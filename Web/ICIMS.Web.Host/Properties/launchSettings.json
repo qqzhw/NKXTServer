@@ -18,11 +18,11 @@
     "ICIMS.Web.Host": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:21021",
+      "launchUrl": "http://localhost:21025",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:21021/"
+      "applicationUrl": "http://localhost:21025/"
     }
   }
 }

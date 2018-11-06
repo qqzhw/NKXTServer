@@ -5,7 +5,7 @@
         /// <summary>
         /// This property can be used to redirect user to a specified URL.
         /// </summary>
-        public string TargetUrl { get; set; }
+        //public string TargetUrl { get; set; }
 
         /// <summary>
         /// Indicates success status of the result.
@@ -26,6 +26,6 @@
         /// <summary>
         /// A special signature for AJAX responses. It's used in the client to detect if this is a response wrapped by ABP.
         /// </summary>
-        public bool __abp { get; } = true;
+       // public bool __abp { get; } = true;
     }
 }
