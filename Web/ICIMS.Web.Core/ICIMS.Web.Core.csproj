@@ -29,9 +29,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.4" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Abp">
-      <HintPath>..\..\..\..\..\aspnetboilerplate-4.0.0\src\Abp.AspNetCore.SignalR\bin\Debug\netstandard2.0\Abp.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 </Project>

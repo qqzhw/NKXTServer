@@ -21,9 +21,4 @@
     <ProjectReference Include="..\ICIMS.Core\ICIMS.Core.csproj" />
     <ProjectReference Include="..\ICIMS.EntityFrameworkCore\ICIMS.EntityFrameworkCore.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Abp.Castle.Log4Net">
-      <HintPath>..\..\..\..\..\aspnetboilerplate-4.0.0\src\Abp.Castle.Log4Net\bin\Debug\netstandard2.0\Abp.Castle.Log4Net.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 </Project>

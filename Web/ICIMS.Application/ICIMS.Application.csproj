@@ -16,9 +16,4 @@
   <ItemGroup>
     <ProjectReference Include="..\ICIMS.Core\ICIMS.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Abp">
-      <HintPath>..\..\..\..\..\aspnetboilerplate-4.0.0\src\Abp.Zero.Common\bin\Debug\netstandard2.0\Abp.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 </Project>
