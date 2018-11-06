@@ -10,7 +10,7 @@ namespace ICIMS.BaseData
     /// <summary>
     /// 采购分类
     /// </summary>   
-    public class BuyCategory : FullAuditedEntity, IMayHaveTenant,IHasCreationTime,IHasDeletionTime,IHasModificationTime
+    public class BuyCategory :Entity,IMayHaveTenant,IHasCreationTime,IHasModificationTime,ISoftDelete
     {
 
         public string No { get; set; }
@@ -23,12 +23,11 @@ namespace ICIMS.BaseData
         public int ParentId { get; set; }
          
         
-        public bool Published { get; set; }
-
-          
-        public int DisplayOrder { get; set; }
- 
-      
+        public bool Published { get; set; } 
+        public int DisplayOrder { get; set; } 
         public int? TenantId { get; set; }
+        public DateTime CreationTime { get; set; }
+        public DateTime? LastModificationTime { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

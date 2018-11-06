@@ -12,7 +12,7 @@ namespace ICIMS.EntityMapper.BuyCategorys
         {
 
             builder.ToTable("BuyCategory");
-
+            builder.HasKey(a => a.Id);
             
 			builder.Property(a => a.No).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
 			builder.Property(a => a.Name).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);

@@ -9,7 +9,7 @@ namespace ICIMS.BaseData
     /// <summary>
     /// 支付类型
     /// </summary>
-    public class PaymentType : FullAuditedEntity, IMayHaveTenant, IHasCreationTime, IHasDeletionTime, IHasModificationTime
+    public class PaymentType : Entity, IMayHaveTenant, IHasCreationTime, ISoftDelete, IHasModificationTime
     {
 
         public string No { get; set; }
@@ -29,5 +29,8 @@ namespace ICIMS.BaseData
 
 
         public int? TenantId { get; set; }
+        public DateTime CreationTime { get; set; }
+        public DateTime? LastModificationTime { get; set; }
+        public bool IsDeleted { get; set; }
     } 
 }

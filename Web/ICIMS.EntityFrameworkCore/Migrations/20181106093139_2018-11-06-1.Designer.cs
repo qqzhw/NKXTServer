@@ -4,14 +4,16 @@ using ICIMS.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ICIMS.Migrations
 {
     [DbContext(typeof(ICIMSDbContext))]
-    partial class ICIMSDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181106093139_2018-11-06-1")]
+    partial class _201811061
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

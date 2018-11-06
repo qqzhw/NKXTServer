@@ -11,7 +11,7 @@ namespace ICIMS.BaseData
     /// 供应商信息
     /// </summary>
     [Table("Vendor")]
-    public class Vendor : FullAuditedEntity, IMayHaveTenant, IHasCreationTime, IHasDeletionTime, IHasModificationTime
+    public class Vendor : FullAuditedEntity, IMayHaveTenant
     {
 
         public string No { get; set; }

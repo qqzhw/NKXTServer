@@ -4,14 +4,16 @@ using ICIMS.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ICIMS.Migrations
 {
     [DbContext(typeof(ICIMSDbContext))]
-    partial class ICIMSDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181106083436_2018-11-06")]
+    partial class _20181106
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1006,52 +1008,6 @@ namespace ICIMS.Migrations
                     b.HasIndex("TenantId", "NormalizedUserName");
 
                     b.ToTable("AbpUsers");
-                });
-
-            modelBuilder.Entity("ICIMS.BaseData.BuyCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(65);
-
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(65);
-
-                    b.Property<string>("No")
-                        .HasMaxLength(65);
-
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
-
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
-
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BuyCategory");
                 });
 
             modelBuilder.Entity("ICIMS.MultiTenancy.Tenant", b =>

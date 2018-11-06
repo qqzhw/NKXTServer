@@ -9,7 +9,7 @@ namespace ICIMS.BaseData
     /// <summary>
     /// 合同分类
     /// </summary>
-    public class ContractCategory : FullAuditedEntity, IMayHaveTenant, IHasCreationTime, IHasDeletionTime, IHasModificationTime
+    public class ContractCategory : Entity, IMayHaveTenant, IHasCreationTime, ISoftDelete, IHasModificationTime
     {
 
         public string No { get; set; }
@@ -29,6 +29,9 @@ namespace ICIMS.BaseData
 
 
         public int? TenantId { get; set; }
+        public DateTime CreationTime { get; set; }
+        public DateTime? LastModificationTime { get; set; }
+        public bool IsDeleted { get; set; }
     } 
  
 }

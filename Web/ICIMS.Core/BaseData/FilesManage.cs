@@ -9,7 +9,7 @@ namespace ICIMS.BaseData
     /// <summary>
     /// 文档管理
     /// </summary>
-    public class FilesManage : FullAuditedEntity, IMayHaveTenant, IHasCreationTime, IHasDeletionTime, IHasModificationTime
+    public class FilesManage : FullAuditedEntity, IMayHaveTenant
     {
 
         /// <summary>

@@ -30,13 +30,13 @@ namespace ICIMS.Web
                 directoryInfo = directoryInfo.Parent;
             }
 
-            var webMvcFolder = Path.Combine(directoryInfo.FullName, "src", "ICIMS.Web.Mvc");
+            var webMvcFolder = Path.Combine(directoryInfo.FullName, "Web", "ICIMS.Web.Mvc");
             if (Directory.Exists(webMvcFolder))
             {
                 return webMvcFolder;
             }
 
-            var webHostFolder = Path.Combine(directoryInfo.FullName, "src", "ICIMS.Web.Host");
+            var webHostFolder = Path.Combine(directoryInfo.FullName, "Web", "ICIMS.Web.Host");
             if (Directory.Exists(webHostFolder))
             {
                 return webHostFolder;
