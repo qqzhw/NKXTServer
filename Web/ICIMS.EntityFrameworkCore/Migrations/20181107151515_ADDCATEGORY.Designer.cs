@@ -4,14 +4,16 @@ using ICIMS.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ICIMS.Migrations
 {
     [DbContext(typeof(ICIMSDbContext))]
-    partial class ICIMSDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181107151515_ADDCATEGORY")]
+    partial class ADDCATEGORY
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

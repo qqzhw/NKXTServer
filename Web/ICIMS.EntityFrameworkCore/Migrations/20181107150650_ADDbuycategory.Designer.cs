@@ -4,14 +4,16 @@ using ICIMS.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ICIMS.Migrations
 {
     [DbContext(typeof(ICIMSDbContext))]
-    partial class ICIMSDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181107150650_ADDbuycategory")]
+    partial class ADDbuycategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1006,44 +1008,6 @@ namespace ICIMS.Migrations
                     b.HasIndex("TenantId", "NormalizedUserName");
 
                     b.ToTable("AbpUsers");
-                });
-
-            modelBuilder.Entity("ICIMS.BaseData.BuyCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(65);
-
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(65);
-
-                    b.Property<string>("No")
-                        .HasMaxLength(65);
-
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
-
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
-
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BuyCategory");
                 });
 
             modelBuilder.Entity("ICIMS.BaseData.ContractCategory", b =>

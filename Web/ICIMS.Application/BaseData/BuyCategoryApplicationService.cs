@@ -54,14 +54,20 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(BuyCategoryPermissions.Query)] 
+		//[AbpAuthorize(BuyCategoryPermissions.Query)] 
         public async Task<PagedResultDto<BuyCategoryListDto>> GetPaged(GetBuyCategorysInput input)
 		{
 
 		    var query = _entityRepository.GetAll();
-			// TODO:根据传入的参数添加过滤条件
-            
-
+            // TODO:根据传入的参数添加过滤条件
+            if (!string.IsNullOrEmpty(input.No))
+            {
+                query = query.Where(o => o.No.Contains(input.No));
+            }
+            if (!string.IsNullOrEmpty(input.Name))
+            {
+                query = query.Where(o => o.Name.Contains(input.Name));
+            }
 			var count = await query.CountAsync();
 
 			var entityList = await query
@@ -79,7 +85,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取BuyCategoryListDto信息
 		/// </summary>
-		[AbpAuthorize(BuyCategoryPermissions.Query)] 
+		//[AbpAuthorize(BuyCategoryPermissions.Query)] 
 		public async Task<BuyCategoryListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +98,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BuyCategoryPermissions.Create,BuyCategoryPermissions.Edit)]
+		//[AbpAuthorize(BuyCategoryPermissions.Create,BuyCategoryPermissions.Edit)]
 		public async Task<GetBuyCategoryForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetBuyCategoryForEditOutput();
@@ -121,7 +127,7 @@ BuyCategoryEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BuyCategoryPermissions.Create,BuyCategoryPermissions.Edit)]
+		//[AbpAuthorize(BuyCategoryPermissions.Create,BuyCategoryPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateBuyCategoryInput input)
 		{
 
@@ -139,7 +145,7 @@ BuyCategoryEditDto editDto;
 		/// <summary>
 		/// 新增BuyCategory
 		/// </summary>
-		[AbpAuthorize(BuyCategoryPermissions.Create)]
+		//[AbpAuthorize(BuyCategoryPermissions.Create)]
 		protected virtual async Task<BuyCategoryEditDto> Create(BuyCategoryEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +161,7 @@ BuyCategoryEditDto editDto;
 		/// <summary>
 		/// 编辑BuyCategory
 		/// </summary>
-		[AbpAuthorize(BuyCategoryPermissions.Edit)]
+		//[AbpAuthorize(BuyCategoryPermissions.Edit)]
 		protected virtual async Task Update(BuyCategoryEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +180,7 @@ BuyCategoryEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BuyCategoryPermissions.Delete)]
+		//[AbpAuthorize(BuyCategoryPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +192,7 @@ BuyCategoryEditDto editDto;
 		/// <summary>
 		/// 批量删除BuyCategory的方法
 		/// </summary>
-		[AbpAuthorize(BuyCategoryPermissions.BatchDelete)]
+		//[AbpAuthorize(BuyCategoryPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

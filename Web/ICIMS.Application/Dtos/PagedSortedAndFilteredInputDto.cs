@@ -7,9 +7,9 @@ namespace ICIMS.Dtos
         public string Filter { get; set; }
 
 
-
+        public string No { get; set; }
 		 
-		 
+		public string Name { get; set; }
          
 
     }

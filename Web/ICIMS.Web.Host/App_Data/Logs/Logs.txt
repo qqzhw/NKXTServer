@@ -31732,3 +31732,378 @@ System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的�
    at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e) in F:\20181030\Server\AbpProject\Abp\Threading\BackgroundWorkers\PeriodicBackgroundWorkerBase.cs:line 48
 ClientConnectionId:23103391-3591-4115-a5ff-28936394108d
 Error Number:4060,State:1,Class:11
+DEBUG 2018-11-07 23:21:15,760 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-07 23:21:16,158 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-07 23:21:16,174 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,182 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,182 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,182 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:16,184 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-07 23:21:16,258 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-07 23:21:16,258 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-07 23:21:16,258 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-07 23:21:16,258 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-07 23:21:16,738 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:21:18,093 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-07 23:21:18,153 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-07 23:21:18,201 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-07 23:21:18,247 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-07 23:21:18,282 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-07 23:21:18,548 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-07 23:21:18,608 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-07 23:21:18,608 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-07 23:21:18,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-07 23:21:18,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-07 23:21:18,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-07 23:21:18,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-07 23:21:18,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-07 23:21:18,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-07 23:21:18,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-07 23:21:18,619 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-07 23:21:18,619 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-07 23:21:39,652 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-07 23:21:39,652 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-07 23:21:39,766 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 118.2386ms 200 
+INFO  2018-11-07 23:21:43,611 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-07 23:21:44,758 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-07 23:21:44,765 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.606ms.
+INFO  2018-11-07 23:21:45,080 [4    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-07 23:21:45,096 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1479.0527ms
+INFO  2018-11-07 23:21:45,125 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5479.3238ms 302 
+INFO  2018-11-07 23:21:45,129 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-07 23:21:45,180 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 50.7079ms 200 text/html
+INFO  2018-11-07 23:21:45,238 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-07 23:21:45,251 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-07 23:21:45,256 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-07 23:21:45,266 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/ui/abp.js  
+INFO  2018-11-07 23:21:45,266 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/ui/abp.swagger.js  
+INFO  2018-11-07 23:21:45,291 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-07 23:21:45,296 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2018-11-07 23:21:45,297 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-07 23:21:45,299 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-07 23:21:45,302 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2018-11-07 23:21:45,308 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 79.714ms 304 application/javascript
+INFO  2018-11-07 23:21:45,310 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.2912ms 304 application/javascript
+INFO  2018-11-07 23:21:45,317 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 79.8243ms 304 text/css
+INFO  2018-11-07 23:21:45,361 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 83.255ms 304 application/javascript
+INFO  2018-11-07 23:21:45,375 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 46.6104ms 304 application/javascript
+INFO  2018-11-07 23:21:45,905 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-07 23:21:46,327 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-07 23:21:46,403 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-07 23:21:46,422 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 550.2489ms 200 text/plain
+INFO  2018-11-07 23:21:46,454 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-07 23:21:46,470 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 130.1055ms 200 text/plain
+INFO  2018-11-07 23:21:47,065 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-07 23:21:47,546 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 481.1944ms 200 application/json;charset=utf-8
+DEBUG 2018-11-07 23:33:35,525 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-07 23:33:35,750 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-07 23:33:35,781 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,785 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,786 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,787 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,790 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,793 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:35,797 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-07 23:33:35,905 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-07 23:33:35,905 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-07 23:33:35,905 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-07 23:33:35,905 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-07 23:33:36,484 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-07 23:33:37,751 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-07 23:33:37,824 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-07 23:33:37,886 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-07 23:33:37,911 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-07 23:33:37,950 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-07 23:33:38,155 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-07 23:33:38,222 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-07 23:33:38,222 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-07 23:33:38,233 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-07 23:33:38,233 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-07 23:33:38,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-07 23:33:38,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-07 23:33:38,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-07 23:33:38,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-07 23:33:38,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-07 23:33:38,235 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-07 23:33:38,235 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-07 23:33:52,655 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-07 23:33:52,655 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-07 23:33:52,777 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.9621ms 200 
+INFO  2018-11-07 23:33:56,801 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-07 23:33:58,297 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-07 23:33:58,303 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.3519ms.
+INFO  2018-11-07 23:33:58,783 [10   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-07 23:33:58,802 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1995.1386ms
+INFO  2018-11-07 23:33:58,827 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-07 23:33:58,834 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6189.7221ms 302 
+INFO  2018-11-07 23:33:58,884 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 57.84ms 200 text/html
+INFO  2018-11-07 23:33:58,935 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-07 23:33:58,939 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-07 23:33:58,964 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-07 23:33:58,992 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-07 23:33:58,994 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-07 23:33:58,995 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-07 23:33:59,016 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.4012ms 304 application/javascript
+INFO  2018-11-07 23:33:59,048 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 66.7958ms 304 text/css
+INFO  2018-11-07 23:33:59,049 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.4012ms 304 application/javascript
+INFO  2018-11-07 23:33:59,381 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-07 23:33:59,646 [4    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-07 23:33:59,654 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 272.3281ms 200 text/plain
+INFO  2018-11-07 23:34:00,106 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-07 23:34:00,136 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-07 23:34:00,139 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.7845ms 200 text/plain
+INFO  2018-11-07 23:34:00,391 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-07 23:34:00,839 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 448.3569ms 200 application/json;charset=utf-8
+INFO  2018-11-07 23:34:45,963 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/BuyCategory/CreateOrUpdate application/json-patch+json 195
+INFO  2018-11-07 23:34:45,992 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:34:45,994 [15   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:34:46,057 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdate", controller = "BuyCategory"}. Executing action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application)
+INFO  2018-11-07 23:34:46,060 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:34:46,061 [15   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+WARN  2018-11-07 23:34:46,947 [15   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-07 23:34:46,954 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-07 23:34:46,984 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:34:47,015 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application) in 955.3359ms
+INFO  2018-11-07 23:34:47,019 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1058.8138ms 401 application/json; charset=utf-8
+INFO  2018-11-07 23:34:47,064 [15   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLI4OPLUL30F", Request id "0HLI4OPLUL30F:00000005": the application completed without reading the entire request body.
+INFO  2018-11-07 23:35:55,922 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/Account/IsTenantAvailable application/json 23
+INFO  2018-11-07 23:35:55,925 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:35:55,927 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:35:55,936 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-07 23:35:55,938 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:35:55,940 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:35:56,521 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-07 23:35:56,820 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 295.7313ms.
+INFO  2018-11-07 23:35:57,128 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:35:57,139 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 1197.3674ms
+INFO  2018-11-07 23:35:57,147 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1219.3845ms 200 application/json; charset=utf-8
+INFO  2018-11-07 23:35:57,155 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json 50
+INFO  2018-11-07 23:35:57,159 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:35:57,163 [15   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:35:57,651 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-11-07 23:35:57,657 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:35:57,664 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:35:58,064 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-11-07 23:35:59,250 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/Account/IsTenantAvailable application/json 23
+INFO  2018-11-07 23:35:59,252 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:35:59,256 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:35:59,265 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-07 23:35:59,267 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:35:59,269 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:35:59,298 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-07 23:35:59,427 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 126.4528ms.
+INFO  2018-11-07 23:35:59,704 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:35:59,708 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 439.5174ms
+INFO  2018-11-07 23:35:59,714 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 469.9394ms 200 application/json; charset=utf-8
+INFO  2018-11-07 23:35:59,716 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json 50
+INFO  2018-11-07 23:35:59,718 [22   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:35:59,720 [22   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:35:59,729 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-11-07 23:35:59,732 [22   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:35:59,734 [22   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:35:59,859 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-11-07 23:36:00,796 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2728.6637ms.
+INFO  2018-11-07 23:36:01,541 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1678.8699ms.
+INFO  2018-11-07 23:36:02,142 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:36:02,150 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 4496.0084ms
+INFO  2018-11-07 23:36:02,153 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5000.9431ms 200 application/json; charset=utf-8
+INFO  2018-11-07 23:36:02,245 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:36:02,250 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 2516.0832ms
+INFO  2018-11-07 23:36:02,256 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2536.9834ms 200 application/json; charset=utf-8
+INFO  2018-11-07 23:36:23,175 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/BuyCategory/CreateOrUpdate application/json-patch+json 195
+INFO  2018-11-07 23:36:23,178 [15   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:36:23,181 [15   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:36:23,236 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-07 23:36:23,460 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdate", controller = "BuyCategory"}. Executing action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application)
+INFO  2018-11-07 23:36:23,467 [28   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:36:23,474 [28   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+ERROR 2018-11-07 23:36:24,540 [28   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.AbpException: There is no permission with name: Pages.BuyCategory.Create
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.AbpException: There is no permission with name: Pages.BuyCategory.Create
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-07 23:36:25,251 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-07 23:36:25,258 [28   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:36:25,264 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application) in 1799.0666ms
+INFO  2018-11-07 23:36:25,272 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2092.9339ms 500 application/json; charset=utf-8
+INFO  2018-11-07 23:36:25,276 [28   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLI4OPLUL30I", Request id "0HLI4OPLUL30I:00000003": the application completed without reading the entire request body.
+INFO  2018-11-07 23:36:37,938 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/BuyCategory/CreateOrUpdate application/json-patch+json 182
+INFO  2018-11-07 23:36:37,941 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:36:37,945 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:36:37,949 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-07 23:36:37,960 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdate", controller = "BuyCategory"}. Executing action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application)
+INFO  2018-11-07 23:36:37,963 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:36:37,965 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+ERROR 2018-11-07 23:36:38,348 [19   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.AbpException: There is no permission with name: Pages.BuyCategory.Create
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.AbpException: There is no permission with name: Pages.BuyCategory.Create
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-07 23:36:38,352 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-07 23:36:38,354 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:36:38,357 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application) in 394.2477ms
+INFO  2018-11-07 23:36:38,361 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 421.7556ms 500 application/json; charset=utf-8
+INFO  2018-11-07 23:36:38,365 [19   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLI4OPLUL30J", Request id "0HLI4OPLUL30J:00000003": the application completed without reading the entire request body.
+INFO  2018-11-07 23:37:26,455 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/BuyCategory/CreateOrUpdate application/json-patch+json 173
+INFO  2018-11-07 23:37:26,457 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:37:26,459 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:37:26,462 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-07 23:37:26,478 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdate", controller = "BuyCategory"}. Executing action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application)
+INFO  2018-11-07 23:37:26,480 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:37:26,482 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+ERROR 2018-11-07 23:37:26,847 [19   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.AbpException: There is no permission with name: Pages.BuyCategory.Create
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.AbpException: There is no permission with name: Pages.BuyCategory.Create
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-07 23:37:26,851 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-07 23:37:26,853 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:37:26,857 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application) in 375.0028ms
+INFO  2018-11-07 23:37:26,872 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 404.6278ms 500 application/json; charset=utf-8
+INFO  2018-11-07 23:37:26,876 [19   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLI4OPLUL30J", Request id "0HLI4OPLUL30J:00000004": the application completed without reading the entire request body.
+INFO  2018-11-07 23:43:02,614 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/BuyCategory/CreateOrUpdate application/json-patch+json 173
+INFO  2018-11-07 23:43:02,643 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:43:02,646 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-07 23:43:02,660 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-07 23:43:02,722 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdate", controller = "BuyCategory"}. Executing action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application)
+INFO  2018-11-07 23:43:02,725 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-07 23:43:02,727 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+ERROR 2018-11-07 23:43:03,114 [19   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.AbpException: There is no permission with name: Pages.BuyCategory.Create
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.AbpException: There is no permission with name: Pages.BuyCategory.Create
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-07 23:43:03,121 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-07 23:43:03,124 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:43:03,128 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.BuyCategoryAppService.CreateOrUpdate (ICIMS.Application) in 403.1673ms
+INFO  2018-11-07 23:43:03,136 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 522.0701ms 500 application/json; charset=utf-8
+INFO  2018-11-07 23:43:03,141 [19   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLI4OPLUL30K", Request id "0HLI4OPLUL30K:00000001": the application completed without reading the entire request body.
+INFO  2018-11-07 23:44:46,870 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BuyCategory/GetById?Id=1  
+INFO  2018-11-07 23:44:46,873 [36   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-07 23:44:46,968 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetById", controller = "BuyCategory"}. Executing action ICIMS.BaseData.BuyCategoryAppService.GetById (ICIMS.Application)
+ERROR 2018-11-07 23:44:47,354 [36   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.AbpException: There is no permission with name: Pages.BuyCategory.Query
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.AbpException: There is no permission with name: Pages.BuyCategory.Query
+   at Abp.Authorization.PermissionManager.GetPermission(String name) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 57
+   at Abp.Authorization.Users.AbpUserManager`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserManager.cs:line 146
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(Int64 userId, String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 48
+   at Abp.Authorization.PermissionChecker`2.IsGrantedAsync(String permissionName) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\PermissionChecker.cs:line 43
+   at Abp.Authorization.PermissionCheckerExtensions.IsGrantedAsync(IPermissionChecker permissionChecker, Boolean requiresAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 129
+   at Abp.Authorization.PermissionCheckerExtensions.AuthorizeAsync(IPermissionChecker permissionChecker, Boolean requireAll, String[] permissionNames) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionCheckerExtensions.cs:line 195
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 50
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-07 23:44:47,370 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-07 23:44:47,391 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-07 23:44:47,397 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.BuyCategoryAppService.GetById (ICIMS.Application) in 423.1444ms
+INFO  2018-11-07 23:44:47,401 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 530.0337ms 500 application/json; charset=utf-8
+INFO  2018-11-07 23:56:59,464 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BuyCategory/GetById?Id=1  
+INFO  2018-11-07 23:56:59,477 [37   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-07 23:56:59,765 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetById", controller = "BuyCategory"}. Executing action ICIMS.BaseData.BuyCategoryAppService.GetById (ICIMS.Application)
