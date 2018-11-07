@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ICIMS.Migrations
 {
     [DbContext(typeof(ICIMSDbContext))]
-    [Migration("20181107134041_2018-1107")]
-    partial class _20181107
+    [Migration("20181107141707_20181107Init")]
+    partial class _20181107Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

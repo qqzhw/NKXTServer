@@ -2,7 +2,7 @@
 
 namespace ICIMS.Migrations
 {
-    public partial class _20181106 : Migration
+    public partial class _20181107Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

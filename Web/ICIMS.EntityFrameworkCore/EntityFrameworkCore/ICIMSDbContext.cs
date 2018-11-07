@@ -15,6 +15,7 @@ using ICIMS.EntityMapper.FunctionSubjects;
 using ICIMS.EntityMapper.ItemCategorys;
 using ICIMS.EntityMapper.PaymentTypes;
 using ICIMS.EntityMapper.Vendors;
+using ICIMS.EntityMapper.FundFroms;
 
 namespace ICIMS.EntityFrameworkCore
 {
@@ -41,6 +42,7 @@ namespace ICIMS.EntityFrameworkCore
             //    var configuration = Activator.CreateInstance(typeConfiguration);
             //    configuration.ApplyConfiguration(modelBuilder);
             //}
+            modelBuilder.ApplyConfiguration(new FundFromCfg());
             modelBuilder.ApplyConfiguration(new BuyCategoryCfg());
             modelBuilder.ApplyConfiguration(new ContractCategoryCfg());
             modelBuilder.ApplyConfiguration(new DocumentCategoryCfg());
