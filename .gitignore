@@ -261,3 +261,6 @@ __pycache__/
 *.pyc
 /solutionInfo.json
 /52abp_code_power/BuyCategory.json
+/52abp_code_power
+/Web/ICIMS.Application/BaseData/Readme.md
+/Web/ICIMS.Core/BaseData/Readme.md

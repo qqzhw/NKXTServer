@@ -8,6 +8,13 @@ using System.Reflection;
 using System.Linq;
 using System;
 using ICIMS.BaseData;
+using ICIMS.EntityMapper.ContractCategorys;
+using ICIMS.EntityMapper.DocumentCategorys;
+using ICIMS.EntityMapper.FilesManages;
+using ICIMS.EntityMapper.FunctionSubjects;
+using ICIMS.EntityMapper.ItemCategorys;
+using ICIMS.EntityMapper.PaymentTypes;
+using ICIMS.EntityMapper.Vendors;
 
 namespace ICIMS.EntityFrameworkCore
 {
@@ -35,7 +42,13 @@ namespace ICIMS.EntityFrameworkCore
             //    configuration.ApplyConfiguration(modelBuilder);
             //}
             modelBuilder.ApplyConfiguration(new BuyCategoryCfg());
-
+            modelBuilder.ApplyConfiguration(new ContractCategoryCfg());
+            modelBuilder.ApplyConfiguration(new DocumentCategoryCfg());
+            modelBuilder.ApplyConfiguration(new FilesManageCfg());
+            modelBuilder.ApplyConfiguration(new FunctionSubjectCfg());
+            modelBuilder.ApplyConfiguration(new ItemCategoryCfg());
+            modelBuilder.ApplyConfiguration(new PaymentTypeCfg());
+            modelBuilder.ApplyConfiguration(new VendorCfg());
             base.OnModelCreating(modelBuilder);
         }
         

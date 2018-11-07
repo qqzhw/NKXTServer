@@ -40,22 +40,56 @@ namespace ICIMS.BaseData.DomainService
 			_repository =  repository;
 		}
 
+         
+       
 
-		/// <summary>
-		/// 初始化
-		///</summary>
-		public void InitBuyCategory()
+        public Task CreateAsync(BuyCategory buyCategory)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IReadOnlyList<BuyCategory>> GetAllAsync(BuyCategory buyCategory)
+        {
+            throw new NotImplementedException();
+        }
+
+       
+
+        public Task<BuyCategory> GetAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        
+
+
+        /// <summary>
+        /// 初始化
+        ///</summary>
+        public void InitBuyCategory()
 		{
 			throw new NotImplementedException();
 		}
 
-		// TODO:编写领域业务代码
+       
+
+        public Task UpdateAsync(BuyCategory buyCategory)
+        {
+            throw new NotImplementedException();
+        }
+
+        // TODO:编写领域业务代码
 
 
 
-		 
-		  
-		 
 
-	}
+
+
+
+    }
 }

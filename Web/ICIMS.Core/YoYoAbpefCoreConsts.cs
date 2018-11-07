@@ -4,14 +4,14 @@ namespace ICIMS
 {
     public class YoYoAbpefCoreConsts
     {
-        //public static class SchemaNames
-        //{
-        //    public const string Basic = "Basic";
+        public static class SchemaNames
+        {
+            public const string Basic = "Basic";
 
-        //    public const string ABP = "ABP";
+            public const string ABP = "ABP";
 
-        //    public const string CMS = "CMS";
-        //}
+            public const string CMS = "CMS";
+        }
 
         /// <summary>
         /// 实体长度单位
