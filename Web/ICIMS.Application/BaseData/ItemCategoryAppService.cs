@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(ItemCategoryPermissions.Query)] 
+		//[AbpAuthorize(ItemCategoryPermissions.Query)] 
         public async Task<PagedResultDto<ItemCategoryListDto>> GetPaged(GetItemCategorysInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取ItemCategoryListDto信息
 		/// </summary>
-		[AbpAuthorize(ItemCategoryPermissions.Query)] 
+		//[AbpAuthorize(ItemCategoryPermissions.Query)] 
 		public async Task<ItemCategoryListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ItemCategoryPermissions.Create,ItemCategoryPermissions.Edit)]
+		//[AbpAuthorize(ItemCategoryPermissions.Create,ItemCategoryPermissions.Edit)]
 		public async Task<GetItemCategoryForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetItemCategoryForEditOutput();
@@ -121,7 +121,7 @@ ItemCategoryEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ItemCategoryPermissions.Create,ItemCategoryPermissions.Edit)]
+		//[AbpAuthorize(ItemCategoryPermissions.Create,ItemCategoryPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateItemCategoryInput input)
 		{
 
@@ -139,7 +139,7 @@ ItemCategoryEditDto editDto;
 		/// <summary>
 		/// 新增ItemCategory
 		/// </summary>
-		[AbpAuthorize(ItemCategoryPermissions.Create)]
+		//[AbpAuthorize(ItemCategoryPermissions.Create)]
 		protected virtual async Task<ItemCategoryEditDto> Create(ItemCategoryEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ ItemCategoryEditDto editDto;
 		/// <summary>
 		/// 编辑ItemCategory
 		/// </summary>
-		[AbpAuthorize(ItemCategoryPermissions.Edit)]
+		//[AbpAuthorize(ItemCategoryPermissions.Edit)]
 		protected virtual async Task Update(ItemCategoryEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ ItemCategoryEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ItemCategoryPermissions.Delete)]
+		//[AbpAuthorize(ItemCategoryPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ ItemCategoryEditDto editDto;
 		/// <summary>
 		/// 批量删除ItemCategory的方法
 		/// </summary>
-		[AbpAuthorize(ItemCategoryPermissions.BatchDelete)]
+		//[AbpAuthorize(ItemCategoryPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除
