@@ -16,6 +16,7 @@ using ICIMS.EntityMapper.ItemCategorys;
 using ICIMS.EntityMapper.PaymentTypes;
 using ICIMS.EntityMapper.Vendors;
 using ICIMS.EntityMapper.FundFroms;
+using ICIMS.EntityMapper.YSCategorys;
 
 namespace ICIMS.EntityFrameworkCore
 {
@@ -51,11 +52,12 @@ namespace ICIMS.EntityFrameworkCore
             modelBuilder.ApplyConfiguration(new ItemCategoryCfg());
             modelBuilder.ApplyConfiguration(new PaymentTypeCfg());
             modelBuilder.ApplyConfiguration(new VendorCfg());
+            modelBuilder.ApplyConfiguration(new YSCategoryCfg());
             base.OnModelCreating(modelBuilder);
         }
 
         public virtual DbSet<BuyCategory> BuyCategorys { get; set; }
-
+        public virtual DbSet<YSCategory> YSCategory { get; set; }
         public virtual DbSet<FundFrom> FundFrom { get; set; }
         public virtual DbSet<ContractCategory> ContractCategory { get; set; }
 

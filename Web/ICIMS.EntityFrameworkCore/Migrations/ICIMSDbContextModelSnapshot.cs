@@ -1408,6 +1408,47 @@ namespace ICIMS.Migrations
                     b.ToTable("Vendor");
                 });
 
+            modelBuilder.Entity("ICIMS.BaseData.YSCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasMaxLength(65);
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(65);
+
+                    b.Property<int>("DisplayOrder")
+                        .HasMaxLength(65);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasMaxLength(65);
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasMaxLength(65);
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(65);
+
+                    b.Property<string>("No")
+                        .HasMaxLength(65);
+
+                    b.Property<int>("ParentId")
+                        .HasMaxLength(65);
+
+                    b.Property<bool>("Published")
+                        .HasMaxLength(65);
+
+                    b.Property<int?>("TenantId")
+                        .HasMaxLength(65);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("YSCategory");
+                });
+
             modelBuilder.Entity("ICIMS.MultiTenancy.Tenant", b =>
                 {
                     b.Property<int>("Id")
