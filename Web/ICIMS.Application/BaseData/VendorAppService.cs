@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(VendorPermissions.Query)] 
+		//[AbpAuthorize(VendorPermissions.Query)] 
         public async Task<PagedResultDto<VendorListDto>> GetPaged(GetVendorsInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取VendorListDto信息
 		/// </summary>
-		[AbpAuthorize(VendorPermissions.Query)] 
+		//[AbpAuthorize(VendorPermissions.Query)] 
 		public async Task<VendorListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(VendorPermissions.Create,VendorPermissions.Edit)]
+		//[AbpAuthorize(VendorPermissions.Create,VendorPermissions.Edit)]
 		public async Task<GetVendorForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetVendorForEditOutput();
@@ -121,7 +121,7 @@ VendorEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(VendorPermissions.Create,VendorPermissions.Edit)]
+		//[AbpAuthorize(VendorPermissions.Create,VendorPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateVendorInput input)
 		{
 
@@ -139,7 +139,7 @@ VendorEditDto editDto;
 		/// <summary>
 		/// 新增Vendor
 		/// </summary>
-		[AbpAuthorize(VendorPermissions.Create)]
+		//[AbpAuthorize(VendorPermissions.Create)]
 		protected virtual async Task<VendorEditDto> Create(VendorEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ VendorEditDto editDto;
 		/// <summary>
 		/// 编辑Vendor
 		/// </summary>
-		[AbpAuthorize(VendorPermissions.Edit)]
+		//[AbpAuthorize(VendorPermissions.Edit)]
 		protected virtual async Task Update(VendorEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ VendorEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(VendorPermissions.Delete)]
+		//[AbpAuthorize(VendorPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ VendorEditDto editDto;
 		/// <summary>
 		/// 批量删除Vendor的方法
 		/// </summary>
-		[AbpAuthorize(VendorPermissions.BatchDelete)]
+		//[AbpAuthorize(VendorPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

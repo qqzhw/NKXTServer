@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(DocumentCategoryPermissions.Query)] 
+		//[AbpAuthorize(DocumentCategoryPermissions.Query)] 
         public async Task<PagedResultDto<DocumentCategoryListDto>> GetPaged(GetDocumentCategorysInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取DocumentCategoryListDto信息
 		/// </summary>
-		[AbpAuthorize(DocumentCategoryPermissions.Query)] 
+		//[AbpAuthorize(DocumentCategoryPermissions.Query)] 
 		public async Task<DocumentCategoryListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(DocumentCategoryPermissions.Create,DocumentCategoryPermissions.Edit)]
+		//[AbpAuthorize(DocumentCategoryPermissions.Create,DocumentCategoryPermissions.Edit)]
 		public async Task<GetDocumentCategoryForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetDocumentCategoryForEditOutput();
@@ -121,7 +121,7 @@ DocumentCategoryEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(DocumentCategoryPermissions.Create,DocumentCategoryPermissions.Edit)]
+		//[AbpAuthorize(DocumentCategoryPermissions.Create,DocumentCategoryPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateDocumentCategoryInput input)
 		{
 
@@ -139,7 +139,7 @@ DocumentCategoryEditDto editDto;
 		/// <summary>
 		/// 新增DocumentCategory
 		/// </summary>
-		[AbpAuthorize(DocumentCategoryPermissions.Create)]
+		//[AbpAuthorize(DocumentCategoryPermissions.Create)]
 		protected virtual async Task<DocumentCategoryEditDto> Create(DocumentCategoryEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ DocumentCategoryEditDto editDto;
 		/// <summary>
 		/// 编辑DocumentCategory
 		/// </summary>
-		[AbpAuthorize(DocumentCategoryPermissions.Edit)]
+		//[AbpAuthorize(DocumentCategoryPermissions.Edit)]
 		protected virtual async Task Update(DocumentCategoryEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ DocumentCategoryEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(DocumentCategoryPermissions.Delete)]
+		//[AbpAuthorize(DocumentCategoryPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ DocumentCategoryEditDto editDto;
 		/// <summary>
 		/// 批量删除DocumentCategory的方法
 		/// </summary>
-		[AbpAuthorize(DocumentCategoryPermissions.BatchDelete)]
+		//[AbpAuthorize(DocumentCategoryPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

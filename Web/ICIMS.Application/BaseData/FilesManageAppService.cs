@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(FilesManagePermissions.Query)] 
+		//[AbpAuthorize(FilesManagePermissions.Query)] 
         public async Task<PagedResultDto<FilesManageListDto>> GetPaged(GetFilesManagesInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取FilesManageListDto信息
 		/// </summary>
-		[AbpAuthorize(FilesManagePermissions.Query)] 
+		//[AbpAuthorize(FilesManagePermissions.Query)] 
 		public async Task<FilesManageListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FilesManagePermissions.Create,FilesManagePermissions.Edit)]
+		//[AbpAuthorize(FilesManagePermissions.Create,FilesManagePermissions.Edit)]
 		public async Task<GetFilesManageForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetFilesManageForEditOutput();
@@ -121,7 +121,7 @@ FilesManageEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FilesManagePermissions.Create,FilesManagePermissions.Edit)]
+		//[AbpAuthorize(FilesManagePermissions.Create,FilesManagePermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateFilesManageInput input)
 		{
 
@@ -139,7 +139,7 @@ FilesManageEditDto editDto;
 		/// <summary>
 		/// 新增FilesManage
 		/// </summary>
-		[AbpAuthorize(FilesManagePermissions.Create)]
+		//[AbpAuthorize(FilesManagePermissions.Create)]
 		protected virtual async Task<FilesManageEditDto> Create(FilesManageEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ FilesManageEditDto editDto;
 		/// <summary>
 		/// 编辑FilesManage
 		/// </summary>
-		[AbpAuthorize(FilesManagePermissions.Edit)]
+		//[AbpAuthorize(FilesManagePermissions.Edit)]
 		protected virtual async Task Update(FilesManageEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ FilesManageEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FilesManagePermissions.Delete)]
+		//[AbpAuthorize(FilesManagePermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ FilesManageEditDto editDto;
 		/// <summary>
 		/// 批量删除FilesManage的方法
 		/// </summary>
-		[AbpAuthorize(FilesManagePermissions.BatchDelete)]
+		//[AbpAuthorize(FilesManagePermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

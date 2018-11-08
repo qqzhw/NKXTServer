@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(FunctionSubjectPermissions.Query)] 
+		//[AbpAuthorize(FunctionSubjectPermissions.Query)] 
         public async Task<PagedResultDto<FunctionSubjectListDto>> GetPaged(GetFunctionSubjectsInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取FunctionSubjectListDto信息
 		/// </summary>
-		[AbpAuthorize(FunctionSubjectPermissions.Query)] 
+		//[AbpAuthorize(FunctionSubjectPermissions.Query)] 
 		public async Task<FunctionSubjectListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FunctionSubjectPermissions.Create,FunctionSubjectPermissions.Edit)]
+		//[AbpAuthorize(FunctionSubjectPermissions.Create,FunctionSubjectPermissions.Edit)]
 		public async Task<GetFunctionSubjectForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetFunctionSubjectForEditOutput();
@@ -121,7 +121,7 @@ FunctionSubjectEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FunctionSubjectPermissions.Create,FunctionSubjectPermissions.Edit)]
+		//[AbpAuthorize(FunctionSubjectPermissions.Create,FunctionSubjectPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateFunctionSubjectInput input)
 		{
 
@@ -139,7 +139,7 @@ FunctionSubjectEditDto editDto;
 		/// <summary>
 		/// 新增FunctionSubject
 		/// </summary>
-		[AbpAuthorize(FunctionSubjectPermissions.Create)]
+		//[AbpAuthorize(FunctionSubjectPermissions.Create)]
 		protected virtual async Task<FunctionSubjectEditDto> Create(FunctionSubjectEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ FunctionSubjectEditDto editDto;
 		/// <summary>
 		/// 编辑FunctionSubject
 		/// </summary>
-		[AbpAuthorize(FunctionSubjectPermissions.Edit)]
+		//[AbpAuthorize(FunctionSubjectPermissions.Edit)]
 		protected virtual async Task Update(FunctionSubjectEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ FunctionSubjectEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FunctionSubjectPermissions.Delete)]
+		//[AbpAuthorize(FunctionSubjectPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ FunctionSubjectEditDto editDto;
 		/// <summary>
 		/// 批量删除FunctionSubject的方法
 		/// </summary>
-		[AbpAuthorize(FunctionSubjectPermissions.BatchDelete)]
+		//[AbpAuthorize(FunctionSubjectPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

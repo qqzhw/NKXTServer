@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(ContractCategoryPermissions.Query)] 
+		//[AbpAuthorize(ContractCategoryPermissions.Query)] 
         public async Task<PagedResultDto<ContractCategoryListDto>> GetPaged(GetContractCategorysInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取ContractCategoryListDto信息
 		/// </summary>
-		[AbpAuthorize(ContractCategoryPermissions.Query)] 
+		//[AbpAuthorize(ContractCategoryPermissions.Query)] 
 		public async Task<ContractCategoryListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ContractCategoryPermissions.Create,ContractCategoryPermissions.Edit)]
+		//[AbpAuthorize(ContractCategoryPermissions.Create,ContractCategoryPermissions.Edit)]
 		public async Task<GetContractCategoryForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetContractCategoryForEditOutput();
@@ -121,7 +121,7 @@ ContractCategoryEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ContractCategoryPermissions.Create,ContractCategoryPermissions.Edit)]
+		//[AbpAuthorize(ContractCategoryPermissions.Create,ContractCategoryPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateContractCategoryInput input)
 		{
 
@@ -139,7 +139,7 @@ ContractCategoryEditDto editDto;
 		/// <summary>
 		/// 新增ContractCategory
 		/// </summary>
-		[AbpAuthorize(ContractCategoryPermissions.Create)]
+		//[AbpAuthorize(ContractCategoryPermissions.Create)]
 		protected virtual async Task<ContractCategoryEditDto> Create(ContractCategoryEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ ContractCategoryEditDto editDto;
 		/// <summary>
 		/// 编辑ContractCategory
 		/// </summary>
-		[AbpAuthorize(ContractCategoryPermissions.Edit)]
+		//[AbpAuthorize(ContractCategoryPermissions.Edit)]
 		protected virtual async Task Update(ContractCategoryEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ ContractCategoryEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ContractCategoryPermissions.Delete)]
+		//[AbpAuthorize(ContractCategoryPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ ContractCategoryEditDto editDto;
 		/// <summary>
 		/// 批量删除ContractCategory的方法
 		/// </summary>
-		[AbpAuthorize(ContractCategoryPermissions.BatchDelete)]
+		//[AbpAuthorize(ContractCategoryPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除
