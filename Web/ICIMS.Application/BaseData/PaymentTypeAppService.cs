@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(PaymentTypePermissions.Query)] 
+		//[AbpAuthorize(PaymentTypePermissions.Query)] 
         public async Task<PagedResultDto<PaymentTypeListDto>> GetPaged(GetPaymentTypesInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取PaymentTypeListDto信息
 		/// </summary>
-		[AbpAuthorize(PaymentTypePermissions.Query)] 
+		//[AbpAuthorize(PaymentTypePermissions.Query)] 
 		public async Task<PaymentTypeListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(PaymentTypePermissions.Create,PaymentTypePermissions.Edit)]
+		//[AbpAuthorize(PaymentTypePermissions.Create,PaymentTypePermissions.Edit)]
 		public async Task<GetPaymentTypeForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetPaymentTypeForEditOutput();
@@ -121,7 +121,7 @@ PaymentTypeEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(PaymentTypePermissions.Create,PaymentTypePermissions.Edit)]
+		//[AbpAuthorize(PaymentTypePermissions.Create,PaymentTypePermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdatePaymentTypeInput input)
 		{
 
@@ -139,7 +139,7 @@ PaymentTypeEditDto editDto;
 		/// <summary>
 		/// 新增PaymentType
 		/// </summary>
-		[AbpAuthorize(PaymentTypePermissions.Create)]
+		//[AbpAuthorize(PaymentTypePermissions.Create)]
 		protected virtual async Task<PaymentTypeEditDto> Create(PaymentTypeEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ PaymentTypeEditDto editDto;
 		/// <summary>
 		/// 编辑PaymentType
 		/// </summary>
-		[AbpAuthorize(PaymentTypePermissions.Edit)]
+		//[AbpAuthorize(PaymentTypePermissions.Edit)]
 		protected virtual async Task Update(PaymentTypeEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ PaymentTypeEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(PaymentTypePermissions.Delete)]
+		//[AbpAuthorize(PaymentTypePermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ PaymentTypeEditDto editDto;
 		/// <summary>
 		/// 批量删除PaymentType的方法
 		/// </summary>
-		[AbpAuthorize(PaymentTypePermissions.BatchDelete)]
+		//[AbpAuthorize(PaymentTypePermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除
