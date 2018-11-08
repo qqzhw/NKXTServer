@@ -2543,3 +2543,843 @@ INFO  2018-11-08 00:30:00,480 [39   ] soft.AspNetCore.Hosting.Internal.WebHost -
 INFO  2018-11-08 00:30:00,516 [32   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
 DEBUG 2018-11-08 00:30:00,523 [32   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"_vsBZElysrDxnhpKDXxmHw","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-11-08T00:30:00.5171861+08:00","Properties":{}}
 DEBUG 2018-11-08 00:30:00,524 [32   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: _vsBZElysrDxnhpKDXxmHw
+DEBUG 2018-11-08 00:35:14,489 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-08 00:35:14,851 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-08 00:35:14,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Startup.ICIMSWebMvcModule, ICIMS.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,884 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,887 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,887 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,887 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,888 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,888 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,888 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,889 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,889 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:14,892 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-08 00:35:14,995 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 00:35:14,995 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 00:35:14,995 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 00:35:14,995 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 00:35:15,650 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 00:35:16,843 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-08 00:35:16,901 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-08 00:35:16,968 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-08 00:35:17,003 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-08 00:35:17,039 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-08 00:35:17,226 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-08 00:35:17,277 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-11-08 00:35:17,277 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-08 00:35:17,289 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-08 00:35:17,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-08 00:35:17,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-08 00:35:17,291 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-08 00:35:17,291 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-08 00:35:17,291 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-08 00:35:17,291 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-08 00:35:17,291 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-08 00:35:17,292 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+DEBUG 2018-11-08 00:35:17,292 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2018-11-08 00:35:17,292 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Web.Models.Roles.EditRoleModalViewModel
+INFO  2018-11-08 00:35:23,032 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:62114/  0
+INFO  2018-11-08 00:35:23,032 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-11-08 00:35:23,141 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 109.823ms 200 
+INFO  2018-11-08 00:35:26,836 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc)
+WARN  2018-11-08 00:35:27,450 [6    ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-08 00:35:27,459 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-08 00:35:27,474 [6    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-11-08 00:35:27,506 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2018-11-08 00:35:27,513 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) in 669.7332ms
+INFO  2018-11-08 00:35:27,536 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login?ReturnUrl=%2F  
+INFO  2018-11-08 00:35:27,563 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4520.9238ms 302 
+INFO  2018-11-08 00:35:27,599 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 00:35:30,608 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) with arguments (, /, ) - Validation state: Valid
+INFO  2018-11-08 00:35:30,620 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 7.8034ms.
+INFO  2018-11-08 00:35:30,992 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2018-11-08 00:35:31,862 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 948.874ms.
+INFO  2018-11-08 00:35:31,929 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 4269.9293ms
+INFO  2018-11-08 00:35:31,937 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772341172280342  
+INFO  2018-11-08 00:35:31,962 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Shared/Components/TenantChange/Default.js?v=636772341318298384  
+INFO  2018-11-08 00:35:31,981 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772341172280342  
+INFO  2018-11-08 00:35:32,010 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 00:35:32,020 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 00:35:32,132 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 00:35:32,139 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4574.3371ms 200 text/html; charset=utf-8
+INFO  2018-11-08 00:35:32,186 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2018-11-08 00:35:32,195 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 00:35:32,203 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 233.1484ms 200 application/javascript
+INFO  2018-11-08 00:35:32,509 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 335.4037ms.
+INFO  2018-11-08 00:35:32,547 [11   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 00:35:32,556 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 336.8611ms.
+INFO  2018-11-08 00:35:32,578 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 530.4252ms
+INFO  2018-11-08 00:35:32,600 [7    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 00:35:32,602 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 625.3229ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 00:35:32,606 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 592.6407ms
+INFO  2018-11-08 00:35:32,610 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 677.8889ms 200 application/x-javascript
+INFO  2018-11-08 00:35:39,249 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/Login application/x-www-form-urlencoded 256
+INFO  2018-11-08 00:35:39,265 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 00:35:39,400 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) with arguments (ICIMS.Web.Models.Account.LoginViewModel, /, ) - Validation state: Valid
+INFO  2018-11-08 00:35:40,835 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed in.
+INFO  2018-11-08 00:35:40,843 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1440.8412ms.
+INFO  2018-11-08 00:35:41,356 [11   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 00:35:41,368 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 2100.0724ms
+INFO  2018-11-08 00:35:41,372 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2122.4471ms 200 application/json; charset=utf-8
+INFO  2018-11-08 00:35:49,721 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/TenantChangeModal application/html 0
+INFO  2018-11-08 00:35:49,794 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "TenantChangeModal", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc)
+INFO  2018-11-08 00:35:49,812 [10   ] idateAntiforgeryTokenAuthorizationFilter - Antiforgery token validation failed. The provided antiforgery token was meant for a different claims-based user than the current user.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The provided antiforgery token was meant for a different claims-based user than the current user.
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.ValidateTokens(HttpContext httpContext, AntiforgeryTokenSet antiforgeryTokenSet)
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2018-11-08 00:35:49,815 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2018-11-08 00:35:49,821 [10   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2018-11-08 00:35:49,824 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc) in 27.4912ms
+INFO  2018-11-08 00:35:49,828 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 107.4239ms 400 
+INFO  2018-11-08 00:35:56,034 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-11-08 00:35:56,048 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc)
+INFO  2018-11-08 00:35:56,089 [14   ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-11-08 00:35:56,120 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 00:35:56,123 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6592ms.
+INFO  2018-11-08 00:35:56,172 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2018-11-08 00:35:57,277 [11   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 1034.3262ms.
+INFO  2018-11-08 00:35:57,316 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) in 1255.0296ms
+INFO  2018-11-08 00:35:57,325 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1285.0552ms 200 text/html; charset=utf-8
+INFO  2018-11-08 00:35:57,338 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772341172280342  
+INFO  2018-11-08 00:35:57,346 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 00:35:57,405 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 00:35:57,407 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772341172280342  
+INFO  2018-11-08 00:35:57,418 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 6.5015ms.
+INFO  2018-11-08 00:35:57,421 [6    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 00:35:57,429 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 75.0048ms
+INFO  2018-11-08 00:35:57,435 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 00:35:57,438 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 103.8512ms 200 application/x-javascript
+INFO  2018-11-08 00:35:57,482 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 00:35:57,542 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 58.0364ms.
+INFO  2018-11-08 00:35:57,548 [11   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 00:35:57,602 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 112.7889ms
+INFO  2018-11-08 00:35:57,626 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 205.3234ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 00:35:58,025 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-11-08 00:35:58,097 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 67.0114ms 200 application/json
+INFO  2018-11-08 00:35:58,249 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=gzMURRT9Vip1mziKkHaO_A  
+INFO  2018-11-08 00:35:58,511 [11   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-11-08 00:35:58,549 [11   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"gzMURRT9Vip1mziKkHaO_A","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-11-08T00:35:58.5409756+08:00","Properties":{}}
+DEBUG 2018-11-08 00:35:58,626 [11   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: gzMURRT9Vip1mziKkHaO_A
+DEBUG 2018-11-08 17:00:55,807 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-08 17:00:56,969 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-08 17:00:57,016 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Startup.ICIMSWebMvcModule, ICIMS.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,027 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,032 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,032 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,033 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:00:57,058 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-08 17:00:57,406 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 17:00:57,406 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 17:00:57,406 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 17:00:57,406 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 17:00:58,833 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:01:02,663 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-08 17:01:02,796 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-08 17:01:02,917 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-08 17:01:02,959 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-08 17:01:03,046 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-08 17:01:03,784 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-08 17:01:03,933 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-11-08 17:01:03,933 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-08 17:01:03,963 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-08 17:01:03,965 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-08 17:01:03,966 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-08 17:01:03,966 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-08 17:01:03,966 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-08 17:01:03,967 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-08 17:01:03,967 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-08 17:01:03,968 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-08 17:01:03,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+DEBUG 2018-11-08 17:01:03,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2018-11-08 17:01:03,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Web.Models.Roles.EditRoleModalViewModel
+INFO  2018-11-08 17:01:16,423 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:62114/  0
+INFO  2018-11-08 17:01:16,423 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-11-08 17:01:16,619 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 192.9976ms 200 
+INFO  2018-11-08 17:01:23,306 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc)
+WARN  2018-11-08 17:01:36,785 [8    ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-08 17:01:36,802 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-08 17:01:36,822 [8    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-11-08 17:01:36,862 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2018-11-08 17:01:36,875 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) in 13559.787ms
+INFO  2018-11-08 17:01:36,910 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login?ReturnUrl=%2F  
+INFO  2018-11-08 17:01:36,914 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20503.0989ms 302 
+INFO  2018-11-08 17:01:36,965 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:01:42,745 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) with arguments (, /, ) - Validation state: Valid
+INFO  2018-11-08 17:01:42,767 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 15.7579ms.
+INFO  2018-11-08 17:01:43,681 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2018-11-08 17:01:46,440 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 2961.4486ms.
+INFO  2018-11-08 17:01:46,457 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 9485.8582ms
+INFO  2018-11-08 17:01:46,685 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9653.9907ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:01:46,747 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Shared/Components/TenantChange/Default.js?v=636772933063792334  
+INFO  2018-11-08 17:01:46,761 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772932638066803  
+INFO  2018-11-08 17:01:46,777 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772932638066803  
+INFO  2018-11-08 17:01:46,843 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:01:46,889 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:01:47,203 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 17:01:47,386 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:01:47,430 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2018-11-08 17:01:47,576 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 833.1618ms 200 application/javascript
+INFO  2018-11-08 17:01:47,920 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 612.3855ms.
+INFO  2018-11-08 17:01:47,965 [10   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:01:47,976 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 1078.1901ms
+INFO  2018-11-08 17:01:47,999 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1292.0072ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:01:48,060 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 651.3058ms.
+INFO  2018-11-08 17:01:48,076 [6    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:01:48,107 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 1234.2547ms
+INFO  2018-11-08 17:01:48,135 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1422.743ms 200 application/x-javascript
+INFO  2018-11-08 17:01:56,259 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/TenantChangeModal application/html 0
+INFO  2018-11-08 17:01:56,277 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "TenantChangeModal", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:01:56,359 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:01:56,363 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.2601ms.
+INFO  2018-11-08 17:01:56,510 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view /Views/Shared/Components/TenantChange/_ChangeModal.cshtml.
+INFO  2018-11-08 17:01:56,650 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view /Views/Shared/Components/TenantChange/_ChangeModal.cshtml executed in 176.2387ms.
+INFO  2018-11-08 17:01:56,656 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc) in 372.8125ms
+INFO  2018-11-08 17:01:56,666 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 404.6097ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:02:02,225 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 25
+INFO  2018-11-08 17:02:02,257 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:02:02,620 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:02:02,784 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 162.0534ms.
+INFO  2018-11-08 17:02:02,886 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:02:02,951 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 682.2236ms
+INFO  2018-11-08 17:02:02,958 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 731.138ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:02:10,031 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 25
+INFO  2018-11-08 17:02:10,043 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:02:10,096 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:02:10,171 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 72.859ms.
+INFO  2018-11-08 17:02:10,254 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:02:10,265 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 211.7966ms
+INFO  2018-11-08 17:02:10,272 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 243.0063ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:02:22,020 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/Login application/x-www-form-urlencoded 256
+INFO  2018-11-08 17:02:22,033 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:02:22,152 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) with arguments (ICIMS.Web.Models.Account.LoginViewModel, /, ) - Validation state: Valid
+INFO  2018-11-08 17:02:24,225 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed in.
+INFO  2018-11-08 17:02:24,233 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.JsonResult in 2078.3053ms.
+INFO  2018-11-08 17:02:24,969 [12   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:02:24,978 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 2937.2759ms
+INFO  2018-11-08 17:02:24,985 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2962.3268ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:02:29,831 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-11-08 17:02:29,915 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:02:33,971 [8    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-11-08 17:02:34,027 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:02:34,037 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.5109ms.
+INFO  2018-11-08 17:02:34,184 [8    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2018-11-08 17:03:01,261 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 26989.359ms.
+INFO  2018-11-08 17:03:01,278 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) in 31360.1254ms
+INFO  2018-11-08 17:03:01,296 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 31463.2751ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:03:01,313 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772932638066803  
+INFO  2018-11-08 17:03:01,324 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:03:01,425 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772932638066803  
+INFO  2018-11-08 17:03:01,442 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:03:01,456 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:03:01,591 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 7.7256ms.
+INFO  2018-11-08 17:03:01,617 [8    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:03:01,630 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 17:03:01,648 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 293.7467ms
+INFO  2018-11-08 17:03:01,722 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 341.545ms 200 application/x-javascript
+INFO  2018-11-08 17:03:01,734 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 84.1068ms.
+INFO  2018-11-08 17:03:01,783 [6    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:03:01,863 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 323.593ms
+INFO  2018-11-08 17:03:01,936 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 502.2788ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:03:02,151 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-11-08 17:03:02,279 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 127.012ms 200 application/json
+INFO  2018-11-08 17:03:02,438 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=97euuqSObTMnVVaANexGmg  
+INFO  2018-11-08 17:03:03,056 [12   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-11-08 17:03:03,156 [12   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"97euuqSObTMnVVaANexGmg","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-11-08T17:03:03.1351505+08:00","Properties":{}}
+DEBUG 2018-11-08 17:03:03,275 [12   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: 97euuqSObTMnVVaANexGmg
+INFO  2018-11-08 17:03:08,237 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Tenants  
+INFO  2018-11-08 17:03:08,252 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Tenants", area = ""}. Executing action ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:03:18,267 [8    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-11-08 17:03:18,650 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:03:40,580 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 21925.5165ms.
+INFO  2018-11-08 17:03:40,709 [8    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2018-11-08 17:03:41,059 [24   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 291.0878ms.
+DEBUG 2018-11-08 17:03:41,292 [22   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: 97euuqSObTMnVVaANexGmg
+INFO  2018-11-08 17:03:41,293 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc) in 32807.6947ms
+INFO  2018-11-08 17:03:41,364 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772932638066803  
+INFO  2018-11-08 17:03:41,415 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33061.663ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:03:41,425 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:03:41,489 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772932638066803  
+INFO  2018-11-08 17:03:41,759 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 39016.7804ms 101 
+INFO  2018-11-08 17:03:41,770 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 17:03:41,778 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:03:41,865 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:03:41,922 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 7.4334ms.
+INFO  2018-11-08 17:03:41,965 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 133.4989ms.
+INFO  2018-11-08 17:03:41,972 [25   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:03:41,978 [17   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:03:42,005 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 195.8046ms
+INFO  2018-11-08 17:03:42,131 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 551.6849ms
+INFO  2018-11-08 17:03:42,228 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 688.781ms 200 application/x-javascript
+INFO  2018-11-08 17:03:42,231 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 893.9923ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:03:42,244 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-11-08 17:03:42,280 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 39.095ms 200 application/json
+INFO  2018-11-08 17:03:42,307 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=KsbqLJ6mdEzMfae4QSbLvw  
+INFO  2018-11-08 17:03:42,359 [27   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-11-08 17:03:42,377 [27   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"KsbqLJ6mdEzMfae4QSbLvw","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-11-08T17:03:42.3605012+08:00","Properties":{}}
+DEBUG 2018-11-08 17:03:42,378 [27   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: KsbqLJ6mdEzMfae4QSbLvw
+INFO  2018-11-08 17:04:43,464 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Tenant/Create application/json 178
+INFO  2018-11-08 17:04:43,510 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Tenant"}. Executing action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application)
+INFO  2018-11-08 17:04:43,594 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) with arguments (ICIMS.MultiTenancy.Dto.CreateTenantDto) - Validation state: Valid
+ERROR 2018-11-08 17:06:08,651 [29   ] Mvc.ExceptionHandling.AbpExceptionFilter - 无法对 表 'BuyCategory' 执行 删除，因为它不存在，或者您没有所需的权限。
+System.Data.SqlClient.SqlException (0x80131904): 无法对 表 'BuyCategory' 执行 删除，因为它不存在，或者您没有所需的权限。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrate(AbpTenantBase tenant, Action`1 seedAction) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 73
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrateForTenant(AbpTenantBase tenant, Action`1 seedAction) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 52
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrateForTenant(AbpTenantBase tenant) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 42
+   at ICIMS.MultiTenancy.TenantAppService.Create(CreateTenantDto input) in F:\20181030\Server\Web\ICIMS.Application\MultiTenancy\TenantAppService.cs:line 68
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+ClientConnectionId:26d1028e-dd33-4c41-b7d3-bbbe42fbc100
+Error Number:3701,State:5,Class:11
+INFO  2018-11-08 17:06:08,667 [29   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:06:08,677 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) in 85161.6045ms
+INFO  2018-11-08 17:06:08,705 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85261.8483ms 500 application/json; charset=utf-8
+INFO  2018-11-08 17:06:48,879 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Tenant/Create application/json 178
+INFO  2018-11-08 17:06:48,894 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Tenant"}. Executing action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application)
+INFO  2018-11-08 17:06:48,941 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) with arguments (ICIMS.MultiTenancy.Dto.CreateTenantDto) - Validation state: Valid
+ERROR 2018-11-08 17:06:51,018 [25   ] Mvc.ExceptionHandling.AbpExceptionFilter - 无法对 表 'BuyCategory' 执行 删除，因为它不存在，或者您没有所需的权限。
+System.Data.SqlClient.SqlException (0x80131904): 无法对 表 'BuyCategory' 执行 删除，因为它不存在，或者您没有所需的权限。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrate(AbpTenantBase tenant, Action`1 seedAction) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 73
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrateForTenant(AbpTenantBase tenant, Action`1 seedAction) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 52
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrateForTenant(AbpTenantBase tenant) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 42
+   at ICIMS.MultiTenancy.TenantAppService.Create(CreateTenantDto input) in F:\20181030\Server\Web\ICIMS.Application\MultiTenancy\TenantAppService.cs:line 68
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+ClientConnectionId:26d1028e-dd33-4c41-b7d3-bbbe42fbc100
+Error Number:3701,State:5,Class:11
+INFO  2018-11-08 17:06:51,026 [25   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:06:51,030 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) in 2131.9825ms
+INFO  2018-11-08 17:06:51,037 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2155.7225ms 500 application/json; charset=utf-8
+INFO  2018-11-08 17:06:59,939 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Tenant/Create application/json 166
+INFO  2018-11-08 17:06:59,956 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Tenant"}. Executing action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application)
+INFO  2018-11-08 17:07:00,059 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) with arguments (ICIMS.MultiTenancy.Dto.CreateTenantDto) - Validation state: Valid
+ERROR 2018-11-08 17:07:01,339 [36   ] Mvc.ExceptionHandling.AbpExceptionFilter - 用户 'sa' 登录失败。
+System.Data.SqlClient.SqlException (0x80131904): 用户 'sa' 登录失败。
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, Func`2 operation, Func`2 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrate(AbpTenantBase tenant, Action`1 seedAction) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 73
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrateForTenant(AbpTenantBase tenant, Action`1 seedAction) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 52
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrateForTenant(AbpTenantBase tenant) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 42
+   at ICIMS.MultiTenancy.TenantAppService.Create(CreateTenantDto input) in F:\20181030\Server\Web\ICIMS.Application\MultiTenancy\TenantAppService.cs:line 68
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+ClientConnectionId:4c86461f-b041-4b55-83e6-1dfc606002b5
+Error Number:18456,State:1,Class:14
+INFO  2018-11-08 17:07:01,344 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:07:01,348 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) in 1388.3662ms
+INFO  2018-11-08 17:07:01,355 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1421.6556ms 500 application/json; charset=utf-8
+INFO  2018-11-08 17:07:11,331 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Tenant/Create application/json 163
+INFO  2018-11-08 17:07:11,350 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Tenant"}. Executing action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application)
+INFO  2018-11-08 17:07:11,405 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) with arguments (ICIMS.MultiTenancy.Dto.CreateTenantDto) - Validation state: Valid
+ERROR 2018-11-08 17:07:33,980 [33   ] Mvc.ExceptionHandling.AbpExceptionFilter - 无法对 表 'BuyCategory' 执行 删除，因为它不存在，或者您没有所需的权限。
+System.Data.SqlClient.SqlException (0x80131904): 无法对 表 'BuyCategory' 执行 删除，因为它不存在，或者您没有所需的权限。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrate(AbpTenantBase tenant, Action`1 seedAction) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 73
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrateForTenant(AbpTenantBase tenant, Action`1 seedAction) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 52
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrateForTenant(AbpTenantBase tenant) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 42
+   at ICIMS.MultiTenancy.TenantAppService.Create(CreateTenantDto input) in F:\20181030\Server\Web\ICIMS.Application\MultiTenancy\TenantAppService.cs:line 68
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+ClientConnectionId:32834dbb-3c8e-4c02-9eca-a7c0b9e22d0e
+Error Number:3701,State:5,Class:11
+INFO  2018-11-08 17:07:33,984 [33   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:07:33,992 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) in 22632.2428ms
+INFO  2018-11-08 17:07:34,000 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22673.182ms 500 application/json; charset=utf-8
+DEBUG 2018-11-08 17:11:16,294 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-08 17:11:17,424 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-08 17:11:17,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Startup.ICIMSWebMvcModule, ICIMS.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,489 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,490 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,490 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,491 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,492 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,493 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,496 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,496 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,496 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:17,503 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-08 17:11:18,002 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 17:11:18,002 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 17:11:18,002 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 17:11:18,002 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-08 17:11:20,213 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-08 17:11:27,702 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-08 17:11:27,918 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-08 17:11:28,110 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-08 17:11:28,208 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-08 17:11:28,323 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-08 17:11:29,238 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-08 17:11:29,433 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-11-08 17:11:29,433 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-08 17:11:29,466 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-08 17:11:29,468 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-08 17:11:29,468 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-08 17:11:29,469 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-08 17:11:29,469 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-08 17:11:29,470 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-08 17:11:29,470 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-08 17:11:29,471 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-08 17:11:29,472 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+DEBUG 2018-11-08 17:11:29,472 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2018-11-08 17:11:29,472 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Web.Models.Roles.EditRoleModalViewModel
+INFO  2018-11-08 17:11:47,908 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:62114/  0
+INFO  2018-11-08 17:11:47,908 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-11-08 17:11:48,179 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 232.7119ms 200 
+INFO  2018-11-08 17:11:54,337 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc)
+WARN  2018-11-08 17:12:13,142 [4    ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-08 17:12:13,205 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-08 17:12:13,229 [4    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-11-08 17:12:13,269 [4    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2018-11-08 17:12:13,277 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) in 18920.5751ms
+INFO  2018-11-08 17:12:13,553 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25474.0486ms 302 
+INFO  2018-11-08 17:12:13,576 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login?ReturnUrl=%2F  
+INFO  2018-11-08 17:12:13,671 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:12:19,014 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) with arguments (, /, ) - Validation state: Valid
+INFO  2018-11-08 17:12:19,026 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 7.9639ms.
+INFO  2018-11-08 17:12:19,634 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2018-11-08 17:12:21,010 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 1505.0699ms.
+INFO  2018-11-08 17:12:21,166 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 7348.5839ms
+INFO  2018-11-08 17:12:21,195 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772938892662333  
+INFO  2018-11-08 17:12:21,251 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772938892662333  
+INFO  2018-11-08 17:12:21,267 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Shared/Components/TenantChange/Default.js?v=636772939409676596  
+INFO  2018-11-08 17:12:21,271 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:12:21,278 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7696.4614ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:12:21,336 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:12:21,600 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 17:12:21,662 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2018-11-08 17:12:21,694 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 415.1144ms 200 application/javascript
+INFO  2018-11-08 17:12:21,769 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:12:22,177 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 525.6854ms.
+INFO  2018-11-08 17:12:22,223 [10   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:12:22,260 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 953.9151ms
+INFO  2018-11-08 17:12:22,371 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1091.4088ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:12:22,439 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 621.623ms.
+INFO  2018-11-08 17:12:22,481 [9    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:12:22,530 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 1146.4718ms
+INFO  2018-11-08 17:12:22,689 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1359.889ms 200 application/x-javascript
+INFO  2018-11-08 17:12:43,956 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/Login application/x-www-form-urlencoded 256
+INFO  2018-11-08 17:12:43,971 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:12:44,181 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) with arguments (ICIMS.Web.Models.Account.LoginViewModel, /, ) - Validation state: Valid
+INFO  2018-11-08 17:12:46,174 [4    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed in.
+INFO  2018-11-08 17:12:46,186 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.JsonResult in 2001.7859ms.
+INFO  2018-11-08 17:12:47,012 [4    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:12:47,050 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 3059.8212ms
+INFO  2018-11-08 17:12:47,102 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3100.3711ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:12:49,020 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/Login application/x-www-form-urlencoded 256
+INFO  2018-11-08 17:12:49,086 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:12:49,110 [4    ] idateAntiforgeryTokenAuthorizationFilter - Antiforgery token validation failed. The provided antiforgery token was meant for a different claims-based user than the current user.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The provided antiforgery token was meant for a different claims-based user than the current user.
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.ValidateTokens(HttpContext httpContext, AntiforgeryTokenSet antiforgeryTokenSet)
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2018-11-08 17:12:49,133 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2018-11-08 17:12:49,140 [4    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2018-11-08 17:12:49,149 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 54.5505ms
+INFO  2018-11-08 17:12:49,155 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 132.826ms 400 
+INFO  2018-11-08 17:12:49,170 [4    ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLI5B8QU8EPH", Request id "0HLI5B8QU8EPH:00000003": the application completed without reading the entire request body.
+INFO  2018-11-08 17:12:51,288 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/Login application/x-www-form-urlencoded 256
+INFO  2018-11-08 17:12:51,297 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:12:51,301 [6    ] idateAntiforgeryTokenAuthorizationFilter - Antiforgery token validation failed. The provided antiforgery token was meant for a different claims-based user than the current user.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The provided antiforgery token was meant for a different claims-based user than the current user.
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.ValidateTokens(HttpContext httpContext, AntiforgeryTokenSet antiforgeryTokenSet)
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2018-11-08 17:12:51,304 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2018-11-08 17:12:51,307 [6    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2018-11-08 17:12:51,312 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 9.8031ms
+INFO  2018-11-08 17:12:51,315 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 26.8739ms 400 
+INFO  2018-11-08 17:12:51,328 [6    ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLI5B8QU8EPJ", Request id "0HLI5B8QU8EPJ:00000002": the application completed without reading the entire request body.
+INFO  2018-11-08 17:12:53,330 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/TenantChangeModal application/html 0
+INFO  2018-11-08 17:12:53,346 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "TenantChangeModal", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:12:53,352 [9    ] idateAntiforgeryTokenAuthorizationFilter - Antiforgery token validation failed. The provided antiforgery token was meant for a different claims-based user than the current user.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The provided antiforgery token was meant for a different claims-based user than the current user.
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.ValidateTokens(HttpContext httpContext, AntiforgeryTokenSet antiforgeryTokenSet)
+   at Microsoft.AspNetCore.Antiforgery.Internal.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2018-11-08 17:12:53,358 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2018-11-08 17:12:53,364 [9    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2018-11-08 17:12:53,370 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc) in 18.134ms
+INFO  2018-11-08 17:12:53,376 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.9267ms 400 
+INFO  2018-11-08 17:13:16,689 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login?ReturnUrl=%2F  
+INFO  2018-11-08 17:13:16,709 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:13:16,790 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) with arguments (, /, ) - Validation state: Valid
+INFO  2018-11-08 17:13:16,793 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.3628ms.
+INFO  2018-11-08 17:13:16,850 [15   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2018-11-08 17:13:17,338 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 283.6245ms.
+INFO  2018-11-08 17:13:17,411 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 644.9397ms
+INFO  2018-11-08 17:13:17,412 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772938892662333  
+INFO  2018-11-08 17:13:17,432 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772938892662333  
+INFO  2018-11-08 17:13:17,471 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 736.6061ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:13:17,473 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Shared/Components/TenantChange/Default.js?v=636772939971225412  
+INFO  2018-11-08 17:13:17,476 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:13:17,481 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:13:17,898 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:13:18,045 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2018-11-08 17:13:18,069 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 54.2436ms.
+INFO  2018-11-08 17:13:18,073 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 603.7801ms 200 application/javascript
+INFO  2018-11-08 17:13:18,076 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 17:13:18,086 [15   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:13:18,097 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 610.1816ms
+INFO  2018-11-08 17:13:18,101 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 727.9867ms 200 application/x-javascript
+INFO  2018-11-08 17:13:19,253 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 1171.4733ms.
+INFO  2018-11-08 17:13:19,277 [18   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:13:19,280 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 1795.9803ms
+INFO  2018-11-08 17:13:19,350 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1901.2573ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:13:19,360 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-11-08 17:13:19,420 [18   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\favicon.ico'
+INFO  2018-11-08 17:13:19,431 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 62.6175ms 200 image/x-icon
+INFO  2018-11-08 17:13:20,913 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-11-08 17:13:20,938 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:13:21,045 [4    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-11-08 17:13:21,105 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:13:21,113 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.8571ms.
+INFO  2018-11-08 17:13:21,275 [4    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2018-11-08 17:13:21,901 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 649.5919ms.
+INFO  2018-11-08 17:13:21,904 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2018-11-08 17:13:21,909 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) in 965.9142ms
+INFO  2018-11-08 17:13:21,921 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1013.9818ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:13:21,922 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:13:21,926 [4    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-11-08 17:13:21,981 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:13:21,985 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0385ms.
+INFO  2018-11-08 17:13:22,058 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2018-11-08 17:13:22,223 [15   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 162.3808ms.
+INFO  2018-11-08 17:13:22,231 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.HomeController.Index (ICIMS.Web.Mvc) in 301.0242ms
+INFO  2018-11-08 17:13:22,530 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 330.8629ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:13:22,556 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772938892662333  
+INFO  2018-11-08 17:13:22,557 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772938892662333  
+INFO  2018-11-08 17:13:22,572 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:13:22,575 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:13:22,927 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 17:13:22,943 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:13:23,029 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 9.0608ms.
+INFO  2018-11-08 17:13:23,039 [9    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:13:23,045 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 463.7078ms
+INFO  2018-11-08 17:13:23,135 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 515.476ms 200 application/x-javascript
+INFO  2018-11-08 17:13:23,180 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 134.0056ms.
+INFO  2018-11-08 17:13:23,256 [6    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:13:23,351 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 684.8168ms
+INFO  2018-11-08 17:13:23,384 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 822.5008ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:13:23,386 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-11-08 17:13:23,499 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 114.7913ms 200 application/json
+INFO  2018-11-08 17:13:23,740 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=Lw8ufkoIM5wYIizubbatTQ  
+INFO  2018-11-08 17:13:24,211 [4    ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-11-08 17:13:24,326 [4    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"Lw8ufkoIM5wYIizubbatTQ","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-11-08T17:13:24.3090702+08:00","Properties":{}}
+DEBUG 2018-11-08 17:13:24,431 [4    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: Lw8ufkoIM5wYIizubbatTQ
+INFO  2018-11-08 17:13:30,186 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Users  
+INFO  2018-11-08 17:13:30,208 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Users", area = ""}. Executing action ICIMS.Web.Controllers.UsersController.Index (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:13:30,213 [9    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-11-08 17:13:30,657 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.UsersController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:13:31,042 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Tenants  
+INFO  2018-11-08 17:13:31,068 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Tenants", area = ""}. Executing action ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:13:31,075 [6    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-11-08 17:13:31,824 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:13:32,441 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.UsersController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1748.0782ms.
+INFO  2018-11-08 17:13:32,555 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 729.164ms.
+INFO  2018-11-08 17:13:32,647 [18   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2018-11-08 17:13:32,653 [24   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2018-11-08 17:13:33,282 [25   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 376.7125ms.
+INFO  2018-11-08 17:13:33,485 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 714.0476ms.
+INFO  2018-11-08 17:13:33,572 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc) in 2213.4761ms
+INFO  2018-11-08 17:13:33,576 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.UsersController.Index (ICIMS.Web.Mvc) in 3277.1917ms
+INFO  2018-11-08 17:13:33,585 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772938892662333  
+INFO  2018-11-08 17:13:33,614 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2539.1632ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:13:33,635 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3407.983ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:13:33,649 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:13:33,654 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772938892662333  
+INFO  2018-11-08 17:13:33,866 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:13:33,934 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+DEBUG 2018-11-08 17:13:34,121 [6    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: Lw8ufkoIM5wYIizubbatTQ
+INFO  2018-11-08 17:13:34,145 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 204.8979ms.
+INFO  2018-11-08 17:13:34,153 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:13:34,161 [15   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:13:34,184 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 511.6904ms
+INFO  2018-11-08 17:13:34,187 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 14.2699ms.
+INFO  2018-11-08 17:13:34,188 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 611.3128ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:13:34,191 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10447.7883ms 101 
+INFO  2018-11-08 17:13:34,194 [25   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:13:34,228 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 328.4773ms
+INFO  2018-11-08 17:13:34,364 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 593.5348ms 200 application/x-javascript
+INFO  2018-11-08 17:13:34,369 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-11-08 17:13:34,433 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.3921ms 200 application/json
+INFO  2018-11-08 17:13:34,456 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=xx9I9v3LQDE4rliFI-oUPQ  
+INFO  2018-11-08 17:13:34,503 [6    ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-11-08 17:13:34,517 [6    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"xx9I9v3LQDE4rliFI-oUPQ","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-11-08T17:13:34.50627+08:00","Properties":{}}
+DEBUG 2018-11-08 17:13:34,518 [6    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: xx9I9v3LQDE4rliFI-oUPQ
+INFO  2018-11-08 17:14:51,291 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Tenant/Create application/json 161
+INFO  2018-11-08 17:14:51,351 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Tenant"}. Executing action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application)
+INFO  2018-11-08 17:14:51,473 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) with arguments (ICIMS.MultiTenancy.Dto.CreateTenantDto) - Validation state: Valid
+INFO  2018-11-08 17:15:23,894 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 32418.8014ms.
+INFO  2018-11-08 17:15:24,541 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:15:24,558 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.MultiTenancy.TenantAppService.Create (ICIMS.Application) in 33204.009ms
+INFO  2018-11-08 17:15:24,563 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33289.2705ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:15:24,613 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Tenants  
+INFO  2018-11-08 17:15:24,630 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Tenants", area = ""}. Executing action ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:15:24,646 [4    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-11-08 17:15:24,698 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:15:24,893 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 192.8659ms.
+INFO  2018-11-08 17:15:24,980 [4    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2018-11-08 17:15:25,153 [4    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 166.4186ms.
+DEBUG 2018-11-08 17:15:25,344 [6    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: xx9I9v3LQDE4rliFI-oUPQ
+INFO  2018-11-08 17:15:25,344 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.TenantsController.Index (ICIMS.Web.Mvc) in 522.8989ms
+INFO  2018-11-08 17:15:26,099 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 737.5391ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:15:26,203 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772938892662333  
+INFO  2018-11-08 17:15:26,267 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772938892662333  
+INFO  2018-11-08 17:15:26,323 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:15:26,329 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:15:26,481 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 111646.899ms 101 
+INFO  2018-11-08 17:15:26,494 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 17:15:26,531 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:15:26,567 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 6.3089ms.
+INFO  2018-11-08 17:15:26,575 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 49.0783ms.
+INFO  2018-11-08 17:15:26,579 [32   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:15:26,592 [31   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:15:26,662 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 257.4457ms
+INFO  2018-11-08 17:15:26,762 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 262.9584ms
+INFO  2018-11-08 17:15:26,788 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 564.6974ms 200 application/x-javascript
+INFO  2018-11-08 17:15:26,829 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 665.1581ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:15:26,913 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-11-08 17:15:27,002 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.2599ms 200 application/json
+INFO  2018-11-08 17:15:27,042 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=pWcJJ4btTSGZ0hrEu1yYnA  
+INFO  2018-11-08 17:15:27,067 [40   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-11-08 17:15:27,077 [40   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"pWcJJ4btTSGZ0hrEu1yYnA","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-11-08T17:15:27.0679288+08:00","Properties":{}}
+DEBUG 2018-11-08 17:15:27,078 [40   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: pWcJJ4btTSGZ0hrEu1yYnA
+INFO  2018-11-08 17:15:49,542 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Logout  
+INFO  2018-11-08 17:15:49,559 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Logout", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Logout (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:15:49,608 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Logout (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:15:49,646 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application signed out.
+INFO  2018-11-08 17:15:49,656 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.External signed out.
+INFO  2018-11-08 17:15:49,659 [6    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.TwoFactorUserId signed out.
+INFO  2018-11-08 17:15:49,670 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Logout (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 59.8416ms.
+INFO  2018-11-08 17:15:49,730 [30   ] ft.AspNetCore.Mvc.RedirectToActionResult - Executing RedirectResult, redirecting to /Account/Login.
+INFO  2018-11-08 17:15:49,732 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Logout (ICIMS.Web.Mvc) in 171.6783ms
+INFO  2018-11-08 17:15:49,738 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 197.8171ms 302 
+INFO  2018-11-08 17:15:49,745 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Account/Login  
+INFO  2018-11-08 17:15:49,754 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:15:49,802 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) with arguments (, , ) - Validation state: Valid
+INFO  2018-11-08 17:15:49,808 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.8918ms.
+INFO  2018-11-08 17:15:49,882 [4    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2018-11-08 17:15:49,895 [4    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 14.5704ms.
+DEBUG 2018-11-08 17:15:49,905 [6    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: pWcJJ4btTSGZ0hrEu1yYnA
+INFO  2018-11-08 17:15:49,906 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.Login (ICIMS.Web.Mvc) in 140.9712ms
+INFO  2018-11-08 17:15:50,085 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 166.3076ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:15:50,125 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22870.0673ms 101 
+INFO  2018-11-08 17:15:50,129 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/view-resources/Views/Shared/Components/TenantChange/Default.js?v=636772941498919656  
+INFO  2018-11-08 17:15:50,132 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636772938892662333  
+INFO  2018-11-08 17:15:50,136 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636772938892662333  
+INFO  2018-11-08 17:15:50,144 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-11-08 17:15:50,151 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2018-11-08 17:15:50,252 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-11-08 17:15:50,285 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 35.0968ms 200 application/javascript
+INFO  2018-11-08 17:15:50,363 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-11-08 17:15:50,364 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-11-08 17:15:50,373 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 6.9799ms.
+INFO  2018-11-08 17:15:50,388 [36   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-11-08 17:15:50,479 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 241.914ms
+INFO  2018-11-08 17:15:50,484 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 45.0019ms.
+INFO  2018-11-08 17:15:50,488 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 354.5398ms 200 application/x-javascript
+INFO  2018-11-08 17:15:50,499 [37   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:15:50,503 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 244.8553ms
+INFO  2018-11-08 17:15:50,629 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 378.3508ms 200 application/x-javascript; charset=utf-8
+INFO  2018-11-08 17:15:51,636 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/TenantChangeModal application/html 0
+INFO  2018-11-08 17:15:51,647 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "TenantChangeModal", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:15:51,718 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:15:51,723 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.2494ms.
+INFO  2018-11-08 17:15:51,852 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view /Views/Shared/Components/TenantChange/_ChangeModal.cshtml.
+INFO  2018-11-08 17:15:51,954 [6    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view /Views/Shared/Components/TenantChange/_ChangeModal.cshtml executed in 161.4791ms.
+INFO  2018-11-08 17:15:51,957 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc) in 307.6794ms
+INFO  2018-11-08 17:15:51,972 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 329.7668ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:15:56,511 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:15:56,530 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:15:56,667 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:15:56,756 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 86.0732ms.
+INFO  2018-11-08 17:15:56,850 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:15:56,857 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 323.6345ms
+INFO  2018-11-08 17:15:56,863 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 354.4141ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:17:12,371 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:17:12,399 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:17:12,439 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:17:12,576 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 124.4362ms.
+INFO  2018-11-08 17:17:12,663 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:17:12,666 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 263.7608ms
+INFO  2018-11-08 17:17:12,679 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 299.3647ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:17:23,992 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:17:24,006 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:17:24,054 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:17:24,125 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 68.2465ms.
+INFO  2018-11-08 17:17:24,232 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:17:24,235 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 225.4333ms
+INFO  2018-11-08 17:17:24,256 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 248.8229ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:17:31,191 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:17:31,206 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:17:31,248 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:17:31,313 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 63.0446ms.
+INFO  2018-11-08 17:17:31,392 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:17:31,397 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 185.6643ms
+INFO  2018-11-08 17:17:31,410 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 208.8628ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:17:36,282 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:17:36,291 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:17:36,331 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:17:36,393 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 60.1871ms.
+INFO  2018-11-08 17:17:36,496 [45   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:17:36,501 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 204.5841ms
+INFO  2018-11-08 17:17:36,511 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 221.8418ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:17:36,937 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:17:36,944 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:17:36,991 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:17:37,049 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 55.3132ms.
+INFO  2018-11-08 17:17:37,156 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:17:37,160 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 212.4665ms
+INFO  2018-11-08 17:17:37,204 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 230.1973ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:17:37,210 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:17:37,222 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:17:37,267 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:17:37,328 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 59.1986ms.
+INFO  2018-11-08 17:17:37,426 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:17:37,430 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:17:37,438 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 208.2243ms
+INFO  2018-11-08 17:17:37,446 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 232.3196ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:17:37,457 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:17:37,503 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:17:37,580 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 74.5468ms.
+INFO  2018-11-08 17:17:37,670 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:17:37,674 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 213.285ms
+INFO  2018-11-08 17:17:37,680 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 253.6669ms 200 application/json; charset=utf-8
+INFO  2018-11-08 17:17:47,902 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Account/TenantChangeModal application/html 0
+INFO  2018-11-08 17:17:47,908 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "TenantChangeModal", controller = "Account", area = ""}. Executing action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc)
+INFO  2018-11-08 17:17:47,974 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-11-08 17:17:47,982 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.4399ms.
+INFO  2018-11-08 17:17:48,048 [43   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view /Views/Shared/Components/TenantChange/_ChangeModal.cshtml.
+INFO  2018-11-08 17:17:48,061 [43   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view /Views/Shared/Components/TenantChange/_ChangeModal.cshtml executed in 7.1362ms.
+INFO  2018-11-08 17:17:48,064 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AccountController.TenantChangeModal (ICIMS.Web.Mvc) in 152.7056ms
+INFO  2018-11-08 17:17:48,077 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 167.6635ms 200 text/html; charset=utf-8
+INFO  2018-11-08 17:17:57,715 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/api/services/app/Account/IsTenantAvailable application/json 22
+INFO  2018-11-08 17:17:57,720 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-08 17:17:57,762 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-08 17:17:57,820 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 55.4518ms.
+INFO  2018-11-08 17:17:57,903 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-08 17:17:57,908 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 182.7826ms
+INFO  2018-11-08 17:17:57,931 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 199.7412ms 200 application/json; charset=utf-8

@@ -53,6 +53,9 @@ namespace ICIMS.EntityFrameworkCore
             modelBuilder.ApplyConfiguration(new VendorCfg());
             base.OnModelCreating(modelBuilder);
         }
-        
+
+        public virtual DbSet<BuyCategory> BuyCategorys { get; set; }
+
+
     }
 }

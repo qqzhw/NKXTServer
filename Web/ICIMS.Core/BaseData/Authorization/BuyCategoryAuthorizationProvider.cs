@@ -35,18 +35,19 @@ namespace ICIMS.BaseData.Authorization
 
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
+            context.CreatePermission(BuyCategoryPermissions.Query, L("查询分类"));
 			// 在这里配置了BuyCategory 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(BuyCategoryPermissions.Node , L("BuyCategory"));
-			entityPermission.CreateChildPermission(BuyCategoryPermissions.Query, L("QueryBuyCategory"));
-			entityPermission.CreateChildPermission(BuyCategoryPermissions.Create, L("CreateBuyCategory"));
-			entityPermission.CreateChildPermission(BuyCategoryPermissions.Edit, L("EditBuyCategory"));
-			entityPermission.CreateChildPermission(BuyCategoryPermissions.Delete, L("DeleteBuyCategory"));
-			entityPermission.CreateChildPermission(BuyCategoryPermissions.BatchDelete, L("BatchDeleteBuyCategory"));
-			entityPermission.CreateChildPermission(BuyCategoryPermissions.ExportExcel, L("ExportExcelBuyCategory"));
+			//var entityPermission = administration.CreateChildPermission(BuyCategoryPermissions.Node , L("BuyCategory"));
+			//entityPermission.CreateChildPermission(BuyCategoryPermissions.Query, L("QueryBuyCategory"));
+			//entityPermission.CreateChildPermission(BuyCategoryPermissions.Create, L("CreateBuyCategory"));
+			//entityPermission.CreateChildPermission(BuyCategoryPermissions.Edit, L("EditBuyCategory"));
+			//entityPermission.CreateChildPermission(BuyCategoryPermissions.Delete, L("DeleteBuyCategory"));
+			//entityPermission.CreateChildPermission(BuyCategoryPermissions.BatchDelete, L("BatchDeleteBuyCategory"));
+			//entityPermission.CreateChildPermission(BuyCategoryPermissions.ExportExcel, L("ExportExcelBuyCategory"));
 
 
 		}

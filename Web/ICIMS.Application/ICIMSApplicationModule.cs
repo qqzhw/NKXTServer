@@ -2,6 +2,7 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using ICIMS.Authorization;
+using ICIMS.BaseData.Authorization;
 
 namespace ICIMS
 {
@@ -13,6 +14,8 @@ namespace ICIMS
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<ICIMSAuthorizationProvider>();
+            Configuration.Authorization.Providers.Add<BuyCategoryAuthorizationProvider>();
+            Configuration.Authorization.Providers.Add<ContractCategoryAuthorizationProvider>();
         }
 
         public override void Initialize()
