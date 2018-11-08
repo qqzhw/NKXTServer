@@ -56,6 +56,17 @@ namespace ICIMS.EntityFrameworkCore
 
         public virtual DbSet<BuyCategory> BuyCategorys { get; set; }
 
+        public virtual DbSet<FundFrom> FundFrom { get; set; }
+        public virtual DbSet<ContractCategory> ContractCategory { get; set; }
 
+        public virtual DbSet<DocumentCategory> DocumentCategory { get; set; }
+        public virtual DbSet<FilesManage> FilesManage { get; set; }
+
+        public virtual DbSet<ItemCategory> ItemCategory { get; set; }
+
+        public virtual DbSet<FunctionSubject> FunctionSubject { get; set; }
+        public virtual DbSet<PaymentType> PaymentTypes { get; set; }
+
+        public virtual DbSet<Vendor> Vendor { get; set; }
     }
 }

@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(FundFromPermissions.Query)] 
+		//[AbpAuthorize(FundFromPermissions.Query)] 
         public async Task<PagedResultDto<FundFromListDto>> GetPaged(GetFundFromsInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BaseData
 		/// <summary>
 		/// 通过指定id获取FundFromListDto信息
 		/// </summary>
-		[AbpAuthorize(FundFromPermissions.Query)] 
+		//[AbpAuthorize(FundFromPermissions.Query)] 
 		public async Task<FundFromListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FundFromPermissions.Create,FundFromPermissions.Edit)]
+		//[AbpAuthorize(FundFromPermissions.Create,FundFromPermissions.Edit)]
 		public async Task<GetFundFromForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetFundFromForEditOutput();
@@ -121,7 +121,7 @@ FundFromEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FundFromPermissions.Create,FundFromPermissions.Edit)]
+		//[AbpAuthorize(FundFromPermissions.Create,FundFromPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateFundFromInput input)
 		{
 
@@ -139,7 +139,7 @@ FundFromEditDto editDto;
 		/// <summary>
 		/// 新增FundFrom
 		/// </summary>
-		[AbpAuthorize(FundFromPermissions.Create)]
+		//[AbpAuthorize(FundFromPermissions.Create)]
 		protected virtual async Task<FundFromEditDto> Create(FundFromEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ FundFromEditDto editDto;
 		/// <summary>
 		/// 编辑FundFrom
 		/// </summary>
-		[AbpAuthorize(FundFromPermissions.Edit)]
+		//[AbpAuthorize(FundFromPermissions.Edit)]
 		protected virtual async Task Update(FundFromEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ FundFromEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(FundFromPermissions.Delete)]
+		//[AbpAuthorize(FundFromPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ FundFromEditDto editDto;
 		/// <summary>
 		/// 批量删除FundFrom的方法
 		/// </summary>
-		[AbpAuthorize(FundFromPermissions.BatchDelete)]
+		//[AbpAuthorize(FundFromPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除
