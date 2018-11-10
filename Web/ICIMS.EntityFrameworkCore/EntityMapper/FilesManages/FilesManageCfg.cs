@@ -14,17 +14,14 @@ namespace ICIMS.EntityMapper.FilesManages
             builder.ToTable("FilesManages");
             builder.HasKey(a => a.Id);
 
-            builder.Property(a => a.DownloadGuid).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.DownloadUrl).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.UploadType).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.ContentType).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.FileName).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.FileSize).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.Extension).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.DisplayOrder).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.IsNew).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-			builder.Property(a => a.TenantId).HasMaxLength(YoYoAbpefCoreConsts.EntityLengthNames.Length64);
-
+            builder.Property(a => a.DownloadGuid).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
+			builder.Property(a => a.DownloadUrl).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
+			builder.Property(a => a.UploadType).HasMaxLength(50);
+			builder.Property(a => a.ContentType).HasMaxLength(50);
+			builder.Property(a => a.FileName).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
+			 
+			builder.Property(a => a.Extension).HasMaxLength(50);
+		 
 
         }
     }

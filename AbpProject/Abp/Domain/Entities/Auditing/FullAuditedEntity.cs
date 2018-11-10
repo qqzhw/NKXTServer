@@ -52,6 +52,7 @@ namespace Abp.Domain.Entities.Auditing
         /// <summary>
         /// Reference to the deleter user of this entity.
         /// </summary>
+        /// 
         [ForeignKey("DeleterUserId")]
         public virtual TUser DeleterUser { get; set; }
 

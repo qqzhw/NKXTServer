@@ -2,7 +2,7 @@
 
 namespace ICIMS
 {
-    public class YoYoAbpefCoreConsts
+    public class ICIMSAbpefCoreConsts
     {
         public static class SchemaNames
         {
