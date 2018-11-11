@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ICIMS.Migrations
 {
     [DbContext(typeof(ICIMSDbContext))]
-    [Migration("20181107143931_20181107I25")]
-    partial class _20181107I25
+    [Migration("20181111102541_table-add")]
+    partial class tableadd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1019,29 +1019,25 @@ namespace ICIMS.Migrations
                     b.Property<DateTime>("CreationTime");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(65);
+                        .HasMaxLength(512);
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
                     b.Property<bool>("IsDeleted");
 
                     b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("No")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
+                    b.Property<int>("ParentId");
 
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
+                    b.Property<bool>("Published");
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1054,35 +1050,28 @@ namespace ICIMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime>("CreationTime");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(65);
+                        .HasMaxLength(512);
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasMaxLength(65);
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("No")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
+                    b.Property<int>("ParentId");
 
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
+                    b.Property<bool>("Published");
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1095,35 +1084,28 @@ namespace ICIMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime>("CreationTime");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(65);
+                        .HasMaxLength(512);
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasMaxLength(65);
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("No")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
+                    b.Property<int>("ParentId");
 
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
+                    b.Property<bool>("Published");
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1137,7 +1119,7 @@ namespace ICIMS.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ContentType")
-                        .HasMaxLength(65);
+                        .HasMaxLength(50);
 
                     b.Property<DateTime>("CreationTime");
 
@@ -1147,38 +1129,34 @@ namespace ICIMS.Migrations
 
                     b.Property<DateTime?>("DeletionTime");
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
                     b.Property<Guid>("DownloadGuid")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("DownloadUrl")
-                        .HasMaxLength(65);
+                        .HasMaxLength(256);
 
                     b.Property<string>("Extension")
-                        .HasMaxLength(65);
+                        .HasMaxLength(50);
 
                     b.Property<string>("FileName")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
-                    b.Property<long>("FileSize")
-                        .HasMaxLength(65);
+                    b.Property<long>("FileSize");
 
                     b.Property<bool>("IsDeleted");
 
-                    b.Property<bool>("IsNew")
-                        .HasMaxLength(65);
+                    b.Property<bool>("IsNew");
 
                     b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<long?>("LastModifierUserId");
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.Property<string>("UploadType")
-                        .HasMaxLength(65);
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -1191,35 +1169,28 @@ namespace ICIMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime>("CreationTime");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(65);
+                        .HasMaxLength(512);
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasMaxLength(65);
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("No")
-                        .HasMaxLength(65);
+                        .HasMaxLength(100);
 
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
+                    b.Property<int>("ParentId");
 
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
+                    b.Property<bool>("Published");
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1232,35 +1203,28 @@ namespace ICIMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime>("CreationTime");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(65);
+                        .HasMaxLength(512);
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasMaxLength(65);
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("No")
-                        .HasMaxLength(65);
+                        .HasMaxLength(100);
 
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
+                    b.Property<int>("ParentId");
 
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
+                    b.Property<bool>("Published");
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1273,35 +1237,28 @@ namespace ICIMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime>("CreationTime");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(65);
+                        .HasMaxLength(2000);
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasMaxLength(65);
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("No")
-                        .HasMaxLength(65);
+                        .HasMaxLength(100);
 
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
+                    b.Property<int>("ParentId");
 
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
+                    b.Property<bool>("Published");
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1314,35 +1271,28 @@ namespace ICIMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime>("CreationTime");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(65);
+                        .HasMaxLength(512);
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasMaxLength(65);
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasMaxLength(65);
+                    b.Property<DateTime?>("LastModificationTime");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("No")
-                        .HasMaxLength(65);
+                        .HasMaxLength(100);
 
-                    b.Property<int>("ParentId")
-                        .HasMaxLength(65);
+                    b.Property<int>("ParentId");
 
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
+                    b.Property<bool>("Published");
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1356,10 +1306,10 @@ namespace ICIMS.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AccountName")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("Address")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<DateTime>("CreationTime");
 
@@ -1369,11 +1319,10 @@ namespace ICIMS.Migrations
 
                     b.Property<DateTime?>("DeletionTime");
 
-                    b.Property<int>("DisplayOrder")
-                        .HasMaxLength(65);
+                    b.Property<int>("DisplayOrder");
 
                     b.Property<string>("Email")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<bool>("IsDeleted");
 
@@ -1382,32 +1331,444 @@ namespace ICIMS.Migrations
                     b.Property<long?>("LastModifierUserId");
 
                     b.Property<string>("LinkPerson")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("LinkPhone")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("Name")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
                     b.Property<string>("No")
-                        .HasMaxLength(65);
+                        .HasMaxLength(100);
 
                     b.Property<string>("OpenBank")
-                        .HasMaxLength(65);
+                        .HasMaxLength(128);
 
-                    b.Property<bool>("Published")
-                        .HasMaxLength(65);
+                    b.Property<bool>("Published");
 
                     b.Property<string>("Remark")
-                        .HasMaxLength(65);
+                        .HasMaxLength(512);
 
-                    b.Property<int?>("TenantId")
-                        .HasMaxLength(65);
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
                     b.ToTable("Vendor");
+                });
+
+            modelBuilder.Entity("ICIMS.BaseData.YSCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(512);
+
+                    b.Property<int>("DisplayOrder");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("No")
+                        .HasMaxLength(50);
+
+                    b.Property<int>("ParentId");
+
+                    b.Property<bool>("Published");
+
+                    b.Property<int?>("TenantId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("YSCategory");
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.Budget", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("According")
+                        .HasMaxLength(128);
+
+                    b.Property<decimal>("BudgetAmount");
+
+                    b.Property<string>("BudgetName")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("BudgetNo")
+                        .HasMaxLength(50);
+
+                    b.Property<int>("BuyCategoryId");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<decimal>("InitAmount");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<bool>("IsMiddle");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("MeasureStandard")
+                        .HasMaxLength(128);
+
+                    b.Property<decimal>("MiddleAmount");
+
+                    b.Property<decimal>("MiddleReplyAmount");
+
+                    b.Property<decimal>("OneAmount");
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(2048);
+
+                    b.Property<decimal>("SecondAmount");
+
+                    b.Property<int>("Status");
+
+                    b.Property<int>("SubjectId");
+
+                    b.Property<string>("SysGuid")
+                        .HasMaxLength(64);
+
+                    b.Property<int?>("TenantId");
+
+                    b.Property<long>("UnitId");
+
+                    b.Property<int>("Year");
+
+                    b.Property<int>("YsCategoryId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BuyCategoryId");
+
+                    b.HasIndex("SubjectId");
+
+                    b.HasIndex("UnitId");
+
+                    b.HasIndex("YsCategoryId");
+
+                    b.ToTable("Budget");
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.Contract", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AuditDate");
+
+                    b.Property<long?>("AuditUserId");
+
+                    b.Property<DateTime>("BeginTime");
+
+                    b.Property<decimal>("ClearingAmount");
+
+                    b.Property<decimal>("ClearingPer");
+
+                    b.Property<decimal>("ContractAmount");
+
+                    b.Property<int>("ContractCategoryId");
+
+                    b.Property<string>("ContractName")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("ContractNo");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<DateTime>("EndTime");
+
+                    b.Property<decimal>("FinalPer");
+
+                    b.Property<DateTime>("IdentifyDate");
+
+                    b.Property<bool>("IsClearing");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<int>("ItemDefineId");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<decimal>("PaidAmount");
+
+                    b.Property<string>("PaymentMethod");
+
+                    b.Property<decimal>("ProvisionalAmount");
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(2000);
+
+                    b.Property<int>("Status");
+
+                    b.Property<string>("SysGuid")
+                        .HasMaxLength(65);
+
+                    b.Property<decimal>("Tax");
+
+                    b.Property<decimal>("TaxAmount");
+
+                    b.Property<int?>("TenantId");
+
+                    b.Property<long>("UnitId");
+
+                    b.Property<int>("VendorId");
+
+                    b.Property<string>("Warining")
+                        .HasMaxLength(200);
+
+                    b.Property<string>("WariningDate");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuditUserId");
+
+                    b.HasIndex("ContractCategoryId");
+
+                    b.HasIndex("ItemDefineId");
+
+                    b.HasIndex("UnitId");
+
+                    b.HasIndex("VendorId");
+
+                    b.ToTable("Contract");
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.ItemDefine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AuditDate");
+
+                    b.Property<long?>("AuditUserId");
+
+                    b.Property<int?>("BudgetId");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<decimal>("DefineAmount");
+
+                    b.Property<DateTime>("DefineDate");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsAudit");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<bool>("IsFinal");
+
+                    b.Property<string>("ItemAddress")
+                        .HasMaxLength(128);
+
+                    b.Property<int>("ItemCategoryId");
+
+                    b.Property<string>("ItemDescription")
+                        .HasMaxLength(2000);
+
+                    b.Property<string>("ItemDocNo")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("ItemName")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("ItemNo")
+                        .HasMaxLength(128);
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(2000);
+
+                    b.Property<int>("Status");
+
+                    b.Property<string>("SysGuid")
+                        .HasMaxLength(64);
+
+                    b.Property<int?>("TenantId");
+
+                    b.Property<long>("UnitId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuditUserId");
+
+                    b.HasIndex("BudgetId");
+
+                    b.HasIndex("ItemCategoryId");
+
+                    b.HasIndex("UnitId");
+
+                    b.ToTable("ItemDefine");
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.PayAudit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AuditDate");
+
+                    b.Property<long?>("AuditUserId");
+
+                    b.Property<decimal>("ContractTotalAmount");
+
+                    b.Property<int>("ContrctId");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<int>("ItemDefineId");
+
+                    b.Property<decimal>("ItemTotalAmount");
+
+                    b.Property<decimal>("ItemYsTotalAmount");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<decimal>("PayAmount");
+
+                    b.Property<int>("PaymentCount");
+
+                    b.Property<string>("PaymentName")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("PaymentNo")
+                        .HasMaxLength(100);
+
+                    b.Property<int>("PaymentPer");
+
+                    b.Property<int>("PaymentTypeId");
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(2000);
+
+                    b.Property<int>("Status");
+
+                    b.Property<string>("SysGuid")
+                        .HasMaxLength(64);
+
+                    b.Property<int?>("TenantId");
+
+                    b.Property<long?>("UnitId")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuditUserId");
+
+                    b.HasIndex("ContrctId");
+
+                    b.HasIndex("ItemDefineId");
+
+                    b.HasIndex("PaymentTypeId");
+
+                    b.HasIndex("UnitId");
+
+                    b.ToTable("PayAudit");
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.ReViewDefine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AuditDate");
+
+                    b.Property<long?>("AuditUserId");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<int>("ItemDefineId");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<decimal>("ReViewAmount");
+
+                    b.Property<string>("ReViewDocNo")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("ReViewName")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("ReViewNo")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(2000);
+
+                    b.Property<int>("Status");
+
+                    b.Property<string>("SysGuid")
+                        .HasMaxLength(64);
+
+                    b.Property<int?>("TenantId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuditUserId");
+
+                    b.HasIndex("ItemDefineId");
+
+                    b.ToTable("ReViewDefine");
                 });
 
             modelBuilder.Entity("ICIMS.MultiTenancy.Tenant", b =>
@@ -1609,6 +1970,116 @@ namespace ICIMS.Migrations
                     b.HasOne("ICIMS.Authorization.Users.User", "LastModifierUser")
                         .WithMany()
                         .HasForeignKey("LastModifierUserId");
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.Budget", b =>
+                {
+                    b.HasOne("ICIMS.BaseData.BuyCategory", "BuyCategory")
+                        .WithMany()
+                        .HasForeignKey("BuyCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ICIMS.BaseData.FunctionSubject", "FunctionSubject")
+                        .WithMany()
+                        .HasForeignKey("SubjectId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Abp.Organizations.OrganizationUnit", "Unit")
+                        .WithMany()
+                        .HasForeignKey("UnitId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ICIMS.BaseData.YSCategory", "YsCategory")
+                        .WithMany()
+                        .HasForeignKey("YsCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.Contract", b =>
+                {
+                    b.HasOne("ICIMS.Authorization.Users.User", "AuditUser")
+                        .WithMany()
+                        .HasForeignKey("AuditUserId");
+
+                    b.HasOne("ICIMS.BaseData.ContractCategory", "ContractCategory")
+                        .WithMany()
+                        .HasForeignKey("ContractCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ICIMS.BusinessManages.ItemDefine", "ItemDefine")
+                        .WithMany()
+                        .HasForeignKey("ItemDefineId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Abp.Organizations.OrganizationUnit", "Unit")
+                        .WithMany()
+                        .HasForeignKey("UnitId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ICIMS.BaseData.Vendor", "Vendor")
+                        .WithMany()
+                        .HasForeignKey("VendorId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.ItemDefine", b =>
+                {
+                    b.HasOne("ICIMS.Authorization.Users.User", "AuditUser")
+                        .WithMany()
+                        .HasForeignKey("AuditUserId");
+
+                    b.HasOne("ICIMS.BusinessManages.Budget", "Budget")
+                        .WithMany()
+                        .HasForeignKey("BudgetId");
+
+                    b.HasOne("ICIMS.BaseData.ItemCategory", "ItemCategory")
+                        .WithMany()
+                        .HasForeignKey("ItemCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Abp.Organizations.OrganizationUnit", "Unit")
+                        .WithMany()
+                        .HasForeignKey("UnitId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.PayAudit", b =>
+                {
+                    b.HasOne("ICIMS.Authorization.Users.User", "AuditUser")
+                        .WithMany()
+                        .HasForeignKey("AuditUserId");
+
+                    b.HasOne("ICIMS.BusinessManages.Contract", "Contract")
+                        .WithMany()
+                        .HasForeignKey("ContrctId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ICIMS.BusinessManages.ItemDefine", "ItemDefine")
+                        .WithMany()
+                        .HasForeignKey("ItemDefineId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ICIMS.BaseData.PaymentType", "PaymentType")
+                        .WithMany()
+                        .HasForeignKey("PaymentTypeId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Abp.Organizations.OrganizationUnit", "Unit")
+                        .WithMany()
+                        .HasForeignKey("UnitId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.ReViewDefine", b =>
+                {
+                    b.HasOne("ICIMS.Authorization.Users.User", "AuditUser")
+                        .WithMany()
+                        .HasForeignKey("AuditUserId");
+
+                    b.HasOne("ICIMS.BusinessManages.ItemDefine", "ItemDefine")
+                        .WithMany()
+                        .HasForeignKey("ItemDefineId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("ICIMS.MultiTenancy.Tenant", b =>

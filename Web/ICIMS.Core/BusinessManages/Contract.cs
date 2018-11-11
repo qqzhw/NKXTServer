@@ -106,8 +106,7 @@ namespace ICIMS.BusinessManages
         #region 导航属性
         //立项登记
         public virtual ItemDefine ItemDefine { get; set; }
-        //组织部门
-        public  virtual OrganizationUnit Unit { get; set; }
+      
         //合同分类
         public virtual ContractCategory ContractCategory { get; set; }
         //供应商

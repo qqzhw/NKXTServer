@@ -23,9 +23,9 @@ namespace ICIMS.EntityMapper.PayAudits
 		 
 			builder.Property(a => a.Remark).HasMaxLength(2000);
 
-            builder.HasOne(a => a.Unit).WithMany().HasForeignKey(r => r.UnitId).IsRequired();
+            //builder.HasOne(a => a.Unit).WithMany().HasForeignKey(r => r.UnitId).IsRequired();
             builder.HasOne(a => a.Contract).WithMany().HasForeignKey(r => r.ContrctId).IsRequired();
-            builder.HasOne(a => a.ItemDefine).WithMany().HasForeignKey(r => r.ItemDefineId).IsRequired();
+           // builder.HasOne(a => a.ItemDefine).WithMany().HasForeignKey(r => r.ItemDefineId).IsRequired();
             builder.HasOne(a => a.PaymentType).WithMany().HasForeignKey(r => r.PaymentTypeId).IsRequired();
         }
     }

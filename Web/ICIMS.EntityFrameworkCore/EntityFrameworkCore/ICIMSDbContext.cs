@@ -82,10 +82,10 @@ namespace ICIMS.EntityFrameworkCore
 
         public virtual DbSet<Vendor> Vendor { get; set; }
         public virtual DbSet<ItemDefine> ItemDefine { get; set; }
-        public virtual DbSet<ReViewDefine> ReViewDefine{ get; set; }
+        public virtual DbSet<ReViewDefine> ReViewDefine { get; set; }
         public virtual DbSet<Budget> Budget { get; set; }
-        public virtual DbSet<Contract> Contract{ get; set; }
+        public virtual DbSet<Contract> Contract { get; set; }
         public virtual DbSet<PayAudit> PayAudit { get; set; }
-       
+
     }
 }
