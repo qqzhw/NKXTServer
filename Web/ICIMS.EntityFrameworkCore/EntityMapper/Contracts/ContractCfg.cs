@@ -11,7 +11,7 @@ namespace ICIMS.EntityMapper.Contracts
         public void Configure(EntityTypeBuilder<Contract> builder)
         {
 
-            builder.ToTable("Contracts", ICIMSAbpefCoreConsts.SchemaNames.CMS);
+            builder.ToTable("Contract");
             builder.HasKey(a => a.Id);
 			builder.Property(a => a.SysGuid).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length64);
 			 
@@ -20,7 +20,11 @@ namespace ICIMS.EntityMapper.Contracts
 			builder.Property(a => a.Warining).HasMaxLength(200);
 			 
 			builder.Property(a => a.Remark).HasMaxLength(2000);
- 
+            builder.HasOne(a => a.ItemDefine).WithMany().HasForeignKey(r => r.ItemDefineId).IsRequired();
+            builder.HasOne(a => a.Unit).WithMany().HasForeignKey(r => r.UnitId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(a => a.ContractCategory).WithMany().HasForeignKey(r => r.ContractCategoryId).IsRequired();
+            builder.HasOne(a => a.Vendor).WithMany().HasForeignKey(r => r.VendorId).IsRequired();
+
 
         }
     }

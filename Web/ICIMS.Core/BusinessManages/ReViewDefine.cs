@@ -56,8 +56,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         public DateTime AuditDate { get; set; }
 
-        public int? AuditUserId { get; set; }
-        [ForeignKey("AuditUserId")]
+        public long? AuditUserId { get; set; }       
         public virtual User AuditUser { get; set; }
 
         #region 导航属性

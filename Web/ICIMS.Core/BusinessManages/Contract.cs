@@ -1,5 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
+using Abp.Organizations;
 using ICIMS.Authorization.Users;
 using ICIMS.BaseData;
 using System;
@@ -29,13 +30,13 @@ namespace ICIMS.BusinessManages
         /// <summary>
         /// 部门ID
         /// </summary>
-        public int UintId { get; set; }
+        public long UnitId { get; set; }
 
         /// <summary>
         /// 合同类型
         /// </summary>
-        public int ContractTypeId { get; set; } 
-        public  virtual ContractCategory ContractType { get; set; }
+        public int ContractCategoryId { get; set; } 
+        
 
         public  DateTime BeginTime { get; set; }
         public DateTime EndTime { get; set; }
@@ -98,10 +99,19 @@ namespace ICIMS.BusinessManages
         /// </summary>
         public DateTime AuditDate { get; set; }
 
-        public int? AuditUserId { get; set; }
+        public long? AuditUserId { get; set; }
         
         public virtual User AuditUser { get; set; }
 
-      
+        #region 导航属性
+        //立项登记
+        public virtual ItemDefine ItemDefine { get; set; }
+        //组织部门
+        public  virtual OrganizationUnit Unit { get; set; }
+        //合同分类
+        public virtual ContractCategory ContractCategory { get; set; }
+        //供应商
+        public virtual Vendor Vendor { get; set; }
+        #endregion
     }
 }

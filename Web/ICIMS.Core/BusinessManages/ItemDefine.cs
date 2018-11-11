@@ -30,7 +30,7 @@ namespace ICIMS.BusinessManages
         /// <summary>
         /// 部门ID
         /// </summary>
-        public int UnitId { get; set; }
+        public long UnitId { get; set; }
         public virtual OrganizationUnit Unit { get; set; }
         public int? BudgetId { get; set; }
         public virtual Budget Budget { get; set; }
@@ -81,7 +81,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         public DateTime AuditDate { get; set; }
 
-        public int? AuditUserId { get; set; }
+        public long? AuditUserId { get; set; }
         [ForeignKey("AuditUserId")]
         public virtual User AuditUser { get; set; }
     }

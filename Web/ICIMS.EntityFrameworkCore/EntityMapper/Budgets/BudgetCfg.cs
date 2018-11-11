@@ -11,10 +11,10 @@ namespace ICIMS.EntityMapper.Budgets
         public void Configure(EntityTypeBuilder<Budget> builder)
         {
 
-            builder.ToTable("Budgets");
+            builder.ToTable("Budget");
             builder.HasKey(a => a.Id);
-            		 
-			builder.Property(a => a.BudgetNo).HasMaxLength(50);
+            builder.Property(a => a.SysGuid).HasMaxLength(64);
+            builder.Property(a => a.BudgetNo).HasMaxLength(50);
 			builder.Property(a => a.BudgetName).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
 			builder.Property(a => a.According).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
 			builder.Property(a => a.MeasureStandard).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);	

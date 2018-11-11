@@ -17,6 +17,12 @@ using ICIMS.EntityMapper.PaymentTypes;
 using ICIMS.EntityMapper.Vendors;
 using ICIMS.EntityMapper.FundFroms;
 using ICIMS.EntityMapper.YSCategorys;
+using ICIMS.EntityMapper.ItemDefines;
+using ICIMS.EntityMapper.Budgets;
+using ICIMS.EntityMapper.Contracts;
+using ICIMS.EntityMapper.PayAudits;
+using ICIMS.EntityMapper.ReViewDefines;
+using ICIMS.BusinessManages;
 
 namespace ICIMS.EntityFrameworkCore
 {
@@ -53,6 +59,11 @@ namespace ICIMS.EntityFrameworkCore
             modelBuilder.ApplyConfiguration(new PaymentTypeCfg());
             modelBuilder.ApplyConfiguration(new VendorCfg());
             modelBuilder.ApplyConfiguration(new YSCategoryCfg());
+            modelBuilder.ApplyConfiguration(new ItemDefineCfg());
+            modelBuilder.ApplyConfiguration(new ReViewDefineCfg());
+            modelBuilder.ApplyConfiguration(new BudgetCfg());
+            modelBuilder.ApplyConfiguration(new ContractCfg());
+            modelBuilder.ApplyConfiguration(new PayAuditCfg());
             base.OnModelCreating(modelBuilder);
         }
 
@@ -70,5 +81,11 @@ namespace ICIMS.EntityFrameworkCore
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
 
         public virtual DbSet<Vendor> Vendor { get; set; }
+        public virtual DbSet<ItemDefine> ItemDefine { get; set; }
+        public virtual DbSet<ReViewDefine> ReViewDefine{ get; set; }
+        public virtual DbSet<Budget> Budget { get; set; }
+        public virtual DbSet<Contract> Contract{ get; set; }
+        public virtual DbSet<PayAudit> PayAudit { get; set; }
+       
     }
 }

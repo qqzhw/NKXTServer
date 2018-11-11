@@ -39,7 +39,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         public decimal BudgetAmount { get; set; }
 
-        public int UnitId { get; set; }
+        public long UnitId { get; set; }
         public virtual OrganizationUnit Unit { get; set; }
         /// <summary>
         /// 预算分类ID

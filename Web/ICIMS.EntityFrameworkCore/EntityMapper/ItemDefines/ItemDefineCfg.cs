@@ -11,8 +11,8 @@ namespace ICIMS.EntityMapper.ItemDefines
         public void Configure(EntityTypeBuilder<ItemDefine> builder)
         {
 
-            builder.ToTable("ItemDefines", ICIMSAbpefCoreConsts.SchemaNames.CMS);
-             
+            builder.ToTable("ItemDefine");
+            builder.HasKey(a => a.Id);
 			 
 			builder.Property(a => a.SysGuid).HasMaxLength(64);
 		 
@@ -20,12 +20,17 @@ namespace ICIMS.EntityMapper.ItemDefines
 			 
 			builder.Property(a => a.ItemNo).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
 			builder.Property(a => a.ItemName).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
-			builder.Property(a => a.ItemType).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
+			//builder.Property(a => a.ItemType).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
 		 
 			builder.Property(a => a.ItemAddress).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
 			builder.Property(a => a.ItemDescription).HasMaxLength(2000);
 			builder.Property(a => a.Remark).HasMaxLength(2000);
 		  
+             
+           builder.HasOne(a => a.Unit).WithMany().HasForeignKey(r => r.UnitId).IsRequired();
+           builder.HasOne(a => a.Budget).WithMany().HasForeignKey(r => r.BudgetId);
+           builder.HasOne(a => a.ItemCategory).WithMany().HasForeignKey(r => r.ItemCategoryId).IsRequired();
+      
 
         }
     }
