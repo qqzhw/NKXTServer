@@ -54,7 +54,7 @@ namespace ICIMS.BusinessManages
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(PayAuditPermissions.Query)] 
+		//[AbpAuthorize(PayAuditPermissions.Query)] 
         public async Task<PagedResultDto<PayAuditListDto>> GetPaged(GetPayAuditsInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BusinessManages
 		/// <summary>
 		/// 通过指定id获取PayAuditListDto信息
 		/// </summary>
-		[AbpAuthorize(PayAuditPermissions.Query)] 
+		//[AbpAuthorize(PayAuditPermissions.Query)] 
 		public async Task<PayAuditListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BusinessManages
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(PayAuditPermissions.Create,PayAuditPermissions.Edit)]
+		//[AbpAuthorize(PayAuditPermissions.Create,PayAuditPermissions.Edit)]
 		public async Task<GetPayAuditForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetPayAuditForEditOutput();
@@ -121,7 +121,7 @@ PayAuditEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(PayAuditPermissions.Create,PayAuditPermissions.Edit)]
+		//[AbpAuthorize(PayAuditPermissions.Create,PayAuditPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdatePayAuditInput input)
 		{
 
@@ -139,7 +139,7 @@ PayAuditEditDto editDto;
 		/// <summary>
 		/// 新增PayAudit
 		/// </summary>
-		[AbpAuthorize(PayAuditPermissions.Create)]
+		//[AbpAuthorize(PayAuditPermissions.Create)]
 		protected virtual async Task<PayAuditEditDto> Create(PayAuditEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ PayAuditEditDto editDto;
 		/// <summary>
 		/// 编辑PayAudit
 		/// </summary>
-		[AbpAuthorize(PayAuditPermissions.Edit)]
+		//[AbpAuthorize(PayAuditPermissions.Edit)]
 		protected virtual async Task Update(PayAuditEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ PayAuditEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(PayAuditPermissions.Delete)]
+		//[AbpAuthorize(PayAuditPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ PayAuditEditDto editDto;
 		/// <summary>
 		/// 批量删除PayAudit的方法
 		/// </summary>
-		[AbpAuthorize(PayAuditPermissions.BatchDelete)]
+		//[AbpAuthorize(PayAuditPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

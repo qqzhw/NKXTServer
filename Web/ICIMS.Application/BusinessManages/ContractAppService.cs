@@ -54,7 +54,7 @@ namespace ICIMS.BusinessManages
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(ContractPermissions.Query)] 
+		//[AbpAuthorize(ContractPermissions.Query)] 
         public async Task<PagedResultDto<ContractListDto>> GetPaged(GetContractsInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BusinessManages
 		/// <summary>
 		/// 通过指定id获取ContractListDto信息
 		/// </summary>
-		[AbpAuthorize(ContractPermissions.Query)] 
+		//[AbpAuthorize(ContractPermissions.Query)] 
 		public async Task<ContractListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BusinessManages
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ContractPermissions.Create,ContractPermissions.Edit)]
+		//[AbpAuthorize(ContractPermissions.Create,ContractPermissions.Edit)]
 		public async Task<GetContractForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetContractForEditOutput();
@@ -121,7 +121,7 @@ ContractEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ContractPermissions.Create,ContractPermissions.Edit)]
+		//[AbpAuthorize(ContractPermissions.Create,ContractPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateContractInput input)
 		{
 
@@ -139,7 +139,7 @@ ContractEditDto editDto;
 		/// <summary>
 		/// 新增Contract
 		/// </summary>
-		[AbpAuthorize(ContractPermissions.Create)]
+		//[AbpAuthorize(ContractPermissions.Create)]
 		protected virtual async Task<ContractEditDto> Create(ContractEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ ContractEditDto editDto;
 		/// <summary>
 		/// 编辑Contract
 		/// </summary>
-		[AbpAuthorize(ContractPermissions.Edit)]
+		//[AbpAuthorize(ContractPermissions.Edit)]
 		protected virtual async Task Update(ContractEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ ContractEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ContractPermissions.Delete)]
+		//[AbpAuthorize(ContractPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ ContractEditDto editDto;
 		/// <summary>
 		/// 批量删除Contract的方法
 		/// </summary>
-		[AbpAuthorize(ContractPermissions.BatchDelete)]
+		//[AbpAuthorize(ContractPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

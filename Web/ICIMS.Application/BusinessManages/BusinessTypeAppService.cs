@@ -52,7 +52,7 @@ namespace ICIMS.BussinesManages
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(BusinessTypePermissions.Query)] 
+		//[AbpAuthorize(BusinessTypePermissions.Query)] 
         public async Task<PagedResultDto<BusinessTypeListDto>> GetPaged(GetBusinessTypesInput input)
 		{
 
@@ -77,7 +77,7 @@ namespace ICIMS.BussinesManages
 		/// <summary>
 		/// 通过指定id获取BusinessTypeListDto信息
 		/// </summary>
-		[AbpAuthorize(BusinessTypePermissions.Query)] 
+		//[AbpAuthorize(BusinessTypePermissions.Query)] 
 		public async Task<BusinessTypeListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -90,7 +90,7 @@ namespace ICIMS.BussinesManages
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BusinessTypePermissions.Create,BusinessTypePermissions.Edit)]
+		//[AbpAuthorize(BusinessTypePermissions.Create,BusinessTypePermissions.Edit)]
 		public async Task<GetBusinessTypeForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetBusinessTypeForEditOutput();
@@ -119,7 +119,7 @@ BusinessTypeEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BusinessTypePermissions.Create,BusinessTypePermissions.Edit)]
+		//[AbpAuthorize(BusinessTypePermissions.Create,BusinessTypePermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateBusinessTypeInput input)
 		{
 
@@ -137,7 +137,7 @@ BusinessTypeEditDto editDto;
 		/// <summary>
 		/// 新增BusinessType
 		/// </summary>
-		[AbpAuthorize(BusinessTypePermissions.Create)]
+		//[AbpAuthorize(BusinessTypePermissions.Create)]
 		protected virtual async Task<BusinessTypeEditDto> Create(BusinessTypeEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -153,7 +153,7 @@ BusinessTypeEditDto editDto;
 		/// <summary>
 		/// 编辑BusinessType
 		/// </summary>
-		[AbpAuthorize(BusinessTypePermissions.Edit)]
+		//[AbpAuthorize(BusinessTypePermissions.Edit)]
 		protected virtual async Task Update(BusinessTypeEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -172,7 +172,7 @@ BusinessTypeEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BusinessTypePermissions.Delete)]
+		//[AbpAuthorize(BusinessTypePermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -184,7 +184,7 @@ BusinessTypeEditDto editDto;
 		/// <summary>
 		/// 批量删除BusinessType的方法
 		/// </summary>
-		[AbpAuthorize(BusinessTypePermissions.BatchDelete)]
+		//[AbpAuthorize(BusinessTypePermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

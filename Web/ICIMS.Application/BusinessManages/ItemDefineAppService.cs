@@ -54,7 +54,7 @@ namespace ICIMS.BusinessManages
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(ItemDefinePermissions.Query)] 
+		//[AbpAuthorize(ItemDefinePermissions.Query)] 
         public async Task<PagedResultDto<ItemDefineListDto>> GetPaged(GetItemDefinesInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BusinessManages
 		/// <summary>
 		/// 通过指定id获取ItemDefineListDto信息
 		/// </summary>
-		[AbpAuthorize(ItemDefinePermissions.Query)] 
+		//[AbpAuthorize(ItemDefinePermissions.Query)] 
 		public async Task<ItemDefineListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BusinessManages
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ItemDefinePermissions.Create,ItemDefinePermissions.Edit)]
+		//[AbpAuthorize(ItemDefinePermissions.Create,ItemDefinePermissions.Edit)]
 		public async Task<GetItemDefineForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetItemDefineForEditOutput();
@@ -121,7 +121,7 @@ ItemDefineEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ItemDefinePermissions.Create,ItemDefinePermissions.Edit)]
+		//[AbpAuthorize(ItemDefinePermissions.Create,ItemDefinePermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateItemDefineInput input)
 		{
 
@@ -139,7 +139,7 @@ ItemDefineEditDto editDto;
 		/// <summary>
 		/// 新增ItemDefine
 		/// </summary>
-		[AbpAuthorize(ItemDefinePermissions.Create)]
+		//[AbpAuthorize(ItemDefinePermissions.Create)]
 		protected virtual async Task<ItemDefineEditDto> Create(ItemDefineEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ ItemDefineEditDto editDto;
 		/// <summary>
 		/// 编辑ItemDefine
 		/// </summary>
-		[AbpAuthorize(ItemDefinePermissions.Edit)]
+		//[AbpAuthorize(ItemDefinePermissions.Edit)]
 		protected virtual async Task Update(ItemDefineEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ ItemDefineEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ItemDefinePermissions.Delete)]
+		//[AbpAuthorize(ItemDefinePermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ ItemDefineEditDto editDto;
 		/// <summary>
 		/// 批量删除ItemDefine的方法
 		/// </summary>
-		[AbpAuthorize(ItemDefinePermissions.BatchDelete)]
+		//[AbpAuthorize(ItemDefinePermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

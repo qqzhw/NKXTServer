@@ -54,7 +54,7 @@ namespace ICIMS.BusinessManages
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(ReViewDefinePermissions.Query)] 
+		//[AbpAuthorize(ReViewDefinePermissions.Query)] 
         public async Task<PagedResultDto<ReViewDefineListDto>> GetPaged(GetReViewDefinesInput input)
 		{
 
@@ -79,7 +79,7 @@ namespace ICIMS.BusinessManages
 		/// <summary>
 		/// 通过指定id获取ReViewDefineListDto信息
 		/// </summary>
-		[AbpAuthorize(ReViewDefinePermissions.Query)] 
+		//[AbpAuthorize(ReViewDefinePermissions.Query)] 
 		public async Task<ReViewDefineListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -92,7 +92,7 @@ namespace ICIMS.BusinessManages
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ReViewDefinePermissions.Create,ReViewDefinePermissions.Edit)]
+		//[AbpAuthorize(ReViewDefinePermissions.Create,ReViewDefinePermissions.Edit)]
 		public async Task<GetReViewDefineForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetReViewDefineForEditOutput();
@@ -121,7 +121,7 @@ ReViewDefineEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ReViewDefinePermissions.Create,ReViewDefinePermissions.Edit)]
+		//[AbpAuthorize(ReViewDefinePermissions.Create,ReViewDefinePermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateReViewDefineInput input)
 		{
 
@@ -139,7 +139,7 @@ ReViewDefineEditDto editDto;
 		/// <summary>
 		/// 新增ReViewDefine
 		/// </summary>
-		[AbpAuthorize(ReViewDefinePermissions.Create)]
+		//[AbpAuthorize(ReViewDefinePermissions.Create)]
 		protected virtual async Task<ReViewDefineEditDto> Create(ReViewDefineEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -155,7 +155,7 @@ ReViewDefineEditDto editDto;
 		/// <summary>
 		/// 编辑ReViewDefine
 		/// </summary>
-		[AbpAuthorize(ReViewDefinePermissions.Edit)]
+		//[AbpAuthorize(ReViewDefinePermissions.Edit)]
 		protected virtual async Task Update(ReViewDefineEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -174,7 +174,7 @@ ReViewDefineEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(ReViewDefinePermissions.Delete)]
+		//[AbpAuthorize(ReViewDefinePermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -186,7 +186,7 @@ ReViewDefineEditDto editDto;
 		/// <summary>
 		/// 批量删除ReViewDefine的方法
 		/// </summary>
-		[AbpAuthorize(ReViewDefinePermissions.BatchDelete)]
+		//[AbpAuthorize(ReViewDefinePermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

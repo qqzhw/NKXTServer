@@ -52,7 +52,7 @@ namespace ICIMS.BusinessManages
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(BudgetPermissions.Query)] 
+		//[AbpAuthorize(BudgetPermissions.Query)] 
         public async Task<PagedResultDto<BudgetListDto>> GetPaged(GetBudgetsInput input)
 		{
 
@@ -77,7 +77,7 @@ namespace ICIMS.BusinessManages
 		/// <summary>
 		/// 通过指定id获取BudgetListDto信息
 		/// </summary>
-		[AbpAuthorize(BudgetPermissions.Query)] 
+		//[AbpAuthorize(BudgetPermissions.Query)] 
 		public async Task<BudgetListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
@@ -90,7 +90,7 @@ namespace ICIMS.BusinessManages
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BudgetPermissions.Create,BudgetPermissions.Edit)]
+		//[AbpAuthorize(BudgetPermissions.Create,BudgetPermissions.Edit)]
 		public async Task<GetBudgetForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetBudgetForEditOutput();
@@ -119,7 +119,7 @@ BudgetEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BudgetPermissions.Create,BudgetPermissions.Edit)]
+		//[AbpAuthorize(BudgetPermissions.Create,BudgetPermissions.Edit)]
 		public async Task CreateOrUpdate(CreateOrUpdateBudgetInput input)
 		{
 
@@ -137,7 +137,7 @@ BudgetEditDto editDto;
 		/// <summary>
 		/// 新增Budget
 		/// </summary>
-		[AbpAuthorize(BudgetPermissions.Create)]
+		//[AbpAuthorize(BudgetPermissions.Create)]
 		protected virtual async Task<BudgetEditDto> Create(BudgetEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
@@ -153,7 +153,7 @@ BudgetEditDto editDto;
 		/// <summary>
 		/// 编辑Budget
 		/// </summary>
-		[AbpAuthorize(BudgetPermissions.Edit)]
+		//[AbpAuthorize(BudgetPermissions.Edit)]
 		protected virtual async Task Update(BudgetEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
@@ -172,7 +172,7 @@ BudgetEditDto editDto;
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BudgetPermissions.Delete)]
+		//[AbpAuthorize(BudgetPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -184,7 +184,7 @@ BudgetEditDto editDto;
 		/// <summary>
 		/// 批量删除Budget的方法
 		/// </summary>
-		[AbpAuthorize(BudgetPermissions.BatchDelete)]
+		//[AbpAuthorize(BudgetPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除

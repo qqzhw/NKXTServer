@@ -59,10 +59,17 @@ namespace ICIMS.BaseData
 		{
 
 		    var query = _entityRepository.GetAll();
-			// TODO:根据传入的参数添加过滤条件
-            
+            // TODO:根据传入的参数添加过滤条件
 
-			var count = await query.CountAsync();
+            if (!string.IsNullOrEmpty(input.No))
+            {
+                query = query.Where(o => o.No.Contains(input.No));
+            }
+            if (!string.IsNullOrEmpty(input.Name))
+            {
+                query = query.Where(o => o.Name.Contains(input.Name));
+            }
+            var count = await query.CountAsync();
 
 			var entityList = await query
 					.OrderBy(input.Sorting).AsNoTracking()
