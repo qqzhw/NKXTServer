@@ -129,16 +129,16 @@ FunctionSubjectEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(FunctionSubjectPermissions.Create,FunctionSubjectPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateFunctionSubjectInput input)
+		public async Task<FunctionSubjectEditDto> CreateOrUpdate(CreateOrUpdateFunctionSubjectInput input)
 		{
 
-			if (input.FunctionSubject.Id.HasValue)
+			if (input.FunctionSubject.Id.HasValue&input.FunctionSubject.Id>0)
 			{
-				await Update(input.FunctionSubject);
+				return await Update(input.FunctionSubject);
 			}
 			else
 			{
-				await Create(input.FunctionSubject);
+				return await Create(input.FunctionSubject);
 			}
 		}
 
@@ -163,7 +163,7 @@ FunctionSubjectEditDto editDto;
 		/// 编辑FunctionSubject
 		/// </summary>
 		//[AbpAuthorize(FunctionSubjectPermissions.Edit)]
-		protected virtual async Task Update(FunctionSubjectEditDto input)
+		protected virtual async Task<FunctionSubjectEditDto> Update(FunctionSubjectEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -172,6 +172,7 @@ FunctionSubjectEditDto editDto;
 
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<FunctionSubjectEditDto>();
 		}
 
 

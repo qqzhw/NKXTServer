@@ -12,7 +12,7 @@ namespace ICIMS.BusinessManages
     /// <summary>
     /// 合同类
     /// </summary>
-   public class Contract: FullAuditedEntity, ICreationAudited, IMayHaveTenant
+   public class Contract: FullAuditedEntity, IMayHaveTenant
     {
         public int? TenantId { get; set; }
         /// <summary>

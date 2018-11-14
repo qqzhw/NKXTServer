@@ -25,8 +25,7 @@ namespace  ICIMS.BusinessManages.Dtos
 
 		/// <summary>
 		/// SysGuid
-		/// </summary>
-		[Required(ErrorMessage="SysGuid不能为空")]
+		/// </summary>	 
 		public string SysGuid { get; set; }
 
 

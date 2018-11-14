@@ -9,7 +9,7 @@ using System.Text;
 
 namespace ICIMS.BusinessManages
 {
-    public class PayAudit : FullAuditedEntity, ICreationAudited, IMayHaveTenant
+    public class PayAudit : FullAuditedEntity, IMayHaveTenant
     {
         public int? TenantId { get; set; }
 

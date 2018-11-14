@@ -8,7 +8,7 @@ using System.Text;
 
 namespace ICIMS.BusinessManages
 {
-    public class Budget : FullAuditedEntity, ICreationAudited, IMayHaveTenant
+    public class Budget : FullAuditedEntity, IMayHaveTenant
     {
         public int? TenantId { get; set; }
         /// <summary>

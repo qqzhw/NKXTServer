@@ -17,7 +17,12 @@ namespace ICIMS.BusinessManages.Mapper
             CreateMap<ItemDefine,ItemDefineListDto>();
             CreateMap<ItemDefineListDto,ItemDefine>();
 
-            CreateMap<ItemDefineEditDto,ItemDefine>();
+            CreateMap<ItemDefineEditDto, ItemDefine>()
+                .ForMember(model => model.ItemCategory, options => options.Ignore())
+                .ForMember(model => model.Unit, options => options.Ignore())
+                .ForMember(model => model.AuditUser, options => options.Ignore())
+                .ForMember(model => model.Budget, options => options.Ignore());
+               
             CreateMap<ItemDefine,ItemDefineEditDto>();
 
         }

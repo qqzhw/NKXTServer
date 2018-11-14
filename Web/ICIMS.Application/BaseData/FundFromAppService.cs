@@ -129,16 +129,16 @@ FundFromEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(FundFromPermissions.Create,FundFromPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateFundFromInput input)
+		public async Task<FundFromEditDto> CreateOrUpdate(CreateOrUpdateFundFromInput input)
 		{
 
-			if (input.FundFrom.Id.HasValue)
+			if (input.FundFrom.Id.HasValue&&input.FundFrom.Id>0)
 			{
-				await Update(input.FundFrom);
+				return await Update(input.FundFrom);
 			}
 			else
 			{
-				await Create(input.FundFrom);
+				return await Create(input.FundFrom);
 			}
 		}
 
@@ -163,7 +163,7 @@ FundFromEditDto editDto;
 		/// 编辑FundFrom
 		/// </summary>
 		//[AbpAuthorize(FundFromPermissions.Edit)]
-		protected virtual async Task Update(FundFromEditDto input)
+		protected virtual async Task<FundFromEditDto> Update(FundFromEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -172,6 +172,7 @@ FundFromEditDto editDto;
 
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<FundFromEditDto>();
 		}
 
 

@@ -55,7 +55,7 @@ namespace ICIMS.BaseData
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateFunctionSubjectInput input);
+        Task<FunctionSubjectEditDto> CreateOrUpdate(CreateOrUpdateFunctionSubjectInput input);
 
 
         /// <summary>

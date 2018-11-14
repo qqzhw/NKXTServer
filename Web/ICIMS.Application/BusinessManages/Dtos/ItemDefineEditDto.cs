@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using Abp.Domain.Entities.Auditing;
 using ICIMS.Authorization.Users;
 using ICIMS.BusinessManages;
+using ICIMS.Users.Dto;
 
 namespace  ICIMS.BusinessManages.Dtos
 {
@@ -26,8 +27,7 @@ namespace  ICIMS.BusinessManages.Dtos
 
 		/// <summary>
 		/// SysGuid
-		/// </summary>
-		[Required(ErrorMessage="SysGuid不能为空")]
+		/// </summary>		
 		public string SysGuid { get; set; }
 
 
@@ -86,17 +86,14 @@ namespace  ICIMS.BusinessManages.Dtos
 
 
 
-		/// <summary>
-		/// ItemType
-		/// </summary>
-		public string ItemType { get; set; }
+		 
 
+        public int ItemCategoryId { get; set; }
 
-
-		/// <summary>
-		/// DefineAmount
-		/// </summary>
-		public decimal DefineAmount { get; set; }
+        /// <summary>
+        /// DefineAmount
+        /// </summary>
+        public decimal DefineAmount { get; set; }
 
 
 
@@ -152,10 +149,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// AuditUser
 		/// </summary>
-		public User AuditUser { get; set; }
-
-
-
+		public UserDto AuditUser { get; set; }  
 
     }
 }
