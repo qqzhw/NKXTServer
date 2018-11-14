@@ -11,7 +11,7 @@ namespace ICIMS.BusinessManages
     /// <summary>
     /// 评审登记
     /// </summary>
-    public class ReViewDefine : FullAuditedEntity, IMayHaveTenant
+    public class ReViewDefine : FullAuditedEntity, ICreationAudited, IMayHaveTenant
     {
         public int? TenantId { get; set; }
 

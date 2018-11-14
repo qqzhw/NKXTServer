@@ -18,8 +18,7 @@ namespace  ICIMS.BusinessManages.Dtos
         
 		/// <summary>
 		/// TenantId
-		/// </summary>
-		[Required(ErrorMessage="TenantId不能为空")]
+		/// </summary> 
 		public int? TenantId { get; set; }
 
 
@@ -110,7 +109,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		[Required(ErrorMessage="SubjectId不能为空")]
 		public int SubjectId { get; set; }
 
-
+        public long UnitId { get; set; }
 
 		/// <summary>
 		/// OneAmount

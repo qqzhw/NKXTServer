@@ -8,7 +8,7 @@ using System.Text;
 
 namespace ICIMS.BusinessManages
 {
-    public class Budget : FullAuditedEntity, IMayHaveTenant
+    public class Budget : FullAuditedEntity, ICreationAudited, IMayHaveTenant
     {
         public int? TenantId { get; set; }
         /// <summary>
@@ -64,5 +64,9 @@ namespace ICIMS.BusinessManages
         public bool IsMiddle { get; set; }
         public decimal MiddleReplyAmount { get; set; }
         public string Remark { get; set; }
+        public Budget()
+        {
+            this.SysGuid = Guid.NewGuid().ToString();
+        }
     }
 }

@@ -9,15 +9,16 @@ namespace ICIMS.BaseData.Mapper
 	/// <summary>
     /// 配置Vendor的AutoMapper
     /// </summary>
-	internal static class VendorMapper
+	internal  class VendorMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <Vendor,VendorListDto>();
-            configuration.CreateMap <VendorListDto,Vendor>();
+        public VendorMapper()
+        { 
+       
+            CreateMap<Vendor,VendorListDto>();
+            CreateMap<VendorListDto,Vendor>();
 
-            configuration.CreateMap <VendorEditDto,Vendor>();
-            configuration.CreateMap <Vendor,VendorEditDto>();
+            CreateMap<VendorEditDto,Vendor>();
+            CreateMap<Vendor,VendorEditDto>();
 
         }
 	}

@@ -9,15 +9,16 @@ namespace ICIMS.BaseData.Mapper
 	/// <summary>
     /// 配置ContractCategory的AutoMapper
     /// </summary>
-	internal static class ContractCategoryMapper
+	internal   class ContractCategoryMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <ContractCategory,ContractCategoryListDto>();
-            configuration.CreateMap <ContractCategoryListDto,ContractCategory>();
+        public ContractCategoryMapper()
+        { 
+        
+            CreateMap<ContractCategory,ContractCategoryListDto>();
+            CreateMap<ContractCategoryListDto,ContractCategory>();
 
-            configuration.CreateMap <ContractCategoryEditDto,ContractCategory>();
-            configuration.CreateMap <ContractCategory,ContractCategoryEditDto>();
+            CreateMap<ContractCategoryEditDto,ContractCategory>();
+            CreateMap<ContractCategory,ContractCategoryEditDto>();
 
         }
 	}

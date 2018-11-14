@@ -8,15 +8,16 @@ namespace ICIMS.BussinesManages.Mapper
 	/// <summary>
     /// 配置BusinessType的AutoMapper
     /// </summary>
-	internal static class BusinessTypeMapper
+	internal   class BusinessTypeMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <BusinessType,BusinessTypeListDto>();
-            configuration.CreateMap <BusinessTypeListDto,BusinessType>();
+        public BusinessTypeMapper()
+        { 
+        
+            CreateMap<BusinessType,BusinessTypeListDto>();
+            CreateMap<BusinessTypeListDto,BusinessType>();
 
-            configuration.CreateMap <BusinessTypeEditDto,BusinessType>();
-            configuration.CreateMap <BusinessType,BusinessTypeEditDto>();
+            CreateMap<BusinessTypeEditDto,BusinessType>();
+            CreateMap<BusinessType,BusinessTypeEditDto>();
 
         }
 	}

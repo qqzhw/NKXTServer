@@ -9,15 +9,16 @@ namespace ICIMS.BaseData.Mapper
 	/// <summary>
     /// 配置FilesManage的AutoMapper
     /// </summary>
-	internal static class FilesManageMapper
+	internal  class FilesManageMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <FilesManage,FilesManageListDto>();
-            configuration.CreateMap <FilesManageListDto,FilesManage>();
+        public FilesManageMapper()
+        { 
+         
+            CreateMap<FilesManage,FilesManageListDto>();
+            CreateMap<FilesManageListDto,FilesManage>();
 
-            configuration.CreateMap <FilesManageEditDto,FilesManage>();
-            configuration.CreateMap <FilesManage,FilesManageEditDto>();
+            CreateMap<FilesManageEditDto,FilesManage>();
+            CreateMap<FilesManage,FilesManageEditDto>();
 
         }
 	}

@@ -9,15 +9,15 @@ namespace ICIMS.BusinessManages.Mapper
 	/// <summary>
     /// 配置Contract的AutoMapper
     /// </summary>
-	internal static class ContractMapper
+	internal   class ContractMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <Contract,ContractListDto>();
-            configuration.CreateMap <ContractListDto,Contract>();
+        public ContractMapper()
+        { 
+            CreateMap<Contract,ContractListDto>();
+            CreateMap<ContractListDto,Contract>();
 
-            configuration.CreateMap <ContractEditDto,Contract>();
-            configuration.CreateMap <Contract,ContractEditDto>();
+            CreateMap<ContractEditDto,Contract>();
+            CreateMap<Contract,ContractEditDto>();
 
         }
 	}

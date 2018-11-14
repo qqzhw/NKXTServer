@@ -9,15 +9,16 @@ namespace ICIMS.BaseData.Mapper
 	/// <summary>
     /// 配置PaymentType的AutoMapper
     /// </summary>
-	internal static class PaymentTypeMapper
+	internal  class PaymentTypeMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <PaymentType,PaymentTypeListDto>();
-            configuration.CreateMap <PaymentTypeListDto,PaymentType>();
+        public PaymentTypeMapper()
+        { 
+        
+            CreateMap<PaymentType,PaymentTypeListDto>();
+            CreateMap<PaymentTypeListDto,PaymentType>();
 
-            configuration.CreateMap <PaymentTypeEditDto,PaymentType>();
-            configuration.CreateMap <PaymentType,PaymentTypeEditDto>();
+            CreateMap<PaymentTypeEditDto,PaymentType>();
+            CreateMap<PaymentType,PaymentTypeEditDto>();
 
         }
 	}

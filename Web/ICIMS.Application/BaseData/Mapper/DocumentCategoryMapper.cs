@@ -9,15 +9,16 @@ namespace ICIMS.BaseData.Mapper
 	/// <summary>
     /// 配置DocumentCategory的AutoMapper
     /// </summary>
-	internal static class DocumentCategoryMapper
+	internal   class DocumentCategoryMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <DocumentCategory,DocumentCategoryListDto>();
-            configuration.CreateMap <DocumentCategoryListDto,DocumentCategory>();
+        public DocumentCategoryMapper()
+        { 
+        
+            CreateMap<DocumentCategory,DocumentCategoryListDto>();
+            CreateMap<DocumentCategoryListDto,DocumentCategory>();
 
-            configuration.CreateMap <DocumentCategoryEditDto,DocumentCategory>();
-            configuration.CreateMap <DocumentCategory,DocumentCategoryEditDto>();
+            CreateMap<DocumentCategoryEditDto,DocumentCategory>();
+            CreateMap<DocumentCategory,DocumentCategoryEditDto>();
 
         }
 	}

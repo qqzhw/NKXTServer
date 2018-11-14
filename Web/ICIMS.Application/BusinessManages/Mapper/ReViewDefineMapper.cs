@@ -9,15 +9,15 @@ namespace ICIMS.BusinessManages.Mapper
 	/// <summary>
     /// 配置ReViewDefine的AutoMapper
     /// </summary>
-	internal static class ReViewDefineMapper
+	internal   class ReViewDefineMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <ReViewDefine,ReViewDefineListDto>();
-            configuration.CreateMap <ReViewDefineListDto,ReViewDefine>();
+        public ReViewDefineMapper()
+        { 
+            CreateMap<ReViewDefine,ReViewDefineListDto>();
+            CreateMap<ReViewDefineListDto,ReViewDefine>();
 
-            configuration.CreateMap <ReViewDefineEditDto,ReViewDefine>();
-            configuration.CreateMap <ReViewDefine,ReViewDefineEditDto>();
+            CreateMap<ReViewDefineEditDto,ReViewDefine>();
+            CreateMap<ReViewDefine,ReViewDefineEditDto>();
 
         }
 	}

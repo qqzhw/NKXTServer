@@ -13,7 +13,7 @@ namespace ICIMS.BusinessManages
     /// <summary>
     /// 立项登记
     /// </summary>
-    public class ItemDefine : FullAuditedEntity, IMayHaveTenant
+    public class ItemDefine : FullAuditedEntity, ICreationAudited, IMayHaveTenant
     {
         public int? TenantId { get; set; }
 

@@ -9,15 +9,16 @@ namespace ICIMS.BusinessManages.Mapper
 	/// <summary>
     /// 配置ItemDefine的AutoMapper
     /// </summary>
-	internal static class ItemDefineMapper
+	internal   class ItemDefineMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <ItemDefine,ItemDefineListDto>();
-            configuration.CreateMap <ItemDefineListDto,ItemDefine>();
+        public ItemDefineMapper()
+        { 
+      
+            CreateMap<ItemDefine,ItemDefineListDto>();
+            CreateMap<ItemDefineListDto,ItemDefine>();
 
-            configuration.CreateMap <ItemDefineEditDto,ItemDefine>();
-            configuration.CreateMap <ItemDefine,ItemDefineEditDto>();
+            CreateMap<ItemDefineEditDto,ItemDefine>();
+            CreateMap<ItemDefine,ItemDefineEditDto>();
 
         }
 	}

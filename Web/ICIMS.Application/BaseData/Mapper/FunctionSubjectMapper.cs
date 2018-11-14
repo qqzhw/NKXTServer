@@ -9,15 +9,15 @@ namespace ICIMS.BaseData.Mapper
 	/// <summary>
     /// 配置FunctionSubject的AutoMapper
     /// </summary>
-	internal static class FunctionSubjectMapper
+	internal   class FunctionSubjectMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <FunctionSubject,FunctionSubjectListDto>();
-            configuration.CreateMap <FunctionSubjectListDto,FunctionSubject>();
+        public FunctionSubjectMapper()
+        { 
+            CreateMap<FunctionSubject,FunctionSubjectListDto>();
+            CreateMap<FunctionSubjectListDto,FunctionSubject>();
 
-            configuration.CreateMap <FunctionSubjectEditDto,FunctionSubject>();
-            configuration.CreateMap <FunctionSubject,FunctionSubjectEditDto>();
+            CreateMap<FunctionSubjectEditDto,FunctionSubject>();
+            CreateMap<FunctionSubject,FunctionSubjectEditDto>();
 
         }
 	}

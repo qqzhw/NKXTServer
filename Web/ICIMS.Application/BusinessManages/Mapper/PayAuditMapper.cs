@@ -9,15 +9,15 @@ namespace ICIMS.BusinessManages.Mapper
 	/// <summary>
     /// 配置PayAudit的AutoMapper
     /// </summary>
-	internal static class PayAuditMapper
+	internal   class PayAuditMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <PayAudit,PayAuditListDto>();
-            configuration.CreateMap <PayAuditListDto,PayAudit>();
+        public PayAuditMapper()
+        { 
+            CreateMap<PayAudit,PayAuditListDto>();
+            CreateMap<PayAuditListDto,PayAudit>();
 
-            configuration.CreateMap <PayAuditEditDto,PayAudit>();
-            configuration.CreateMap <PayAudit,PayAuditEditDto>();
+            CreateMap<PayAuditEditDto,PayAudit>();
+            CreateMap<PayAudit,PayAuditEditDto>();
 
         }
 	}
