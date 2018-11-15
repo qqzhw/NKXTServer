@@ -55,7 +55,7 @@ namespace ICIMS.BaseData
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdatePaymentTypeInput input);
+        Task<PaymentTypeEditDto> CreateOrUpdate(CreateOrUpdatePaymentTypeInput input);
 
 
         /// <summary>

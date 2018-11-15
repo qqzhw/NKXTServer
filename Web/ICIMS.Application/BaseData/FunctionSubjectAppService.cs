@@ -22,7 +22,7 @@ using ICIMS.BaseData;
 using ICIMS.BaseData.Dtos;
 using ICIMS.BaseData.DomainService;
 using ICIMS.BaseData.Authorization;
-
+using Abp;
 
 namespace ICIMS.BaseData
 {
@@ -132,7 +132,7 @@ FunctionSubjectEditDto editDto;
 		public async Task<FunctionSubjectEditDto> CreateOrUpdate(CreateOrUpdateFunctionSubjectInput input)
 		{
 
-			if (input.FunctionSubject.Id.HasValue&input.FunctionSubject.Id>0)
+			if (input.FunctionSubject.Id>0)
 			{
 				return await Update(input.FunctionSubject);
 			}
@@ -153,10 +153,14 @@ FunctionSubjectEditDto editDto;
 
             // var entity = ObjectMapper.Map <FunctionSubject>(input);
             var entity=input.MapTo<FunctionSubject>();
-			
+            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
+            if (item != null)
+            {
+                throw new AbpException("编号已存在,请重新输入");
+            }
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<FunctionSubjectEditDto>();
+            input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+			return  input;
 		}
 
 		/// <summary>
@@ -167,11 +171,15 @@ FunctionSubjectEditDto editDto;
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-
-			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
+            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
+            if (item != null)
+            {
+                throw new AbpException("编号已存在,请重新输入");
+            }
+            // ObjectMapper.Map(input, entity);
+            await _entityRepository.UpdateAsync(entity);
             return entity.MapTo<FunctionSubjectEditDto>();
 		}
 

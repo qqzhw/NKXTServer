@@ -22,7 +22,7 @@ using ICIMS.BaseData;
 using ICIMS.BaseData.Dtos;
 using ICIMS.BaseData.DomainService;
 using ICIMS.BaseData.Authorization;
-
+using Abp;
 
 namespace ICIMS.BaseData
 {
@@ -32,7 +32,7 @@ namespace ICIMS.BaseData
     [AbpAuthorize]
     public class FundFromAppService : ICIMSAppServiceBase, IFundFromAppService
     {
-        private readonly IRepository<FundFrom, int> _entityRepository;
+        private readonly IRepository<FundFrom> _entityRepository;
 
         private readonly IFundFromManager _entityManager;
 
@@ -40,12 +40,11 @@ namespace ICIMS.BaseData
         /// 构造函数 
         ///</summary>
         public FundFromAppService(
-        IRepository<FundFrom, int> entityRepository
-        ,IFundFromManager entityManager
+        IRepository<FundFrom> entityRepository     
         )
         {
             _entityRepository = entityRepository; 
-             _entityManager=entityManager;
+          //   _entityManager=entityManager;
         }
 
 
@@ -132,7 +131,7 @@ FundFromEditDto editDto;
 		public async Task<FundFromEditDto> CreateOrUpdate(CreateOrUpdateFundFromInput input)
 		{
 
-			if (input.FundFrom.Id.HasValue&&input.FundFrom.Id>0)
+			if (input.FundFrom.Id>0)
 			{
 				return await Update(input.FundFrom);
 			}
@@ -153,10 +152,15 @@ FundFromEditDto editDto;
 
             // var entity = ObjectMapper.Map <FundFrom>(input);
             var entity=input.MapTo<FundFrom>();
-			
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<FundFromEditDto>();
+            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
+            if (item!=null)
+            {
+                throw new AbpException("编号已存在,请重新输入");
+            }
+			int id = await _entityRepository.InsertAndGetIdAsync(entity);
+            input.Id = id;
+			return input;
 		}
 
 		/// <summary>
@@ -167,11 +171,15 @@ FundFromEditDto editDto;
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-
-			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
+            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
+            if (item != null)
+            {
+                throw new AbpException("编号已存在,请重新输入");
+            }
+            // ObjectMapper.Map(input, entity);
+            await _entityRepository.UpdateAsync(entity);
             return entity.MapTo<FundFromEditDto>();
 		}
 

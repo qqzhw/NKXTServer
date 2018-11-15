@@ -125,7 +125,7 @@ ItemCategoryEditDto editDto;
 		public async Task CreateOrUpdate(CreateOrUpdateItemCategoryInput input)
 		{
 
-			if (input.ItemCategory.Id.HasValue)
+			if (input.ItemCategory.Id>0)
 			{
 				await Update(input.ItemCategory);
 			}
@@ -160,7 +160,7 @@ ItemCategoryEditDto editDto;
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);

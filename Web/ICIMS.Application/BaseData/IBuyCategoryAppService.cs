@@ -55,7 +55,7 @@ namespace ICIMS.BaseData
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateBuyCategoryInput input);
+        Task<BuyCategoryEditDto> CreateOrUpdate(CreateOrUpdateBuyCategoryInput input);
 
 
         /// <summary>

@@ -22,7 +22,7 @@ using ICIMS.BaseData;
 using ICIMS.BaseData.Dtos;
 using ICIMS.BaseData.DomainService;
 using ICIMS.BaseData.Authorization;
-
+using Abp;
 
 namespace ICIMS.BaseData
 {
@@ -129,16 +129,16 @@ YSCategoryEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(YSCategoryPermissions.Create,YSCategoryPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateYSCategoryInput input)
+		public async Task<YSCategoryEditDto> CreateOrUpdate(CreateOrUpdateYSCategoryInput input)
 		{
 
-			if (input.YSCategory.Id.HasValue)
+			if (input.YSCategory.Id>0)
 			{
-				await Update(input.YSCategory);
+				return await Update(input.YSCategory);
 			}
 			else
 			{
-				await Create(input.YSCategory);
+				return await Create(input.YSCategory);
 			}
 		}
 
@@ -153,25 +153,34 @@ YSCategoryEditDto editDto;
 
             // var entity = ObjectMapper.Map <YSCategory>(input);
             var entity=input.MapTo<YSCategory>();
-			
+            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
+            if (item != null)
+            {
+                throw new AbpException("编号已存在,请重新输入");
+            }
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<YSCategoryEditDto>();
+            input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+			return  input;
 		}
 
 		/// <summary>
 		/// 编辑YSCategory
 		/// </summary>
 		//[AbpAuthorize(YSCategoryPermissions.Edit)]
-		protected virtual async Task Update(YSCategoryEditDto input)
+		protected virtual async Task<YSCategoryEditDto> Update(YSCategoryEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-
-			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
+            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
+            if (item != null)
+            {
+                throw new AbpException("编号已存在,请重新输入");
+            }
+            // ObjectMapper.Map(input, entity);
+            await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<YSCategoryEditDto>();
 		}
 
 

@@ -22,7 +22,7 @@ using ICIMS.BaseData;
 using ICIMS.BaseData.Dtos;
 using ICIMS.BaseData.DomainService;
 using ICIMS.BaseData.Authorization;
-
+using Abp;
 
 namespace ICIMS.BaseData
 {
@@ -129,16 +129,16 @@ VendorEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(VendorPermissions.Create,VendorPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateVendorInput input)
+		public async Task<VendorEditDto> CreateOrUpdate(CreateOrUpdateVendorInput input)
 		{
 
-			if (input.Vendor.Id.HasValue)
+			if (input.Vendor.Id>0)
 			{
-				await Update(input.Vendor);
+				return await Update(input.Vendor);
 			}
 			else
 			{
-				await Create(input.Vendor);
+				return await Create(input.Vendor);
 			}
 		}
 
@@ -153,9 +153,13 @@ VendorEditDto editDto;
 
             // var entity = ObjectMapper.Map <Vendor>(input);
             var entity=input.MapTo<Vendor>();
-			
 
-			entity = await _entityRepository.InsertAsync(entity);
+            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
+            if (item != null)
+            {
+                throw new AbpException("编号已存在,请重新输入");
+            }
+            entity = await _entityRepository.InsertAsync(entity);
 			return entity.MapTo<VendorEditDto>();
 		}
 
@@ -163,16 +167,22 @@ VendorEditDto editDto;
 		/// 编辑Vendor
 		/// </summary>
 		//[AbpAuthorize(VendorPermissions.Edit)]
-		protected virtual async Task Update(VendorEditDto input)
+		protected virtual async Task<VendorEditDto> Update(VendorEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
+            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
+            if (item != null)
+            {
+                throw new AbpException("编号已存在,请重新输入");
+            }
+            // ObjectMapper.Map(input, entity);
+            await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<VendorEditDto>();
 
-			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
-		}
+        }
 
 
 

@@ -125,7 +125,7 @@ FilesManageEditDto editDto;
 		public async Task CreateOrUpdate(CreateOrUpdateFilesManageInput input)
 		{
 
-			if (input.FilesManage.Id.HasValue)
+			if (input.FilesManage.Id>0)
 			{
 				await Update(input.FilesManage);
 			}
@@ -148,8 +148,8 @@ FilesManageEditDto editDto;
             var entity=input.MapTo<FilesManage>();
 			
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<FilesManageEditDto>();
+			input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            return input;
 		}
 
 		/// <summary>
@@ -160,11 +160,11 @@ FilesManageEditDto editDto;
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-
-			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
+          
+            // ObjectMapper.Map(input, entity);
+            await _entityRepository.UpdateAsync(entity);
 		}
 
 
