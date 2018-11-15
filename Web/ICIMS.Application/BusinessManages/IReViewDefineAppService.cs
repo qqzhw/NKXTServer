@@ -55,7 +55,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateReViewDefineInput input);
+        Task<ReViewDefineEditDto> CreateOrUpdate(CreateOrUpdateReViewDefineInput input);
 
 
         /// <summary>

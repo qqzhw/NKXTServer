@@ -13,7 +13,7 @@ namespace  ICIMS.BusinessManages.Dtos
         /// <summary>
         /// Id
         /// </summary>
-        public int? Id { get; set; }         
+        public int Id { get; set; }         
 
 
         

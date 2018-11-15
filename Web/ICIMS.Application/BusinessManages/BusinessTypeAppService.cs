@@ -140,29 +140,34 @@ BusinessTypeEditDto editDto;
 		//[AbpAuthorize(BusinessTypePermissions.Create)]
 		protected virtual async Task<BusinessTypeEditDto> Create(BusinessTypeEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <BusinessType>(input);
             var entity=input.MapTo<BusinessType>();
-			
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.Name == input.Name);
+            if (item != null)
+            {
+                throw new UserFriendlyException("已存在相同名称的预算,请重新输入");
+            }
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<BusinessTypeEditDto>();
+            input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+			return input;
 		}
 
 		/// <summary>
 		/// 编辑BusinessType
 		/// </summary>
 		//[AbpAuthorize(BusinessTypePermissions.Edit)]
-		protected virtual async Task Update(BusinessTypeEditDto input)
+		protected virtual async Task<BusinessTypeEditDto>  Update(BusinessTypeEditDto input)
 		{
-			//TODO:更新前的逻辑判断，是否允许更新
-
+            //TODO:更新前的逻辑判断，是否允许更新
+          
 			var entity = await _entityRepository.GetAsync(input.Id.Value);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<BusinessTypeEditDto>();
 		}
 
 

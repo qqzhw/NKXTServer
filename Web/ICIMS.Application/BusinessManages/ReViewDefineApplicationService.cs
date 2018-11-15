@@ -122,16 +122,16 @@ ReViewDefineEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(ReViewDefinePermissions.Create,ReViewDefinePermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateReViewDefineInput input)
+		public async Task<ReViewDefineEditDto> CreateOrUpdate(CreateOrUpdateReViewDefineInput input)
 		{
 
-			if (input.ReViewDefine.Id.HasValue)
+			if (input.ReViewDefine.Id>0)
 			{
-				await Update(input.ReViewDefine);
+				return await Update(input.ReViewDefine);
 			}
 			else
 			{
-				await Create(input.ReViewDefine);
+				return await Create(input.ReViewDefine);
 			}
 		}
 
@@ -142,29 +142,35 @@ ReViewDefineEditDto editDto;
 		//[AbpAuthorize(ReViewDefinePermissions.Create)]
 		protected virtual async Task<ReViewDefineEditDto> Create(ReViewDefineEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
+            
             // var entity = ObjectMapper.Map <ReViewDefine>(input);
             var entity=input.MapTo<ReViewDefine>();
-			
-
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<ReViewDefineEditDto>();
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.ReViewName == input.ReViewName);
+            if (item != null)
+            {
+                throw new UserFriendlyException("已存在相同名称,请重新输入");
+            }
+            entity.CreatorUserId = AbpSession.UserId;
+			input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+			return input;
 		}
 
 		/// <summary>
 		/// 编辑ReViewDefine
 		/// </summary>
 		//[AbpAuthorize(ReViewDefinePermissions.Edit)]
-		protected virtual async Task Update(ReViewDefineEditDto input)
+		protected virtual async Task<ReViewDefineEditDto> Update(ReViewDefineEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<ReViewDefineEditDto>();
 		}
 
 

@@ -122,16 +122,16 @@ PayAuditEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(PayAuditPermissions.Create,PayAuditPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdatePayAuditInput input)
+		public async Task<PayAuditEditDto> CreateOrUpdate(CreateOrUpdatePayAuditInput input)
 		{
 
-			if (input.PayAudit.Id.HasValue)
+			if (input.PayAudit.Id>0)
 			{
-				await Update(input.PayAudit);
+			   return 	await Update(input.PayAudit);
 			}
 			else
 			{
-				await Create(input.PayAudit);
+				return await Create(input.PayAudit);
 			}
 		}
 
@@ -142,29 +142,35 @@ PayAuditEditDto editDto;
 		//[AbpAuthorize(PayAuditPermissions.Create)]
 		protected virtual async Task<PayAuditEditDto> Create(PayAuditEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <PayAudit>(input);
             var entity=input.MapTo<PayAudit>();
-			
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.PaymentName == input.PaymentName);
+            if (item != null)
+            {
+                throw new UserFriendlyException("已存在相同名称,请重新输入");
+            }
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<PayAuditEditDto>();
+            input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            return input;
 		}
 
 		/// <summary>
 		/// 编辑PayAudit
 		/// </summary>
 		//[AbpAuthorize(PayAuditPermissions.Edit)]
-		protected virtual async Task Update(PayAuditEditDto input)
+		protected virtual async Task<PayAuditEditDto> Update(PayAuditEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-
+            entity.LastModifierUserId = AbpSession.UserId;
+            entity.LastModificationTime = DateTime.Now;
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<PayAuditEditDto>();
 		}
 
 

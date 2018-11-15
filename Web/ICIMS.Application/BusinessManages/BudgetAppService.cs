@@ -120,16 +120,16 @@ BudgetEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(BudgetPermissions.Create,BudgetPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateBudgetInput input)
+		public async Task<BudgetEditDto> CreateOrUpdate(CreateOrUpdateBudgetInput input)
 		{
 
-			if (input.Budget.Id.HasValue)
+			if (input.Budget.Id>0)
 			{
-				await Update(input.Budget);
+				return await Update(input.Budget);
 			}
 			else
 			{
-				await Create(input.Budget);
+				return await Create(input.Budget);
 			}
 		}
 
@@ -140,29 +140,34 @@ BudgetEditDto editDto;
 		//[AbpAuthorize(BudgetPermissions.Create)]
 		protected virtual async Task<BudgetEditDto> Create(BudgetEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <Budget>(input);
             var entity=input.MapTo<Budget>();
-			
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.BudgetName == input.BudgetName);
+            if (item != null)
+            {
+                throw new UserFriendlyException("已存在相同名称的预算,请重新输入");
+            }
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<BudgetEditDto>();
+           input.Id=await _entityRepository.InsertAndGetIdAsync(entity);
+			return  input;
 		}
 
 		/// <summary>
 		/// 编辑Budget
 		/// </summary>
 		//[AbpAuthorize(BudgetPermissions.Edit)]
-		protected virtual async Task Update(BudgetEditDto input)
+		protected virtual async Task<BudgetEditDto> Update(BudgetEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<BudgetEditDto>();
 		}
 
 

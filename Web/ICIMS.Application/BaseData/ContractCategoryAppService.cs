@@ -128,16 +128,16 @@ ContractCategoryEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(ContractCategoryPermissions.Create,ContractCategoryPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateContractCategoryInput input)
+		public async Task<ContractCategoryEditDto> CreateOrUpdate(CreateOrUpdateContractCategoryInput input)
 		{
 
 			if (input.ContractCategory.Id>0)
 			{
-				await Update(input.ContractCategory);
+				return await Update(input.ContractCategory);
 			}
 			else
 			{
-				await Create(input.ContractCategory);
+				return await Create(input.ContractCategory);
 			}
 		}
 
@@ -167,7 +167,7 @@ ContractCategoryEditDto editDto;
 		/// 编辑ContractCategory
 		/// </summary>
 		//[AbpAuthorize(ContractCategoryPermissions.Edit)]
-		protected virtual async Task Update(ContractCategoryEditDto input)
+		protected virtual async Task<ContractCategoryEditDto> Update(ContractCategoryEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -180,7 +180,8 @@ ContractCategoryEditDto editDto;
             }
             // ObjectMapper.Map(input, entity);
             await _entityRepository.UpdateAsync(entity);
-		}
+            return entity.MapTo<ContractCategoryEditDto>();
+        }
 
 
 

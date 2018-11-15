@@ -122,16 +122,16 @@ ContractEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(ContractPermissions.Create,ContractPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateContractInput input)
+		public async Task<ContractEditDto> CreateOrUpdate(CreateOrUpdateContractInput input)
 		{
 
 			if (input.Contract.Id.HasValue)
 			{
-				await Update(input.Contract);
+				return await Update(input.Contract);
 			}
 			else
 			{
-				await Create(input.Contract);
+				return await Create(input.Contract);
 			}
 		}
 
@@ -142,21 +142,25 @@ ContractEditDto editDto;
 		//[AbpAuthorize(ContractPermissions.Create)]
 		protected virtual async Task<ContractEditDto> Create(ContractEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <Contract>(input);
             var entity=input.MapTo<Contract>();
-			
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.ContractName == input.ContractName);
+            if (item != null)
+            {
+                throw new UserFriendlyException("已存在相同名称,请重新输入");
+            }
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<ContractEditDto>();
+            input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            return input;
 		}
 
 		/// <summary>
 		/// 编辑Contract
 		/// </summary>
 		//[AbpAuthorize(ContractPermissions.Edit)]
-		protected virtual async Task Update(ContractEditDto input)
+		protected virtual async Task<ContractEditDto> Update(ContractEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -165,6 +169,7 @@ ContractEditDto editDto;
 
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<ContractEditDto>();
 		}
 
 

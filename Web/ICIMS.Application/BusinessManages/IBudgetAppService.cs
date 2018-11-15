@@ -55,7 +55,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateBudgetInput input);
+        Task<BudgetEditDto> CreateOrUpdate(CreateOrUpdateBudgetInput input);
 
 
         /// <summary>

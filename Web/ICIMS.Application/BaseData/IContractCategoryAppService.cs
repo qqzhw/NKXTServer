@@ -55,7 +55,7 @@ namespace ICIMS.BaseData
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateContractCategoryInput input);
+        Task<ContractCategoryEditDto> CreateOrUpdate(CreateOrUpdateContractCategoryInput input);
 
 
         /// <summary>

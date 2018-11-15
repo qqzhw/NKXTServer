@@ -142,21 +142,25 @@ ItemDefineEditDto editDto;
 		//[AbpAuthorize(ItemDefinePermissions.Create)]
 		protected virtual async Task<ItemDefineEditDto> Create(ItemDefineEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <ItemDefine>(input);
             var entity=input.MapTo<ItemDefine>();
-			
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.ItemName == input.ItemName);
+            if (item != null)
+            {
+                throw new UserFriendlyException("已存在相同的项目名称,请重新输入");
+            }
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<ItemDefineEditDto>();
+            input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+			return input;
 		}
 
 		/// <summary>
 		/// 编辑ItemDefine
 		/// </summary>
 		//[AbpAuthorize(ItemDefinePermissions.Edit)]
-		protected virtual async Task Update(ItemDefineEditDto input)
+		protected virtual async Task<ItemDefineEditDto> Update(ItemDefineEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -165,6 +169,7 @@ ItemDefineEditDto editDto;
 
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<ItemDefineEditDto>();
 		}
 
 
