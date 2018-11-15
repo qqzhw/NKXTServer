@@ -152,8 +152,8 @@ BuyCategoryEditDto editDto;
 		//[AbpAuthorize(BuyCategoryPermissions.Create)]
 		protected virtual async Task<BuyCategoryEditDto> Create(BuyCategoryEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <BuyCategory>(input);
             var entity=input.MapTo<BuyCategory>();
 
@@ -162,6 +162,8 @@ BuyCategoryEditDto editDto;
             {
                 throw new UserFriendlyException("编号已存在,请重新输入");
             }
+          
+          
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
             return input;
 		}

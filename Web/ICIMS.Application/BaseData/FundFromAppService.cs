@@ -148,8 +148,8 @@ FundFromEditDto editDto;
 		//[AbpAuthorize(FundFromPermissions.Create)]
 		protected virtual async Task<FundFromEditDto> Create(FundFromEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <FundFrom>(input);
             var entity=input.MapTo<FundFrom>();
 
@@ -158,7 +158,8 @@ FundFromEditDto editDto;
             {
                 throw new UserFriendlyException("编号已存在,请重新输入");
             }
-			int id = await _entityRepository.InsertAndGetIdAsync(entity);
+           
+            int id = await _entityRepository.InsertAndGetIdAsync(entity);
             input.Id = id;
 			return input;
 		}

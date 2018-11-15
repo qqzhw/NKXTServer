@@ -148,8 +148,8 @@ ContractCategoryEditDto editDto;
 		//[AbpAuthorize(ContractCategoryPermissions.Create)]
 		protected virtual async Task<ContractCategoryEditDto> Create(ContractCategoryEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <ContractCategory>(input);
             var entity=input.MapTo<ContractCategory>();
 

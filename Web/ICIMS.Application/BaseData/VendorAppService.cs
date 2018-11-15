@@ -149,8 +149,8 @@ VendorEditDto editDto;
 		//[AbpAuthorize(VendorPermissions.Create)]
 		protected virtual async Task<VendorEditDto> Create(VendorEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <Vendor>(input);
             var entity=input.MapTo<Vendor>();
 

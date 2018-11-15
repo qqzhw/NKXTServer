@@ -149,8 +149,8 @@ YSCategoryEditDto editDto;
 		//[AbpAuthorize(YSCategoryPermissions.Create)]
 		protected virtual async Task<YSCategoryEditDto> Create(YSCategoryEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <YSCategory>(input);
             var entity=input.MapTo<YSCategory>();
             var item = await _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
