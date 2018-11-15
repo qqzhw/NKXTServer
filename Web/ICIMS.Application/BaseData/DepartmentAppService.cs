@@ -20,7 +20,7 @@ namespace ICIMS.BaseData
             _organizationUnitRepository = organizationUnitRepository;
         }
 
-        public async Task<PagedResultDto<OrganizationUnitListDto>> GetPaged(GetContractCategorysInput input)
+        public async Task<PagedResultDto<OrganizationUnitListDto>> GetPaged(GetOrganizationUnitsInput input)
         {
 
             var query = _organizationUnitRepository.GetAll();
@@ -36,7 +36,7 @@ namespace ICIMS.BaseData
             var count = await query.CountAsync();
 
             var entityList = await query
-                    .OrderBy(input.No).AsNoTracking() 
+                    .OrderBy("Code").AsNoTracking() 
                     .ToListAsync();
 
             // var entityListDtos = ObjectMapper.Map<List<ContractCategoryListDto>>(entityList);

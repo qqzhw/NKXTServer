@@ -10,7 +10,7 @@ namespace ICIMS.BaseData
 {
     public interface IDepartmentAppService: IApplicationService
     {
-        Task<PagedResultDto<OrganizationUnitListDto>> GetPaged(GetContractCategorysInput input);
+        Task<PagedResultDto<OrganizationUnitListDto>> GetPaged(GetOrganizationUnitsInput input);
         
 
     }
