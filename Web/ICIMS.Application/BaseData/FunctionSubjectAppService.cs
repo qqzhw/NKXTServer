@@ -153,7 +153,7 @@ FunctionSubjectEditDto editDto;
 
             // var entity = ObjectMapper.Map <FunctionSubject>(input);
             var entity=input.MapTo<FunctionSubject>();
-            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
             if (item != null)
             {
                 throw new UserFriendlyException("编号已存在,请重新输入");

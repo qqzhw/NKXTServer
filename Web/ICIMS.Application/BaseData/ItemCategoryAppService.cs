@@ -122,16 +122,16 @@ ItemCategoryEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(ItemCategoryPermissions.Create,ItemCategoryPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateItemCategoryInput input)
+		public async Task<ItemCategoryEditDto> CreateOrUpdate(CreateOrUpdateItemCategoryInput input)
 		{
 
 			if (input.ItemCategory.Id>0)
 			{
-				await Update(input.ItemCategory);
+				return await Update(input.ItemCategory);
 			}
 			else
 			{
-				await Create(input.ItemCategory);
+				return await Create(input.ItemCategory);
 			}
 		}
 
@@ -146,25 +146,34 @@ ItemCategoryEditDto editDto;
 
             // var entity = ObjectMapper.Map <ItemCategory>(input);
             var entity=input.MapTo<ItemCategory>();
-			
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
+            if (item != null)
+            {
+                throw new UserFriendlyException("编号已存在,请重新输入");
+            }
 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<ItemCategoryEditDto>();
+            input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            return input;
 		}
 
 		/// <summary>
 		/// 编辑ItemCategory
 		/// </summary>
 		//[AbpAuthorize(ItemCategoryPermissions.Edit)]
-		protected virtual async Task Update(ItemCategoryEditDto input)
+		protected virtual async Task<ItemCategoryEditDto> Update(ItemCategoryEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
 			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-
-			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
+            var item = await _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
+            if (item != null)
+            {
+                throw new UserFriendlyException("编号已存在,请重新输入");
+            }
+            // ObjectMapper.Map(input, entity);
+            await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<ItemCategoryEditDto>();
 		}
 
 
