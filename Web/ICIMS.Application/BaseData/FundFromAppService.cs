@@ -156,7 +156,7 @@ FundFromEditDto editDto;
             var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No);
             if (item!=null)
             {
-                throw new AbpException("编号已存在,请重新输入");
+                throw new UserFriendlyException("编号已存在,请重新输入");
             }
 			int id = await _entityRepository.InsertAndGetIdAsync(entity);
             input.Id = id;
@@ -173,10 +173,10 @@ FundFromEditDto editDto;
 
 			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-            var item = _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
+            var item =await _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
             if (item != null)
             {
-                throw new AbpException("编号已存在,请重新输入");
+                throw new UserFriendlyException("编号已存在,请重新输入");
             }
             // ObjectMapper.Map(input, entity);
             await _entityRepository.UpdateAsync(entity);
