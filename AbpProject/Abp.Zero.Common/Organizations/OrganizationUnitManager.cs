@@ -6,6 +6,7 @@ using Abp.Domain.Services;
 using Abp.Domain.Uow;
 using Abp.UI;
 using Abp.Zero;
+using AutoMapper;
 
 namespace Abp.Organizations
 {
@@ -24,17 +25,19 @@ namespace Abp.Organizations
         }
 
         [UnitOfWork]
-        public virtual async Task CreateAsync(OrganizationUnit organizationUnit)
+        public virtual async Task<OrganizationUnit> CreateAsync(OrganizationUnit organizationUnit)
         {
             organizationUnit.Code = await GetNextChildCodeAsync(organizationUnit.ParentId);
             await ValidateOrganizationUnitAsync(organizationUnit);
-            await OrganizationUnitRepository.InsertAsync(organizationUnit);
+            return await OrganizationUnitRepository.InsertAsync(organizationUnit);
         }
 
-        public virtual async Task UpdateAsync(OrganizationUnit organizationUnit)
+        public virtual async Task<OrganizationUnit> UpdateAsync(OrganizationUnit organizationUnit)
         {
-            await ValidateOrganizationUnitAsync(organizationUnit);
-            await OrganizationUnitRepository.UpdateAsync(organizationUnit);
+            var oriItem = await OrganizationUnitRepository.GetAsync(organizationUnit.Id);
+            Mapper.Map(organizationUnit, oriItem);
+            await ValidateOrganizationUnitAsync(oriItem);
+            return await OrganizationUnitRepository.UpdateAsync(oriItem);
         }
 
         public virtual async Task<string> GetNextChildCodeAsync(long? parentId)
