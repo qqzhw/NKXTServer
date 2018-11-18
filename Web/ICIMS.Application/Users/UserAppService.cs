@@ -16,6 +16,7 @@ using ICIMS.Authorization.Roles;
 using ICIMS.Authorization.Users;
 using ICIMS.Roles.Dto;
 using ICIMS.Users.Dto;
+using Abp.Authorization.Users;
 
 namespace ICIMS.Users
 {
@@ -25,8 +26,7 @@ namespace ICIMS.Users
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
         private readonly IRepository<Role> _roleRepository;
-        private readonly IPasswordHasher<User> _passwordHasher;
-
+        private readonly IPasswordHasher<User> _passwordHasher; 
         public UserAppService(
             IRepository<User, long> repository,
             UserManager userManager,
@@ -116,11 +116,11 @@ namespace ICIMS.Users
             user.SetNormalizedNames();
         }
 
-        protected override UserDto MapToEntityDto(User user)
+        protected override  UserDto MapToEntityDto(User user)
         {
             var roles = _roleManager.Roles.Where(r => user.Roles.Any(ur => ur.RoleId == r.Id)).Select(r => r.NormalizedName);
             var userDto = base.MapToEntityDto(user);
-            userDto.RoleNames = roles.ToArray();
+            userDto.RoleNames = roles.ToArray();  
             return userDto;
         }
 
@@ -131,16 +131,17 @@ namespace ICIMS.Users
 
         protected override async Task<User> GetEntityByIdAsync(long id)
         {
+         
             var user = await Repository.GetAllIncluding(x => x.Roles).FirstOrDefaultAsync(x => x.Id == id);
 
             if (user == null)
             {
                 throw new EntityNotFoundException(typeof(User), id);
             }
-
+           
             return user;
         }
-
+        
         protected override IQueryable<User> ApplySorting(IQueryable<User> query, PagedResultRequestDto input)
         {
             return query.OrderBy(r => r.UserName);
@@ -149,6 +150,24 @@ namespace ICIMS.Users
         protected virtual void CheckErrors(IdentityResult identityResult)
         {
             identityResult.CheckErrors(LocalizationManager);
+        }
+
+        public virtual async Task<List<UnitDto>> GetOrganizationUnitsAsync(User user)
+        {
+            if (user==null)
+            {
+                return null;
+            }
+            var items =await _userManager.GetOrganizationUnitsAsync(user);
+            return items.Select(o => new UnitDto() { Id = o.Id, Code = o.Code, Name = o.DisplayName }).ToList();
+        }
+
+        public async Task<UserDto> GetUserById(long id)
+        {
+            var user =await GetEntityByIdAsync(id);
+            var userdto = MapToEntityDto(user);
+            userdto.Units =await GetOrganizationUnitsAsync(user);
+            return userdto;
         }
     }
 }

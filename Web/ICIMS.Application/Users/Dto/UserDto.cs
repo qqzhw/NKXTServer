@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 using Abp.Authorization.Users;
@@ -10,6 +11,10 @@ namespace ICIMS.Users.Dto
     [AutoMapFrom(typeof(User))]
     public class UserDto : EntityDto<long>
     {
+        public UserDto()
+        {
+           
+        }
         [Required]
         [StringLength(AbpUserBase.MaxUserNameLength)]
         public string UserName { get; set; }
@@ -36,5 +41,7 @@ namespace ICIMS.Users.Dto
         public DateTime CreationTime { get; set; }
 
         public string[] RoleNames { get; set; }
+
+        public IList<UnitDto> Units { get; set; }
     }
 }

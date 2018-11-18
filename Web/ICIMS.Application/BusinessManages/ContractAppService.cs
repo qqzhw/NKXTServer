@@ -155,12 +155,21 @@ ContractEditDto editDto;
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
             return input;
 		}
+        private string GenerateId()
+        {
+            var findnumber = _entityRepository.LongCount(o => o.CreationTime.Date == DateTime.Now.Date);
 
-		/// <summary>
-		/// 编辑Contract
-		/// </summary>
-		//[AbpAuthorize(ContractPermissions.Edit)]
-		protected virtual async Task<ContractEditDto> Update(ContractEditDto input)
+            findnumber += 1;
+
+            var id = DateTime.Now.ToString("yyyyMMdd000");
+            var no = $"HT{Convert.ToInt64(id) + findnumber}";
+            return no;
+        }
+        /// <summary>
+        /// 编辑Contract
+        /// </summary>
+        //[AbpAuthorize(ContractPermissions.Edit)]
+        protected virtual async Task<ContractEditDto> Update(ContractEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 

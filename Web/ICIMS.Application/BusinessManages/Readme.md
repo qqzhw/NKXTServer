@@ -25,7 +25,7 @@ Configuration.Modules.AbpAutoMapper().Configurators.Add(configuration =>
     // ....
 
     // 只需要复制这一段
-ReViewDefineMapper.CreateMappings(configuration);
+BuinessAuditMapper.CreateMappings(configuration);
 
     // ....
 });
@@ -38,7 +38,7 @@ ReViewDefineMapper.CreateMappings(configuration);
 中的 PreInitialize 方法中:
 
 ```
-Configuration.Authorization.Providers.Add<ReViewDefineAuthorizationProvider>();
+Configuration.Authorization.Providers.Add<BuinessAuditAuthorizationProvider>();
 
 ```
 
@@ -47,7 +47,7 @@ Configuration.Authorization.Providers.Add<ReViewDefineAuthorizationProvider>();
 可以在```DbContext```中增加：
 
  ```
-public DbSet<ReViewDefine>  ReViewDefines { get; set; }
+public DbSet<BuinessAudit>  BuinessAudits { get; set; }
 
  ```
 
@@ -56,7 +56,7 @@ public DbSet<ReViewDefine>  ReViewDefines { get; set; }
 ```
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ReViewDefineCfg());
+            modelBuilder.ApplyConfiguration(new BuinessAuditCfg());
         }
 
 ```
@@ -68,18 +68,13 @@ public DbSet<ReViewDefine>  ReViewDefines { get; set; }
 
 ```
 
+<text name="Name"  value="Name"></text>
+<text name="DisplayOrder"  value="DisplayOrder"></text>
 <text name="TenantId"  value="TenantId"></text>
-<text name="Status"  value="Status"></text>
-<text name="ItemDefineId"  value="ItemDefineId"></text>
-<text name="ReViewNo"  value="ReViewNo"></text>
-<text name="ReViewName"  value="ReViewName"></text>
-<text name="ReViewDocNo"  value="ReViewDocNo"></text>
-<text name="ReViewAmount"  value="ReViewAmount"></text>
-<text name="Remark"  value="Remark"></text>
-<text name="AuditDate"  value="AuditDate"></text>
-<text name="AuditUserId"  value="AuditUserId"></text>
-<text name="AuditUser"  value="AuditUser"></text>
-<text name="SysGuid"  value="SysGuid"></text>
+<text name="RoleId"  value="RoleId"></text>
+<text name="BuinessTypeId"  value="BuinessTypeId"></text>
+<text name="Role"  value="Role"></text>
+<text name="BuinessType"  value="BuinessType"></text>
 
 
 ```

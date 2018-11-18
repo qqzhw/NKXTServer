@@ -152,13 +152,23 @@ BudgetEditDto editDto;
 
            input.Id=await _entityRepository.InsertAndGetIdAsync(entity);
 			return  input;
-		}
+        }
+        private string GenerateId()
+        {
+            var findnumber = _entityRepository.LongCount(o => o.CreationTime.Date == DateTime.Now.Date);
 
-		/// <summary>
-		/// 编辑Budget
-		/// </summary>
-		//[AbpAuthorize(BudgetPermissions.Edit)]
-		protected virtual async Task<BudgetEditDto> Update(BudgetEditDto input)
+            findnumber += 1;
+
+            var id = DateTime.Now.ToString("yyyyMMdd000");
+            var no = $"YS{Convert.ToInt64(id) + findnumber}";
+            return no;
+        }
+
+        /// <summary>
+        /// 编辑Budget
+        /// </summary>
+        //[AbpAuthorize(BudgetPermissions.Edit)]
+        protected virtual async Task<BudgetEditDto> Update(BudgetEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 

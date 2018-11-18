@@ -122,16 +122,16 @@ ItemDefineEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(ItemDefinePermissions.Create,ItemDefinePermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateItemDefineInput input)
+		public async Task<ItemDefineEditDto> CreateOrUpdate(CreateOrUpdateItemDefineInput input)
 		{
 
-			if (input.ItemDefine.Id.HasValue)
+			if (input.ItemDefine.Id>0)
 			{
-				await Update(input.ItemDefine);
+			   return await Update(input.ItemDefine);
 			}
 			else
 			{
-				await Create(input.ItemDefine);
+				return await Create(input.ItemDefine);
 			}
 		}
 
@@ -142,8 +142,9 @@ ItemDefineEditDto editDto;
 		//[AbpAuthorize(ItemDefinePermissions.Create)]
 		protected virtual async Task<ItemDefineEditDto> Create(ItemDefineEditDto input)
 		{
+            GenerateId();
             //TODO:新增前的逻辑判断，是否允许新增
-            input.TenantId = AbpSession.TenantId;
+            input.TenantId = AbpSession.TenantId;            
             // var entity = ObjectMapper.Map <ItemDefine>(input);
             var entity=input.MapTo<ItemDefine>();
             var item = await _entityRepository.FirstOrDefaultAsync(o => o.ItemName == input.ItemName);
@@ -151,20 +152,30 @@ ItemDefineEditDto editDto;
             {
                 throw new UserFriendlyException("已存在相同的项目名称,请重新输入");
             }
-
+            entity.ItemNo = GenerateId();
+            entity.CreatorUserId = AbpSession.UserId;
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
 			return input;
 		}
-
-		/// <summary>
-		/// 编辑ItemDefine
-		/// </summary>
-		//[AbpAuthorize(ItemDefinePermissions.Edit)]
-		protected virtual async Task<ItemDefineEditDto> Update(ItemDefineEditDto input)
+        private string GenerateId()
+        {
+            var findnumber = _entityRepository.LongCount(o=>o.CreationTime.Date == DateTime.Now.Date);
+             
+             findnumber += 1;
+         
+            var id = DateTime.Now.ToString("yyyyMMdd000");
+            var no = $"LX{Convert.ToInt64(id) + findnumber}";
+            return no;
+        }
+        /// <summary>
+        /// 编辑ItemDefine
+        /// </summary>
+        //[AbpAuthorize(ItemDefinePermissions.Edit)]
+        protected virtual async Task<ItemDefineEditDto> Update(ItemDefineEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);

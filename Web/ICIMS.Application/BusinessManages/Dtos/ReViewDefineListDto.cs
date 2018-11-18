@@ -76,7 +76,7 @@ namespace ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// AuditDate
 		/// </summary>
-		public DateTime AuditDate { get; set; }
+		public DateTime? AuditDate { get; set; }
 
 
 
