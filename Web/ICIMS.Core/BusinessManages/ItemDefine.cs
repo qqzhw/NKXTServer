@@ -5,6 +5,7 @@ using ICIMS.Authorization.Users;
 using ICIMS.BaseData;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -74,12 +75,13 @@ namespace ICIMS.BusinessManages
         /// <summary>
         /// 是否评审
         /// </summary>
+        [DefaultValue(false)]
         public bool IsAudit { get; set; }
 
         /// <summary>
         /// 结审日期
         /// </summary>
-        public DateTime AuditDate { get; set; }
+        public DateTime? AuditDate { get; set; }
 
         public long? AuditUserId { get; set; }
         [ForeignKey("AuditUserId")]

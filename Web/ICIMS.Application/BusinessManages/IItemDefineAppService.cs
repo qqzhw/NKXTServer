@@ -55,7 +55,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateItemDefineInput input);
+        Task<ItemDefineEditDto> CreateOrUpdate(CreateOrUpdateItemDefineInput input);
 
 
         /// <summary>

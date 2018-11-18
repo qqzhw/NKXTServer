@@ -156,12 +156,21 @@ ReViewDefineEditDto editDto;
 			input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
 			return input;
 		}
+        private string GenerateId()
+        {
+            var findnumber = _entityRepository.LongCount(o => o.CreationTime.Date == DateTime.Now.Date);
 
-		/// <summary>
-		/// 编辑ReViewDefine
-		/// </summary>
-		//[AbpAuthorize(ReViewDefinePermissions.Edit)]
-		protected virtual async Task<ReViewDefineEditDto> Update(ReViewDefineEditDto input)
+            findnumber += 1;
+
+            var id = DateTime.Now.ToString("yyyyMMdd000");
+            var no = $"PS{Convert.ToInt64(id) + findnumber}";
+            return no;
+        }
+        /// <summary>
+        /// 编辑ReViewDefine
+        /// </summary>
+        //[AbpAuthorize(ReViewDefinePermissions.Edit)]
+        protected virtual async Task<ReViewDefineEditDto> Update(ReViewDefineEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 

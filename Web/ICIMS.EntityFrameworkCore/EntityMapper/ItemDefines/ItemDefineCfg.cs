@@ -25,7 +25,7 @@ namespace ICIMS.EntityMapper.ItemDefines
 			builder.Property(a => a.ItemAddress).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
 			builder.Property(a => a.ItemDescription).HasMaxLength(2000);
 			builder.Property(a => a.Remark).HasMaxLength(2000);
-		  
+            builder.Property(a => a.IsDeleted).HasDefaultValue(false);
              
            builder.HasOne(a => a.Unit).WithMany().HasForeignKey(r => r.UnitId).IsRequired();
            builder.HasOne(a => a.Budget).WithMany().HasForeignKey(r => r.BudgetId);

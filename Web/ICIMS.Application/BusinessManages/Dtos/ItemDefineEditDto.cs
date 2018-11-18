@@ -14,7 +14,7 @@ namespace  ICIMS.BusinessManages.Dtos
         /// <summary>
         /// Id
         /// </summary>
-        public int? Id { get; set; }         
+        public int Id { get; set; }         
 
 
         
@@ -50,8 +50,7 @@ namespace  ICIMS.BusinessManages.Dtos
 
 		/// <summary>
 		/// BudgetId
-		/// </summary>
-		[Required(ErrorMessage="BudgetId不能为空")]
+		/// </summary> 
 		public int? BudgetId { get; set; }
 
 
@@ -72,8 +71,7 @@ namespace  ICIMS.BusinessManages.Dtos
 
 		/// <summary>
 		/// ItemNo
-		/// </summary>
-		[Required(ErrorMessage="ItemNo不能为空")]
+		/// </summary> 
 		public string ItemNo { get; set; }
 
 
@@ -84,8 +82,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		[Required(ErrorMessage="ItemName不能为空")]
 		public string ItemName { get; set; }
 
-
-
+         
 		 
 
         public int ItemCategoryId { get; set; }
@@ -135,7 +132,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// AuditDate
 		/// </summary>
-		public DateTime AuditDate { get; set; }
+		public DateTime? AuditDate { get; set; }
 
 
 

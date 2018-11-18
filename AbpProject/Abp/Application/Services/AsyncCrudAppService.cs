@@ -106,6 +106,7 @@ namespace Abp.Application.Services
             CheckGetPermission();
 
             var entity = await GetEntityByIdAsync(input.Id);
+            
             return MapToEntityDto(entity);
         }
 

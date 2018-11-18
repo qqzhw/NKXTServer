@@ -97,7 +97,7 @@ namespace ICIMS.BusinessManages
         /// <summary>
         /// 结审日期
         /// </summary>
-        public DateTime AuditDate { get; set; }
+        public DateTime? AuditDate { get; set; }
 
         public long? AuditUserId { get; set; }
         
