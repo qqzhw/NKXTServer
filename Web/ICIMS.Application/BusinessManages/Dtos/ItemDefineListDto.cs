@@ -7,6 +7,9 @@ using System.ComponentModel.DataAnnotations;
 using ICIMS.BusinessManages;
 using Abp.Domain.Entities;
 using ICIMS.Authorization.Users;
+using ICIMS.BaseData;
+using ICIMS.Users.Dto;
+using ICIMS.BaseData.Dtos;
 
 namespace ICIMS.BusinessManages.Dtos
 {
@@ -18,67 +21,34 @@ namespace ICIMS.BusinessManages.Dtos
 		/// TenantId
 		/// </summary>
 		public int? TenantId { get; set; }
-
-
-
-		/// <summary>
-		/// SysGuid
-		/// </summary>
-		[Required(ErrorMessage="SysGuid不能为空")]
+          
 		public string SysGuid { get; set; }
-
-
-
+         
 		/// <summary>
 		/// Status
-		/// </summary>
-		[Required(ErrorMessage="Status不能为空")]
+		/// </summary> 
 		public int Status { get; set; }
+         
+		public long UnitId { get; set; }
+        public string UnitName { get; set; }
 
-
-
-		/// <summary>
-		/// UnitId
-		/// </summary>
-		[Required(ErrorMessage="UnitId不能为空")]
-		public int UnitId { get; set; }
-
-
-
-		/// <summary>
-		/// BudgetId
-		/// </summary>
-		[Required(ErrorMessage="BudgetId不能为空")]
+         
+		 
 		public int? BudgetId { get; set; }
-
-
-
-		/// <summary>
-		/// ItemDocNo
-		/// </summary>
-		public string ItemDocNo { get; set; }
-
-
-
+        public string BudgetNo { get; set; } 
+        public string BudgetName { get; set; }
+        /// <summary>
+        /// ItemDocNo
+        /// </summary>
+        public string ItemDocNo { get; set; }
+         
 		/// <summary>
 		/// DefineDate
 		/// </summary>
 		public DateTime DefineDate { get; set; }
-
-
-
-		/// <summary>
-		/// ItemNo
-		/// </summary>
-		[Required(ErrorMessage="ItemNo不能为空")]
-		public string ItemNo { get; set; }
-
-
-
-		/// <summary>
-		/// ItemName
-		/// </summary>
-		[Required(ErrorMessage="ItemName不能为空")]
+         
+		public string ItemNo { get; set; } 
+        
 		public string ItemName { get; set; }
 
 
@@ -86,17 +56,12 @@ namespace ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// ItemType
 		/// </summary>
-		public string ItemType { get; set; }
+		public int ItemCategoryId { get; set; }
 
-
-
-		/// <summary>
-		/// DefineAmount
-		/// </summary>
-		public decimal DefineAmount { get; set; }
-
-
-
+        public string ItemCategoryName { get; set; }
+         
+        public decimal DefineAmount { get; set; }
+         
 		/// <summary>
 		/// ItemAddress
 		/// </summary>
@@ -130,29 +95,24 @@ namespace ICIMS.BusinessManages.Dtos
 		/// </summary>
 		public bool IsAudit { get; set; }
 
-
-
+        public long? CreatorUserId { get; set; }
+        public string CreatorName { get; set; }
+         
 		/// <summary>
 		/// AuditDate
 		/// </summary>
-		public DateTime? AuditDate { get; set; }
-
-
+		public DateTime? AuditDate { get; set; } 
 
 		/// <summary>
 		/// AuditUserId
 		/// </summary>
-		public int? AuditUserId { get; set; }
-
-
-
+		public long? AuditUserId { get; set; } 
 		/// <summary>
 		/// AuditUser
 		/// </summary>
-		public User AuditUser { get; set; }
+		public string AuditUserName { get; set; } 
 
-
-
+        
 
     }
 }

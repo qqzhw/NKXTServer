@@ -14,5 +14,7 @@ namespace ICIMS.Models.TokenAuth
         public string Password { get; set; }
         
         public bool RememberClient { get; set; }
+
+        public string TenancyName { get; set; }
     }
 }

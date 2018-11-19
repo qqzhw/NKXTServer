@@ -14,7 +14,8 @@ namespace ICIMS.BusinessManages.Mapper
         public ItemDefineMapper()
         { 
       
-            CreateMap<ItemDefine,ItemDefineListDto>();
+            CreateMap<ItemDefine,ItemDefineListDto>() 
+             ;
             CreateMap<ItemDefineListDto,ItemDefine>();
 
             CreateMap<ItemDefineEditDto, ItemDefine>()

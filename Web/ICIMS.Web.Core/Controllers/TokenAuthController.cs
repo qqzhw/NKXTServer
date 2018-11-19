@@ -55,7 +55,7 @@ namespace ICIMS.Controllers
             var loginResult = await GetLoginResultAsync(
                 model.UserNameOrEmailAddress,
                 model.Password,
-                GetTenancyNameOrNull()
+                model.TenancyName
             );
 
             var accessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity));

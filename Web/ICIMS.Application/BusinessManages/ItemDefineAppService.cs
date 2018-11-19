@@ -58,10 +58,41 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<ItemDefineListDto>> GetPaged(GetItemDefinesInput input)
 		{
 
-		    var query = _entityRepository.GetAll();
+            var query = _entityRepository.GetAllIncluding(o => o.Budget).Include(o => o.ItemCategory).Include(o => o.Unit).Include(o=>o.AuditUser)
+                .Select(o=>new ItemDefineListDto() {
+                     AuditDate=o.AuditDate,
+                     AuditUserId=o.AuditUserId,
+                     AuditUserName=o.AuditUser.Name,
+                     BudgetId=o.BudgetId,
+                     BudgetName=o.Budget.BudgetName,
+                     BudgetNo=o.Budget.BudgetNo,
+                     CreatorUserId = o.CreatorUserId,
+                     CreationTime=o.CreationTime,
+                     DefineAmount=o.DefineAmount,
+                     DefineDate=o.DefineDate,
+                     Id=o.Id,
+                     IsAudit=o.IsAudit,
+                     IsFinal=o.IsFinal,
+                     IsDeleted=o.IsDeleted,
+                     ItemAddress=o.ItemAddress,
+                     ItemCategoryId=o.ItemCategoryId,
+                     ItemCategoryName=o.ItemCategory.Name,
+                     ItemDescription=o.ItemDescription,
+                     ItemDocNo=o.ItemDocNo,
+                     ItemName=o.ItemName,
+                     ItemNo=o.ItemNo,
+                     Remark=o.Remark,
+                     Status=o.Status,
+                     SysGuid=o.SysGuid,
+                     TenantId=o.TenantId,
+                     UnitId=o.UnitId ,
+                    UnitName =o.Unit.DisplayName
+                });
+                 
+           
 			// TODO:根据传入的参数添加过滤条件
             
-
+            
 			var count = await query.CountAsync();
 
 			var entityList = await query
@@ -70,9 +101,9 @@ namespace ICIMS.BusinessManages
 					.ToListAsync();
 
 			// var entityListDtos = ObjectMapper.Map<List<ItemDefineListDto>>(entityList);
-			var entityListDtos =entityList.MapTo<List<ItemDefineListDto>>();
+			//var entityListDtos =entityList.MapTo<List<ItemDefineListDto>>();
 
-			return new PagedResultDto<ItemDefineListDto>(count,entityListDtos);
+			return new PagedResultDto<ItemDefineListDto>(count, entityList);
 		}
 
 
