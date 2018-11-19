@@ -27,21 +27,21 @@ using ICIMS.BusinessManages.Authorization;
 namespace ICIMS.BusinessManages
 {
     /// <summary>
-    /// BuinessAudit应用层服务的接口实现方法  
+    /// AuditMapping应用层服务的接口实现方法  
     ///</summary>
     [AbpAuthorize]
-    public class BuinessAuditAppService : ICIMSAppServiceBase, IBuinessAuditAppService
+    public class AuditMappingAppService : ICIMSAppServiceBase, IAuditMappingAppService
     {
-        private readonly IRepository<BuinessAudit, int> _entityRepository;
+        private readonly IRepository<AuditMapping, int> _entityRepository;
 
-        private readonly IBuinessAuditManager _entityManager;
+        private readonly IAuditMappingManager _entityManager;
 
         /// <summary>
         /// 构造函数 
         ///</summary>
-        public BuinessAuditAppService(
-        IRepository<BuinessAudit, int> entityRepository
-        ,IBuinessAuditManager entityManager
+        public AuditMappingAppService(
+        IRepository<AuditMapping, int> entityRepository
+        ,IAuditMappingManager entityManager
         )
         {
             _entityRepository = entityRepository; 
@@ -50,12 +50,12 @@ namespace ICIMS.BusinessManages
 
 
         /// <summary>
-        /// 获取BuinessAudit的分页列表信息
+        /// 获取AuditMapping的分页列表信息
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(BuinessAuditPermissions.Query)] 
-        public async Task<PagedResultDto<BuinessAuditListDto>> GetPaged(GetBuinessAuditsInput input)
+		//[AbpAuthorize(AuditMappingPermissions.Query)] 
+        public async Task<PagedResultDto<AuditMappingListDto>> GetPaged(GetAuditMappingsInput input)
 		{
 
 		    var query = _entityRepository.GetAll();
@@ -69,94 +69,94 @@ namespace ICIMS.BusinessManages
 					.PageBy(input)
 					.ToListAsync();
 
-			// var entityListDtos = ObjectMapper.Map<List<BuinessAuditListDto>>(entityList);
-			var entityListDtos =entityList.MapTo<List<BuinessAuditListDto>>();
+			// var entityListDtos = ObjectMapper.Map<List<AuditMappingListDto>>(entityList);
+			var entityListDtos =entityList.MapTo<List<AuditMappingListDto>>();
 
-			return new PagedResultDto<BuinessAuditListDto>(count,entityListDtos);
+			return new PagedResultDto<AuditMappingListDto>(count,entityListDtos);
 		}
 
 
 		/// <summary>
-		/// 通过指定id获取BuinessAuditListDto信息
+		/// 通过指定id获取AuditMappingListDto信息
 		/// </summary>
-		[AbpAuthorize(BuinessAuditPermissions.Query)] 
-		public async Task<BuinessAuditListDto> GetById(EntityDto<int> input)
+		//[AbpAuthorize(AuditMappingPermissions.Query)] 
+		public async Task<AuditMappingListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
 
-		    return entity.MapTo<BuinessAuditListDto>();
+		    return entity.MapTo<AuditMappingListDto>();
 		}
 
 		/// <summary>
-		/// 获取编辑 BuinessAudit
+		/// 获取编辑 AuditMapping
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BuinessAuditPermissions.Create,BuinessAuditPermissions.Edit)]
-		public async Task<GetBuinessAuditForEditOutput> GetForEdit(NullableIdDto<int> input)
+		//[AbpAuthorize(AuditMappingPermissions.Create,AuditMappingPermissions.Edit)]
+		public async Task<GetAuditMappingForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
-			var output = new GetBuinessAuditForEditOutput();
-BuinessAuditEditDto editDto;
+			var output = new GetAuditMappingForEditOutput();
+AuditMappingEditDto editDto;
 
 			if (input.Id.HasValue)
 			{
 				var entity = await _entityRepository.GetAsync(input.Id.Value);
 
-				editDto = entity.MapTo<BuinessAuditEditDto>();
+				editDto = entity.MapTo<AuditMappingEditDto>();
 
-				//buinessAuditEditDto = ObjectMapper.Map<List<buinessAuditEditDto>>(entity);
+				//auditMappingEditDto = ObjectMapper.Map<List<auditMappingEditDto>>(entity);
 			}
 			else
 			{
-				editDto = new BuinessAuditEditDto();
+				editDto = new AuditMappingEditDto();
 			}
 
-			output.BuinessAudit = editDto;
+			output.AuditMapping = editDto;
 			return output;
 		}
 
 
 		/// <summary>
-		/// 添加或者修改BuinessAudit的公共方法
+		/// 添加或者修改AuditMapping的公共方法
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BuinessAuditPermissions.Create,BuinessAuditPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateBuinessAuditInput input)
+		//[AbpAuthorize(AuditMappingPermissions.Create,AuditMappingPermissions.Edit)]
+		public async Task CreateOrUpdate(CreateOrUpdateAuditMappingInput input)
 		{
 
-			if (input.BuinessAudit.Id.HasValue)
+			if (input.AuditMapping.Id.HasValue)
 			{
-				await Update(input.BuinessAudit);
+				await Update(input.AuditMapping);
 			}
 			else
 			{
-				await Create(input.BuinessAudit);
+				await Create(input.AuditMapping);
 			}
 		}
 
 
 		/// <summary>
-		/// 新增BuinessAudit
+		/// 新增AuditMapping
 		/// </summary>
-		[AbpAuthorize(BuinessAuditPermissions.Create)]
-		protected virtual async Task<BuinessAuditEditDto> Create(BuinessAuditEditDto input)
+		//[AbpAuthorize(AuditMappingPermissions.Create)]
+		protected virtual async Task<AuditMappingEditDto> Create(AuditMappingEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
 
-            // var entity = ObjectMapper.Map <BuinessAudit>(input);
-            var entity=input.MapTo<BuinessAudit>();
+            // var entity = ObjectMapper.Map <AuditMapping>(input);
+            var entity=input.MapTo<AuditMapping>();
 			
 
 			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<BuinessAuditEditDto>();
+			return entity.MapTo<AuditMappingEditDto>();
 		}
 
 		/// <summary>
-		/// 编辑BuinessAudit
+		/// 编辑AuditMapping
 		/// </summary>
-		[AbpAuthorize(BuinessAuditPermissions.Edit)]
-		protected virtual async Task Update(BuinessAuditEditDto input)
+		//[AbpAuthorize(AuditMappingPermissions.Edit)]
+		protected virtual async Task Update(AuditMappingEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -170,11 +170,11 @@ BuinessAuditEditDto editDto;
 
 
 		/// <summary>
-		/// 删除BuinessAudit信息的方法
+		/// 删除AuditMapping信息的方法
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		[AbpAuthorize(BuinessAuditPermissions.Delete)]
+		//[AbpAuthorize(AuditMappingPermissions.Delete)]
 		public async Task Delete(EntityDto<int> input)
 		{
 			//TODO:删除前的逻辑判断，是否允许删除
@@ -184,9 +184,9 @@ BuinessAuditEditDto editDto;
 
 
 		/// <summary>
-		/// 批量删除BuinessAudit的方法
+		/// 批量删除AuditMapping的方法
 		/// </summary>
-		[AbpAuthorize(BuinessAuditPermissions.BatchDelete)]
+		//[AbpAuthorize(AuditMappingPermissions.BatchDelete)]
 		public async Task BatchDelete(List<int> input)
 		{
 			// TODO:批量删除前的逻辑判断，是否允许删除
@@ -195,7 +195,7 @@ BuinessAuditEditDto editDto;
 
 
 		/// <summary>
-		/// 导出BuinessAudit为excel表,等待开发。
+		/// 导出AuditMapping为excel表,等待开发。
 		/// </summary>
 		/// <returns></returns>
 		//public async Task<FileDto> GetToExcel()

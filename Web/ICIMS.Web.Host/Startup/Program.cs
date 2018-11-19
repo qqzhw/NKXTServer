@@ -14,7 +14,7 @@ namespace ICIMS.Web.Host.Startup
         {
             return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-               // .UseUrls("http://.*:10085")
+                .UseUrls("http://.*:10085")
                 .Build();
         }
     }

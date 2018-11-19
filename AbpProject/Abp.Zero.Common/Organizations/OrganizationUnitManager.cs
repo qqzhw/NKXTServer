@@ -6,7 +6,7 @@ using Abp.Domain.Services;
 using Abp.Domain.Uow;
 using Abp.UI;
 using Abp.Zero;
-using AutoMapper;
+
 
 namespace Abp.Organizations
 {
@@ -35,7 +35,8 @@ namespace Abp.Organizations
         public virtual async Task<OrganizationUnit> UpdateAsync(OrganizationUnit organizationUnit)
         {
             var oriItem = await OrganizationUnitRepository.GetAsync(organizationUnit.Id);
-            Mapper.Map(organizationUnit, oriItem);
+            //Mapper.Map(organizationUnit, oriItem);
+            oriItem = organizationUnit;
             await ValidateOrganizationUnitAsync(oriItem);
             return await OrganizationUnitRepository.UpdateAsync(oriItem);
         }
