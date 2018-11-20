@@ -158,6 +158,7 @@ ContractCategoryEditDto editDto;
             {
                 throw new UserFriendlyException("编号已存在,请重新输入");
             }
+            
             var id = await _entityRepository.InsertAndGetIdAsync(entity);
             input.Id = id;
             return input;

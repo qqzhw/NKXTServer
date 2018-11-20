@@ -22,7 +22,7 @@ using ICIMS.BaseData;
 using ICIMS.BaseData.Dtos;
 using ICIMS.BaseData.DomainService;
 using ICIMS.BaseData.Authorization;
-
+using Microsoft.AspNetCore.Http;
 
 namespace ICIMS.BaseData
 {
@@ -122,16 +122,16 @@ FilesManageEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(FilesManagePermissions.Create,FilesManagePermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateFilesManageInput input)
+		public async Task<FilesManageEditDto> CreateOrUpdate(CreateOrUpdateFilesManageInput input)
 		{
 
 			if (input.FilesManage.Id>0)
 			{
-				await Update(input.FilesManage);
+				return await Update(input.FilesManage);
 			}
 			else
 			{
-				await Create(input.FilesManage);
+				return await Create(input.FilesManage);
 			}
 		}
 
@@ -142,12 +142,12 @@ FilesManageEditDto editDto;
 		//[AbpAuthorize(FilesManagePermissions.Create)]
 		protected virtual async Task<FilesManageEditDto> Create(FilesManageEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <FilesManage>(input);
             var entity=input.MapTo<FilesManage>();
-			
 
+            entity.CreatorUserId = AbpSession.UserId;
 			input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
             return input;
 		}
@@ -156,7 +156,7 @@ FilesManageEditDto editDto;
 		/// 编辑FilesManage
 		/// </summary>
 		//[AbpAuthorize(FilesManagePermissions.Edit)]
-		protected virtual async Task Update(FilesManageEditDto input)
+		protected virtual async Task<FilesManageEditDto> Update(FilesManageEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -165,6 +165,7 @@ FilesManageEditDto editDto;
           
             // ObjectMapper.Map(input, entity);
             await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<FilesManageEditDto>();
 		}
 
 
@@ -193,18 +194,23 @@ FilesManageEditDto editDto;
 			await _entityRepository.DeleteAsync(s => input.Contains(s.Id));
 		}
 
+        public async Task<FilesManageEditDto> UploadFileAsync(IFormCollection formcollection, FilesManageInput model)
+        {
+            int s=0;
+            return null;
+        }
 
-		/// <summary>
-		/// 导出FilesManage为excel表,等待开发。
-		/// </summary>
-		/// <returns></returns>
-		//public async Task<FileDto> GetToExcel()
-		//{
-		//	var users = await UserManager.Users.ToListAsync();
-		//	var userListDtos = ObjectMapper.Map<List<UserListDto>>(users);
-		//	await FillRoleNames(userListDtos);
-		//	return _userListExcelExporter.ExportToFile(userListDtos);
-		//}
+        /// <summary>
+        /// 导出FilesManage为excel表,等待开发。
+        /// </summary>
+        /// <returns></returns>
+        //public async Task<FileDto> GetToExcel()
+        //{
+        //	var users = await UserManager.Users.ToListAsync();
+        //	var userListDtos = ObjectMapper.Map<List<UserListDto>>(users);
+        //	await FillRoleNames(userListDtos);
+        //	return _userListExcelExporter.ExportToFile(userListDtos);
+        //}
 
     }
 }

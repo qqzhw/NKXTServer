@@ -162,7 +162,7 @@ BuyCategoryEditDto editDto;
             {
                 throw new UserFriendlyException("编号已存在,请重新输入");
             }
-          
+            
           
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
             return input;

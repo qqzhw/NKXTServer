@@ -20,6 +20,7 @@ using Abp.Application.Services.Dto;
 
 using ICIMS.BaseData.Dtos;
 using ICIMS.BaseData;
+using Microsoft.AspNetCore.Http;
 
 namespace ICIMS.BaseData
 {
@@ -55,7 +56,7 @@ namespace ICIMS.BaseData
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateFilesManageInput input);
+        Task<FilesManageEditDto> CreateOrUpdate(CreateOrUpdateFilesManageInput input);
 
 
         /// <summary>
@@ -71,6 +72,7 @@ namespace ICIMS.BaseData
         /// </summary>
         Task BatchDelete(List<int> input);
 
+        Task<FilesManageEditDto> UploadFileAsync(IFormCollection formcollection, FilesManageInput model);
 
 		/// <summary>
         /// 导出FilesManage为excel表

@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using ICIMS.BaseData;
+using Microsoft.AspNetCore.Http;
 
 namespace ICIMS.BaseData.Dtos
 {
@@ -10,6 +11,6 @@ namespace ICIMS.BaseData.Dtos
     {
         [Required]
         public FilesManageEditDto FilesManage { get; set; }
-
+        public IFormFile FromFile { get; }
     }
 }

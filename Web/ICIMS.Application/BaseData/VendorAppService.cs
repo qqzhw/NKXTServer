@@ -159,6 +159,7 @@ VendorEditDto editDto;
             {
                 throw new UserFriendlyException("编号已存在,请重新输入");
             }
+            entity.CreatorUserId = AbpSession.UserId;
             entity = await _entityRepository.InsertAsync(entity);
 			return entity.MapTo<VendorEditDto>();
 		}

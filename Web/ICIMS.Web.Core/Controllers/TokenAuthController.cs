@@ -17,6 +17,8 @@ using ICIMS.Authorization;
 using ICIMS.Authorization.Users;
 using ICIMS.Models.TokenAuth;
 using ICIMS.MultiTenancy;
+using Microsoft.AspNetCore.Http;
+using ICIMS.BaseData.Dtos;
 
 namespace ICIMS.Controllers
 {
@@ -228,6 +230,11 @@ namespace ICIMS.Controllers
         private string GetEncrpyedAccessToken(string accessToken)
         {
             return SimpleStringCipher.Instance.Encrypt(accessToken, AppConsts.DefaultPassPhrase);
+        }
+        [HttpPost]
+        public  async Task UploadAsync(IFormCollection formcollection,FilesManageInput model)
+        {
+            await Task.CompletedTask;
         }
     }
 }
