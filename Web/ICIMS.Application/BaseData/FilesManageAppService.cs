@@ -194,10 +194,15 @@ FilesManageEditDto editDto;
 			await _entityRepository.DeleteAsync(s => input.Contains(s.Id));
 		}
 
-        public async Task<FilesManageEditDto> UploadFileAsync(IFormCollection formcollection, FilesManageInput model)
+        public async Task<FilesManageInput> InsertOrUpdate(FilesManageInput input)
         {
-            int s=0;
-            return null;
+            input.TenantId = AbpSession.TenantId;
+            // var entity = ObjectMapper.Map <FilesManage>(input);
+            var entity = input.MapTo<FilesManage>();
+
+            entity.CreatorUserId = AbpSession.UserId;
+            input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            return input;
         }
 
         /// <summary>

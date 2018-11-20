@@ -11,7 +11,11 @@ namespace ICIMS.BaseData
     /// </summary>
     public class FilesManage : FullAuditedEntity, IMayHaveTenant
     {
+        public int? EntityId { get; set; }
 
+        public string EntityKey { get; set; }
+
+        public string EntityName { get; set; }
         /// <summary>
         /// Gets or sets a GUID
         /// </summary>
@@ -21,6 +25,7 @@ namespace ICIMS.BaseData
 
         public string UploadType { get; set; }
 
+        
         public string ContentType { get; set; }
 
 
@@ -30,7 +35,7 @@ namespace ICIMS.BaseData
 
         public string Extension { get; set; }
         public int DisplayOrder { get; set; }
-        public bool IsNew { get; set; }
+         
         public int? TenantId { get; set; }
 
     }

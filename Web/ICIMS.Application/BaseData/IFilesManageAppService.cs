@@ -58,7 +58,7 @@ namespace ICIMS.BaseData
         /// <returns></returns>
         Task<FilesManageEditDto> CreateOrUpdate(CreateOrUpdateFilesManageInput input);
 
-
+        Task<FilesManageInput> InsertOrUpdate(FilesManageInput input);
         /// <summary>
         /// 删除FilesManage信息的方法
         /// </summary>
@@ -72,8 +72,7 @@ namespace ICIMS.BaseData
         /// </summary>
         Task BatchDelete(List<int> input);
 
-        Task<FilesManageEditDto> UploadFileAsync(IFormCollection formcollection, FilesManageInput model);
-
+        
 		/// <summary>
         /// 导出FilesManage为excel表
         /// </summary>

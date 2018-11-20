@@ -8,7 +8,7 @@ namespace ICIMS.BaseData.Dtos
     public class FilesManageInput
     {
         public int Id { get; set; }
-      
+
         /// <summary>
         /// DownloadGuid
         /// </summary>
@@ -20,23 +20,27 @@ namespace ICIMS.BaseData.Dtos
         /// DownloadUrl
         /// </summary>
         public string DownloadUrl { get; set; }
-         
+
         /// <summary>
         /// UploadType
         /// </summary>
-        public string UploadType { get; set; } 
+        public string UploadType { get; set; }
         /// <summary>
         /// ContentType
         /// </summary>
-        public string ContentType { get; set; } 
- 
-        public string FileName { get; set; } 
+        public string ContentType { get; set; }
+
+        public string FileName { get; set; }
         /// <summary>
         /// FileSize
         /// </summary>
         public long FileSize { get; set; }
 
+        public int? EntityId { get; set; }
 
+        public string EntityKey { get; set; }
+
+        public string EntityName { get; set; }
 
         /// <summary>
         /// Extension
@@ -50,19 +54,12 @@ namespace ICIMS.BaseData.Dtos
         /// </summary>
         public int DisplayOrder { get; set; }
 
-
-
-        /// <summary>
-        /// IsNew
-        /// </summary>
-        public bool IsNew { get; set; }
-
+         
 
 
         /// <summary>
         /// TenantId
         /// </summary>
         public int? TenantId { get; set; }
-        public IFormFile FromFile { get; }
     }
 }

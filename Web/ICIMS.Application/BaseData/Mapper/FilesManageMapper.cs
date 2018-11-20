@@ -19,7 +19,8 @@ namespace ICIMS.BaseData.Mapper
 
             CreateMap<FilesManageEditDto,FilesManage>();
             CreateMap<FilesManage,FilesManageEditDto>();
-
+            CreateMap<FilesManageInput, FilesManage>();
+            CreateMap<FilesManage, FilesManageInput>();
         }
 	}
 }
