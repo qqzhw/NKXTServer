@@ -40,7 +40,7 @@ namespace ICIMS.BusinessManages.Dtos
 		/// RoleId
 		/// </summary>
 		[Required(ErrorMessage="RoleId不能为空")]
-		public Role RoleId { get; set; }
+		public long RoleId { get; set; }
 
 
 
