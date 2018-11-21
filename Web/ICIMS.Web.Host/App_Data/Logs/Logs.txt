@@ -4009,3 +4009,584 @@ INFO  2018-11-21 01:42:28,835 [6    ] uthentication.JwtBearer.JwtBearerHandler -
 INFO  2018-11-21 01:42:31,879 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "UploadFileAsync", controller = "FilesManage", area = ""}. Executing action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core)
 INFO  2018-11-21 01:42:31,908 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
 INFO  2018-11-21 01:42:31,908 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+WARN  2018-11-21 01:42:34,272 [6    ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 118
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 89
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Validation\AbpValidationActionFilter.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+WARN  2018-11-21 01:42:34,276 [6    ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 1 validation errors:
+WARN  2018-11-21 01:42:34,277 [6    ] Mvc.ExceptionHandling.AbpExceptionFilter - The value 'sssssssss' is not valid for DownloadGuid. (DownloadGuid)
+WARN  2018-11-21 01:42:34,675 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+INFO  2018-11-21 01:42:34,739 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 01:42:35,093 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) in 3164.7548ms
+INFO  2018-11-21 01:42:35,222 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6818.2102ms 400 application/json; charset=utf-8
+DEBUG 2018-11-21 01:44:01,065 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-21 01:44:02,131 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-21 01:44:02,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,200 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,201 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,205 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,205 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,207 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,208 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,209 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,209 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,219 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,220 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,221 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:02,231 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-21 01:44:02,628 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-21 01:44:02,628 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-21 01:44:02,628 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-21 01:44:02,628 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-21 01:44:04,058 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 01:44:07,608 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-21 01:44:07,827 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-21 01:44:07,947 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-21 01:44:08,069 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-21 01:44:08,139 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-21 01:44:08,864 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-21 01:44:08,951 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-21 01:44:08,951 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-21 01:44:08,964 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-21 01:44:08,965 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-21 01:44:08,965 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-21 01:44:08,965 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-21 01:44:08,967 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-21 01:44:08,967 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-21 01:44:08,967 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-21 01:44:08,970 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-21 01:44:08,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-21 01:44:23,697 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-21 01:44:23,697 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-21 01:44:23,755 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/FilesManage/UploadFileAsync multipart/form-data; boundary=----WebKitFormBoundary30yPySJB3NxzeVTG 275762
+INFO  2018-11-21 01:44:23,962 [11   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:44:23,998 [11   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:44:24,023 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 353.261ms 200 
+INFO  2018-11-21 01:44:24,818 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 01:44:38,541 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-21 01:44:38,662 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "UploadFileAsync", controller = "FilesManage", area = ""}. Executing action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core)
+INFO  2018-11-21 01:44:38,667 [9    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:44:38,673 [9    ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:44:43,382 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-21 01:44:43,396 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 7.4198ms.
+INFO  2018-11-21 01:44:44,348 [10   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-21 01:44:44,419 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 5855.3917ms
+INFO  2018-11-21 01:44:44,481 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20841.4506ms 302 
+INFO  2018-11-21 01:44:44,497 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-21 01:44:44,763 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-21 01:44:44,876 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 264.0854ms 200 text/html
+INFO  2018-11-21 01:44:44,957 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-21 01:44:44,965 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-21 01:44:45,016 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-21 01:44:45,022 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-21 01:44:45,024 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-21 01:44:45,034 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 81.3007ms 304 text/css
+INFO  2018-11-21 01:44:45,086 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.8241ms 304 application/javascript
+INFO  2018-11-21 01:44:45,117 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 275.7315ms 304 application/javascript
+WARN  2018-11-21 01:44:45,294 [11   ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 118
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 89
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Validation\AbpValidationActionFilter.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+WARN  2018-11-21 01:44:45,298 [11   ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 1 validation errors:
+WARN  2018-11-21 01:44:45,298 [11   ] Mvc.ExceptionHandling.AbpExceptionFilter - The value 'sssssssss' is not valid for DownloadGuid. (DownloadGuid)
+INFO  2018-11-21 01:44:45,845 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+WARN  2018-11-21 01:44:46,728 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+INFO  2018-11-21 01:44:46,847 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 01:44:46,935 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-21 01:44:46,949 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1117.5103ms 200 text/plain
+INFO  2018-11-21 01:44:46,982 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) in 8306.2676ms
+INFO  2018-11-21 01:44:47,021 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23367.5494ms 400 application/json; charset=utf-8
+INFO  2018-11-21 01:44:48,535 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-21 01:44:48,651 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-21 01:44:48,658 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 148.5196ms 200 text/plain
+INFO  2018-11-21 01:44:49,315 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-21 01:44:50,873 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1554.4098ms 200 application/json;charset=utf-8
+INFO  2018-11-21 01:44:54,617 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/FilesManage/UploadFileAsync multipart/form-data; boundary=----WebKitFormBoundaryDiyyAhacVZwlsHUn 275762
+INFO  2018-11-21 01:44:54,642 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:44:54,648 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:44:54,653 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 01:44:54,679 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "UploadFileAsync", controller = "FilesManage", area = ""}. Executing action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core)
+INFO  2018-11-21 01:44:54,683 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:44:54,687 [19   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+WARN  2018-11-21 01:44:54,881 [17   ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 118
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 89
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Validation\AbpValidationActionFilter.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+WARN  2018-11-21 01:44:54,882 [17   ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 1 validation errors:
+WARN  2018-11-21 01:44:54,882 [17   ] Mvc.ExceptionHandling.AbpExceptionFilter - The value 'sssssssss' is not valid for DownloadGuid. (DownloadGuid)
+WARN  2018-11-21 01:44:54,883 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+INFO  2018-11-21 01:44:54,887 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 01:44:54,892 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) in 208.1196ms
+INFO  2018-11-21 01:44:54,919 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 286.5292ms 400 application/json; charset=utf-8
+INFO  2018-11-21 01:45:45,315 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/FilesManage/UploadFileAsync multipart/form-data; boundary=----WebKitFormBoundaryB4QH8w09SP6Guop0 275567
+INFO  2018-11-21 01:45:45,329 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:45:45,332 [10   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:45:45,338 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 01:45:45,357 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "UploadFileAsync", controller = "FilesManage", area = ""}. Executing action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core)
+INFO  2018-11-21 01:45:45,362 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:45:45,366 [10   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:45:45,444 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) with arguments (Microsoft.AspNetCore.Http.FormCollection, ICIMS.BaseData.Dtos.FilesManageInput) - Validation state: Valid
+INFO  2018-11-21 01:45:53,036 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7588.4702ms.
+ERROR 2018-11-21 01:45:55,556 [24   ] Mvc.ExceptionHandling.AbpExceptionFilter - An error occurred while updating the entries. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'FilesManages' 中的标识列插入显式值。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 167
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 70
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.CompleteUowAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 82
+   at Abp.Domain.Uow.UnitOfWorkBase.CompleteAsync() in F:\20181030\Server\AbpProject\Abp\Domain\Uow\UnitOfWorkBase.cs:line 272
+   at Abp.AspNetCore.Mvc.Uow.AbpUowActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Uow\AbpUowActionFilter.cs:line 49
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2018-11-21 01:45:55,569 [24   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 01:45:55,638 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) in 10212.0993ms
+INFO  2018-11-21 01:45:55,698 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10395.7611ms 500 application/json; charset=utf-8
+INFO  2018-11-21 01:46:01,767 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/FilesManage/UploadFileAsync multipart/form-data; boundary=----WebKitFormBoundary3BAKWZTenHjN6vir 275567
+INFO  2018-11-21 01:46:01,832 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:46:01,919 [10   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:46:01,924 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 01:46:01,933 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "UploadFileAsync", controller = "FilesManage", area = ""}. Executing action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core)
+INFO  2018-11-21 01:46:01,936 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:46:01,940 [10   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:46:01,998 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) with arguments (Microsoft.AspNetCore.Http.FormCollection, ICIMS.BaseData.Dtos.FilesManageInput) - Validation state: Valid
+INFO  2018-11-21 01:46:41,911 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 39909.183ms.
+ERROR 2018-11-21 01:46:43,755 [32   ] Mvc.ExceptionHandling.AbpExceptionFilter - An error occurred while updating the entries. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'FilesManages' 中的标识列插入显式值。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 167
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 70
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.CompleteUowAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 82
+   at Abp.Domain.Uow.UnitOfWorkBase.CompleteAsync() in F:\20181030\Server\AbpProject\Abp\Domain\Uow\UnitOfWorkBase.cs:line 272
+   at Abp.AspNetCore.Mvc.Uow.AbpUowActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Uow\AbpUowActionFilter.cs:line 49
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2018-11-21 01:46:43,764 [32   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 01:46:43,783 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) in 41831.4236ms
+INFO  2018-11-21 01:46:43,824 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42040.2305ms 500 application/json; charset=utf-8
+INFO  2018-11-21 01:46:58,601 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/FilesManage/UploadFileAsync multipart/form-data; boundary=----WebKitFormBoundarySDS5u8RTVwRZqdty 275579
+INFO  2018-11-21 01:46:58,609 [34   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:46:58,622 [34   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:46:58,627 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 01:46:58,640 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "UploadFileAsync", controller = "FilesManage", area = ""}. Executing action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core)
+INFO  2018-11-21 01:46:58,644 [34   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:46:58,649 [34   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:46:58,766 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) with arguments (Microsoft.AspNetCore.Http.FormCollection, ICIMS.BaseData.Dtos.FilesManageInput) - Validation state: Valid
+ERROR 2018-11-21 01:47:04,830 [34   ] Mvc.ExceptionHandling.AbpExceptionFilter - An error occurred while updating the entries. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 不能将值 NULL 插入列 'IsNew'，表 'ICIMSDb.dbo.FilesManages'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Repositories.EfCoreRepositoryBase`3.InsertAndGetIdAsync(TEntity entity) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Repositories\EfCoreRepositoryBaseOfTEntityAndTPrimaryKey.cs:line 154
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at ICIMS.BaseData.FilesManageAppService.InsertOrUpdate(FilesManageInput input) in F:\20181030\Server\Web\ICIMS.Application\BaseData\FilesManageAppService.cs:line 204
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithFinallyAndGetResult[T](Task`1 actualReturnValue, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 86
+   at ICIMS.Controllers.FilesManageController.UploadFileAsync(IFormCollection formcollection, FilesManageInput model) in F:\20181030\Server\Web\ICIMS.Web.Core\Controllers\FilesManageController.cs:line 85
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2018-11-21 01:47:04,836 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 01:47:04,843 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) in 6196.9462ms
+INFO  2018-11-21 01:47:04,874 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6257.7202ms 500 application/json; charset=utf-8
+INFO  2018-11-21 01:47:13,137 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/FilesManage/UploadFileAsync multipart/form-data; boundary=----WebKitFormBoundaryJxn1l2ZfzIyHRrPS 275579
+INFO  2018-11-21 01:47:13,144 [34   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:47:13,150 [34   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:47:13,154 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 01:47:13,162 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "UploadFileAsync", controller = "FilesManage", area = ""}. Executing action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core)
+INFO  2018-11-21 01:47:13,167 [34   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:47:13,171 [34   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:47:13,238 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) with arguments (Microsoft.AspNetCore.Http.FormCollection, ICIMS.BaseData.Dtos.FilesManageInput) - Validation state: Valid
+ERROR 2018-11-21 01:47:23,862 [34   ] Mvc.ExceptionHandling.AbpExceptionFilter - An error occurred while updating the entries. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: 不能将值 NULL 插入列 'IsNew'，表 'ICIMSDb.dbo.FilesManages'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Repositories.EfCoreRepositoryBase`3.InsertAndGetIdAsync(TEntity entity) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Repositories\EfCoreRepositoryBaseOfTEntityAndTPrimaryKey.cs:line 154
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at ICIMS.BaseData.FilesManageAppService.InsertOrUpdate(FilesManageInput input) in F:\20181030\Server\Web\ICIMS.Application\BaseData\FilesManageAppService.cs:line 204
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithFinallyAndGetResult[T](Task`1 actualReturnValue, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 86
+   at ICIMS.Controllers.FilesManageController.UploadFileAsync(IFormCollection formcollection, FilesManageInput model) in F:\20181030\Server\Web\ICIMS.Web.Core\Controllers\FilesManageController.cs:line 85
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2018-11-21 01:47:23,875 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 01:47:23,892 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) in 10712.6853ms
+INFO  2018-11-21 01:47:23,943 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10785.4826ms 500 application/json; charset=utf-8
+INFO  2018-11-21 01:47:43,277 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/FilesManage/UploadFileAsync multipart/form-data; boundary=----WebKitFormBoundarypCsKnyBY6eCr0eeV 275579
+INFO  2018-11-21 01:47:43,312 [34   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:47:43,318 [34   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:47:43,323 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 01:47:43,333 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "UploadFileAsync", controller = "FilesManage", area = ""}. Executing action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core)
+INFO  2018-11-21 01:47:43,338 [34   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 01:47:43,350 [34   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 01:47:43,449 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) with arguments (Microsoft.AspNetCore.Http.FormCollection, ICIMS.BaseData.Dtos.FilesManageInput) - Validation state: Valid
+INFO  2018-11-21 01:49:06,226 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 82770.9264ms.
+INFO  2018-11-21 01:49:06,393 [32   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 01:49:06,403 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.FilesManageController.UploadFileAsync (ICIMS.Web.Core) in 83063.9501ms
+INFO  2018-11-21 01:49:06,424 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 83139.1597ms 200 application/json; charset=utf-8
+DEBUG 2018-11-21 17:45:53,879 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-21 17:45:54,813 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-21 17:45:54,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:54,842 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:54,842 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:54,842 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:54,842 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:54,843 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:54,843 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:54,843 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:55,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:55,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:55,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:55,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:55,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:55,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:55,102 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:55,106 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-21 17:45:55,198 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-21 17:45:55,198 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-21 17:45:55,198 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-21 17:45:55,198 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-21 17:45:55,802 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-21 17:45:57,056 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-21 17:45:57,155 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-21 17:45:57,363 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-21 17:45:57,419 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-21 17:45:57,467 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-21 17:45:57,697 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-21 17:45:57,759 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-21 17:45:57,759 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-21 17:45:57,764 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-21 17:45:57,765 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-21 17:45:57,766 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-21 17:45:57,766 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-21 17:45:57,766 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-21 17:45:57,767 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-21 17:45:57,767 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-21 17:45:57,767 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-21 17:45:57,767 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-21 17:46:08,860 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-21 17:46:08,860 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-21 17:46:08,986 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 139.7676ms 200 
+INFO  2018-11-21 17:46:14,057 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-21 17:46:15,512 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-21 17:46:15,520 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.3483ms.
+INFO  2018-11-21 17:46:16,510 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-21 17:46:16,531 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 2466.6965ms
+INFO  2018-11-21 17:46:16,574 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-21 17:46:16,579 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7736.0172ms 302 
+INFO  2018-11-21 17:46:16,633 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 59.6793ms 200 text/html
+INFO  2018-11-21 17:46:16,693 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-21 17:46:16,697 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-21 17:46:16,703 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-21 17:46:16,745 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-21 17:46:16,748 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-21 17:46:16,751 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-21 17:46:16,768 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 68.8243ms 304 application/javascript
+INFO  2018-11-21 17:46:16,778 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 77.2587ms 304 text/css
+INFO  2018-11-21 17:46:16,783 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.2945ms 304 application/javascript
+INFO  2018-11-21 17:46:17,302 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-21 17:46:17,598 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-21 17:46:17,604 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 300.6251ms 200 text/plain
+INFO  2018-11-21 17:46:18,659 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-21 17:46:18,728 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-21 17:46:18,733 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 71.5806ms 200 text/plain
+INFO  2018-11-21 17:46:18,986 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-21 17:46:19,655 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 666.8779ms 200 application/json;charset=utf-8
+INFO  2018-11-21 17:47:14,078 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-11-21 17:47:14,158 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-11-21 17:47:15,895 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-11-21 17:47:19,831 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3933.8814ms.
+INFO  2018-11-21 17:47:20,505 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:47:20,540 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 6378.7945ms
+INFO  2018-11-21 17:47:20,546 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6471.4397ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:47:32,440 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-11-21 17:47:32,624 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 17:47:32,875 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-21 17:47:33,766 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetItemDefinesInput) - Validation state: Valid
+INFO  2018-11-21 17:47:37,249 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3471.9653ms.
+INFO  2018-11-21 17:47:37,404 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:47:37,445 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) in 4556.1825ms
+INFO  2018-11-21 17:47:37,569 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5032.3451ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:52:22,566 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/DocumentCategory/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-11-21 17:52:22,574 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 17:52:22,607 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "DocumentCategory"}. Executing action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application)
+WARN  2018-11-21 17:52:24,066 [23   ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 118
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 89
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Validation\AbpValidationActionFilter.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+WARN  2018-11-21 17:52:24,070 [23   ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 1 validation errors:
+WARN  2018-11-21 17:52:24,070 [23   ] Mvc.ExceptionHandling.AbpExceptionFilter - The field MaxResultCount must be between 1 and 1000. (MaxResultCount)
+WARN  2018-11-21 17:52:25,109 [23   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+INFO  2018-11-21 17:52:25,119 [23   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:52:25,126 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) in 2517.4261ms
+INFO  2018-11-21 17:52:25,128 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2567.1879ms 400 application/json; charset=utf-8
+INFO  2018-11-21 17:53:28,081 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/DocumentCategory/GetPaged  
+INFO  2018-11-21 17:53:28,157 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "DocumentCategory"}. Executing action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application)
+WARN  2018-11-21 17:53:28,524 [11   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 48
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 103
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in F:\20181030\Server\AbpProject\Abp\Authorization\AuthorizationHelper.cs:line 57
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2018-11-21 17:53:28,563 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2018-11-21 17:53:28,595 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:53:28,607 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) in 437.8754ms
+INFO  2018-11-21 17:53:28,627 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 538.48ms 401 application/json; charset=utf-8
+INFO  2018-11-21 17:53:41,448 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/Account/IsTenantAvailable application/json 23
+INFO  2018-11-21 17:53:41,456 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 17:53:41,458 [10   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-21 17:53:41,489 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-21 17:53:41,496 [10   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 17:53:41,501 [10   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-21 17:53:41,687 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-21 17:53:41,806 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 116.2337ms.
+INFO  2018-11-21 17:53:41,919 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:53:41,924 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 431.267ms
+INFO  2018-11-21 17:53:41,930 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 480.6576ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:53:41,942 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json 50
+INFO  2018-11-21 17:53:41,945 [28   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 17:53:41,949 [28   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-21 17:53:41,958 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-11-21 17:53:41,961 [28   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 17:53:41,963 [28   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-21 17:53:42,010 [28   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-11-21 17:53:42,953 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 940.6397ms.
+INFO  2018-11-21 17:53:43,200 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:53:43,209 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 1242.5633ms
+INFO  2018-11-21 17:53:43,217 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1269.2549ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:53:52,730 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Department/GetPaged  
+INFO  2018-11-21 17:53:52,735 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 17:53:52,835 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Department"}. Executing action ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-21 17:53:53,006 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetOrganizationUnitsInput) - Validation state: Valid
+INFO  2018-11-21 17:54:19,660 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 26648.8628ms.
+INFO  2018-11-21 17:54:19,754 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:54:19,762 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application) in 26922.3025ms
+INFO  2018-11-21 17:54:19,767 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 27044.9502ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:54:29,371 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/DocumentCategory/GetPaged  
+INFO  2018-11-21 17:54:29,374 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 17:54:29,384 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "DocumentCategory"}. Executing action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-21 17:54:29,523 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetDocumentCategorysInput) - Validation state: Valid
+INFO  2018-11-21 17:54:29,859 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 324.677ms.
+INFO  2018-11-21 17:54:29,997 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:54:30,012 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) in 617.4462ms
+INFO  2018-11-21 17:54:30,023 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 643.6027ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:55:40,423 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/DocumentCategory/GetPaged  
+INFO  2018-11-21 17:55:40,434 [35   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 17:55:40,443 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "DocumentCategory"}. Executing action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-21 17:55:40,519 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetDocumentCategorysInput) - Validation state: Valid
+INFO  2018-11-21 17:55:59,800 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19274.9613ms.
+INFO  2018-11-21 17:55:59,940 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:55:59,947 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) in 19497.8938ms
+INFO  2018-11-21 17:56:00,074 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19535.2211ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:56:16,860 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/Account/IsTenantAvailable application/json 23
+INFO  2018-11-21 17:56:16,863 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 17:56:16,866 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-21 17:56:16,876 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-21 17:56:16,878 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 17:56:16,881 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-21 17:56:16,916 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-21 17:56:17,087 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 168.9573ms.
+INFO  2018-11-21 17:56:17,201 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:56:17,205 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 325.4465ms
+INFO  2018-11-21 17:56:17,212 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 348.5775ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:56:17,216 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json 50
+INFO  2018-11-21 17:56:17,218 [11   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 17:56:17,221 [11   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-21 17:56:17,231 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-11-21 17:56:17,233 [11   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 17:56:17,235 [11   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-21 17:56:17,276 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-11-21 17:56:18,150 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 871.6443ms.
+INFO  2018-11-21 17:56:18,400 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:56:18,406 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 1169.339ms
+INFO  2018-11-21 17:56:18,416 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1192.7826ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:56:32,221 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/DocumentCategory/GetPaged  
+INFO  2018-11-21 17:56:32,225 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 17:56:32,239 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "DocumentCategory"}. Executing action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-21 17:56:32,290 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetDocumentCategorysInput) - Validation state: Valid
+INFO  2018-11-21 17:56:40,237 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7932.1045ms.
+INFO  2018-11-21 17:56:40,338 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:56:40,374 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) in 8099.0727ms
+INFO  2018-11-21 17:56:40,453 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8165.1248ms 200 application/json; charset=utf-8
+INFO  2018-11-21 17:57:33,104 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-11-21 17:57:33,126 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-11-21 17:57:33,272 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-11-21 17:57:35,940 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2658.8377ms.
+INFO  2018-11-21 17:57:36,460 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 17:57:36,470 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 3334.1479ms
+INFO  2018-11-21 17:57:36,531 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3379.6384ms 200 application/json; charset=utf-8
+INFO  2018-11-21 18:00:05,098 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-11-21 18:00:05,111 [43   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 18:00:05,130 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-21 18:00:05,179 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetItemDefinesInput) - Validation state: Valid
+INFO  2018-11-21 18:00:05,468 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 286.3166ms.
+INFO  2018-11-21 18:00:05,584 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 18:00:05,591 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) in 455.4299ms
+INFO  2018-11-21 18:00:05,599 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 538.0628ms 200 application/json; charset=utf-8
+INFO  2018-11-21 18:00:11,969 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/DocumentCategory/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-11-21 18:00:11,995 [37   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 18:00:12,033 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "DocumentCategory"}. Executing action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application)
+WARN  2018-11-21 18:00:12,315 [43   ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 118
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 89
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Validation\AbpValidationActionFilter.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+WARN  2018-11-21 18:00:12,316 [43   ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 1 validation errors:
+WARN  2018-11-21 18:00:12,316 [43   ] Mvc.ExceptionHandling.AbpExceptionFilter - The field MaxResultCount must be between 1 and 1000. (MaxResultCount)
+WARN  2018-11-21 18:00:12,318 [43   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+INFO  2018-11-21 18:00:12,324 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 18:00:12,334 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) in 291.9762ms
+INFO  2018-11-21 18:00:12,372 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 422.1926ms 400 application/json; charset=utf-8
+INFO  2018-11-21 18:01:47,647 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/DocumentCategory/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0 multipart/form-data; boundary=----WebKitFormBoundarymGRSi8KvF3Dz3ndB 247
+INFO  2018-11-21 18:01:47,652 [14   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 18:01:47,656 [14   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 18:01:47,659 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 18:01:47,674 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.3917ms 404 
+INFO  2018-11-21 18:01:47,721 [14   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLIFIOKTM8PS", Request id "0HLIFIOKTM8PS:00000001": the application completed without reading the entire request body.
+INFO  2018-11-21 18:02:00,222 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/DocumentCategory/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0 application/json 247
+INFO  2018-11-21 18:02:00,237 [34   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-21 18:02:00,256 [34   ] pNetCore.Cors.Infrastructure.CorsService - Request origin chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop does not have permission to access the resource.
+INFO  2018-11-21 18:02:00,288 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 18:02:00,341 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 71.0754ms 404 
+INFO  2018-11-21 18:02:00,363 [34   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLIFIOKTM8PS", Request id "0HLIFIOKTM8PS:00000002": the application completed without reading the entire request body.
+INFO  2018-11-21 18:02:10,652 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/DocumentCategory/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0 application/json 
+INFO  2018-11-21 18:02:10,656 [48   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 18:02:10,674 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "DocumentCategory"}. Executing action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application)
+WARN  2018-11-21 18:02:10,918 [37   ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 118
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in F:\20181030\Server\AbpProject\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 89
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Mvc\Validation\AbpValidationActionFilter.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+WARN  2018-11-21 18:02:10,919 [37   ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 1 validation errors:
+WARN  2018-11-21 18:02:10,919 [37   ] Mvc.ExceptionHandling.AbpExceptionFilter - The field MaxResultCount must be between 1 and 1000. (MaxResultCount)
+WARN  2018-11-21 18:02:10,920 [37   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+INFO  2018-11-21 18:02:10,923 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 18:02:10,927 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) in 248.5351ms
+INFO  2018-11-21 18:02:10,932 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 278.4403ms 400 application/json; charset=utf-8
+INFO  2018-11-21 18:02:28,903 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/DocumentCategory/GetPaged?No=&Name=&MaxResultCount=1000&SkipCount=0 application/json 
+INFO  2018-11-21 18:02:28,905 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-21 18:02:28,914 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "DocumentCategory"}. Executing action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-21 18:02:28,966 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetDocumentCategorysInput) - Validation state: Valid
+INFO  2018-11-21 18:02:36,454 [41   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7484.7ms.
+INFO  2018-11-21 18:02:36,532 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-21 18:02:36,540 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DocumentCategoryAppService.GetPaged (ICIMS.Application) in 7623.1805ms
+INFO  2018-11-21 18:02:36,557 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7640.7297ms 200 application/json; charset=utf-8
