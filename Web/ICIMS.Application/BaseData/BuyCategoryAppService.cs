@@ -54,7 +54,7 @@ namespace ICIMS.BaseData
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-		[AbpAuthorize(BuyCategoryPermissions.Query)] 
+		//[AbpAuthorize(BuyCategoryPermissions.Query)] 
         public async Task<PagedResultDto<BuyCategoryListDto>> GetPaged(GetBuyCategorysInput input)
 		{
 
