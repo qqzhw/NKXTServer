@@ -12,11 +12,15 @@ namespace ICIMS.BaseData.Dtos
     public class FilesManageListDto : FullAuditedEntityDto,IMayHaveTenant 
     {
 
-        
-		/// <summary>
-		/// DownloadGuid
-		/// </summary>
-		public Guid DownloadGuid { get; set; }
+        public int? EntityId { get; set; }
+
+        public string EntityKey { get; set; }
+
+        public string EntityName { get; set; }
+        /// <summary>
+        /// DownloadGuid
+        /// </summary>
+        public Guid DownloadGuid { get; set; }
 
 
 
@@ -68,22 +72,13 @@ namespace ICIMS.BaseData.Dtos
 		/// </summary>
 		public int DisplayOrder { get; set; }
 
-
-
-		/// <summary>
-		/// IsNew
-		/// </summary>
-		public bool IsNew { get; set; }
-
-
-
+         
 		/// <summary>
 		/// TenantId
 		/// </summary>
 		public int? TenantId { get; set; }
 
-
-
+       
 
     }
 }

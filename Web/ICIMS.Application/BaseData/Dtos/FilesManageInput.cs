@@ -61,5 +61,7 @@ namespace ICIMS.BaseData.Dtos
         /// TenantId
         /// </summary>
         public int? TenantId { get; set; }
+
+        public DateTime CreationTime { get; set; }
     }
 }

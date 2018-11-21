@@ -5,9 +5,9 @@ using ICIMS.BaseData;
 
 namespace ICIMS.BaseData.Dtos
 {
-    public class GetFilesManagesInput : PagedSortedAndFilteredInputDto, IShouldNormalize
+    public class GetFilesManagesInput : PagedAndSortedInputDto, IShouldNormalize
     {
-
+         
         /// <summary>
         /// 正常化排序使用
         /// </summary>
@@ -18,6 +18,14 @@ namespace ICIMS.BaseData.Dtos
                 Sorting = "Id";
             }
         }
+
+        public string UploadType { get; set; }
+
+        public int? EntityId { get; set; }
+
+        public string EntityKey { get; set; }
+
+        public string EntityName { get; set; }
 
     }
 }

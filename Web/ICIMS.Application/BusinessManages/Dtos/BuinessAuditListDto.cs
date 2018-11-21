@@ -50,12 +50,12 @@ namespace ICIMS.BusinessManages.Dtos
 		[Required(ErrorMessage="BuinessTypeId不能为空")]
 		public int BuinessTypeId { get; set; }
 
+        public string BuinessTypeName { get; set; }
 
-
-		/// <summary>
-		/// Role
-		/// </summary>
-		public virtual Role Role { get; set; }
+        /// <summary>
+        /// Role
+        /// </summary>
+        public virtual Role Role { get; set; }
 
 
 

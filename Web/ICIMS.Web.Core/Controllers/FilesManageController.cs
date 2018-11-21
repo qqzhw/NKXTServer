@@ -47,12 +47,10 @@ namespace ICIMS.Controllers
             if (formcollection.Files.Count>0)
             {
                 var file = formcollection.Files[0];
-                model.ContentType = file.ContentType;
-                model.EntityId = 1;
-                model.EntityKey = "itemdefine";
-                model.TenantId = AbpSession.TenantId;
-                model.EntityName = "立项登记";
-                
+                model.ContentType = file.ContentType; 
+                model.TenantId = AbpSession.TenantId; 
+                model.FileSize = file.Length;
+                model.DownloadGuid = Guid.NewGuid();
                 //原文件名 不包括路径
                 var fileName = file.FileName; 
                 

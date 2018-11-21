@@ -59,9 +59,15 @@ namespace ICIMS.BusinessManages
 		{
 
 		    var query = _entityRepository.GetAll();
-			// TODO:根据传入的参数添加过滤条件
-            
-
+            // TODO:根据传入的参数添加过滤条件
+            if (input.BuinessTypeId.HasValue)
+            {
+                query = query.Where(o => o.BuinessTypeId == input.BuinessTypeId);
+            }
+            if (!string.IsNullOrEmpty(input.BuinessTypeName))
+            {
+                query = query.Where(o => o.BuinessTypeName == input.BuinessTypeName);
+            }
 			var count = await query.CountAsync();
 
 			var entityList = await query

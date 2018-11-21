@@ -59,9 +59,19 @@ namespace ICIMS.BaseData
 		{
 
 		    var query = _entityRepository.GetAll();
-			// TODO:根据传入的参数添加过滤条件
-            
-
+            // TODO:根据传入的参数添加过滤条件
+            if (input.EntityId.HasValue)
+            {
+                query = query.Where(o => o.EntityId == input.EntityId);
+            }
+            if (!string.IsNullOrEmpty(input.EntityKey))
+            {
+                query = query.Where(o => o.EntityKey == input.EntityKey);
+            }
+            if (!string.IsNullOrEmpty(input.EntityName))
+            {
+                query = query.Where(o => o.EntityName == input.EntityName);
+            }
 			var count = await query.CountAsync();
 
 			var entityList = await query
@@ -202,6 +212,8 @@ FilesManageEditDto editDto;
 
             entity.CreatorUserId = AbpSession.UserId;
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            input.CreationTime = entity.CreationTime;
+            //input.CreationTime=
             return input;
         }
 

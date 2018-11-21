@@ -15,7 +15,7 @@ namespace ICIMS.BusinessManages
         public int? TenantId { get; set; }
         public int RoleId { get; set; }  //角色ID
         public int BuinessTypeId { get; set; }//业务类型ID
-        
+        public string BuinessTypeName { get; set; }
         public virtual Role Role { get; set; }
         public virtual BusinessType BuinessType{get;set;}
     }
