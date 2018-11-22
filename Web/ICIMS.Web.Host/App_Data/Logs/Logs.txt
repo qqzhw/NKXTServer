@@ -8014,3 +8014,674 @@ INFO  2018-11-22 17:02:35,678 [22   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-11-22 17:02:35,791 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2018-11-22 17:02:35,796 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) in 5666.0593ms
 INFO  2018-11-22 17:02:35,802 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5698.7314ms 200 application/json; charset=utf-8
+DEBUG 2018-11-22 21:43:57,626 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-22 21:43:58,435 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-22 21:43:58,463 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,470 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,471 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,471 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:43:58,479 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-22 21:43:58,612 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 21:43:58,612 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 21:43:58,612 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 21:43:58,612 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 21:43:59,313 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 21:44:01,142 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-22 21:44:01,236 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-22 21:44:01,327 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-22 21:44:01,354 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-22 21:44:01,419 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-22 21:44:01,921 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-22 21:44:02,046 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-22 21:44:02,046 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-22 21:44:02,058 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-22 21:44:02,060 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-22 21:44:02,062 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-22 21:44:02,062 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-22 21:44:02,062 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-22 21:44:02,062 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-22 21:44:02,063 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-22 21:44:02,063 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-22 21:44:02,064 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-22 21:44:27,036 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-22 21:44:27,036 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-22 21:44:27,150 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.9014ms 200 
+INFO  2018-11-22 21:44:31,374 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-22 21:44:32,638 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-22 21:44:32,645 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.7193ms.
+INFO  2018-11-22 21:44:33,104 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-22 21:44:33,119 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1739.0382ms
+INFO  2018-11-22 21:44:33,154 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6130.6181ms 302 
+INFO  2018-11-22 21:44:33,159 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-22 21:44:33,216 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 57.6792ms 200 text/html
+INFO  2018-11-22 21:44:33,284 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-22 21:44:33,286 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-22 21:44:33,289 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-22 21:44:33,321 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-22 21:44:33,323 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-22 21:44:33,326 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-22 21:44:33,355 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.5249ms 304 application/javascript
+INFO  2018-11-22 21:44:33,361 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 62.5345ms 304 application/javascript
+INFO  2018-11-22 21:44:33,364 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.5249ms 304 text/css
+INFO  2018-11-22 21:44:33,903 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-22 21:44:34,256 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 21:44:34,266 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 361.1721ms 200 text/plain
+INFO  2018-11-22 21:44:34,662 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-22 21:44:34,726 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 21:44:34,736 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 66.9492ms 200 text/plain
+INFO  2018-11-22 21:44:34,985 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-22 21:44:35,187 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 21:44:35,828 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 862.6088ms 200 application/json;charset=utf-8
+INFO  2018-11-22 21:46:07,156 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-11-22 21:46:07,226 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-11-22 21:46:08,808 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-11-22 21:46:15,688 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6678.4361ms.
+INFO  2018-11-22 21:46:24,261 [26   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 21:46:24,426 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 17097.3215ms
+INFO  2018-11-22 21:46:24,798 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17282.9433ms 200 application/json; charset=utf-8
+DEBUG 2018-11-22 22:12:42,243 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-22 22:12:42,581 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-22 22:12:42,611 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,615 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,615 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,618 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,619 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,619 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,619 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,620 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,621 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,621 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,622 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,622 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,623 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,624 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:42,628 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-22 22:12:42,753 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:12:42,753 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:12:42,753 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:12:42,753 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:12:43,281 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:12:44,868 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-22 22:12:44,942 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-22 22:12:44,998 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-22 22:12:45,030 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-22 22:12:45,067 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-22 22:12:45,268 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-22 22:12:45,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-22 22:12:45,325 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-22 22:12:45,330 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-22 22:12:45,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-22 22:12:45,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-22 22:12:45,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-22 22:12:45,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-22 22:12:45,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-22 22:12:45,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-22 22:12:45,332 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-22 22:12:45,332 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-22 22:12:52,917 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-22 22:12:52,917 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-22 22:12:53,077 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 164.2145ms 200 
+INFO  2018-11-22 22:12:57,361 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-22 22:12:58,671 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-22 22:12:58,683 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.4205ms.
+INFO  2018-11-22 22:12:59,165 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-22 22:12:59,183 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1811.3623ms
+INFO  2018-11-22 22:12:59,209 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-22 22:12:59,223 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6313.365ms 302 
+INFO  2018-11-22 22:12:59,272 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 63.511ms 200 text/html
+INFO  2018-11-22 22:12:59,320 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-22 22:12:59,323 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-22 22:12:59,326 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-22 22:12:59,364 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-22 22:12:59,367 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-22 22:12:59,369 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-22 22:12:59,389 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 63.5223ms 304 application/javascript
+INFO  2018-11-22 22:12:59,393 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 63.5197ms 304 text/css
+INFO  2018-11-22 22:12:59,394 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.5556ms 304 application/javascript
+INFO  2018-11-22 22:12:59,950 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-22 22:13:00,231 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:13:00,241 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 288.7811ms 200 text/plain
+INFO  2018-11-22 22:13:01,057 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-22 22:13:01,085 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:13:01,088 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33.198ms 200 text/plain
+INFO  2018-11-22 22:13:01,340 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-22 22:13:01,572 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:13:02,450 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1099.5137ms 200 application/json;charset=utf-8
+DEBUG 2018-11-22 22:20:02,482 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-22 22:20:02,758 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-22 22:20:02,780 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,784 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,785 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,785 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,785 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,786 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,786 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,787 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,787 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,787 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:02,796 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-22 22:20:02,883 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:20:02,884 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:20:02,884 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:20:02,884 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:20:03,322 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:20:04,509 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-22 22:20:04,571 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-22 22:20:04,626 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-22 22:20:04,654 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-22 22:20:04,688 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-22 22:20:04,885 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-22 22:20:04,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-22 22:20:04,949 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-22 22:20:04,956 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-22 22:20:04,956 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-22 22:20:04,957 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-22 22:20:04,957 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-22 22:20:04,957 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-22 22:20:04,957 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-22 22:20:04,957 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-22 22:20:04,958 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-22 22:20:04,958 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-22 22:20:11,749 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-22 22:20:11,749 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-22 22:20:11,881 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 140.2943ms 200 
+INFO  2018-11-22 22:20:16,281 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-22 22:20:17,756 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-22 22:20:17,766 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 4.3372ms.
+INFO  2018-11-22 22:20:18,238 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-22 22:20:18,268 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1974.7447ms
+INFO  2018-11-22 22:20:18,307 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-22 22:20:18,313 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6578.0546ms 302 
+INFO  2018-11-22 22:20:18,372 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64.8004ms 200 text/html
+INFO  2018-11-22 22:20:18,421 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-22 22:20:18,424 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-22 22:20:18,426 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-22 22:20:18,470 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-22 22:20:18,473 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-22 22:20:18,474 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-22 22:20:18,535 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 57.3447ms 304 text/css
+INFO  2018-11-22 22:20:18,537 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.1751ms 304 application/javascript
+INFO  2018-11-22 22:20:18,542 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 57.3741ms 304 application/javascript
+INFO  2018-11-22 22:20:19,035 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-22 22:20:19,347 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:20:19,359 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 326.1311ms 200 text/plain
+INFO  2018-11-22 22:20:20,120 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-22 22:20:20,139 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:20:20,142 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.6946ms 200 text/plain
+INFO  2018-11-22 22:20:20,589 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-22 22:20:20,802 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:20:21,724 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1131.272ms 200 application/json;charset=utf-8
+DEBUG 2018-11-22 22:21:44,721 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-22 22:21:44,958 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-22 22:21:44,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,988 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,988 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,988 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,988 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,989 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,989 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:44,993 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-22 22:21:45,101 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:21:45,101 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:21:45,101 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:21:45,101 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:21:45,581 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:21:46,783 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-22 22:21:46,841 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-22 22:21:46,889 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-22 22:21:46,914 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-22 22:21:46,945 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-22 22:21:47,130 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-22 22:21:47,188 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-22 22:21:47,188 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-22 22:21:47,194 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-22 22:21:47,196 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-22 22:21:47,196 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-22 22:21:47,196 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-22 22:21:47,196 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-22 22:21:47,196 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-22 22:21:47,196 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-22 22:21:47,197 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-22 22:21:47,197 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-22 22:21:53,861 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-22 22:21:53,861 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-22 22:21:53,969 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 119.9922ms 200 
+INFO  2018-11-22 22:21:58,217 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-22 22:21:59,452 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-22 22:21:59,460 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.2033ms.
+INFO  2018-11-22 22:21:59,930 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-22 22:21:59,949 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1722.7883ms
+INFO  2018-11-22 22:21:59,978 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-22 22:21:59,988 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6142.999ms 302 
+INFO  2018-11-22 22:22:00,047 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 57.3889ms 200 text/html
+INFO  2018-11-22 22:22:00,117 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-22 22:22:00,133 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-22 22:22:00,135 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-22 22:22:00,171 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-22 22:22:00,173 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-22 22:22:00,175 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-22 22:22:00,203 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 46.6852ms 304 application/javascript
+INFO  2018-11-22 22:22:00,205 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.7101ms 304 application/javascript
+INFO  2018-11-22 22:22:00,208 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 66.808ms 304 text/css
+INFO  2018-11-22 22:22:00,725 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-22 22:22:00,931 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:22:00,937 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 211.3925ms 200 text/plain
+INFO  2018-11-22 22:22:01,632 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-22 22:22:01,665 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:22:01,668 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 36.6729ms 200 text/plain
+INFO  2018-11-22 22:22:01,919 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-22 22:22:02,182 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:22:02,960 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1041.2707ms 200 application/json;charset=utf-8
+INFO  2018-11-22 22:22:30,140 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:22:30,143 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:22:30,213 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:22:31,255 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 22:23:29,529 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 58270.2445ms.
+INFO  2018-11-22 22:23:29,647 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:23:29,670 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 59452.4142ms
+INFO  2018-11-22 22:23:29,677 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 59533.6666ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:23:41,141 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-22 22:23:41,183 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.3416ms 200 text/html
+INFO  2018-11-22 22:23:41,219 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-22 22:23:41,225 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-22 22:23:41,227 [20   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-22 22:23:41,233 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-22 22:23:41,237 [19   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-22 22:23:41,239 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.5391ms 304 text/css
+INFO  2018-11-22 22:23:41,244 [21   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-22 22:23:41,254 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 29.0899ms 304 application/javascript
+INFO  2018-11-22 22:23:41,255 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.391ms 304 application/javascript
+INFO  2018-11-22 22:23:41,611 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-22 22:23:41,819 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:23:41,822 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 210.1597ms 200 text/plain
+INFO  2018-11-22 22:23:42,364 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-22 22:23:42,389 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:23:42,393 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 31.1632ms 200 text/plain
+INFO  2018-11-22 22:23:42,682 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-22 22:23:42,685 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/favicon-32x32.png  
+INFO  2018-11-22 22:23:42,694 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2018-11-22 22:23:42,705 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.9319ms 200 image/png
+INFO  2018-11-22 22:23:42,707 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/favicon-16x16.png  
+INFO  2018-11-22 22:23:42,710 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /favicon-16x16.png was not modified
+INFO  2018-11-22 22:23:42,717 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.123ms 304 image/png
+INFO  2018-11-22 22:23:42,784 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 127.6295ms 200 application/json;charset=utf-8
+INFO  2018-11-22 22:23:49,511 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/Account/IsTenantAvailable application/json 23
+INFO  2018-11-22 22:23:49,519 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-22 22:23:49,522 [21   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-22 22:23:49,540 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-22 22:23:49,545 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-22 22:23:49,549 [21   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-22 22:23:49,805 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-22 22:23:49,942 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 134.1775ms.
+INFO  2018-11-22 22:23:49,986 [21   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:23:49,991 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 447.7835ms
+INFO  2018-11-22 22:23:50,003 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 485.7818ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:23:50,006 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json 50
+INFO  2018-11-22 22:23:50,009 [6    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-22 22:23:50,017 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-22 22:23:50,178 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-11-22 22:23:50,184 [21   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-22 22:23:50,191 [21   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-22 22:23:50,967 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-11-22 22:23:52,833 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1861.2665ms.
+INFO  2018-11-22 22:23:53,596 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/Account/IsTenantAvailable application/json 23
+INFO  2018-11-22 22:23:53,599 [18   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-22 22:23:53,603 [18   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-22 22:23:53,620 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application)
+INFO  2018-11-22 22:23:53,747 [18   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution failed.
+INFO  2018-11-22 22:23:53,751 [18   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21025 does not have permission to access the resource.
+INFO  2018-11-22 22:23:53,755 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:23:53,796 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) with arguments (ICIMS.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2018-11-22 22:23:53,799 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 3617.547ms
+INFO  2018-11-22 22:23:53,802 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3795.4054ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:23:53,878 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 77.9013ms.
+INFO  2018-11-22 22:23:53,936 [21   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:23:53,939 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Authorization.Accounts.AccountAppService.IsTenantAvailable (ICIMS.Application) in 198.4641ms
+INFO  2018-11-22 22:23:53,952 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 347.1793ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:24:04,780 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:24:04,784 [21   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:24:04,791 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:24:04,826 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 22:24:57,035 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 52162.4557ms.
+INFO  2018-11-22 22:24:57,116 [32   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:24:57,118 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 52324.5626ms
+INFO  2018-11-22 22:24:57,133 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 52346.5408ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:25:01,251 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:25:01,254 [26   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:25:01,262 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:25:01,308 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+DEBUG 2018-11-22 22:25:54,541 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-22 22:25:54,772 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-22 22:25:54,814 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,818 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,818 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:54,824 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-22 22:25:54,908 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:25:54,908 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:25:54,908 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:25:54,908 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:25:55,423 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:25:56,713 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-22 22:25:56,788 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-22 22:25:56,848 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-22 22:25:56,871 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-22 22:25:56,907 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-22 22:25:57,116 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-22 22:25:57,198 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-22 22:25:57,198 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-22 22:25:57,203 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-22 22:25:57,204 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-22 22:25:57,204 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-22 22:25:57,205 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-22 22:25:57,205 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-22 22:25:57,205 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-22 22:25:57,205 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-22 22:25:57,205 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-22 22:25:57,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-22 22:26:04,513 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-22 22:26:04,513 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-22 22:26:04,615 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 119.6965ms 200 
+INFO  2018-11-22 22:26:09,051 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-22 22:26:10,344 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-22 22:26:10,350 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.5607ms.
+INFO  2018-11-22 22:26:10,818 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-22 22:26:10,838 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1779.2415ms
+INFO  2018-11-22 22:26:10,868 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-22 22:26:10,876 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6383.3999ms 302 
+INFO  2018-11-22 22:26:10,924 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.087ms 200 text/html
+INFO  2018-11-22 22:26:10,980 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-22 22:26:10,984 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-22 22:26:10,987 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-22 22:26:11,021 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-22 22:26:11,023 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-22 22:26:11,027 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-22 22:26:11,052 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 59.3772ms 304 text/css
+INFO  2018-11-22 22:26:11,062 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 59.3772ms 304 application/javascript
+INFO  2018-11-22 22:26:11,064 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.6057ms 304 application/javascript
+INFO  2018-11-22 22:26:11,484 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-22 22:26:12,028 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:26:12,035 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 550.4165ms 200 text/plain
+INFO  2018-11-22 22:26:12,054 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-22 22:26:12,116 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:26:12,133 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 66.9711ms 200 text/plain
+INFO  2018-11-22 22:26:12,784 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-22 22:26:12,995 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:26:14,010 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1218.3773ms 200 application/json;charset=utf-8
+INFO  2018-11-22 22:26:42,928 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:26:42,930 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:26:43,021 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:26:44,030 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+DEBUG 2018-11-22 22:28:22,273 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-22 22:28:22,559 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-22 22:28:22,583 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,593 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:22,595 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-22 22:28:22,689 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:28:22,689 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:28:22,689 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:28:22,689 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 22:28:23,138 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 22:28:24,337 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-22 22:28:24,403 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-22 22:28:24,460 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-22 22:28:24,490 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-22 22:28:24,523 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-22 22:28:24,750 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-22 22:28:24,806 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-22 22:28:24,806 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-22 22:28:24,814 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-22 22:28:24,814 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-22 22:28:24,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-22 22:28:24,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-22 22:28:24,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-22 22:28:24,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-22 22:28:24,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-22 22:28:24,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-22 22:28:24,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-22 22:28:31,348 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-22 22:28:31,348 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-22 22:28:31,499 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 142.9465ms 200 
+INFO  2018-11-22 22:28:35,510 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-22 22:28:36,693 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-22 22:28:36,704 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.0021ms.
+INFO  2018-11-22 22:28:37,085 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-22 22:28:37,103 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1584.2647ms
+INFO  2018-11-22 22:28:37,131 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-22 22:28:37,158 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5803.9013ms 302 
+INFO  2018-11-22 22:28:37,222 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 87.4802ms 200 text/html
+INFO  2018-11-22 22:28:37,289 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-22 22:28:37,302 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-22 22:28:37,316 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-22 22:28:37,349 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-22 22:28:37,357 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-22 22:28:37,360 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-22 22:28:37,396 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 66.7204ms 304 application/javascript
+INFO  2018-11-22 22:28:37,412 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 66.6827ms 304 text/css
+INFO  2018-11-22 22:28:37,416 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 95.3207ms 304 application/javascript
+INFO  2018-11-22 22:28:37,883 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-22 22:28:38,190 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:28:38,198 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 315.0086ms 200 text/plain
+INFO  2018-11-22 22:28:38,919 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-22 22:28:38,955 [7    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 22:28:38,957 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 38.9489ms 200 text/plain
+INFO  2018-11-22 22:28:39,242 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-22 22:28:39,435 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:28:40,216 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 968.9258ms 200 application/json;charset=utf-8
+INFO  2018-11-22 22:28:56,982 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:28:56,989 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:28:57,066 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:28:57,929 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 22:29:14,981 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 17023.2201ms.
+INFO  2018-11-22 22:29:15,101 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:29:15,157 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 18087.709ms
+ERROR 2018-11-22 22:29:15,571 [14   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLIGGR3DB1MV", Request id "0HLIGGR3DB1MV:00000005": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object. A common cause of this error is disposing a context that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling Dispose() on the context, or wrapping the context in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ICIMSDbContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_QueryProvider()
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ParameterExtractingExpressionVisitor..ctor(IEvaluatableExpressionFilter evaluatableExpressionFilter, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, DbContext context, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryModelGenerator.ExtractParameters(IDiagnosticsLogger`1 logger, Expression query, IParameterValues parameterValues, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Remotion.Linq.QueryableBase`1.System.Collections.IEnumerable.GetEnumerator()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter.WriteObject(TextWriter writer, Object value)
+   at Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Abp.AspNetCore.Security.AbpSecurityHeadersMiddleware.Invoke(HttpContext httpContext) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\Security\AbpSecurityHeadersMiddleware.cs:line 26
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+INFO  2018-11-22 22:29:15,577 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18599.556ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:29:28,034 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:29:28,038 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:29:28,051 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:29:28,102 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 22:29:46,874 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18764.4521ms.
+INFO  2018-11-22 22:29:46,955 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:29:47,010 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 18914.9944ms
+INFO  2018-11-22 22:29:47,032 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18979.3614ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:30:03,752 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:30:03,756 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:30:03,765 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:30:03,821 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 22:30:13,581 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9757.0862ms.
+INFO  2018-11-22 22:30:13,740 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:30:13,748 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 9977.5962ms
+INFO  2018-11-22 22:30:13,764 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10001.195ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:30:34,272 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:30:34,277 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:30:34,284 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:30:34,341 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 22:32:07,626 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 93282.0232ms.
+INFO  2018-11-22 22:32:07,734 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:32:07,738 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 93449.9493ms
+INFO  2018-11-22 22:32:07,746 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 93469.6492ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:43:55,374 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:43:55,393 [3    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:43:55,429 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:43:55,492 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 22:43:58,625 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3129.2478ms.
+INFO  2018-11-22 22:43:58,984 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:43:59,070 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 3637.9428ms
+INFO  2018-11-22 22:43:59,083 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3699.8132ms 200 application/json; charset=utf-8
+INFO  2018-11-22 22:45:08,742 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 22:45:08,747 [26   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 22:45:08,755 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 22:45:08,818 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 22:45:54,203 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 45382.8226ms.
+INFO  2018-11-22 22:45:54,302 [30   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 22:45:54,307 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 45547.9014ms
+INFO  2018-11-22 22:45:54,310 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 45568.7099ms 200 application/json; charset=utf-8
+DEBUG 2018-11-22 23:08:45,510 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-11-22 23:08:45,861 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-11-22 23:08:45,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,882 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,883 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,883 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,883 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,884 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:45,888 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-11-22 23:08:45,959 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 23:08:45,959 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 23:08:45,959 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 23:08:45,959 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-11-22 23:08:46,425 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-11-22 23:08:47,621 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-11-22 23:08:47,690 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-11-22 23:08:47,741 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-11-22 23:08:47,770 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-11-22 23:08:47,804 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-11-22 23:08:48,015 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-11-22 23:08:48,082 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-11-22 23:08:48,082 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-11-22 23:08:48,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-11-22 23:08:48,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-11-22 23:08:48,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-11-22 23:08:48,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-11-22 23:08:48,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-11-22 23:08:48,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-11-22 23:08:48,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-11-22 23:08:48,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-11-22 23:08:48,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-11-22 23:08:55,596 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-11-22 23:08:55,596 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-11-22 23:08:55,783 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 172.4363ms 200 
+INFO  2018-11-22 23:09:00,032 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-11-22 23:09:01,384 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-11-22 23:09:01,397 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 7.9239ms.
+INFO  2018-11-22 23:09:01,877 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-11-22 23:09:01,892 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 1853.5869ms
+INFO  2018-11-22 23:09:01,915 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-11-22 23:09:01,921 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6334.8294ms 302 
+INFO  2018-11-22 23:09:01,966 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 52.5536ms 200 text/html
+INFO  2018-11-22 23:09:02,038 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-11-22 23:09:02,040 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-11-22 23:09:02,043 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-11-22 23:09:02,067 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-11-22 23:09:02,069 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-11-22 23:09:02,071 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-11-22 23:09:02,082 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.5417ms 304 application/javascript
+INFO  2018-11-22 23:09:02,085 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.3992ms 304 text/css
+INFO  2018-11-22 23:09:02,126 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 34.5263ms 304 application/javascript
+INFO  2018-11-22 23:09:02,612 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-11-22 23:09:03,022 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 23:09:03,029 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 418.0649ms 200 text/plain
+INFO  2018-11-22 23:09:03,822 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-11-22 23:09:03,860 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-11-22 23:09:03,862 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 41.9688ms 200 text/plain
+INFO  2018-11-22 23:09:04,130 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-11-22 23:09:04,345 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 23:09:05,277 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1145.1187ms 200 application/json;charset=utf-8
+INFO  2018-11-22 23:09:19,303 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 23:09:19,307 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 23:09:19,375 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 23:09:20,235 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 23:09:44,255 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 24017.0651ms.
+INFO  2018-11-22 23:09:44,430 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 23:09:44,480 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 25098.68ms
+INFO  2018-11-22 23:09:44,485 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25186.0526ms 200 application/json; charset=utf-8
+INFO  2018-11-22 23:10:39,115 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged  
+INFO  2018-11-22 23:10:39,127 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-11-22 23:10:39,207 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-11-22 23:10:39,259 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-11-22 23:10:41,816 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2548.5274ms.
+INFO  2018-11-22 23:10:41,925 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-11-22 23:10:41,928 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 2718.7583ms
+INFO  2018-11-22 23:10:41,942 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2816.6945ms 200 application/json; charset=utf-8

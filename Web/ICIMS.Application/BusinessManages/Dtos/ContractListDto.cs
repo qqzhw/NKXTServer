@@ -8,6 +8,7 @@ using ICIMS.BusinessManages;
 using Abp.Domain.Entities;
 using ICIMS.BaseData;
 using ICIMS.Authorization.Users;
+using ICIMS.Users.Dto;
 
 namespace ICIMS.BusinessManages.Dtos
 {
@@ -18,14 +19,8 @@ namespace ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// TenantId
 		/// </summary>
-		public int? TenantId { get; set; }
-
-
-
-		/// <summary>
-		/// SysGuid
-		/// </summary>
-		[Required(ErrorMessage="SysGuid不能为空")]
+		public int? TenantId { get; set; } 
+		 
 		public string SysGuid { get; set; }
 
 
@@ -36,39 +31,27 @@ namespace ICIMS.BusinessManages.Dtos
 		[Required(ErrorMessage="Status不能为空")]
 		public int Status { get; set; }
 
-
-
-		/// <summary>
-		/// ItemDefineId
-		/// </summary>
-		[Required(ErrorMessage="ItemDefineId不能为空")]
+         
 		public int ItemDefineId { get; set; }
 
+        public string ItemDefineName { get; set; }
 
 
 		/// <summary>
 		/// UintId
 		/// </summary>
 		[Required(ErrorMessage="UintId不能为空")]
-		public int UintId { get; set; }
+		public long UintId { get; set; }
 
-
+        public string UnitName { get; set; }
 
 		/// <summary>
 		/// ContractTypeId
 		/// </summary>
 		[Required(ErrorMessage="ContractTypeId不能为空")]
 		public int ContractTypeId { get; set; }
-
-
-
-		/// <summary>
-		/// ContractType
-		/// </summary>
-		[Required(ErrorMessage="ContractType不能为空")]
-		public ContractCategory ContractType { get; set; }
-
-
+         
+        public string ContractTypeName { get; set; }
 
 		/// <summary>
 		/// BeginTime
@@ -76,8 +59,7 @@ namespace ICIMS.BusinessManages.Dtos
 		[Required(ErrorMessage="BeginTime不能为空")]
 		public DateTime BeginTime { get; set; }
 
-
-
+         
 		/// <summary>
 		/// EndTime
 		/// </summary>
@@ -150,7 +132,7 @@ namespace ICIMS.BusinessManages.Dtos
 		/// </summary>
 		public int VendorId { get; set; }
 
-
+        public string VendorName { get; set; }
 
 		/// <summary>
 		/// IsClearing
@@ -218,17 +200,17 @@ namespace ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// AuditUserId
 		/// </summary>
-		public int? AuditUserId { get; set; }
+		public long? AuditUserId { get; set; }
 
 
 
 		/// <summary>
 		/// AuditUser
 		/// </summary>
-		public User AuditUser { get; set; }
+		public string AuditUserName { get; set; }
 
 
-
+        
 
     }
 }

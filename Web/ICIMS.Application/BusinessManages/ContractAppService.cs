@@ -58,19 +58,62 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<ContractListDto>> GetPaged(GetContractsInput input)
 		{
 
-		    var query = _entityRepository.GetAll();
-			// TODO:根据传入的参数添加过滤条件
-            
-
-			var count = await query.CountAsync();
+		    var query = _entityRepository.GetAllIncluding(o=>o.Vendor).Include(o=>o.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.ContractCategory).Select(o=>new ContractListDto()
+            {
+                AuditDate=o.AuditDate,
+                AuditUserId=o.AuditUserId,
+                AuditUserName=o.AuditUser.Name,
+                BeginTime=o.BeginTime,
+                ClearingAmount=o.ClearingAmount,
+                ClearingPer=o.ClearingPer,
+                ContractAmount=o.ContractAmount,
+                ContractName=o.ContractName,
+                ContractNo=o.ContractNo,
+                ContractTypeId=o.ContractCategoryId,
+                ContractTypeName=o.ContractCategory.Name,
+                CreationTime=o.CreationTime,
+                CreatorUserId=o.CreatorUserId,
+                EndTime=o.EndTime,
+                FinalPer=o.FinalPer,
+                Id=o.Id,
+                IdentifyDate=o.IdentifyDate,
+                IsClearing=o.IsClearing,
+                IsDeleted=o.IsDeleted,
+                ItemDefineId=o.ItemDefineId,
+                ItemDefineName=o.ItemDefine.ItemName,
+                PaidAmount=o.PaidAmount,
+                PaymentMethod=o.PaymentMethod,
+                ProvisionalAmount=o.ProvisionalAmount,
+                Remark=o.Remark,
+                Status=o.Status,
+                SysGuid=o.SysGuid,
+                Tax=o.Tax,
+                TaxAmount=o.TaxAmount,
+                UintId=o.UnitId,
+                UnitName=o.ItemDefine.Unit.DisplayName,
+                VendorId=o.VendorId,
+                VendorName=o.Vendor.Name,
+                Warining=o.Warining,
+                WariningDate=o.WariningDate                
+            });
+            // TODO:根据传入的参数添加过滤条件
+            if (!string.IsNullOrEmpty(input.No))
+            {
+                query = query.Where(o => o.ContractNo.Contains(input.No));
+            }
+            if (!string.IsNullOrEmpty(input.Name))
+            {
+                query = query.Where(o => o.ContractName.Contains(input.Name));
+            }
+            var count = await query.CountAsync();
 
 			var entityList = await query
 					.OrderBy(input.Sorting).AsNoTracking()
 					.PageBy(input)
 					.ToListAsync();
-
+           
 			// var entityListDtos = ObjectMapper.Map<List<ContractListDto>>(entityList);
-			var entityListDtos =entityList.MapTo<List<ContractListDto>>();
+			 var entityListDtos =entityList.MapTo<List<ContractListDto>>();
 
 			return new PagedResultDto<ContractListDto>(count,entityListDtos);
 		}
