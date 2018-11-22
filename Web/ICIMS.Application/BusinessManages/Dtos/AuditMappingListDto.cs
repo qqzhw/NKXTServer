@@ -39,13 +39,14 @@ namespace ICIMS.BusinessManages.Dtos
 		/// </summary>
 		[Required(ErrorMessage="BusinessTypeId不能为空")]
 		public int BusinessTypeId { get; set; }
+        public string BusinessTypeName { get; set; }
+        public int RoleId { get; set; }
+        public string RoleName { get; set; }
 
-
-
-		/// <summary>
-		/// ItemId
-		/// </summary>
-		[Required(ErrorMessage="ItemId不能为空")]
+     /// <summary>
+     /// ItemId
+     /// </summary>
+       [Required(ErrorMessage="ItemId不能为空")]
 		public int ItemId { get; set; }
 
 
@@ -85,6 +86,6 @@ namespace ICIMS.BusinessManages.Dtos
 
         public string  AuditUserName { get;set; }
 
-
+       
     }
 }
