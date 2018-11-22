@@ -25,16 +25,16 @@ namespace ICIMS.BusinessManages.DomainService
     /// <summary>
     /// BuinessAudit领域层的业务管理
     ///</summary>
-    public class BuinessAuditManager :ICIMSDomainServiceBase, IBuinessAuditManager
+    public class BusinessAuditManager :ICIMSDomainServiceBase, IBusinessAuditManager
     {
 		
-		private readonly IRepository<BuinessAudit,int> _repository;
+		private readonly IRepository<BusinessAudit,int> _repository;
 
 		/// <summary>
 		/// BuinessAudit的构造方法
 		///</summary>
-		public BuinessAuditManager(
-			IRepository<BuinessAudit, int> repository
+		public BusinessAuditManager(
+			IRepository<BusinessAudit, int> repository
 		)
 		{
 			_repository =  repository;
@@ -44,7 +44,7 @@ namespace ICIMS.BusinessManages.DomainService
 		/// <summary>
 		/// 初始化
 		///</summary>
-		public void InitBuinessAudit()
+		public void InitBusinessAudit()
 		{
 			throw new NotImplementedException();
 		}

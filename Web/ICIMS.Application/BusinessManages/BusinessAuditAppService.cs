@@ -15,109 +15,108 @@ using Abp.Extensions;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
 using Abp.Application.Services.Dto;
-using Abp.Linq.Extensions;
-
-
+using Abp.Linq.Extensions; 
 using ICIMS.BusinessManages;
 using ICIMS.BusinessManages.Dtos;
 using ICIMS.BusinessManages.DomainService;
 using ICIMS.BusinessManages.Authorization;
-
+ 
 
 namespace ICIMS.BusinessManages
 {
     /// <summary>
-    /// BuinessAudit应用层服务的接口实现方法  
+    /// BusinessAudit应用层服务的接口实现方法  
     ///</summary>
     [AbpAuthorize]
-    public class BuinessAuditAppService : ICIMSAppServiceBase, IBuinessAuditAppService
+    public class BusinessAuditAppService : ICIMSAppServiceBase, IBusinessAuditAppService
     {
-        private readonly IRepository<BuinessAudit, int> _entityRepository;
-
-        private readonly IBuinessAuditManager _entityManager;
+        private readonly IRepository<BusinessAudit, int> _entityRepository;
+        private readonly IRepository<BusinessType, int> _businessRepository;
+        private readonly IBusinessAuditManager _entityManager;
 
         /// <summary>
         /// 构造函数 
         ///</summary>
-        public BuinessAuditAppService(
-        IRepository<BuinessAudit, int> entityRepository
-        ,IBuinessAuditManager entityManager
+        public BusinessAuditAppService(
+        IRepository<BusinessAudit, int> entityRepository
+        ,IBusinessAuditManager entityManager
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
+           // _businessRepository = businessRepository;
         }
 
 
         /// <summary>
-        /// 获取BuinessAudit的分页列表信息
+        /// 获取BusinessAudit的分页列表信息
         ///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
 		//[AbpAuthorize(BuinessAuditPermissions.Query)] 
-        public async Task<PagedResultDto<BuinessAuditListDto>> GetPaged(GetBuinessAuditsInput input)
-		{
+        public async Task<PagedResultDto<BusinessAuditListDto>> GetPaged(GetBusinessAuditsInput input)
+        {
 
-		    var query = _entityRepository.GetAll();
+            var query = _entityRepository.GetAll();
             // TODO:根据传入的参数添加过滤条件
-            if (input.BuinessTypeId.HasValue)
+            if (input.BusinessTypeId.HasValue)
             {
-                query = query.Where(o => o.BuinessTypeId == input.BuinessTypeId);
+                query = query.Where(o => o.BusinessType.Id == input.BusinessTypeId);
             }
-            if (!string.IsNullOrEmpty(input.BuinessTypeName))
+            if (!string.IsNullOrEmpty(input.BusinessTypeName))
             {
-                query = query.Where(o => o.BuinessTypeName == input.BuinessTypeName);
+                query = query.Where(o => o.BusinessType.Name == input.BusinessTypeName);
             }
-			var count = await query.CountAsync();
+            var count = await query.CountAsync();
 
-			var entityList = await query
-					.OrderBy(input.Sorting).AsNoTracking()
-					.PageBy(input)
-					.ToListAsync();
+            var entityList = await query
+                    .OrderBy(input.Sorting).AsNoTracking()
+                    .PageBy(input)
+                    .ToListAsync();
 
-			// var entityListDtos = ObjectMapper.Map<List<BuinessAuditListDto>>(entityList);
-			var entityListDtos =entityList.MapTo<List<BuinessAuditListDto>>();
+            //var entityListDtos = ObjectMapper.Map<List<BuinessAuditListDto>>(entityList);
+            var entityListDtos = entityList.MapTo<List<BusinessAuditListDto>>();
 
-			return new PagedResultDto<BuinessAuditListDto>(count,entityListDtos);
-		}
+            return new PagedResultDto<BusinessAuditListDto>(count, entityListDtos);
+        }
 
 
 		/// <summary>
 		/// 通过指定id获取BuinessAuditListDto信息
 		/// </summary>
 		//[AbpAuthorize(BuinessAuditPermissions.Query)] 
-		public async Task<BuinessAuditListDto> GetById(EntityDto<int> input)
+		public async Task<BusinessAuditListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
 
-		    return entity.MapTo<BuinessAuditListDto>();
+		    return entity.MapTo<BusinessAuditListDto>();
 		}
 
 		/// <summary>
-		/// 获取编辑 BuinessAudit
+		/// 获取编辑 BusinessAudit
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(BuinessAuditPermissions.Create,BuinessAuditPermissions.Edit)]
-		public async Task<GetBuinessAuditForEditOutput> GetForEdit(NullableIdDto<int> input)
+		public async Task<GetBusinessAuditForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
-			var output = new GetBuinessAuditForEditOutput();
-BuinessAuditEditDto editDto;
+			var output = new GetBusinessAuditForEditOutput();
+BusinessAuditEditDto editDto;
 
 			if (input.Id.HasValue)
 			{
 				var entity = await _entityRepository.GetAsync(input.Id.Value);
 
-				editDto = entity.MapTo<BuinessAuditEditDto>();
+				editDto = entity.MapTo<BusinessAuditEditDto>();
 
 				//buinessAuditEditDto = ObjectMapper.Map<List<buinessAuditEditDto>>(entity);
 			}
 			else
 			{
-				editDto = new BuinessAuditEditDto();
+				editDto = new BusinessAuditEditDto();
 			}
 
-			output.BuinessAudit = editDto;
+			output.BusinessAudit = editDto;
 			return output;
 		}
 
@@ -128,41 +127,41 @@ BuinessAuditEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(BuinessAuditPermissions.Create,BuinessAuditPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateBuinessAuditInput input)
+		public async Task CreateOrUpdate(CreateOrUpdateBusinessAuditInput input)
 		{
 
-			if (input.BuinessAudit.Id.HasValue)
+			if (input.BusinessAudit.Id.HasValue)
 			{
-				await Update(input.BuinessAudit);
+				await Update(input.BusinessAudit);
 			}
 			else
 			{
-				await Create(input.BuinessAudit);
+				await Create(input.BusinessAudit);
 			}
 		}
 
 
 		/// <summary>
-		/// 新增BuinessAudit
+		/// 新增BusinessAudit
 		/// </summary>
 		//[AbpAuthorize(BuinessAuditPermissions.Create)]
-		protected virtual async Task<BuinessAuditEditDto> Create(BuinessAuditEditDto input)
+		protected virtual async Task<BusinessAuditEditDto> Create(BusinessAuditEditDto input)
 		{
 			//TODO:新增前的逻辑判断，是否允许新增
 
             // var entity = ObjectMapper.Map <BuinessAudit>(input);
-            var entity=input.MapTo<BuinessAudit>();
+            var entity=input.MapTo<BusinessAudit>();
 			
 
 			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<BuinessAuditEditDto>();
+			return entity.MapTo<BusinessAuditEditDto>();
 		}
 
 		/// <summary>
 		/// 编辑BuinessAudit
 		/// </summary>
 		//[AbpAuthorize(BuinessAuditPermissions.Edit)]
-		protected virtual async Task Update(BuinessAuditEditDto input)
+		protected virtual async Task Update(BusinessAuditEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 

@@ -13,7 +13,7 @@ namespace ICIMS.EntityMapper.AuditMappings
 
             builder.ToTable("AuditMappings"); 
             builder.HasKey(a => a.Id);
-            builder.HasOne(a => a.BuinessAudit).WithMany().HasForeignKey(a => a.BuinessAuditId);
+            builder.HasOne(a => a.BusinessAudit).WithMany().HasForeignKey(a => a.BusinessAuditId);
         }
     }
 }

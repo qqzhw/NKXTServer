@@ -1,6 +1,6 @@
 
 
-namespace ICIMS.BussinesManages.Authorization
+namespace ICIMS.BusinessManages.Authorization
 {
 	/// <summary>
     /// 定义系统的权限名称的字符串常量。

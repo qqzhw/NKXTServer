@@ -26,20 +26,20 @@ namespace ICIMS.BusinessManages
     /// <summary>
     /// BuinessAudit应用层服务的接口方法
     ///</summary>
-    public interface IBuinessAuditAppService : IApplicationService
+    public interface IBusinessAuditAppService : IApplicationService
     {
         /// <summary>
 		/// 获取BuinessAudit的分页列表信息
 		///</summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<PagedResultDto<BuinessAuditListDto>> GetPaged(GetBuinessAuditsInput input);
+        Task<PagedResultDto<BusinessAuditListDto>> GetPaged(GetBusinessAuditsInput input);
 
 
 		/// <summary>
 		/// 通过指定id获取BuinessAuditListDto信息
 		/// </summary>
-		Task<BuinessAuditListDto> GetById(EntityDto<int> input);
+		Task<BusinessAuditListDto> GetById(EntityDto<int> input);
 
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<GetBuinessAuditForEditOutput> GetForEdit(NullableIdDto<int> input);
+        Task<GetBusinessAuditForEditOutput> GetForEdit(NullableIdDto<int> input);
 
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateBuinessAuditInput input);
+        Task CreateOrUpdate(CreateOrUpdateBusinessAuditInput input);
 
 
         /// <summary>

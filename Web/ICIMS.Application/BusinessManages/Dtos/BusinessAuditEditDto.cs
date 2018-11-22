@@ -1,18 +1,21 @@
 
-
 using System;
-using Abp.Application.Services.Dto;
-using Abp.Domain.Entities.Auditing;
 using System.ComponentModel.DataAnnotations;
-using ICIMS.BusinessManages;
+using Abp.Domain.Entities.Auditing;
 using ICIMS.Authorization.Roles;
-using ICIMS.BussinesManages;
-using Abp.Domain.Entities;
+using ICIMS.BusinessManages;
 
-namespace ICIMS.BusinessManages.Dtos
+
+namespace  ICIMS.BusinessManages.Dtos
 {
-    public class BuinessAuditListDto : EntityDto,IMayHaveTenant 
+    public class BusinessAuditEditDto
     {
+
+        /// <summary>
+        /// Id
+        /// </summary>
+        public int? Id { get; set; }         
+
 
         
 		/// <summary>
@@ -40,7 +43,7 @@ namespace ICIMS.BusinessManages.Dtos
 		/// RoleId
 		/// </summary>
 		[Required(ErrorMessage="RoleId不能为空")]
-		public long RoleId { get; set; }
+		public Role RoleId { get; set; }
 
 
 
@@ -48,9 +51,9 @@ namespace ICIMS.BusinessManages.Dtos
 		/// BuinessTypeId
 		/// </summary>
 		[Required(ErrorMessage="BuinessTypeId不能为空")]
-		public int BuinessTypeId { get; set; }
+		public int BusinessTypeId { get; set; }
 
-        public string BuinessTypeName { get; set; }
+        public string BusinessTypeName { get; set; }
 
         /// <summary>
         /// Role
@@ -62,7 +65,7 @@ namespace ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// BuinessType
 		/// </summary>
-		public virtual BusinessType BuinessType { get; set; }
+		public virtual BusinessType BusinessType { get; set; }
 
 
 

@@ -6,16 +6,16 @@ using ICIMS.BusinessManages;
 
 namespace ICIMS.EntityMapper.BuinessAudits
 {
-    public class BuinessAuditCfg : IEntityTypeConfiguration<BuinessAudit>
+    public class BusinessAuditCfg : IEntityTypeConfiguration<BusinessAudit>
     {
-        public void Configure(EntityTypeBuilder<BuinessAudit> builder)
+        public void Configure(EntityTypeBuilder<BusinessAudit> builder)
         {
 
-            builder.ToTable("BuinessAudit");
+            builder.ToTable("BusinessAudit");
             builder.HasKey(a => a.Id);
 
             builder.HasOne(o => o.Role).WithMany().HasForeignKey(a => a.RoleId);
-            builder.HasOne(o => o.BuinessType).WithMany().HasForeignKey(a => a.BuinessTypeId);
+            builder.HasOne(o => o.BusinessType).WithMany().HasForeignKey(a => a.BusinessTypeId);
            
 
         }

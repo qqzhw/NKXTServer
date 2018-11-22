@@ -12,23 +12,23 @@ namespace ICIMS.BusinessManages.Authorization
     /// <summary>
     /// 权限配置都在这里。
     /// 给权限默认设置服务
-    /// See <see cref="BuinessAuditPermissions" /> for all permission names. BuinessAudit
+    /// See <see cref="BusinessAuditPermissions" /> for all permission names. BusinessAudit
     ///</summary>
-    public class BuinessAuditAuthorizationProvider : AuthorizationProvider
+    public class BusinessAuditAuthorizationProvider : AuthorizationProvider
     {
         private readonly bool _isMultiTenancyEnabled;
 
-		public BuinessAuditAuthorizationProvider()
+		public BusinessAuditAuthorizationProvider()
 		{
 
 		}
 
-        public BuinessAuditAuthorizationProvider(bool isMultiTenancyEnabled)
+        public BusinessAuditAuthorizationProvider(bool isMultiTenancyEnabled)
         {
             _isMultiTenancyEnabled = isMultiTenancyEnabled;
         }
 
-        public BuinessAuditAuthorizationProvider(IMultiTenancyConfig multiTenancyConfig)
+        public BusinessAuditAuthorizationProvider(IMultiTenancyConfig multiTenancyConfig)
         {
             _isMultiTenancyEnabled = multiTenancyConfig.IsEnabled;
         }
@@ -40,13 +40,13 @@ namespace ICIMS.BusinessManages.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(BuinessAuditPermissions.Node , L("BuinessAudit"));
-			entityPermission.CreateChildPermission(BuinessAuditPermissions.Query, L("QueryBuinessAudit"));
-			entityPermission.CreateChildPermission(BuinessAuditPermissions.Create, L("CreateBuinessAudit"));
-			entityPermission.CreateChildPermission(BuinessAuditPermissions.Edit, L("EditBuinessAudit"));
-			entityPermission.CreateChildPermission(BuinessAuditPermissions.Delete, L("DeleteBuinessAudit"));
-			entityPermission.CreateChildPermission(BuinessAuditPermissions.BatchDelete, L("BatchDeleteBuinessAudit"));
-			entityPermission.CreateChildPermission(BuinessAuditPermissions.ExportExcel, L("ExportExcelBuinessAudit"));
+			var entityPermission = administration.CreateChildPermission(BusinessAuditPermissions.Node , L("BuinessAudit"));
+			entityPermission.CreateChildPermission(BusinessAuditPermissions.Query, L("QueryBuinessAudit"));
+			entityPermission.CreateChildPermission(BusinessAuditPermissions.Create, L("CreateBuinessAudit"));
+			entityPermission.CreateChildPermission(BusinessAuditPermissions.Edit, L("EditBuinessAudit"));
+			entityPermission.CreateChildPermission(BusinessAuditPermissions.Delete, L("DeleteBuinessAudit"));
+			entityPermission.CreateChildPermission(BusinessAuditPermissions.BatchDelete, L("BatchDeleteBuinessAudit"));
+			entityPermission.CreateChildPermission(BusinessAuditPermissions.ExportExcel, L("ExportExcelBuinessAudit"));
 
 
 		}

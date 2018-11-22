@@ -1,9 +1,8 @@
 
 
-using ICIMS.BussinesManages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
- 
+using ICIMS.BusinessManages;
 
 namespace ICIMS.EntityMapper.BusinessTypes
 {
@@ -12,11 +11,11 @@ namespace ICIMS.EntityMapper.BusinessTypes
         public void Configure(EntityTypeBuilder<BusinessType> builder)
         {
 
-            builder.ToTable("BusinessTypes", ICIMSAbpefCoreConsts.SchemaNames.CMS);
+            builder.ToTable("BusinessType");
 
-            
-			builder.Property(a => a.Name).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
-			 
+            builder.HasKey(a => a.Id);
+			builder.Property(a => a.Name).HasMaxLength(100); 
+
         }
     }
 }

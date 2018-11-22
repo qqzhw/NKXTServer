@@ -9,13 +9,13 @@ using ICIMS.BusinessManages;
 
 namespace ICIMS.BusinessManages.DomainService
 {
-    public interface IBuinessAuditManager : IDomainService
+    public interface IBusinessAuditManager : IDomainService
     {
 
         /// <summary>
         /// 初始化方法
         ///</summary>
-        void InitBuinessAudit();
+        void InitBusinessAudit();
 
 
 

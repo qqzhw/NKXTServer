@@ -25,7 +25,7 @@ Configuration.Modules.AbpAutoMapper().Configurators.Add(configuration =>
     // ....
 
     // 只需要复制这一段
-BuinessAuditMapper.CreateMappings(configuration);
+BusinessTypeMapper.CreateMappings(configuration);
 
     // ....
 });
@@ -38,7 +38,7 @@ BuinessAuditMapper.CreateMappings(configuration);
 中的 PreInitialize 方法中:
 
 ```
-Configuration.Authorization.Providers.Add<BuinessAuditAuthorizationProvider>();
+Configuration.Authorization.Providers.Add<BusinessTypeAuthorizationProvider>();
 
 ```
 
@@ -47,7 +47,7 @@ Configuration.Authorization.Providers.Add<BuinessAuditAuthorizationProvider>();
 可以在```DbContext```中增加：
 
  ```
-public DbSet<BuinessAudit>  BuinessAudits { get; set; }
+public DbSet<BusinessType>  BusinessTypes { get; set; }
 
  ```
 
@@ -56,7 +56,7 @@ public DbSet<BuinessAudit>  BuinessAudits { get; set; }
 ```
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new BuinessAuditCfg());
+            modelBuilder.ApplyConfiguration(new BusinessTypeCfg());
         }
 
 ```
@@ -71,10 +71,7 @@ public DbSet<BuinessAudit>  BuinessAudits { get; set; }
 <text name="Name"  value="Name"></text>
 <text name="DisplayOrder"  value="DisplayOrder"></text>
 <text name="TenantId"  value="TenantId"></text>
-<text name="RoleId"  value="RoleId"></text>
-<text name="BuinessTypeId"  value="BuinessTypeId"></text>
-<text name="Role"  value="Role"></text>
-<text name="BuinessType"  value="BuinessType"></text>
+<text name="IsDeleted"  value="IsDeleted"></text>
 
 
 ```

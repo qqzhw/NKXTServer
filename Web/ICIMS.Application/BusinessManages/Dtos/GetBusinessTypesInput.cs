@@ -1,9 +1,9 @@
 
 using Abp.Runtime.Validation;
 using ICIMS.Dtos;
- 
+using ICIMS.BusinessManages;
 
-namespace ICIMS.BussinesManages.Dtos
+namespace ICIMS.BusinessManages.Dtos
 {
     public class GetBusinessTypesInput : PagedSortedAndFilteredInputDto, IShouldNormalize
     {

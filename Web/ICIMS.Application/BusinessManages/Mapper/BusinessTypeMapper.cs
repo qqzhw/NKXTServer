@@ -1,23 +1,23 @@
 
-using AutoMapper; 
-using ICIMS.BussinesManages.Dtos;
+using AutoMapper;
+using ICIMS.BusinessManages;
+using ICIMS.BusinessManages.Dtos;
 
-namespace ICIMS.BussinesManages.Mapper
+namespace ICIMS.BusinessManages.Mapper
 {
 
 	/// <summary>
     /// 配置BusinessType的AutoMapper
     /// </summary>
-	internal   class BusinessTypeMapper : Profile
+	internal static class BusinessTypeMapper
     {
-        public BusinessTypeMapper()
-        { 
-        
-            CreateMap<BusinessType,BusinessTypeListDto>();
-            CreateMap<BusinessTypeListDto,BusinessType>();
+        public static void CreateMappings(IMapperConfigurationExpression configuration)
+        {
+            configuration.CreateMap <BusinessType,BusinessTypeListDto>();
+            configuration.CreateMap <BusinessTypeListDto,BusinessType>();
 
-            CreateMap<BusinessTypeEditDto,BusinessType>();
-            CreateMap<BusinessType,BusinessTypeEditDto>();
+            configuration.CreateMap <BusinessTypeEditDto,BusinessType>();
+            configuration.CreateMap <BusinessType,BusinessTypeEditDto>();
 
         }
 	}

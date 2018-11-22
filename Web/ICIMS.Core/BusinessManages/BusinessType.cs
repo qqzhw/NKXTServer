@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ICIMS.BussinesManages
+namespace ICIMS.BusinessManages
 {
     public class BusinessType : Entity, IMayHaveTenant,ISoftDelete
     {

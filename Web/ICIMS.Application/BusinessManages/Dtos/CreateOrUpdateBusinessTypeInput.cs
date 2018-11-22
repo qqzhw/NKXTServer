@@ -2,9 +2,9 @@
 
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
- 
+using ICIMS.BusinessManages;
 
-namespace ICIMS.BussinesManages.Dtos
+namespace ICIMS.BusinessManages.Dtos
 {
     public class CreateOrUpdateBusinessTypeInput
     {

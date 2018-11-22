@@ -7,17 +7,17 @@ namespace ICIMS.BusinessManages.Mapper
 {
 
 	/// <summary>
-    /// 配置BuinessAudit的AutoMapper
+    /// 配置BusinessAudit的AutoMapper
     /// </summary>
-	internal static class BuinessAuditMapper
+	internal static class BusinessAuditMapper
     {
         public static void CreateMappings(IMapperConfigurationExpression configuration)
         {
-            configuration.CreateMap <BuinessAudit,BuinessAuditListDto>();
-            configuration.CreateMap <BuinessAuditListDto,BuinessAudit>();
+            configuration.CreateMap <BusinessAudit,BusinessAuditListDto>();
+            configuration.CreateMap <BusinessAuditListDto,BusinessAudit>();
 
-            configuration.CreateMap <BuinessAuditEditDto,BuinessAudit>();
-            configuration.CreateMap <BuinessAudit,BuinessAuditEditDto>();
+            configuration.CreateMap <BusinessAuditEditDto,BusinessAudit>();
+            configuration.CreateMap <BusinessAudit,BusinessAuditEditDto>();
 
         }
 	}

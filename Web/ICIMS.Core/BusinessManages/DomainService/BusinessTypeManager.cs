@@ -14,12 +14,13 @@ using Abp.Linq.Extensions;
 using Abp.Extensions;
 using Abp.UI;
 using Abp.Domain.Repositories;
-using Abp.Domain.Services; 
+using Abp.Domain.Services;
+
 using ICIMS;
- 
+using ICIMS.BusinessManages;
 
 
-namespace ICIMS.BussinesManages.DomainService
+namespace ICIMS.BusinessManages.DomainService
 {
     /// <summary>
     /// BusinessType领域层的业务管理

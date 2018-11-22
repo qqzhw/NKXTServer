@@ -4,10 +4,10 @@ using System;
 using System.Threading.Tasks;
 using Abp;
 using Abp.Domain.Services;
- 
+using ICIMS.BusinessManages;
 
 
-namespace ICIMS.BussinesManages.DomainService
+namespace ICIMS.BusinessManages.DomainService
 {
     public interface IBusinessTypeManager : IDomainService
     {

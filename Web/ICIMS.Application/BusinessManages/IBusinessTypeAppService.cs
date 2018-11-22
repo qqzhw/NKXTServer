@@ -15,12 +15,13 @@ using Abp.Authorization;
 using Abp.Linq.Extensions;
 using Abp.Domain.Repositories;
 using Abp.Application.Services;
-using Abp.Application.Services.Dto; 
- 
- 
-using ICIMS.BussinesManages.Dtos;
+using Abp.Application.Services.Dto;
 
-namespace ICIMS.BussinesManages
+
+using ICIMS.BusinessManages.Dtos;
+using ICIMS.BusinessManages;
+
+namespace ICIMS.BusinessManages
 {
     /// <summary>
     /// BusinessType应用层服务的接口方法

@@ -4,10 +4,10 @@ using System;
 using Abp.Application.Services.Dto;
 using Abp.Domain.Entities.Auditing;
 using System.ComponentModel.DataAnnotations;
- 
+using ICIMS.BusinessManages;
 using Abp.Domain.Entities;
 
-namespace ICIMS.BussinesManages.Dtos
+namespace ICIMS.BusinessManages.Dtos
 {
     public class BusinessTypeListDto : EntityDto,IMayHaveTenant,ISoftDelete 
     {

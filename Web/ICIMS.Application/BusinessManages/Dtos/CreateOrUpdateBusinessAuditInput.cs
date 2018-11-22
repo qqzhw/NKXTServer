@@ -6,10 +6,10 @@ using ICIMS.BusinessManages;
 
 namespace ICIMS.BusinessManages.Dtos
 {
-    public class CreateOrUpdateBuinessAuditInput
+    public class CreateOrUpdateBusinessAuditInput
     {
         [Required]
-        public BuinessAuditEditDto BuinessAudit { get; set; }
+        public BusinessAuditEditDto BusinessAudit { get; set; }
 
     }
 }

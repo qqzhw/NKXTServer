@@ -5,7 +5,7 @@ using ICIMS.BusinessManages;
 
 namespace ICIMS.BusinessManages.Dtos
 {
-    public class GetBuinessAuditsInput : PagedAndSortedInputDto, IShouldNormalize
+    public class GetBusinessAuditsInput : PagedAndSortedInputDto, IShouldNormalize
     {
 
         /// <summary>
@@ -18,7 +18,7 @@ namespace ICIMS.BusinessManages.Dtos
                 Sorting = "Id";
             }
         }
-        public string BuinessTypeName { get; set; }
-        public int? BuinessTypeId { get; set; }
+        public string BusinessTypeName { get; set; }
+        public int? BusinessTypeId { get; set; }
     }
 }

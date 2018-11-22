@@ -7,7 +7,7 @@ using Abp.Localization;
 using Abp.MultiTenancy;
 using ICIMS.Authorization;
 
-namespace ICIMS.BussinesManages.Authorization
+namespace ICIMS.BusinessManages.Authorization
 {
     /// <summary>
     /// 权限配置都在这里。

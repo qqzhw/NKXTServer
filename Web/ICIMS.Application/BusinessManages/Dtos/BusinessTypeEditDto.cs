@@ -2,9 +2,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using Abp.Domain.Entities.Auditing;
- 
+using ICIMS.BusinessManages;
 
-namespace  ICIMS.BussinesManages.Dtos
+namespace  ICIMS.BusinessManages.Dtos
 {
     public class BusinessTypeEditDto
     {

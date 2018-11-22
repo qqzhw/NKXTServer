@@ -1135,6 +1135,12 @@ namespace ICIMS.Migrations
                     b.Property<string>("DownloadUrl")
                         .HasMaxLength(256);
 
+                    b.Property<int?>("EntityId");
+
+                    b.Property<string>("EntityKey");
+
+                    b.Property<string>("EntityName");
+
                     b.Property<string>("Extension")
                         .HasMaxLength(50);
 
@@ -1144,8 +1150,6 @@ namespace ICIMS.Migrations
                     b.Property<long>("FileSize");
 
                     b.Property<bool>("IsDeleted");
-
-                    b.Property<bool>("IsNew");
 
                     b.Property<DateTime?>("LastModificationTime");
 
@@ -1399,9 +1403,9 @@ namespace ICIMS.Migrations
 
                     b.Property<DateTime?>("AuditTime");
 
-                    b.Property<int>("BuinessAuditId");
+                    b.Property<int>("BusinessAuditId");
 
-                    b.Property<int>("BuinessTypeId");
+                    b.Property<int>("BusinessTypeId");
 
                     b.Property<DateTime>("CreationTime");
 
@@ -1417,7 +1421,7 @@ namespace ICIMS.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BuinessAuditId");
+                    b.HasIndex("BusinessAuditId");
 
                     b.ToTable("AuditMappings");
                 });
@@ -1501,13 +1505,15 @@ namespace ICIMS.Migrations
                     b.ToTable("Budget");
                 });
 
-            modelBuilder.Entity("ICIMS.BusinessManages.BuinessAudit", b =>
+            modelBuilder.Entity("ICIMS.BusinessManages.BusinessAudit", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BuinessTypeId");
+                    b.Property<int>("BusinessTypeId");
+
+                    b.Property<string>("BusinessTypeName");
 
                     b.Property<int>("DisplayOrder");
 
@@ -1519,11 +1525,31 @@ namespace ICIMS.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BuinessTypeId");
+                    b.HasIndex("BusinessTypeId");
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("BuinessAudit");
+                    b.ToTable("BusinessAudit");
+                });
+
+            modelBuilder.Entity("ICIMS.BusinessManages.BusinessType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("DisplayOrder");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(100);
+
+                    b.Property<int?>("TenantId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BusinessType");
                 });
 
             modelBuilder.Entity("ICIMS.BusinessManages.Contract", b =>
@@ -1824,25 +1850,6 @@ namespace ICIMS.Migrations
                     b.ToTable("ReViewDefine");
                 });
 
-            modelBuilder.Entity("ICIMS.BussinesManages.BusinessType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("DisplayOrder");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<string>("Name");
-
-                    b.Property<int?>("TenantId");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BusinessType");
-                });
-
             modelBuilder.Entity("ICIMS.MultiTenancy.Tenant", b =>
                 {
                     b.Property<int>("Id")
@@ -2046,9 +2053,9 @@ namespace ICIMS.Migrations
 
             modelBuilder.Entity("ICIMS.BusinessManages.AuditMapping", b =>
                 {
-                    b.HasOne("ICIMS.BusinessManages.BuinessAudit", "BuinessAudit")
+                    b.HasOne("ICIMS.BusinessManages.BusinessAudit", "BusinessAudit")
                         .WithMany()
-                        .HasForeignKey("BuinessAuditId")
+                        .HasForeignKey("BusinessAuditId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -2075,11 +2082,11 @@ namespace ICIMS.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("ICIMS.BusinessManages.BuinessAudit", b =>
+            modelBuilder.Entity("ICIMS.BusinessManages.BusinessAudit", b =>
                 {
-                    b.HasOne("ICIMS.BussinesManages.BusinessType", "BuinessType")
+                    b.HasOne("ICIMS.BusinessManages.BusinessType", "BusinessType")
                         .WithMany()
-                        .HasForeignKey("BuinessTypeId")
+                        .HasForeignKey("BusinessTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ICIMS.Authorization.Roles.Role", "Role")

@@ -33,16 +33,16 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// BuinessAuditId
 		/// </summary>
-		[Required(ErrorMessage="BuinessAuditId不能为空")]
-		public int BuinessAuditId { get; set; }
+		[Required(ErrorMessage="BusinessAuditId不能为空")]
+		public int BusinessAuditId { get; set; }
 
 
 
 		/// <summary>
-		/// BuinessTypeId
+		/// BusinessTypeId
 		/// </summary>
-		[Required(ErrorMessage="BuinessTypeId不能为空")]
-		public int BuinessTypeId { get; set; }
+		[Required(ErrorMessage="BusinessTypeId不能为空")]
+		public int BusinessTypeId { get; set; }
 
 
 
