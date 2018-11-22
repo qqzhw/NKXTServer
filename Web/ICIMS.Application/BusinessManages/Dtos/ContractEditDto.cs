@@ -86,13 +86,13 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// </summary>
 		[Required(ErrorMessage="EndTime不能为空")]
 		public DateTime EndTime { get; set; }
+        public DateTime ContractTime { get; set; }
 
 
-
-		/// <summary>
-		/// ContractNo
-		/// </summary>
-		[Required(ErrorMessage="ContractNo不能为空")]
+        /// <summary>
+        /// ContractNo
+        /// </summary>
+        [Required(ErrorMessage="ContractNo不能为空")]
 		public string ContractNo { get; set; }
 
 

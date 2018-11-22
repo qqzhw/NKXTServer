@@ -43,6 +43,7 @@ namespace ICIMS.BusinessManages
         public string ContractNo { get; set; }
         public string ContractName { get; set; }
 
+        public DateTime ContractTime { get; set; }
         public decimal ContractAmount { get; set; }
 
         public decimal PaidAmount { get; set; }
