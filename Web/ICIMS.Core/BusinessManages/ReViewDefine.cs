@@ -61,6 +61,7 @@ namespace ICIMS.BusinessManages
 
         #region 导航属性
         public virtual ItemDefine ItemDefine { get; set; }
+        public virtual User CreatorUser { get; set; }
         #endregion
     }
 }

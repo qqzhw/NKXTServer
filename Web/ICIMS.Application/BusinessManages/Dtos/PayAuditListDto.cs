@@ -10,146 +10,32 @@ using ICIMS.Authorization.Users;
 
 namespace ICIMS.BusinessManages.Dtos
 {
-    public class PayAuditListDto : FullAuditedEntityDto,IMayHaveTenant 
+    public class PayAuditListDto : Entity, ICreationAudited
     {
 
+        public PayAuditEditDto PayAudit { get; set; }
+
+        public string ItemNo { get; set; }
+        public decimal DefineAmount { get; set; }//项目金额
+        public string ItemDefineName { get; set; }
+        public string UnitName { get; set; }
+        public string CreatorUserName { get; set; }
+        public string AuditUserName { get; set; }
+        public string PaymentTypeName { get; set; }//支付类型
+        public string ContractName { get; set; }
+        public decimal ContractAmount { get; set; }//合同金额
+        public bool IsDeleted { get; set; }
+
+        public long? CreatorUserId { get; set; }
+        public DateTime CreationTime { get; set; }
+   
+ 
+        public string VendorName { get; set; } //承建单位
+        public string AccountName { get; set; }//账户
+        public string OpenBank { get; set; }//开户行
+        public string LinkPhone { get; set; }//联系人电话
+
         
-		/// <summary>
-		/// TenantId
-		/// </summary>
-		public int? TenantId { get; set; }
-
-
-
-		/// <summary>
-		/// SysGuid
-		/// </summary>
-		[Required(ErrorMessage="SysGuid不能为空")]
-		public string SysGuid { get; set; }
-
-
-
-		/// <summary>
-		/// Status
-		/// </summary>
-		[Required(ErrorMessage="Status不能为空")]
-		public int Status { get; set; }
-
-
-
-		/// <summary>
-		/// UnitId
-		/// </summary>
-		[Required(ErrorMessage="UnitId不能为空")]
-		public int? UnitId { get; set; }
-
-
-
-		/// <summary>
-		/// ContrctId
-		/// </summary>
-		[Required(ErrorMessage="ContrctId不能为空")]
-		public int ContrctId { get; set; }
-
-
-
-		/// <summary>
-		/// ItemDefineId
-		/// </summary>
-		public int ItemDefineId { get; set; }
-
-
-
-		/// <summary>
-		/// PaymentTypeId
-		/// </summary>
-		public int PaymentTypeId { get; set; }
-
-
-
-		/// <summary>
-		/// PaymentNo
-		/// </summary>
-		public string PaymentNo { get; set; }
-
-
-
-		/// <summary>
-		/// PaymentName
-		/// </summary>
-		public string PaymentName { get; set; }
-
-
-
-		/// <summary>
-		/// PayAmount
-		/// </summary>
-		public decimal PayAmount { get; set; }
-
-
-
-		/// <summary>
-		/// PaymentPer
-		/// </summary>
-		public int PaymentPer { get; set; }
-
-
-
-		/// <summary>
-		/// PaymentCount
-		/// </summary>
-		public int PaymentCount { get; set; }
-
-
-
-		/// <summary>
-		/// ItemYsTotalAmount
-		/// </summary>
-		public decimal ItemYsTotalAmount { get; set; }
-
-
-
-		/// <summary>
-		/// ItemTotalAmount
-		/// </summary>
-		public decimal ItemTotalAmount { get; set; }
-
-
-
-		/// <summary>
-		/// ContractTotalAmount
-		/// </summary>
-		public decimal ContractTotalAmount { get; set; }
-
-
-
-		/// <summary>
-		/// Remark
-		/// </summary>
-		public string Remark { get; set; }
-
-
-
-		/// <summary>
-		/// AuditDate
-		/// </summary>
-		public DateTime? AuditDate { get; set; }
-
-
-
-		/// <summary>
-		/// AuditUserId
-		/// </summary>
-		public int? AuditUserId { get; set; }
-
-
-
-		/// <summary>
-		/// AuditUser
-		/// </summary>
-		public User AuditUser { get; set; }
-
-
 
 
     }

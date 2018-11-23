@@ -173,9 +173,9 @@ ItemDefineEditDto editDto;
 		//[AbpAuthorize(ItemDefinePermissions.Create)]
 		protected virtual async Task<ItemDefineEditDto> Create(ItemDefineEditDto input)
 		{
-            GenerateId();
+          
             //TODO:新增前的逻辑判断，是否允许新增
-            input.TenantId = AbpSession.TenantId;            
+       
             // var entity = ObjectMapper.Map <ItemDefine>(input);
             var entity=input.MapTo<ItemDefine>();
             var item = await _entityRepository.FirstOrDefaultAsync(o => o.ItemName == input.ItemName);
@@ -183,9 +183,12 @@ ItemDefineEditDto editDto;
             {
                 throw new UserFriendlyException("已存在相同的项目名称,请重新输入");
             }
+            entity.TenantId = AbpSession.TenantId;
+            input.SysGuid = Guid.NewGuid().ToString();
             entity.ItemNo = GenerateId();
             entity.CreatorUserId = AbpSession.UserId;
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            input.ItemNo = entity.ItemNo;
 			return input;
 		}
         private string GenerateId()

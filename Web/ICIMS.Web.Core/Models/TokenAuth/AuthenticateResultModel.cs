@@ -1,4 +1,6 @@
-﻿namespace ICIMS.Models.TokenAuth
+﻿using System.Collections.Generic;
+
+namespace ICIMS.Models.TokenAuth
 {
     public class AuthenticateResultModel
     {
@@ -9,5 +11,9 @@
         public int ExpireInSeconds { get; set; }
 
         public long UserId { get; set; }
+        public long? UnitId { get; set; }
+        public string UnitName { get; set; }
+        public string Name { get; set; }
+        public IList<string> RolesName { get; set; }
     }
 }

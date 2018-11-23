@@ -77,6 +77,7 @@ namespace ICIMS.BusinessManages
         public virtual Contract Contract { get; set; } 
         public virtual PaymentType PaymentType { get; set; }
         public virtual ItemDefine ItemDefine { get; set; }
+        public virtual User CreatorUser { get; set; }
         #endregion
 
     }

@@ -5,7 +5,7 @@ using ICIMS.BusinessManages;
 
 namespace ICIMS.BusinessManages.Dtos
 {
-    public class GetPayAuditsInput : PagedSortedAndFilteredInputDto, IShouldNormalize
+    public class GetPayAuditsInput : PagedAndSortedInputDto, IShouldNormalize
     {
 
         /// <summary>
@@ -18,6 +18,8 @@ namespace ICIMS.BusinessManages.Dtos
                 Sorting = "Id";
             }
         }
-
+        public string No { get; set; }
+        public string Name { get; set; }
+        public string ContractName { get; set; }
     }
 }

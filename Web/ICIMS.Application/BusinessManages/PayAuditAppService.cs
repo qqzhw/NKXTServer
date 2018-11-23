@@ -58,7 +58,27 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<PayAuditListDto>> GetPaged(GetPayAuditsInput input)
 		{
 
-		    var query = _entityRepository.GetAll();
+		    var query = _entityRepository.GetAllIncluding(o=>o.Contract).Include(o=>o.Contract.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.Contract.Vendor).Include(o=>o.AuditUser).Include(o=>o.CreatorUser)
+                       .Select(o=>new PayAuditListDto() {
+                           PayAudit= o.MapTo<PayAuditEditDto>(),
+                           AccountName=o.Contract.Vendor.AccountName,
+                           AuditUserName=o.AuditUser.Name,
+                           ContractAmount=o.Contract.ContractAmount,
+                           ContractName=o.Contract.ContractName,
+                           CreationTime=o.CreationTime,
+                           CreatorUserId=o.CreatorUserId,
+                           CreatorUserName=o.CreatorUser.Name,
+                           DefineAmount=o.ItemDefine.DefineAmount,
+                           Id=o.Id,
+                           IsDeleted=o.IsDeleted,
+                           ItemDefineName=o.ItemDefine.ItemName,
+                           ItemNo=o.ItemDefine.ItemNo,
+                           LinkPhone=o.Contract.Vendor.LinkPhone,
+                           OpenBank=o.Contract.Vendor.OpenBank,
+                           PaymentTypeName=o.PaymentType.Name,
+                           UnitName=o.ItemDefine.Unit.DisplayName,
+                           VendorName=o.Contract.Vendor.Name
+                       });
 			// TODO:根据传入的参数添加过滤条件
             
 
@@ -70,9 +90,9 @@ namespace ICIMS.BusinessManages
 					.ToListAsync();
 
 			// var entityListDtos = ObjectMapper.Map<List<PayAuditListDto>>(entityList);
-			var entityListDtos =entityList.MapTo<List<PayAuditListDto>>();
+			//var entityListDtos =entityList.MapTo<List<PayAuditListDto>>();
 
-			return new PagedResultDto<PayAuditListDto>(count,entityListDtos);
+			return new PagedResultDto<PayAuditListDto>(count, entityList);
 		}
 
 

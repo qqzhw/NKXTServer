@@ -21,8 +21,8 @@ namespace ICIMS.EntityMapper.ReViewDefines
 			builder.Property(a => a.Remark).HasMaxLength(2000);
 
             builder.HasOne(a => a.ItemDefine).WithMany().HasForeignKey(a => a.ItemDefineId).IsRequired();
-
-
+            builder.HasOne(a => a.CreatorUser).WithMany().HasForeignKey(a => a.CreatorUserId);
+           // builder.HasOne(a => a.AuditUser).WithMany().HasForeignKey(a => a.AuditUserId);
         }
     }
 }

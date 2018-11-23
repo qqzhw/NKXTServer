@@ -19,6 +19,8 @@ using ICIMS.Models.TokenAuth;
 using ICIMS.MultiTenancy;
 using Microsoft.AspNetCore.Http;
 using ICIMS.BaseData.Dtos;
+using ICIMS.Roles;
+using ICIMS.Users;
 
 namespace ICIMS.Controllers
 {
@@ -32,15 +34,17 @@ namespace ICIMS.Controllers
         private readonly IExternalAuthConfiguration _externalAuthConfiguration;
         private readonly IExternalAuthManager _externalAuthManager;
         private readonly UserRegistrationManager _userRegistrationManager;
-
+        private readonly UserManager _userManager;
+        private readonly IRoleAppService _roleAppService;
+        private readonly IUserAppService _userAppService;
         public TokenAuthController(
             LogInManager logInManager,
             ITenantCache tenantCache,
             AbpLoginResultTypeHelper abpLoginResultTypeHelper,
             TokenAuthConfiguration configuration,
             IExternalAuthConfiguration externalAuthConfiguration,
-            IExternalAuthManager externalAuthManager,
-            UserRegistrationManager userRegistrationManager)
+            IExternalAuthManager externalAuthManager, UserManager userManager, IUserAppService userAppService,
+            UserRegistrationManager userRegistrationManager, IRoleAppService roleAppService)
         {
             _logInManager = logInManager;
             _tenantCache = tenantCache;
@@ -49,6 +53,9 @@ namespace ICIMS.Controllers
             _externalAuthConfiguration = externalAuthConfiguration;
             _externalAuthManager = externalAuthManager;
             _userRegistrationManager = userRegistrationManager;
+            _userManager = userManager;
+            _userAppService = userAppService;
+            _roleAppService = roleAppService;
         }
 
         [HttpPost]
@@ -59,15 +66,20 @@ namespace ICIMS.Controllers
                 model.Password,
                 model.TenancyName
             );
-
+             
             var accessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity));
-
+            var unit =await _userManager.GetOrganizationUnitsAsync(loginResult.User);
+            
             return new AuthenticateResultModel
             {
                 AccessToken = accessToken,
                 EncryptedAccessToken = GetEncrpyedAccessToken(accessToken),
                 ExpireInSeconds = (int)_configuration.Expiration.TotalSeconds,
-                UserId = loginResult.User.Id
+                UserId = loginResult.User.Id,
+                UnitId = unit.FirstOrDefault()?.Id,
+                UnitName = unit.FirstOrDefault()?.DisplayName,
+                Name = loginResult.User.Name,
+                 
             };
         }
 
