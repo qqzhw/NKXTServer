@@ -125,16 +125,16 @@ AuditMappingEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(AuditMappingPermissions.Create,AuditMappingPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateAuditMappingInput input)
+		public async Task<AuditMappingEditDto> CreateOrUpdate(CreateOrUpdateAuditMappingInput input)
 		{
 
 			if (input.AuditMapping.Id.HasValue)
 			{
-				await Update(input.AuditMapping);
+				return await Update(input.AuditMapping);
 			}
 			else
 			{
-				await Create(input.AuditMapping);
+			  return	await Create(input.AuditMapping);
 			}
 		}
 
@@ -149,8 +149,11 @@ AuditMappingEditDto editDto;
 
             // var entity = ObjectMapper.Map <AuditMapping>(input);
             var entity=input.MapTo<AuditMapping>();
-			
 
+            entity.TenantId = AbpSession.TenantId;
+            entity.AuditTime = DateTime.Now;
+            entity.Status = 1;
+            entity.CreatorUserId = AbpSession.UserId;
 			entity = await _entityRepository.InsertAsync(entity);
 			return entity.MapTo<AuditMappingEditDto>();
 		}
@@ -159,7 +162,7 @@ AuditMappingEditDto editDto;
 		/// 编辑AuditMapping
 		/// </summary>
 		//[AbpAuthorize(AuditMappingPermissions.Edit)]
-		protected virtual async Task Update(AuditMappingEditDto input)
+		protected virtual async Task<AuditMappingEditDto> Update(AuditMappingEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -167,7 +170,8 @@ AuditMappingEditDto editDto;
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
+		     await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<AuditMappingEditDto>();
 		}
 
 
