@@ -61,7 +61,7 @@ namespace ICIMS.BusinessManages
 		    var query = _entityRepository.GetAllIncluding(o=>o.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.AuditUser).Include(o=>o.CreatorUser)
                 .Select(o=>new ReViewDefineListDto
                 {
-                    Entity = o.MapTo<ReViewDefineEditDto>(),
+                    ReViewDefine = o.MapTo<ReViewDefineEditDto>(),
                     AuditUserName = o.AuditUser.Name,
                     Id = o.Id,
                     ItemDefineName = o.ItemDefine.ItemName,
@@ -75,11 +75,11 @@ namespace ICIMS.BusinessManages
             // TODO:根据传入的参数添加过滤条件
             if (!string.IsNullOrEmpty(input.No))
             {
-                query = query.Where(o => o.Entity.ReViewNo.Contains(input.No));
+                query = query.Where(o => o.ReViewDefine.ReViewNo.Contains(input.No));
             }
             if (!string.IsNullOrEmpty(input.Name))
             {
-                query = query.Where(o => o.Entity.ReViewName.Contains(input.Name));
+                query = query.Where(o => o.ReViewDefine.ReViewName.Contains(input.Name));
             }
             var count = await query.CountAsync();
 

@@ -13,7 +13,7 @@ namespace ICIMS.BusinessManages.Dtos
     public class ReViewDefineListDto : Entity, ICreationAudited
     {
 
-        public ReViewDefineEditDto Entity { get; set; }
+        public ReViewDefineEditDto ReViewDefine { get; set; }
 
         public string ItemNo { get; set; }
         public string ItemDefineName { get; set; }
