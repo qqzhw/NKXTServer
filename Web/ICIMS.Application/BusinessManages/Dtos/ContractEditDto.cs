@@ -14,7 +14,7 @@ namespace  ICIMS.BusinessManages.Dtos
         /// <summary>
         /// Id
         /// </summary>
-        public int? Id { get; set; }         
+        public int Id { get; set; }         
 
 
         
@@ -22,25 +22,11 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// TenantId
 		/// </summary>
 		public int? TenantId { get; set; }
-
-
-
-		/// <summary>
-		/// SysGuid
-		/// </summary>
-		[Required(ErrorMessage="SysGuid不能为空")]
-		public string SysGuid { get; set; }
-
-
-
-		/// <summary>
-		/// Status
-		/// </summary>
-		[Required(ErrorMessage="Status不能为空")]
+         
+		public string SysGuid { get; set; } 
+	 
 		public int Status { get; set; }
-
-
-
+         
 		/// <summary>
 		/// ItemDefineId
 		/// </summary>
@@ -62,16 +48,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// </summary>
 		[Required(ErrorMessage="ContractTypeId不能为空")]
 		public int ContractTypeId { get; set; }
-
-
-
-		/// <summary>
-		/// ContractType
-		/// </summary>
-		[Required(ErrorMessage="ContractType不能为空")]
-		public ContractCategory ContractType { get; set; }
-
-
+         
 
 		/// <summary>
 		/// BeginTime
@@ -89,10 +66,7 @@ namespace  ICIMS.BusinessManages.Dtos
         public DateTime ContractTime { get; set; }
 
 
-        /// <summary>
-        /// ContractNo
-        /// </summary>
-        [Required(ErrorMessage="ContractNo不能为空")]
+       
 		public string ContractNo { get; set; }
 
 

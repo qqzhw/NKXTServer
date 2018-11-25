@@ -17,6 +17,7 @@ namespace ICIMS.BusinessManages.Dtos
 
         public string ItemNo { get; set; }
         public string ItemDefineName { get; set; }
+        public decimal ItemDefineAmount { get; set; }
         public string UnitName { get; set; }
         public string CreatorUserName { get; set; }
         public string AuditUserName { get; set; }

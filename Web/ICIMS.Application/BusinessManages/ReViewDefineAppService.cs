@@ -64,6 +64,7 @@ namespace ICIMS.BusinessManages
                     ReViewDefine = o.MapTo<ReViewDefineEditDto>(),
                     AuditUserName = o.AuditUser.Name,
                     Id = o.Id,
+                    ItemDefineAmount=o.ItemDefine.DefineAmount,
                     ItemDefineName = o.ItemDefine.ItemName,
                     ItemNo = o.ItemDefine.ItemNo,
                     CreatorUserName = o.CreatorUser.Name,
@@ -163,7 +164,8 @@ ReViewDefineEditDto editDto;
 		{
             //TODO:新增前的逻辑判断，是否允许新增
             input.TenantId = AbpSession.TenantId;
-            
+            input.ReViewNo = GenerateId();
+            input.SysGuid = Guid.NewGuid().ToString();
             // var entity = ObjectMapper.Map <ReViewDefine>(input);
             var entity=input.MapTo<ReViewDefine>();
             var item = await _entityRepository.FirstOrDefaultAsync(o => o.ReViewName == input.ReViewName);
@@ -173,6 +175,7 @@ ReViewDefineEditDto editDto;
             }
             entity.CreatorUserId = AbpSession.UserId;
 			input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            
 			return input;
 		}
         private string GenerateId()

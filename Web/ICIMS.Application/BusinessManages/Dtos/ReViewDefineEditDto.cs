@@ -20,37 +20,17 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// TenantId
 		/// </summary>
-		public int? TenantId { get; set; }
-
-
-
-		/// <summary>
-		/// Status
-		/// </summary>
-		[Required(ErrorMessage="Status不能为空")]
+		public int? TenantId { get; set; } 
+		 
 		public int Status { get; set; }
-
-
-
+         
 		/// <summary>
 		/// ItemDefineId
 		/// </summary>
-		public int ItemDefineId { get; set; }
-
-
-
-		/// <summary>
-		/// ReViewNo
-		/// </summary>
-		[Required(ErrorMessage="ReViewNo不能为空")]
-		public string ReViewNo { get; set; }
-
-
-
-		/// <summary>
-		/// ReViewName
-		/// </summary>
-		[Required(ErrorMessage="ReViewName不能为空")]
+		public int ItemDefineId { get; set; } 
+ 
+		public string ReViewNo { get; set; } 
+ 
 		public string ReViewName { get; set; }
 
 
@@ -94,17 +74,9 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// AuditUser
 		/// </summary>
 		public User AuditUser { get; set; }
-
-
-
-		/// <summary>
-		/// SysGuid
-		/// </summary>
-		[Required(ErrorMessage="SysGuid不能为空")]
+         
 		public string SysGuid { get; set; }
-
-
-
+         
 
     }
 }

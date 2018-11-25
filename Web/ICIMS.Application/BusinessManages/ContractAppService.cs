@@ -168,7 +168,7 @@ ContractEditDto editDto;
 		public async Task<ContractEditDto> CreateOrUpdate(CreateOrUpdateContractInput input)
 		{
 
-			if (input.Contract.Id.HasValue)
+			if (input.Contract.Id>0)
 			{
 				return await Update(input.Contract);
 			}
@@ -188,13 +188,15 @@ ContractEditDto editDto;
             //TODO:新增前的逻辑判断，是否允许新增
             input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <Contract>(input);
-            var entity=input.MapTo<Contract>();
+            input.ContractNo = GenerateId();
+            input.SysGuid = new Guid().ToString();
             var item = await _entityRepository.FirstOrDefaultAsync(o => o.ContractName == input.ContractName);
             if (item != null)
             {
                 throw new UserFriendlyException("已存在相同名称,请重新输入");
             }
-
+            var entity = input.MapTo<Contract>();
+            entity.CreatorUserId = AbpSession.UserId;
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
             return input;
 		}
@@ -216,7 +218,7 @@ ContractEditDto editDto;
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
