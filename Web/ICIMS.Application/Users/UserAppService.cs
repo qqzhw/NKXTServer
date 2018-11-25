@@ -79,6 +79,11 @@ namespace ICIMS.Users
                 CheckErrors(await _userManager.SetRoles(user, input.RoleNames));
             }
 
+            if(input.Units != null)
+            {
+                await _userManager.SetOrganizationUnitsAsync(user.Id, input.Units.Select(a=>a.Id).ToArray());
+            }
+
             return await Get(input);
         }
 
