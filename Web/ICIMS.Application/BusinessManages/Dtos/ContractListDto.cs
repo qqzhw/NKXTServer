@@ -49,9 +49,9 @@ namespace ICIMS.BusinessManages.Dtos
 		/// ContractTypeId
 		/// </summary>
 		[Required(ErrorMessage="ContractTypeId不能为空")]
-		public int ContractTypeId { get; set; }
+		public int ContractCategoryId { get; set; }
          
-        public string ContractTypeName { get; set; }
+        public string ContractCategoryName { get; set; }
 
 		/// <summary>
 		/// BeginTime

@@ -42,18 +42,14 @@ namespace  ICIMS.BusinessManages.Dtos
 		public int UintId { get; set; }
 
 
+ 
+        public int ContractCategoryId { get; set; }
+        
 
-		/// <summary>
-		/// ContractTypeId
-		/// </summary>
-		[Required(ErrorMessage="ContractTypeId不能为空")]
-		public int ContractTypeId { get; set; }
-         
-
-		/// <summary>
-		/// BeginTime
-		/// </summary>
-		[Required(ErrorMessage="BeginTime不能为空")]
+        /// <summary>
+        /// BeginTime
+        /// </summary>
+        [Required(ErrorMessage="BeginTime不能为空")]
 		public DateTime BeginTime { get; set; }
 
 
