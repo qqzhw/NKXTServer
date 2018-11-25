@@ -403,7 +403,7 @@ namespace ICIMS.Migrations
                     ClearingPer = table.Column<decimal>(nullable: false),
                     FinalPer = table.Column<decimal>(nullable: false),
                     Warining = table.Column<string>(maxLength: 200, nullable: true),
-                    WariningDate = table.Column<string>(nullable: true),
+                    WariningDate = table.Column<DateTime?>(nullable: true),
                     PaymentMethod = table.Column<string>(nullable: true),
                     Remark = table.Column<string>(maxLength: 2000, nullable: true),
                     AuditDate = table.Column<DateTime>(nullable: false),

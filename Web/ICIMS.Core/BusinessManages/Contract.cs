@@ -86,7 +86,7 @@ namespace ICIMS.BusinessManages
         /// <summary>
         /// 预警日期
         /// </summary>
-       public  string WariningDate { get; set; }
+       public  DateTime? WariningDate { get; set; }
 
         /// <summary>
         /// 付款方式及比例

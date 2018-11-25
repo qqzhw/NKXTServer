@@ -163,7 +163,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// WariningDate
 		/// </summary>
-		public string WariningDate { get; set; }
+		public DateTime? WariningDate { get; set; }
 
 
 

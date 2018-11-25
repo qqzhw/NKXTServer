@@ -1628,7 +1628,7 @@ namespace ICIMS.Migrations
                     b.Property<string>("Warining")
                         .HasMaxLength(200);
 
-                    b.Property<string>("WariningDate");
+                    b.Property<DateTime?>("WariningDate");
 
                     b.HasKey("Id");
 

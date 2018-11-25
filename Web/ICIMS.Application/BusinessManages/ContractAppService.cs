@@ -189,7 +189,7 @@ ContractEditDto editDto;
             input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <Contract>(input);
             input.ContractNo = GenerateId();
-            input.SysGuid = new Guid().ToString();
+            input.SysGuid =  Guid.NewGuid().ToString();
             var item = await _entityRepository.FirstOrDefaultAsync(o => o.ContractName == input.ContractName);
             if (item != null)
             {
