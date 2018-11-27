@@ -113,7 +113,7 @@ namespace ICIMS.BusinessManages
 		//[AbpAuthorize(ItemDefinePermissions.Query)] 
 		public async Task<ItemDefineListDto> GetById(EntityDto<int> input)
 		{
-			var entity = await _entityRepository.GetAsync(input.Id);
+			var entity = await _entityRepository.GetAll().Include(o=>o.ItemCategory).FirstOrDefaultAsync(o=>o.Id==input.Id);
 
 		    return entity.MapTo<ItemDefineListDto>();
 		}

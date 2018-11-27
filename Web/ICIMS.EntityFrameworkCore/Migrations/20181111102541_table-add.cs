@@ -506,7 +506,7 @@ namespace ICIMS.Migrations
                     PayAmount = table.Column<decimal>(nullable: false),
                     PaymentPer = table.Column<int>(nullable: false),
                     PaymentCount = table.Column<int>(nullable: false),
-                    ItemYsTotalAmount = table.Column<decimal>(nullable: false),
+                    ItemYsTotalAmount = table.Column<decimal?>(nullable: false),
                     ItemTotalAmount = table.Column<decimal>(nullable: false),
                     ContractTotalAmount = table.Column<decimal>(nullable: false),
                     Remark = table.Column<string>(maxLength: 2000, nullable: true),

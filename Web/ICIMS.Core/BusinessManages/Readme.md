@@ -20,12 +20,13 @@
 
 ```
 // 自定义类型映射
+// 如果没有这一段就把这一段复制上去
 Configuration.Modules.AbpAutoMapper().Configurators.Add(configuration =>
 {
     // ....
 
     // 只需要复制这一段
-BusinessTypeMapper.CreateMappings(configuration);
+PayAuditDetailMapper.CreateMappings(configuration);
 
     // ....
 });
@@ -38,7 +39,7 @@ BusinessTypeMapper.CreateMappings(configuration);
 中的 PreInitialize 方法中:
 
 ```
-Configuration.Authorization.Providers.Add<BusinessTypeAuthorizationProvider>();
+Configuration.Authorization.Providers.Add<PayAuditDetailAuthorizationProvider>();
 
 ```
 
@@ -47,7 +48,7 @@ Configuration.Authorization.Providers.Add<BusinessTypeAuthorizationProvider>();
 可以在```DbContext```中增加：
 
  ```
-public DbSet<BusinessType>  BusinessTypes { get; set; }
+public DbSet<PayAuditDetail>  PayAuditDetails { get; set; }
 
  ```
 
@@ -56,7 +57,7 @@ public DbSet<BusinessType>  BusinessTypes { get; set; }
 ```
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new BusinessTypeCfg());
+            modelBuilder.ApplyConfiguration(new PayAuditDetailCfg());
         }
 
 ```
@@ -68,10 +69,14 @@ public DbSet<BusinessType>  BusinessTypes { get; set; }
 
 ```
 
-<text name="Name"  value="Name"></text>
-<text name="DisplayOrder"  value="DisplayOrder"></text>
+<text name="FundName"  value="FundName"></text>
 <text name="TenantId"  value="TenantId"></text>
+<text name="Remark"  value="Remark"></text>
 <text name="IsDeleted"  value="IsDeleted"></text>
+<text name="CreationTime"  value="CreationTime"></text>
+<text name="PayAuditId"  value="PayAuditId"></text>
+<text name="PayAudit"  value="PayAudit"></text>
+<text name="Amount"  value="Amount"></text>
 
 
 ```

@@ -52,7 +52,7 @@ namespace ICIMS.BusinessManages
         /// <summary>
         /// 项目预算总额
         /// </summary>
-        public decimal ItemYsTotalAmount { get; set; }
+        public decimal? ItemYsTotalAmount { get; set; }
 
         /// <summary>
         /// 项目总额
@@ -63,6 +63,11 @@ namespace ICIMS.BusinessManages
         /// 合同总额
         /// </summary>
         public decimal ContractTotalAmount { get; set; }
+
+        /// <summary>
+        /// 支付方式及比例
+        /// </summary>
+        public string PaymentMethod { get; set; }
         public string Remark { get; set; }
 
         /// <summary>

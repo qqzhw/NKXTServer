@@ -108,7 +108,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// ItemYsTotalAmount
 		/// </summary>
-		public decimal ItemYsTotalAmount { get; set; }
+		public decimal? ItemYsTotalAmount { get; set; }
 
 
 

@@ -1751,7 +1751,7 @@ namespace ICIMS.Migrations
 
                     b.Property<decimal>("ItemTotalAmount");
 
-                    b.Property<decimal>("ItemYsTotalAmount");
+                    b.Property<decimal?>("ItemYsTotalAmount");
 
                     b.Property<DateTime?>("LastModificationTime");
 
