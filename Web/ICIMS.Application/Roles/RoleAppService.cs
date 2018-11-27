@@ -76,7 +76,7 @@ namespace ICIMS.Roles
                 .GetAllPermissions()
                 .Where(p => input.Permissions.Contains(p.Name))
                 .ToList();
-
+            
             await _roleManager.SetGrantedPermissionsAsync(role, grantedPermissions);
 
             return MapToEntityDto(role);
