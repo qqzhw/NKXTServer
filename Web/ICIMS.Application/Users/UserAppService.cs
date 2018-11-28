@@ -58,7 +58,10 @@ namespace ICIMS.Users
             {
                 CheckErrors(await _userManager.SetRoles(user, input.RoleNames));
             }
-
+            if (input.UnitIds.Count()>0)
+            {
+               await _userManager.SetOrganizationUnitsAsync(user, input.UnitIds);
+            }
             CurrentUnitOfWork.SaveChanges();
 
             return MapToEntityDto(user);
@@ -173,6 +176,15 @@ namespace ICIMS.Users
             var userdto = MapToEntityDto(user);
             userdto.Units =await GetOrganizationUnitsAsync(user);
             return userdto;
+        }
+
+        public async Task CreateOrUpdateUserUnit(CreateUserUnitDto userUnitDto)
+        {
+            if (userUnitDto.UnitId>0&&userUnitDto.UserId>0)
+            {
+               await _userManager.AddToOrganizationUnitAsync(userUnitDto.UserId, userUnitDto.UnitId);
+            }
+            await Task.CompletedTask;
         }
     }
 }

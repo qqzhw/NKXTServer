@@ -60,10 +60,10 @@ namespace ICIMS.BusinessManages
 
 		    var query = _entityRepository.GetAllIncluding(o=>o.BusinessAudit);
             // TODO:根据传入的参数添加过滤条件
-            if (input.ItemId>0)
-            {
+             
+             
                 query = query.Where(o => o.ItemId == input.ItemId);
-            }
+             
          
 			var count = await query.CountAsync();
 

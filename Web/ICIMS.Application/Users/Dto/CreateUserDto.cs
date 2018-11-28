@@ -43,5 +43,6 @@ namespace ICIMS.Users.Dto
                 RoleNames = new string[0];
             }
         }
+        public long[] UnitIds { get; set; }
     }
 }
