@@ -8,6 +8,7 @@ using ICIMS.BusinessManages;
 using ICIMS.Authorization.Roles;
  
 using Abp.Domain.Entities;
+using ICIMS.Roles.Dto;
 
 namespace ICIMS.BusinessManages.Dtos
 {
@@ -55,16 +56,9 @@ namespace ICIMS.BusinessManages.Dtos
         /// <summary>
         /// Role
         /// </summary>
-        public virtual Role Role { get; set; }
+       // public virtual RoleDto Role { get; set; }
 
-
-
-		/// <summary>
-		/// BuinessType
-		/// </summary>
-		public virtual BusinessType BusinessType { get; set; }
-
-
+         
 
 
     }

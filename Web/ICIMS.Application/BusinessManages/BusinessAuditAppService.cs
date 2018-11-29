@@ -127,16 +127,16 @@ BusinessAuditEditDto editDto;
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(BuinessAuditPermissions.Create,BuinessAuditPermissions.Edit)]
-		public async Task CreateOrUpdate(CreateOrUpdateBusinessAuditInput input)
+		public async Task<BusinessAuditEditDto> CreateOrUpdate(CreateOrUpdateBusinessAuditInput input)
 		{
 
-			if (input.BusinessAudit.Id.HasValue)
+			if (input.BusinessAudit.Id>0)
 			{
-				await Update(input.BusinessAudit);
+				return await Update(input.BusinessAudit);
 			}
 			else
 			{
-				await Create(input.BusinessAudit);
+			return	await Create(input.BusinessAudit);
 			}
 		}
 
@@ -147,12 +147,10 @@ BusinessAuditEditDto editDto;
 		//[AbpAuthorize(BuinessAuditPermissions.Create)]
 		protected virtual async Task<BusinessAuditEditDto> Create(BusinessAuditEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <BuinessAudit>(input);
-            var entity=input.MapTo<BusinessAudit>();
-			
-
+            var entity=input.MapTo<BusinessAudit>(); 
 			entity = await _entityRepository.InsertAsync(entity);
 			return entity.MapTo<BusinessAuditEditDto>();
 		}
@@ -161,15 +159,16 @@ BusinessAuditEditDto editDto;
 		/// 编辑BuinessAudit
 		/// </summary>
 		//[AbpAuthorize(BuinessAuditPermissions.Edit)]
-		protected virtual async Task Update(BusinessAuditEditDto input)
+		protected virtual async Task<BusinessAuditEditDto> Update(BusinessAuditEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
+		   await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<BusinessAuditEditDto>();
 		}
 
 

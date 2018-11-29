@@ -14,7 +14,7 @@ namespace  ICIMS.BusinessManages.Dtos
         /// <summary>
         /// Id
         /// </summary>
-        public int? Id { get; set; }         
+        public int Id { get; set; }         
 
 
         
@@ -43,7 +43,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// RoleId
 		/// </summary>
 		[Required(ErrorMessage="RoleId不能为空")]
-		public Role RoleId { get; set; }
+		public int RoleId { get; set; }
 
 
 
@@ -54,21 +54,6 @@ namespace  ICIMS.BusinessManages.Dtos
 		public int BusinessTypeId { get; set; }
 
         public string BusinessTypeName { get; set; }
-
-        /// <summary>
-        /// Role
-        /// </summary>
-        public virtual Role Role { get; set; }
-
-
-
-		/// <summary>
-		/// BuinessType
-		/// </summary>
-		public virtual BusinessType BusinessType { get; set; }
-
-
-
-
+         
     }
 }

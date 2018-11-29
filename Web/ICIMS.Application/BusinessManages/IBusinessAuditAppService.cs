@@ -55,7 +55,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task CreateOrUpdate(CreateOrUpdateBusinessAuditInput input);
+        Task<BusinessAuditEditDto> CreateOrUpdate(CreateOrUpdateBusinessAuditInput input);
 
 
         /// <summary>
