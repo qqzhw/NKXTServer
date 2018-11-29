@@ -1503,7 +1503,7 @@ namespace ICIMS.Migrations
                     b.ToTable("Budget");
                 });
 
-            modelBuilder.Entity("ICIMS.BusinessManages.BuinessAudit", b =>
+            modelBuilder.Entity("ICIMS.BusinessManages.BusinessAudit", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1525,7 +1525,7 @@ namespace ICIMS.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("BuinessAudit");
+                    b.ToTable("BusinessAudit");
                 });
 
             modelBuilder.Entity("ICIMS.BusinessManages.Contract", b =>
@@ -2046,9 +2046,9 @@ namespace ICIMS.Migrations
 
             modelBuilder.Entity("ICIMS.BusinessManages.AuditMapping", b =>
                 {
-                    b.HasOne("ICIMS.BusinessManages.BuinessAudit", "BuinessAudit")
+                    b.HasOne("ICIMS.BusinessManages.BusinessAudit", "BusinessAudit")
                         .WithMany()
-                        .HasForeignKey("BuinessAuditId")
+                        .HasForeignKey("BusinessAuditId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -2075,11 +2075,11 @@ namespace ICIMS.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("ICIMS.BusinessManages.BuinessAudit", b =>
+            modelBuilder.Entity("ICIMS.BusinessManages.BusinessAudit", b =>
                 {
-                    b.HasOne("ICIMS.BussinesManages.BusinessType", "BuinessType")
+                    b.HasOne("ICIMS.BusinesManages.BusinessType", "BusinessType")
                         .WithMany()
-                        .HasForeignKey("BuinessTypeId")
+                        .HasForeignKey("BusinessTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ICIMS.Authorization.Roles.Role", "Role")

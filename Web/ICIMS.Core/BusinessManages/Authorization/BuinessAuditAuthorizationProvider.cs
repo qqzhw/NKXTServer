@@ -40,7 +40,7 @@ namespace ICIMS.BusinessManages.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(BusinessAuditPermissions.Node , L("BuinessAudit"));
+			var entityPermission = administration.CreateChildPermission(BusinessAuditPermissions.Node , L("BusinessAudit"));
 			entityPermission.CreateChildPermission(BusinessAuditPermissions.Query, L("QueryBuinessAudit"));
 			entityPermission.CreateChildPermission(BusinessAuditPermissions.Create, L("CreateBuinessAudit"));
 			entityPermission.CreateChildPermission(BusinessAuditPermissions.Edit, L("EditBuinessAudit"));

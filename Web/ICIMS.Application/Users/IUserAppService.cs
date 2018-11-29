@@ -18,5 +18,6 @@ namespace ICIMS.Users
         Task<List<UnitDto>> GetOrganizationUnitsAsync(User user);
 
         Task<UserDto> GetUserById(long id);
+        Task CreateOrUpdateUserUnit(CreateUserUnitDto userUnitDto);
     }
 }
