@@ -58,6 +58,7 @@ namespace ICIMS.BusinessManages
         {
 
             var query = _entityRepository.GetAll();
+             var a =_entityRepository.FirstOrDefault(1);
             // TODO:根据传入的参数添加过滤条件
             if (input.BusinessTypeId.HasValue)
             {
@@ -132,11 +133,13 @@ BusinessAuditEditDto editDto;
 
 			if (input.BusinessAudit.Id>0)
 			{
-				return await Update(input.BusinessAudit);
+				var entity = await Update(input.BusinessAudit);
+
+                return entity.MapTo<BusinessAuditEditDto>();
 			}
 			else
 			{
-			return	await Create(input.BusinessAudit);
+				await Create(input.BusinessAudit);
 			}
 		}
 
@@ -159,7 +162,7 @@ BusinessAuditEditDto editDto;
 		/// 编辑BuinessAudit
 		/// </summary>
 		//[AbpAuthorize(BuinessAuditPermissions.Edit)]
-		protected virtual async Task<BusinessAuditEditDto> Update(BusinessAuditEditDto input)
+		protected virtual async Task Update(BusinessAuditEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -167,8 +170,7 @@ BusinessAuditEditDto editDto;
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
-		   await _entityRepository.UpdateAsync(entity);
-            return entity.MapTo<BusinessAuditEditDto>();
+		    await _entityRepository.UpdateAsync(entity);
 		}
 
 
