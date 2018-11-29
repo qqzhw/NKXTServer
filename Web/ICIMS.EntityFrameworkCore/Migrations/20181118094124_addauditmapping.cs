@@ -86,7 +86,7 @@ namespace ICIMS.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BuinessAudit",
+                name: "BusinessAudit",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -95,19 +95,19 @@ namespace ICIMS.Migrations
                     DisplayOrder = table.Column<int>(nullable: false),
                     TenantId = table.Column<int>(nullable: true),
                     RoleId = table.Column<int>(nullable: false),
-                    BuinessTypeId = table.Column<int>(nullable: false)
+                    BusinessTypeId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BuinessAudit", x => x.Id);
                     table.ForeignKey(
                         name: "FK_BuinessAudit_BusinessType_BuinessTypeId",
-                        column: x => x.BuinessTypeId,
+                        column: x => x.BusinessTypeId,
                         principalTable: "BusinessType",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BuinessAudit_AbpRoles_RoleId",
+                        name: "FK_BusinessAudit_AbpRoles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "AbpRoles",
                         principalColumn: "Id",
@@ -122,8 +122,8 @@ namespace ICIMS.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     DisplayOrder = table.Column<int>(nullable: false),
                     TenantId = table.Column<int>(nullable: true),
-                    BuinessAuditId = table.Column<int>(nullable: false),
-                    BuinessTypeId = table.Column<int>(nullable: false),
+                    BusinessAuditId = table.Column<int>(nullable: false),
+                    BusinessTypeId = table.Column<int>(nullable: false),
                     ItemId = table.Column<int>(nullable: false),
                     Status = table.Column<int>(nullable: false),
                     AuditOpinion = table.Column<string>(nullable: true),
@@ -135,26 +135,26 @@ namespace ICIMS.Migrations
                 {
                     table.PrimaryKey("PK_AuditMappings", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AuditMappings_BuinessAudit_BuinessAuditId",
-                        column: x => x.BuinessAuditId,
-                        principalTable: "BuinessAudit",
+                        name: "FK_AuditMappings_BusinessAudit_BusinessAuditId",
+                        column: x => x.BusinessAuditId,
+                        principalTable: "BusinessAudit",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_AuditMappings_BuinessAuditId",
+                name: "IX_AuditMappings_BusinessAuditId",
                 table: "AuditMappings",
-                column: "BuinessAuditId");
+                column: "BusinessAuditId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BuinessAudit_BuinessTypeId",
-                table: "BuinessAudit",
-                column: "BuinessTypeId");
+                name: "IX_BusinessAudit_BusinessTypeId",
+                table: "BusinessAudit",
+                column: "BusinessTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BuinessAudit_RoleId",
-                table: "BuinessAudit",
+                name: "IX_BusinessAudit_RoleId",
+                table: "BusinessAudit",
                 column: "RoleId");
         }
 
@@ -164,7 +164,7 @@ namespace ICIMS.Migrations
                 name: "AuditMappings");
 
             migrationBuilder.DropTable(
-                name: "BuinessAudit");
+                name: "BusinessAudit");
 
             migrationBuilder.DropTable(
                 name: "BusinessType");

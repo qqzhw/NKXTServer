@@ -54,7 +54,7 @@ namespace ICIMS.Users
 
             CheckErrors(await _userManager.CreateAsync(user, input.Password));
 
-            if (input.RoleNames != null)
+            if (input.RoleNames.Count()>0)
             {
                 CheckErrors(await _userManager.SetRoles(user, input.RoleNames));
             }
