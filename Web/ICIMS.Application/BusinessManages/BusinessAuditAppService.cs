@@ -139,7 +139,7 @@ BusinessAuditEditDto editDto;
 			}
 			else
 			{
-				await Create(input.BusinessAudit);
+				return await Create(input.BusinessAudit);
 			}
 		}
 
@@ -154,15 +154,15 @@ BusinessAuditEditDto editDto;
             input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <BuinessAudit>(input);
             var entity=input.MapTo<BusinessAudit>(); 
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<BusinessAuditEditDto>();
+			input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+			return input;
 		}
 
 		/// <summary>
 		/// 编辑BuinessAudit
 		/// </summary>
 		//[AbpAuthorize(BuinessAuditPermissions.Edit)]
-		protected virtual async Task Update(BusinessAuditEditDto input)
+		protected virtual async Task<BusinessAuditEditDto> Update(BusinessAuditEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -171,6 +171,7 @@ BusinessAuditEditDto editDto;
 
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
+            return entity.MapTo<BusinessAuditEditDto>();
 		}
 
 
