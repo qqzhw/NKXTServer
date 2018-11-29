@@ -169,9 +169,9 @@ DocumentCategoryEditDto editDto;
 		//[AbpAuthorize(DocumentCategoryPermissions.Edit)]
 		protected virtual async  Task<DocumentCategoryEditDto> Update(DocumentCategoryEditDto input)
 		{
-			//TODO:更新前的逻辑判断，是否允许更新
-
-			var entity = await _entityRepository.GetAsync(input.Id);
+            //TODO:更新前的逻辑判断，是否允许更新
+            input.TenantId = AbpSession.TenantId;
+            var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
             var item = await _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
             if (item != null)

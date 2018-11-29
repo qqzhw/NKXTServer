@@ -54,11 +54,11 @@ var abp = abp || {};
                 }
             }
         };
-
+        var tenancyName = document.getElementById('tenancyName').value;
         xhr.open('POST', '/api/TokenAuth/Authenticate', true);
         xhr.setRequestHeader('Abp.TenantId', tenantId);
         xhr.setRequestHeader('Content-type', 'application/json');
-        xhr.send("{" + "usernameOrEmailAddress:'" + usernameOrEmailAddress + "'," + "password:'" + password + "'}");
+        xhr.send("{" + "usernameOrEmailAddress:'" + usernameOrEmailAddress + "'," + "password:'" + password + "'," + "tenancyname:'" + tenancyName + "'}");
     };
 
     abp.swagger.login = function (callback) {

@@ -142,13 +142,13 @@ BusinessTypeEditDto editDto;
 		//[AbpAuthorize(BusinessTypePermissions.Create)]
 		protected virtual async Task<BusinessTypeEditDto> Create(BusinessTypeEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <BusinessType>(input);
             var entity=input.MapTo<BusinessType>();
 			
 
-			entity = await _entityRepository.InsertAsync(entity);
+			input.Id = await _entityRepository.InsertOrUpdateAndGetIdAsync(entity);
 			return entity.MapTo<BusinessTypeEditDto>();
 		}
 
@@ -158,9 +158,9 @@ BusinessTypeEditDto editDto;
 		//[AbpAuthorize(BusinessTypePermissions.Edit)]
 		protected virtual async Task Update(BusinessTypeEditDto input)
 		{
-			//TODO:更新前的逻辑判断，是否允许更新
-
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+            //TODO:更新前的逻辑判断，是否允许更新
+            input.TenantId = AbpSession.TenantId;
+            var entity = await _entityRepository.GetAsync(input.Id.Value);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);

@@ -145,8 +145,8 @@ AuditMappingEditDto editDto;
 		//[AbpAuthorize(AuditMappingPermissions.Create)]
 		protected virtual async Task<AuditMappingEditDto> Create(AuditMappingEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <AuditMapping>(input);
             var entity=input.MapTo<AuditMapping>();
 
@@ -164,9 +164,9 @@ AuditMappingEditDto editDto;
 		//[AbpAuthorize(AuditMappingPermissions.Edit)]
 		protected virtual async Task<AuditMappingEditDto> Update(AuditMappingEditDto input)
 		{
-			//TODO:更新前的逻辑判断，是否允许更新
-
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+            //TODO:更新前的逻辑判断，是否允许更新
+            input.TenantId = AbpSession.TenantId;
+            var entity = await _entityRepository.GetAsync(input.Id.Value);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);

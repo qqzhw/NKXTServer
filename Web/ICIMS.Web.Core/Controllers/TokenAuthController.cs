@@ -68,7 +68,7 @@ namespace ICIMS.Controllers
             );
              
             var accessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity));
-            var unit =await _userManager.GetOrganizationUnitsAsync(loginResult.User);
+            //var unit =await _userManager.GetOrganizationUnitsAsync(loginResult.User);
             
             return new AuthenticateResultModel
             {
@@ -76,8 +76,8 @@ namespace ICIMS.Controllers
                 EncryptedAccessToken = GetEncrpyedAccessToken(accessToken),
                 ExpireInSeconds = (int)_configuration.Expiration.TotalSeconds,
                 UserId = loginResult.User.Id,
-                UnitId = unit.FirstOrDefault()?.Id,
-                UnitName = unit.FirstOrDefault()?.DisplayName,
+                //UnitId = unit.FirstOrDefault()?.Id,
+                //UnitName = unit.FirstOrDefault()?.DisplayName,
                 Name = loginResult.User.Name,
                  
             };
