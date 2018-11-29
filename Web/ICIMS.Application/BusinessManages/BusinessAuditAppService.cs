@@ -139,7 +139,7 @@ BusinessAuditEditDto editDto;
 			}
 			else
 			{
-				await Create(input.BusinessAudit);
+				return await Create(input.BusinessAudit);
 			}
 		}
 
@@ -162,7 +162,7 @@ BusinessAuditEditDto editDto;
 		/// 编辑BuinessAudit
 		/// </summary>
 		//[AbpAuthorize(BuinessAuditPermissions.Edit)]
-		protected virtual async Task Update(BusinessAuditEditDto input)
+		protected virtual async Task<BusinessAudit> Update(BusinessAuditEditDto input)
 		{
 			//TODO:更新前的逻辑判断，是否允许更新
 
@@ -170,7 +170,7 @@ BusinessAuditEditDto editDto;
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
-		    await _entityRepository.UpdateAsync(entity);
+		    return await _entityRepository.UpdateAsync(entity);
 		}
 
 
