@@ -7,10 +7,6 @@ namespace ICIMS.Dtos
     public class PagedAndSortedInputDto : PagedInputDto, ISortedResultRequest
     {
         public string Sorting { get; set; }
-
-
-		 
-		 
          
 
         public PagedAndSortedInputDto()

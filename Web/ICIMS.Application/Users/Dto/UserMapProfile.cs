@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Abp.Organizations;
+using AutoMapper;
 using ICIMS.Authorization.Users;
 using System.Linq;
 namespace ICIMS.Users.Dto
@@ -19,6 +20,9 @@ namespace ICIMS.Users.Dto
                
             CreateMap<CreateUserDto, User>();
             CreateMap<CreateUserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
+            CreateMap<OrganizationUnit, UnitDto>()
+               .ForMember(x => x.Name, opt => opt.MapFrom(o => o.DisplayName));
+             
         }
     }
 }

@@ -115,12 +115,12 @@ namespace Abp.Application.Services
             CheckGetAllPermission();
 
             var query = CreateFilteredQuery(input);
-
+             
             var totalCount = await AsyncQueryableExecuter.CountAsync(query);
 
             query = ApplySorting(query, input);
             query = ApplyPaging(query, input);
-
+             
             var entities = await AsyncQueryableExecuter.ToListAsync(query);
 
             return new PagedResultDto<TEntityDto>(

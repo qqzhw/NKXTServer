@@ -4,6 +4,7 @@ using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Organizations;
 using ICIMS.Authorization.Users;
+using ICIMS.Dtos;
 using ICIMS.Roles.Dto;
 using ICIMS.Users.Dto;
 
@@ -19,5 +20,6 @@ namespace ICIMS.Users
 
         Task<UserDto> GetUserById(long id);
         Task CreateOrUpdateUserUnit(CreateUserUnitDto userUnitDto);
+        Task<PagedResultDto<UserDto>> GetAllUsersAsync(PagedAndSortedInputDto pageDto);
     }
 }

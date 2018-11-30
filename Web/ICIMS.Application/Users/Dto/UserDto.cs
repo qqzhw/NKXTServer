@@ -43,5 +43,6 @@ namespace ICIMS.Users.Dto
         public string[] RoleNames { get; set; }
 
         public IList<UnitDto> Units { get; set; }
+        public  UnitDto Unit { get; set; }
     }
 }

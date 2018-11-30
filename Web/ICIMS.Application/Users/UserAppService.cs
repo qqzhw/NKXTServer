@@ -17,7 +17,10 @@ using ICIMS.Authorization.Users;
 using ICIMS.Roles.Dto;
 using ICIMS.Users.Dto;
 using Abp.Authorization.Users;
-
+using Abp.Organizations;
+using ICIMS.Dtos;
+using Abp.AutoMapper;
+using Abp.Linq.Extensions;
 namespace ICIMS.Users
 {
     [AbpAuthorize(PermissionNames.Pages_Users)]
@@ -26,11 +29,14 @@ namespace ICIMS.Users
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
         private readonly IRepository<Role> _roleRepository;
-        private readonly IPasswordHasher<User> _passwordHasher; 
+        private readonly IPasswordHasher<User> _passwordHasher;
+        private readonly IRepository<OrganizationUnit, long> _organizationUnitRepository;
+        private readonly IRepository<UserOrganizationUnit, long> _userOrganizationUnitRepository;
+        private readonly IRepository<User, long> _userRepository;
         public UserAppService(
             IRepository<User, long> repository,
             UserManager userManager,
-            RoleManager roleManager,
+            RoleManager roleManager, IRepository<User, long> userRepository,IRepository<OrganizationUnit, long> organizationUnitRepository, IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
             IRepository<Role> roleRepository,
             IPasswordHasher<User> passwordHasher)
             : base(repository)
@@ -39,6 +45,9 @@ namespace ICIMS.Users
             _roleManager = roleManager;
             _roleRepository = roleRepository;
             _passwordHasher = passwordHasher;
+            _organizationUnitRepository = organizationUnitRepository;
+            _userOrganizationUnitRepository = userOrganizationUnitRepository;
+            _userRepository = userRepository;
         }
 
         public override async Task<UserDto> Create(CreateUserDto input)
@@ -134,9 +143,10 @@ namespace ICIMS.Users
 
         protected override IQueryable<User> CreateFilteredQuery(PagedResultRequestDto input)
         {
+            var query = Repository.GetAllIncluding(x => x.Roles); 
             return Repository.GetAllIncluding(x => x.Roles);
         }
-
+        
         protected override async Task<User> GetEntityByIdAsync(long id)
         {
          
@@ -186,6 +196,35 @@ namespace ICIMS.Users
                await _userManager.AddToOrganizationUnitAsync(userUnitDto.UserId, userUnitDto.UnitId);
             }
             await Task.CompletedTask;
+        }
+
+        public async Task<PagedResultDto<UserDto>> GetAllUsersAsync(PagedAndSortedInputDto input)
+        {
+             var query =(from u in _userRepository.GetAll()  
+                        join uou in _userOrganizationUnitRepository.GetAll() on u.Id equals uou.UserId
+                        join ou in _organizationUnitRepository.GetAll() on uou.OrganizationUnitId equals ou.Id 
+                        select  new UserDto {
+                            CreationTime=u.CreationTime,
+                            EmailAddress=u.EmailAddress,
+                            FullName=u.FullName,
+                            Id=u.Id,
+                            IsActive=u.IsActive,
+                            Name=u.Name,
+                            Surname=u.Surname,
+                            UserName=u.UserName,
+                            LastLoginTime=u.LastLoginTime,
+                            Unit=ou.MapTo<UnitDto>()
+                        });
+            var count = await query.CountAsync();
+
+            var entityList = await query
+                    .OrderBy(o=>o.Id).AsNoTracking()
+                    .PageBy(input)
+                    .ToListAsync();
+
+        
+
+            return new PagedResultDto<UserDto>(count, entityList);
         }
     }
 }
