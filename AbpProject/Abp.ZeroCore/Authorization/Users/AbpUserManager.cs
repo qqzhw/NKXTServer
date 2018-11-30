@@ -214,6 +214,20 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
+        /// 获取用户部门
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public virtual async Task<List<OrganizationUnit>>  GetUserOrganizationUnit(long userId)
+        {
+           var query = from uou in _userOrganizationUnitRepository.GetAll()
+                            join ou in _organizationUnitRepository.GetAll() on uou.OrganizationUnitId equals ou.Id
+                                   where uou.UserId == userId
+                       select ou;
+           return await Task.FromResult(query.ToList());
+        }
+
+        /// <summary>
         /// Gets granted permissions for a user.
         /// </summary>
         /// <param name="user">Role</param>
@@ -561,7 +575,7 @@ namespace Abp.Authorization.Users
         {
             var query = from uou in _userOrganizationUnitRepository.GetAll()
                         join ou in _organizationUnitRepository.GetAll() on uou.OrganizationUnitId equals ou.Id
-                        where uou.UserId == user.Id
+                        where uou.UserId == user.Id && uou.TenantId==user.TenantId
                         select ou;
 
             return Task.FromResult(query.ToList());

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Abp.Authorization.Users;
 using Abp.Extensions;
 
@@ -12,7 +14,8 @@ namespace ICIMS.Authorization.Users
         {
             return Guid.NewGuid().ToString("N").Truncate(16);
         }
-
+        [ForeignKey("UserId")]
+        public virtual ICollection<UserOrganizationUnit> UserOrganizationUnits { get; set; }
         public static User CreateTenantAdminUser(int tenantId, string emailAddress)
         {
             var user = new User

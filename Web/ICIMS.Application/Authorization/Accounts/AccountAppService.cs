@@ -29,7 +29,7 @@ namespace ICIMS.Authorization.Accounts
                 return new IsTenantAvailableOutput(TenantAvailabilityState.InActive);
             }
 
-            return new IsTenantAvailableOutput(TenantAvailabilityState.Available, tenant.Id);
+            return new IsTenantAvailableOutput(TenantAvailabilityState.Available, tenant.Id,tenant.TenancyName);
         }
 
         public async Task<RegisterOutput> Register(RegisterInput input)

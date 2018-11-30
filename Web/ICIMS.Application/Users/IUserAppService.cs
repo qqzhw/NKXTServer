@@ -15,7 +15,7 @@ namespace ICIMS.Users
 
         Task ChangeLanguage(ChangeUserLanguageDto input);
 
-        Task<List<UnitDto>> GetOrganizationUnitsAsync(User user);
+        Task<List<UnitDto>> GetUserUnitsAsync(long userId);
 
         Task<UserDto> GetUserById(long id);
         Task CreateOrUpdateUserUnit(CreateUserUnitDto userUnitDto);

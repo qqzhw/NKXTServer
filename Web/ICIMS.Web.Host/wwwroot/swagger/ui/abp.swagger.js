@@ -1,10 +1,10 @@
 var abp = abp || {};
+abp.tenancyName = "";
 (function () {
 
     /* Swagger */
 
-    abp.swagger = abp.swagger || {};
-
+    abp.swagger = abp.swagger || {};    
     abp.swagger.addAuthToken = function () {
         var authToken = abp.auth.getToken();
         if (!authToken) {
@@ -54,17 +54,17 @@ var abp = abp || {};
                 }
             }
         };
-        var tenancyName = document.getElementById('tenancyName').value;
+        
         xhr.open('POST', '/api/TokenAuth/Authenticate', true);
         xhr.setRequestHeader('Abp.TenantId', tenantId);
         xhr.setRequestHeader('Content-type', 'application/json');
-        xhr.send("{" + "usernameOrEmailAddress:'" + usernameOrEmailAddress + "'," + "password:'" + password + "'," + "tenancyname:'" + tenancyName + "'}");
-    };
+        xhr.send("{" + "usernameOrEmailAddress:'" + usernameOrEmailAddress + "'," + "password:'" + password + "'," + "tenancyname:'" + abp.tenancyName + "'}");
+    }
 
     abp.swagger.login = function (callback) {
         //Get TenantId first
         var tenancyName = document.getElementById('tenancyName').value;
-
+        abp.tenancyName = tenancyName;
         if (tenancyName) {
             var xhrTenancyName = new XMLHttpRequest();
             xhrTenancyName.onreadystatechange = function () {
@@ -72,6 +72,7 @@ var abp = abp || {};
                     var responseJSON = JSON.parse(xhrTenancyName.responseText);
                     var result = responseJSON.result;
                     if (result.state === 1) { // Tenant exists and active.
+                        abp.tenancyName = result.tenancyName;
                         loginUserInternal(result.tenantId, callback); // Login for tenant    
                     } else {
                         alert('There is no such tenant or tenant is not active !');

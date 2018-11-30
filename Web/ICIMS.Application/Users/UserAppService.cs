@@ -141,7 +141,7 @@ namespace ICIMS.Users
         {
          
             var user = await Repository.GetAllIncluding(x => x.Roles).FirstOrDefaultAsync(x => x.Id == id);
-
+           
             if (user == null)
             {
                 throw new EntityNotFoundException(typeof(User), id);
@@ -160,13 +160,13 @@ namespace ICIMS.Users
             identityResult.CheckErrors(LocalizationManager);
         }
 
-        public virtual async Task<List<UnitDto>> GetOrganizationUnitsAsync(User user)
+        public virtual async Task<List<UnitDto>> GetUserUnitsAsync(long userId)
         {
-            if (user==null)
+            if (userId <1)
             {
                 return null;
             }
-            var items =await _userManager.GetOrganizationUnitsAsync(user);
+            var items =await _userManager.GetUserOrganizationUnit(userId);
             return items.Select(o => new UnitDto() { Id = o.Id, Code = o.Code, Name = o.DisplayName }).ToList();
         }
 
@@ -174,7 +174,8 @@ namespace ICIMS.Users
         {
             var user =await GetEntityByIdAsync(id);
             var userdto = MapToEntityDto(user);
-            userdto.Units =await GetOrganizationUnitsAsync(user);
+            var items = await _userManager.GetUserOrganizationUnit(user.Id);
+            userdto.Units= items.Select(o => new UnitDto() { Id = o.Id, Code = o.Code, Name = o.DisplayName }).ToList();
             return userdto;
         }
 
