@@ -5,6 +5,7 @@ using Abp.Application.Services.Dto;
 using Abp.Authorization.Users;
 using Abp.AutoMapper;
 using ICIMS.Authorization.Users;
+using ICIMS.Roles.Dto;
 
 namespace ICIMS.Users.Dto
 {
@@ -40,7 +41,7 @@ namespace ICIMS.Users.Dto
 
         public DateTime CreationTime { get; set; }
 
-        public string[] RoleNames { get; set; }
+        public IList<RoleDto> RoleNames { get; set; }
 
         public IList<UnitDto> Units { get; set; }
         public  UnitDto Unit { get; set; }

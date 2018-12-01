@@ -88,9 +88,8 @@ namespace ICIMS.Users
 
             if (input.RoleNames != null)
             {
-                CheckErrors(await _userManager.SetRoles(user, input.RoleNames));
+                CheckErrors(await _userManager.SetRoles(user, input.RoleNames.Select(o=>o.Name).ToArray()));
             }
-
             if(input.Units != null)
             {
                 await _userManager.SetOrganizationUnitsAsync(user.Id, input.Units.Select(a=>a.Id).ToArray());
@@ -135,9 +134,9 @@ namespace ICIMS.Users
 
         protected override  UserDto MapToEntityDto(User user)
         {
-            var roles = _roleManager.Roles.Where(r => user.Roles.Any(ur => ur.RoleId == r.Id)).Select(r => r.NormalizedName);
+            var roles = _roleManager.Roles.Where(r => user.Roles.Any(ur => ur.RoleId == r.Id));
             var userDto = base.MapToEntityDto(user);
-            userDto.RoleNames = roles.ToArray();  
+            userDto.RoleNames = roles.Select(o=>o.MapTo<RoleDto>()).ToList();  
             return userDto;
         }
 
@@ -200,31 +199,79 @@ namespace ICIMS.Users
 
         public async Task<PagedResultDto<UserDto>> GetAllUsersAsync(PagedAndSortedInputDto input)
         {
-             var query =(from u in _userRepository.GetAll()  
-                        join uou in _userOrganizationUnitRepository.GetAll() on u.Id equals uou.UserId
-                        join ou in _organizationUnitRepository.GetAll() on uou.OrganizationUnitId equals ou.Id 
-                        select  new UserDto {
-                            CreationTime=u.CreationTime,
-                            EmailAddress=u.EmailAddress,
-                            FullName=u.FullName,
-                            Id=u.Id,
-                            IsActive=u.IsActive,
-                            Name=u.Name,
-                            Surname=u.Surname,
-                            UserName=u.UserName,
-                            LastLoginTime=u.LastLoginTime,
-                            Unit=ou.MapTo<UnitDto>()
-                        });
+            var query =  from u in _userRepository.GetAllIncluding().Include(u=>u.Roles)
+                         join uou in _userOrganizationUnitRepository.GetAll() on u.Id equals uou.UserId
+                         join ou in _organizationUnitRepository.GetAll() on uou.OrganizationUnitId equals ou.Id
+                         select new 
+                         {
+                             CreationTime = u.CreationTime,
+                             EmailAddress = u.EmailAddress,
+                             FullName = u.FullName,
+                             Id = u.Id,
+                             IsActive = u.IsActive,
+                             Name = u.Name,
+                             Surname = u.Surname,
+                             UserName = u.UserName,
+                             LastLoginTime = u.LastLoginTime,
+                             Unit = ou.MapTo<UnitDto>(),
+                             u.Roles
+                         };
+           
+            //var query1 = from o in _roleManager.Roles.Where(r =>query.Roles.Any(ur => ur.RoleId == r.Id))
+            //             join p in query on o.Id equals p.Roles.FirstOrDefault(u=>u.RoleId == u.Id)
+            //       select 
+            //           new UserDto {
+            //               CreationTime = p.CreationTime,
+            //               EmailAddress = p.EmailAddress,
+            //               FullName = p.FullName,
+            //               Id = p.Id,
+            //               IsActive = p.IsActive,
+            //               Name = p.Name,
+            //               Surname = p.Surname,
+            //               UserName = p.UserName,
+            //               LastLoginTime = p.LastLoginTime,
+            //               Unit = p.Unit,
+            //           };
+            
             var count = await query.CountAsync();
-
+            
             var entityList = await query
                     .OrderBy(o=>o.Id).AsNoTracking()
                     .PageBy(input)
                     .ToListAsync();
+            var roles = _roleRepository.GetAll().ToList();
+            List<UserDto> dto = new List<UserDto>();
+            foreach (var item in entityList)
+            {
+                var userDto = new UserDto()
+                {
+                    EmailAddress=item.EmailAddress,
+                    FullName=item.FullName,
+                    Id=item.Id,
+                    IsActive=item.IsActive,
+                    LastLoginTime=item.LastLoginTime,
+                    Name=item.Name,
+                    Surname=item.Surname,
+                    Unit=item.Unit,
+                    UserName=item.UserName,                    
+                    CreationTime=item.CreationTime,
+                    RoleNames=roles.Where(o=>item.Roles.Any(r=>r.RoleId==o.Id)).Select(p=>p.MapTo<RoleDto>()).ToList(),
+                };
+                dto.Add(userDto);
+            }
+                  
+            return new PagedResultDto<UserDto>(count, dto);
+        }
 
-        
-
-            return new PagedResultDto<UserDto>(count, entityList);
+        private RoleDto CreateRoleDto(int roleId)
+        {
+            var roleDto = new RoleDto();
+            var query = _roleRepository.Get(roleId);
+            if (query!=null)
+            {
+                roleDto = query.MapTo<RoleDto>();
+            }
+            return roleDto;
         }
     }
 }
