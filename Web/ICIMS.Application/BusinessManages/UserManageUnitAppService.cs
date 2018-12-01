@@ -96,14 +96,14 @@ namespace ICIMS.BusinessManages
 		/// <param name="input"></param>
 		/// <returns></returns>
 		//[AbpAuthorize(UserManageUnitPermissions.Create,UserManageUnitPermissions.Edit)]
-		public async Task<GetUserManageUnitForEditOutput> GetForEdit(NullableIdDto<int> input)
+		public async Task<GetUserManageUnitForEditOutput> GetForEdit(EntityDto<int> input)
 		{
 			var output = new GetUserManageUnitForEditOutput();
-UserManageUnitEditDto editDto;
+         UserManageUnitEditDto editDto;
 
-			if (input.Id.HasValue)
+			if (input.Id>0)
 			{
-				var entity = await _entityRepository.GetAsync(input.Id.Value);
+				var entity = await _entityRepository.GetAsync(input.Id);
 
 				editDto = entity.MapTo<UserManageUnitEditDto>();
 
@@ -128,7 +128,7 @@ UserManageUnitEditDto editDto;
 		public async Task<UserManageUnitEditDto> CreateOrUpdate(CreateOrUpdateUserManageUnitInput input)
 		{
 
-			if (input.UserManageUnit.Id.HasValue)
+			if (input.UserManageUnit.Id>0)
 			{
 				return await Update(input.UserManageUnit);
 			}
@@ -151,8 +151,8 @@ UserManageUnitEditDto editDto;
             var entity=input.MapTo<UserManageUnit>();
 
             entity.TenantId = AbpSession.TenantId;
-			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<UserManageUnitEditDto>();
+			input.Id = await _entityRepository.InsertOrUpdateAndGetIdAsync(entity);
+			return input;
 		}
 
 		/// <summary>
@@ -163,7 +163,7 @@ UserManageUnitEditDto editDto;
 		{
             //TODO:更新前的逻辑判断，是否允许更新
             
-			var entity = await _entityRepository.GetAsync(input.Id.Value);
+			var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);

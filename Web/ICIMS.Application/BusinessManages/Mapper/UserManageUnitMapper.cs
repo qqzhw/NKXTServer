@@ -9,15 +9,15 @@ namespace ICIMS.BusinessManages.Mapper
 	/// <summary>
     /// 配置UserManageUnit的AutoMapper
     /// </summary>
-	internal static class UserManageUnitMapper
+	internal   class UserManageUnitMapper: Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap <UserManageUnit,UserManageUnitListDto>();
-            configuration.CreateMap <UserManageUnitListDto,UserManageUnit>();
+        public UserManageUnitMapper()
+        { 
+            CreateMap <UserManageUnit,UserManageUnitListDto>();
+            CreateMap <UserManageUnitListDto,UserManageUnit>();
 
-            configuration.CreateMap <UserManageUnitEditDto,UserManageUnit>();
-            configuration.CreateMap <UserManageUnit,UserManageUnitEditDto>();
+            CreateMap <UserManageUnitEditDto,UserManageUnit>();
+            CreateMap <UserManageUnit,UserManageUnitEditDto>();
 
         }
 	}

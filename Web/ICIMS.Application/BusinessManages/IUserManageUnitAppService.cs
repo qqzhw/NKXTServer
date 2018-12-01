@@ -47,7 +47,7 @@ namespace ICIMS.BusinessManages
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<GetUserManageUnitForEditOutput> GetForEdit(NullableIdDto<int> input);
+        Task<GetUserManageUnitForEditOutput> GetForEdit(EntityDto<int> input);
 
 
         /// <summary>
