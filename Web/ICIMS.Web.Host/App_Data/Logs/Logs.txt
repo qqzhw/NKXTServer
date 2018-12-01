@@ -6268,3 +6268,110 @@ INFO  2018-12-01 14:17:22,994 [24   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-12-01 14:17:23,349 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2018-12-01 14:17:23,417 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application) in 12837.2957ms
 INFO  2018-12-01 14:17:23,421 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12994.596ms 200 application/json; charset=utf-8
+DEBUG 2018-12-01 15:17:32,133 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-12-01 15:17:32,440 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-12-01 15:17:32,464 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,470 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,470 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,470 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,471 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,471 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,471 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,472 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:32,475 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-12-01 15:17:32,563 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-01 15:17:32,563 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-01 15:17:32,563 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-01 15:17:32,563 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-01 15:17:33,392 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-01 15:17:37,389 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-12-01 15:17:37,559 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-12-01 15:17:37,719 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-12-01 15:17:37,797 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-12-01 15:17:37,902 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-12-01 15:17:39,270 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-12-01 15:17:39,393 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-12-01 15:17:39,393 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-12-01 15:17:39,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-12-01 15:17:39,418 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-12-01 15:17:39,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-12-01 15:17:39,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-12-01 15:17:39,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-12-01 15:17:39,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-12-01 15:17:39,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-12-01 15:17:39,420 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-12-01 15:17:39,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-12-01 15:17:55,232 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-12-01 15:17:55,232 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-12-01 15:17:55,521 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 286.075ms 200 
+INFO  2018-12-01 15:18:08,414 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-12-01 15:18:09,936 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-12-01 15:18:09,945 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 2.8567ms.
+INFO  2018-12-01 15:18:10,854 [10   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-12-01 15:18:10,937 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 2466.4583ms
+INFO  2018-12-01 15:18:11,017 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15789.1602ms 302 
+INFO  2018-12-01 15:18:11,023 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-12-01 15:18:11,139 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 78.6437ms 200 text/html
+INFO  2018-12-01 15:18:11,269 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-12-01 15:18:11,273 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-12-01 15:18:11,279 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-12-01 15:18:11,333 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-12-01 15:18:11,337 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-12-01 15:18:11,344 [3    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-12-01 15:18:11,357 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.3051ms 304 application/javascript
+INFO  2018-12-01 15:18:11,379 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.7343ms 304 application/javascript
+INFO  2018-12-01 15:18:11,481 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 101.4616ms 304 text/css
+INFO  2018-12-01 15:18:12,140 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-12-01 15:18:12,675 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-12-01 15:18:12,682 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 545.6408ms 200 text/plain
+INFO  2018-12-01 15:18:12,711 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-12-01 15:18:12,795 [10   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-12-01 15:18:12,805 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 96.5731ms 200 text/plain
+INFO  2018-12-01 15:18:13,645 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-12-01 15:18:13,909 [3    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-01 15:18:15,063 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1408.8028ms 200 application/json;charset=utf-8
+INFO  2018-12-01 15:18:59,523 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/User/GetUserUnitsAsync?userId=1  
+INFO  2018-12-01 15:18:59,691 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-01 15:18:59,910 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetUserUnitsAsync", controller = "User"}. Executing action ICIMS.Users.UserAppService.GetUserUnitsAsync (ICIMS.Application)
+INFO  2018-12-01 15:19:05,778 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Users.UserAppService.GetUserUnitsAsync (ICIMS.Application) with arguments (1) - Validation state: Valid
+INFO  2018-12-01 15:19:14,840 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Users.UserAppService.GetUserUnitsAsync (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9049.9849ms.
+INFO  2018-12-01 15:19:16,664 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-01 15:19:17,497 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetUserUnitsAsync (ICIMS.Application) in 16858.6929ms
+INFO  2018-12-01 15:19:18,569 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/User/GetUserUnitsAsync?userId=1  
+INFO  2018-12-01 15:19:19,881 [20   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-01 15:19:20,688 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20499.1572ms 200 application/json; charset=utf-8
+INFO  2018-12-01 15:19:21,803 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetUserUnitsAsync", controller = "User"}. Executing action ICIMS.Users.UserAppService.GetUserUnitsAsync (ICIMS.Application)
+INFO  2018-12-01 15:19:25,235 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Users.UserAppService.GetUserUnitsAsync (ICIMS.Application) with arguments (1) - Validation state: Valid
+INFO  2018-12-01 15:19:33,835 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Users.UserAppService.GetUserUnitsAsync (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8401.7639ms.
+INFO  2018-12-01 15:19:37,134 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-01 15:19:37,713 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetUserUnitsAsync (ICIMS.Application) in 15330.5144ms
+INFO  2018-12-01 15:19:38,595 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19432.607ms 200 application/json; charset=utf-8
+INFO  2018-12-01 15:19:39,987 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-12-01 15:19:40,054 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-12-01 15:19:49,799 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-12-01 15:27:49,012 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 479207.9044ms.
+INFO  2018-12-01 15:27:50,478 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-01 15:27:50,491 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 490431.8031ms
+INFO  2018-12-01 15:27:50,508 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 490561.1877ms 200 application/json; charset=utf-8
+INFO  2018-12-01 15:40:18,948 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-12-01 15:40:18,972 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-12-01 15:40:19,056 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-12-01 15:40:28,130 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9070.5245ms.
+INFO  2018-12-01 15:40:28,831 [44   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-01 15:40:28,835 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 9859.2974ms
+INFO  2018-12-01 15:40:28,840 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9896.7904ms 200 application/json; charset=utf-8
+INFO  2018-12-01 15:40:34,459 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/User/GetAll?userId=2  
+INFO  2018-12-01 15:40:34,467 [40   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-01 15:40:35,237 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing action ICIMS.Users.UserAppService.GetAll (ICIMS.Application)
+INFO  2018-12-01 15:40:35,657 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Users.UserAppService.GetAll (ICIMS.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - Validation state: Valid
+INFO  2018-12-01 15:40:47,040 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Users.UserAppService.GetAll (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11379.646ms.
+INFO  2018-12-01 15:40:47,417 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-01 15:40:47,513 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetAll (ICIMS.Application) in 12221.4037ms
+INFO  2018-12-01 15:40:47,582 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13059.8133ms 200 application/json; charset=utf-8

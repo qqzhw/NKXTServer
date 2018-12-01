@@ -5,6 +5,7 @@ using ICIMS.Authorization.Users;
 using ICIMS.BaseData;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace ICIMS.BusinessManages
@@ -21,6 +22,8 @@ namespace ICIMS.BusinessManages
         /// </summary>
         public long? UnitId { get; set; }
 
+       
+        public decimal? InitPayAmount { get; set; }
         /// <summary>
         /// 合同ID
         /// </summary>

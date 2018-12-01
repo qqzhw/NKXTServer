@@ -27,6 +27,7 @@ using ICIMS.EntityMapper.AuditMappings;
 using ICIMS.EntityMapper.BuinessAudits;
 using ICIMS.EntityMapper.BusinessTypes;
 using ICIMS.EntityMapper.PayAuditDetails;
+using ICIMS.EntityMapper.UserManageUnits;
 
 namespace ICIMS.EntityFrameworkCore
 {
@@ -72,6 +73,7 @@ namespace ICIMS.EntityFrameworkCore
             modelBuilder.ApplyConfiguration(new AuditMappingCfg());
             modelBuilder.ApplyConfiguration(new BusinessTypeCfg());
             modelBuilder.ApplyConfiguration(new PayAuditDetailCfg());
+            modelBuilder.ApplyConfiguration(new UserManageUnitCfg());
             base.OnModelCreating(modelBuilder);
         }
 
@@ -98,5 +100,6 @@ namespace ICIMS.EntityFrameworkCore
         public virtual DbSet<AuditMapping> AuditMapping { get; set; }
         public virtual DbSet<BusinessType> BusinessType { get; set; }
         public virtual DbSet<PayAuditDetail> PayAuditDetail { get; set; }
+        public virtual DbSet<UserManageUnit> UserManageUnit { get; set; }
     }
 }

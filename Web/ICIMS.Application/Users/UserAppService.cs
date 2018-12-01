@@ -169,14 +169,14 @@ namespace ICIMS.Users
             identityResult.CheckErrors(LocalizationManager);
         }
 
-        public virtual async Task<List<UnitDto>> GetUserUnitsAsync(long userId)
+        public virtual async Task<UnitDto> GetUserUnitAsync(long userId)
         {
             if (userId <1)
             {
                 return null;
             }
             var items =await _userManager.GetUserOrganizationUnit(userId);
-            return items.Select(o => new UnitDto() { Id = o.Id, Code = o.Code, Name = o.DisplayName }).ToList();
+            return items.FirstOrDefault().MapTo<UnitDto>();
         }
 
         public async Task<UserDto> GetUserById(long id)

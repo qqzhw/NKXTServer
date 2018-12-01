@@ -21,7 +21,7 @@ namespace ICIMS.Users.Dto
             CreateMap<CreateUserDto, User>();
             CreateMap<CreateUserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
             CreateMap<OrganizationUnit, UnitDto>()
-               .ForMember(x => x.Name, opt => opt.MapFrom(o => o.DisplayName));
+               .ForMember(x => x.Name, opt => opt.MapFrom(o => o.DisplayName));           
              
         }
     }

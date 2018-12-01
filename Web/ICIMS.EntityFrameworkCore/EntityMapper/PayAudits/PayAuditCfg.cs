@@ -19,7 +19,7 @@ namespace ICIMS.EntityMapper.PayAudits
 		 
 			builder.Property(a => a.PaymentNo).HasMaxLength(100);
 			builder.Property(a => a.PaymentName).HasMaxLength(ICIMSAbpefCoreConsts.EntityLengthNames.Length128);
-		 
+            builder.Property(a => a.InitPayAmount).HasDefaultValue(0.0m);
 		 
 			builder.Property(a => a.Remark).HasMaxLength(2000);
 

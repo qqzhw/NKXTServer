@@ -26,7 +26,7 @@ Configuration.Modules.AbpAutoMapper().Configurators.Add(configuration =>
     // ....
 
     // 只需要复制这一段
-PayAuditDetailMapper.CreateMappings(configuration);
+UserManageUnitMapper.CreateMappings(configuration);
 
     // ....
 });
@@ -39,7 +39,7 @@ PayAuditDetailMapper.CreateMappings(configuration);
 中的 PreInitialize 方法中:
 
 ```
-Configuration.Authorization.Providers.Add<PayAuditDetailAuthorizationProvider>();
+Configuration.Authorization.Providers.Add<UserManageUnitAuthorizationProvider>();
 
 ```
 
@@ -48,7 +48,7 @@ Configuration.Authorization.Providers.Add<PayAuditDetailAuthorizationProvider>()
 可以在```DbContext```中增加：
 
  ```
-public DbSet<PayAuditDetail>  PayAuditDetails { get; set; }
+public DbSet<UserManageUnit>  UserManageUnits { get; set; }
 
  ```
 
@@ -57,7 +57,7 @@ public DbSet<PayAuditDetail>  PayAuditDetails { get; set; }
 ```
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new PayAuditDetailCfg());
+            modelBuilder.ApplyConfiguration(new UserManageUnitCfg());
         }
 
 ```
@@ -69,14 +69,11 @@ public DbSet<PayAuditDetail>  PayAuditDetails { get; set; }
 
 ```
 
-<text name="FundName"  value="FundName"></text>
+<text name="UserId"  value="UserId"></text>
+<text name="UnitId"  value="UnitId"></text>
 <text name="TenantId"  value="TenantId"></text>
-<text name="Remark"  value="Remark"></text>
-<text name="IsDeleted"  value="IsDeleted"></text>
-<text name="CreationTime"  value="CreationTime"></text>
-<text name="PayAuditId"  value="PayAuditId"></text>
-<text name="PayAudit"  value="PayAudit"></text>
-<text name="Amount"  value="Amount"></text>
+<text name="User"  value="User"></text>
+<text name="OrganizationUnit"  value="OrganizationUnit"></text>
 
 
 ```
