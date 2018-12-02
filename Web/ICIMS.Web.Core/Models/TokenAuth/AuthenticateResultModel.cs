@@ -15,5 +15,6 @@ namespace ICIMS.Models.TokenAuth
         public string UnitName { get; set; }
         public string Name { get; set; }
         public IList<string> RolesName { get; set; }
+        public string UserName { get; set; }
     }
 }

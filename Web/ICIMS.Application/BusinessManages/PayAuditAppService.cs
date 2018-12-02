@@ -33,19 +33,20 @@ namespace ICIMS.BusinessManages
     public class PayAuditAppService : ICIMSAppServiceBase, IPayAuditAppService
     {
         private readonly IRepository<PayAudit, int> _entityRepository;
-
+        private readonly IRepository<PayAuditDetail, int> _entityDetailRepository;
         private readonly IPayAuditManager _entityManager;
 
         /// <summary>
         /// 构造函数 
         ///</summary>
         public PayAuditAppService(
-        IRepository<PayAudit, int> entityRepository
-        ,IPayAuditManager entityManager
+        IRepository<PayAudit, int> entityRepository, IRepository<PayAuditDetail, int> entityDetailRepository
+        , IPayAuditManager entityManager
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
+            _entityDetailRepository = entityDetailRepository;
         }
 
 
@@ -171,8 +172,22 @@ PayAuditEditDto editDto;
             {
                 throw new UserFriendlyException("已存在相同名称,请重新输入");
             }
-
+            entity.TenantId = AbpSession.TenantId;
+            entity.SysGuid = Guid.NewGuid().ToString();
+            entity.PaymentNo = GenerateId();
+            entity.CreatorUserId = AbpSession.UserId;
+            
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            foreach (var detail in input.PayAuditDetails)
+            {
+                var payDetail = detail.MapTo<PayAuditDetail>();
+                payDetail.PayAuditId = entity.Id;
+                payDetail.TenantId = AbpSession.TenantId;
+               payDetail.Id= await _entityDetailRepository.InsertAndGetIdAsync(payDetail);
+            }
+            input.PaymentNo = entity.PaymentNo;
+         
+             
             return input;
 		}
         private string GenerateId()
@@ -182,7 +197,7 @@ PayAuditEditDto editDto;
             findnumber += 1;
 
             var id = DateTime.Now.ToString("yyyyMMdd000");
-            var no = $"SH{Convert.ToInt64(id) + findnumber}";
+            var no = $"ZF{Convert.ToInt64(id) + findnumber}";
             return no;
         }
         /// <summary>

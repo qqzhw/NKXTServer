@@ -80,7 +80,8 @@ namespace ICIMS.BusinessManages
 
         public long? AuditUserId { get; set; }
 
-        public virtual User AuditUser { get; set; }
+        public virtual User AuditUser { get; set; } 
+        
         #region 导航属性 
         public virtual Contract Contract { get; set; } 
         public virtual PaymentType PaymentType { get; set; }

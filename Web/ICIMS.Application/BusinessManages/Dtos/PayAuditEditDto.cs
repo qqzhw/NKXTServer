@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Abp.Domain.Entities.Auditing;
 using ICIMS.Authorization.Users;
@@ -21,21 +22,9 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// TenantId
 		/// </summary>
 		public int? TenantId { get; set; }
+         
 
-
-
-		/// <summary>
-		/// SysGuid
-		/// </summary>
-		[Required(ErrorMessage="SysGuid不能为空")]
-		public string SysGuid { get; set; }
-
-
-
-		/// <summary>
-		/// Status
-		/// </summary>
-		[Required(ErrorMessage="Status不能为空")]
+ 
 		public int Status { get; set; }
 
 
@@ -82,12 +71,12 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// </summary>
 		public string PaymentName { get; set; }
 
+        public string PaymentMethod { get; set; }
 
-
-		/// <summary>
-		/// PayAmount
-		/// </summary>
-		public decimal PayAmount { get; set; }
+        /// <summary>
+        /// PayAmount
+        /// </summary>
+        public decimal PayAmount { get; set; }
 
 
 
@@ -153,7 +142,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		public User AuditUser { get; set; }
 
 
-
+        public IList<PayAuditDetailEditDto> PayAuditDetails { get; set; }
 
     }
 }

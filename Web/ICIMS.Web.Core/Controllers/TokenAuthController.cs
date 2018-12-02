@@ -68,8 +68,8 @@ namespace ICIMS.Controllers
             );
              
             var accessToken = CreateAccessToken(CreateJwtClaims(loginResult.Identity));
-           // var unit = _userManager.GetUserOrganizationUnit();
-            
+            var unit =await _userManager.GetUserOrganizationUnit(loginResult.User.Id);
+
             return new AuthenticateResultModel
             {
                 AccessToken = accessToken,
@@ -78,6 +78,7 @@ namespace ICIMS.Controllers
                 UserId = loginResult.User.Id,
                 //UnitId = unit.FirstOrDefault()?.Id,
                 //UnitName = unit.FirstOrDefault()?.DisplayName,
+                UserName = loginResult.User.UserName,
                 Name = loginResult.User.Name,
                  
             };
