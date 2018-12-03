@@ -41,9 +41,9 @@ namespace ICIMS.Users.Dto
 
         public DateTime CreationTime { get; set; }
 
-        public IList<RoleDto> RoleNames { get; set; }
+        public IList<RoleDto> Roles { get; set; }
 
-        public IList<UnitDto> Units { get; set; }
+        //public IList<UnitDto> Units { get; set; }
         public  UnitDto Unit { get; set; }
     }
 }

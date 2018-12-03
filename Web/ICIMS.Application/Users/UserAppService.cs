@@ -86,13 +86,13 @@ namespace ICIMS.Users
 
             CheckErrors(await _userManager.UpdateAsync(user));
 
-            if (input.RoleNames != null)
+            if (input.Roles != null)
             {
-                CheckErrors(await _userManager.SetRoles(user, input.RoleNames.Select(o=>o.Name).ToArray()));
+                CheckErrors(await _userManager.SetRoles(user, input.Roles.Select(o=>o.Name).ToArray()));
             }
-            if(input.Units != null)
+            if(input.Unit != null)
             {
-                await _userManager.SetOrganizationUnitsAsync(user.Id, input.Units.Select(a=>a.Id).ToArray());
+                await _userManager.SetOrganizationUnitsAsync(user.Id, input.Unit.Id);
             }
 
             return await Get(input);
@@ -134,9 +134,10 @@ namespace ICIMS.Users
 
         protected override  UserDto MapToEntityDto(User user)
         {
-            var roles = _roleManager.Roles.Where(r => user.Roles.Any(ur => ur.RoleId == r.Id));
+            var roles = _roleManager.Roles.Include(o=>o.Permissions).Where(r => user.Roles.Any(ur => ur.RoleId == r.Id));
             var userDto = base.MapToEntityDto(user);
-            userDto.RoleNames = roles.Select(o=>o.MapTo<RoleDto>()).ToList();  
+            userDto.Roles = roles.Select(o=>o.MapTo<RoleDto>()).ToList();
+           // var unit = _userManager.GetUserOrganizationUnit(user.Id);
             return userDto;
         }
 
@@ -183,8 +184,8 @@ namespace ICIMS.Users
         {
             var user =await GetEntityByIdAsync(id);
             var userdto = MapToEntityDto(user);
-            var items = await _userManager.GetUserOrganizationUnit(user.Id);
-            userdto.Units= items.Select(o => new UnitDto() { Id = o.Id, Code = o.Code, Name = o.DisplayName }).ToList();
+            var items =await  _userManager.GetUserOrganizationUnit(user.Id);
+            userdto.Unit= items.FirstOrDefault().MapTo<UnitDto>();
             return userdto;
         }
 
@@ -255,7 +256,7 @@ namespace ICIMS.Users
                     Unit=item.Unit,
                     UserName=item.UserName,                    
                     CreationTime=item.CreationTime,
-                    RoleNames=roles.Where(o=>item.Roles.Any(r=>r.RoleId==o.Id)).Select(p=>p.MapTo<RoleDto>()).ToList(),
+                    Roles=roles.Where(o=>item.Roles.Any(r=>r.RoleId==o.Id)).Select(p=>p.MapTo<RoleDto>()).ToList(),
                 };
                 dto.Add(userDto);
             }

@@ -15,7 +15,8 @@ namespace ICIMS.Users.Dto
                 .ForMember(x => x.CreationTime, opt => opt.Ignore())
                 .ForMember(x => x.LastLoginTime, opt => opt.Ignore());
             CreateMap<User, UserDto>()
-               .ForMember(x => x.Units, opt => opt.MapFrom(o => o.UserOrganizationUnits.Select(x => new UnitDto() { Id = x.OrganizationUnitId })));
+                .ForMember(x => x.Roles, opt => opt.Ignore())
+               .ForMember(x => x.Unit, opt => opt.MapFrom(o => o.UserOrganizationUnits.Select(x => new UnitDto() { Id = x.OrganizationUnitId })));
                 
                
             CreateMap<CreateUserDto, User>();
