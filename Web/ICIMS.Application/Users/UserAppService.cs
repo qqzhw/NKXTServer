@@ -63,17 +63,14 @@ namespace ICIMS.Users
 
             CheckErrors(await _userManager.CreateAsync(user, input.Password));
 
-            if (input.RoleNames.Count()>0)
+           
+            if (input.Unit != null)
             {
-                CheckErrors(await _userManager.SetRoles(user, input.RoleNames));
-            }
-            if (input.UnitIds.Count()>0)
-            {
-               await _userManager.SetOrganizationUnitsAsync(user, input.UnitIds);
+               await _userManager.SetOrganizationUnitsAsync(user, input.Unit.Id);
             }
             CurrentUnitOfWork.SaveChanges();
 
-            return MapToEntityDto(user);
+            return await MapToNewEntityDto(user);
         }
 
         public override async Task<UserDto> Update(UserDto input)
@@ -94,8 +91,9 @@ namespace ICIMS.Users
             {
                 await _userManager.SetOrganizationUnitsAsync(user.Id, input.Unit.Id);
             }
-
-            return await Get(input);
+            var rs = await Get(input);
+            rs.Unit = input.Unit;
+            return rs;
         }
 
         public override async Task Delete(EntityDto<long> input)
@@ -138,6 +136,20 @@ namespace ICIMS.Users
             var userDto = base.MapToEntityDto(user);
             userDto.Roles = roles.Select(o=>o.MapTo<RoleDto>()).ToList();
            // var unit = _userManager.GetUserOrganizationUnit(user.Id);
+            return userDto;
+        }
+
+        private  async Task<UserDto> MapToNewEntityDto(User user)
+        {
+            var roles = _roleManager.Roles.Include(o => o.Permissions).Where(r => user.Roles.Any(ur => ur.RoleId == r.Id));
+            var userDto = base.MapToEntityDto(user);
+            userDto.Roles = new List<RoleDto>();
+            var units = await _userManager.GetUserOrganizationUnit(user.Id);
+            var unit = units.FirstOrDefault();
+            if(unit != null)
+            {
+                userDto.Unit = new UnitDto { Id=unit.Id, Code=unit.Code, Name=unit.DisplayName };
+            }
             return userDto;
         }
 
