@@ -63,7 +63,10 @@ namespace ICIMS.BusinessManages
              
              
                 query = query.Where(o => o.ItemId == input.ItemId);
-             
+            if (!string.IsNullOrEmpty(input.BusinessTypeName))
+            {
+                query = query.Where(o => o.BusinessTypeName == input.BusinessTypeName);
+            }
          
 			var count = await query.CountAsync();
 

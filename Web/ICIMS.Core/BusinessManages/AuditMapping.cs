@@ -13,6 +13,7 @@ namespace ICIMS.BusinessManages
         public int? TenantId { get; set; }
         public int BusinessAuditId { get; set; } //审核角色对应ID
         public int BusinessTypeId { get; set; }//业务类型ID
+        public string BusinessTypeName { get; set; }
         public int ItemId { get; set; }  //对应业务立项等ID
         
         public int Status { get; set; } //审核状态
