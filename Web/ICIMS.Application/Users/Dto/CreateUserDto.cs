@@ -44,5 +44,6 @@ namespace ICIMS.Users.Dto
             }
         }
         public long[] UnitIds { get; set; }
+        public UnitDto Unit { get; set; }
     }
 }
