@@ -106,7 +106,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// </summary>
 		public decimal ItemTotalAmount { get; set; }
 
-
+        public decimal InitPayAmount { get; set; }
 
 		/// <summary>
 		/// ContractTotalAmount
