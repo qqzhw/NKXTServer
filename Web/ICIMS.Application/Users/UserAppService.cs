@@ -95,8 +95,24 @@ namespace ICIMS.Users
             {
                 await _userManager.SetOrganizationUnitsAsync(user.Id, input.Unit.Id);
             }
+            if(input.Units != null)
+            {
+                var entity = await GetEntityByIdAsync(input.Id);
+                var oris = _usermanagerUnitRepository.GetAll().Where(a => a.UserId == input.Id);
+                await _usermanagerUnitRepository.DeleteAsync(a => a.UserId == input.Id);
+                foreach (var unit in input.Units)
+                {
+                    UserManageUnit one = new UserManageUnit();
+                    one.UserId = input.Id;
+                    one.UnitId = unit.Id;
+                    one.TenantId = entity.TenantId;
+                    await _usermanagerUnitRepository.InsertAsync(one);
+                }
+               
+            }
             var rs = await Get(input);
             rs.Unit = input.Unit;
+            rs.Units = input.Units;
             return rs;
         }
 
@@ -283,6 +299,8 @@ namespace ICIMS.Users
                     CreationTime=item.CreationTime,
                     Roles=roles.Where(o=>item.Roles.Any(r=>r.RoleId==o.Id)).Select(p=>p.MapTo<RoleDto>()).ToList(),
                 };
+                var units = await GetUserManagerUnits(item.Id);
+                userDto.Units = units.Select(a => new UnitDto { Id=a.Id, Code=a.Code, Name=a.DisplayName }).ToList();
                 dto.Add(userDto);
             }
                   
