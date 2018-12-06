@@ -125,7 +125,7 @@ BusinessTypeEditDto editDto;
 		public async Task CreateOrUpdate(CreateOrUpdateBusinessTypeInput input)
 		{
 
-			if (input.BusinessType.Id.HasValue)
+			if (input.BusinessType.Id>0)
 			{
 				await Update(input.BusinessType);
 			}
@@ -160,7 +160,7 @@ BusinessTypeEditDto editDto;
 		{
             //TODO:更新前的逻辑判断，是否允许更新
             input.TenantId = AbpSession.TenantId;
-            var entity = await _entityRepository.GetAsync(input.Id.Value);
+            var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
 
 			// ObjectMapper.Map(input, entity);
