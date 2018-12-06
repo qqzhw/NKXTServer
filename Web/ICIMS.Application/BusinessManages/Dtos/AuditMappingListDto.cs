@@ -32,12 +32,7 @@ namespace ICIMS.BusinessManages.Dtos
 		/// </summary> 
 		public int BusinessAuditId { get; set; }
 
-
-
-		/// <summary>
-		/// BuinessTypeId
-		/// </summary>
-		[Required(ErrorMessage="BusinessTypeId不能为空")]
+         
 		public int BusinessTypeId { get; set; }
         public string BusinessTypeName { get; set; }
         public int RoleId { get; set; }

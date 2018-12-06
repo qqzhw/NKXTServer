@@ -1,5 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
+using ICIMS.Authorization.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -23,6 +24,7 @@ namespace ICIMS.BusinessManages
         public DateTime? AuditTime { get; set; }
 
         public virtual BusinessAudit BusinessAudit { get; set; }
+        public virtual User User { get; set; }
     }
      
 }

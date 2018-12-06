@@ -58,11 +58,10 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<AuditMappingListDto>> GetPaged(GetAuditMappingsInput input)
 		{
 
-		    var query = _entityRepository.GetAllIncluding(o=>o.BusinessAudit);
+		    var query = _entityRepository.GetAllIncluding(o=>o.BusinessAudit).Include(o=>o.User).Where(o=>o.ItemId==input.ItemId);
             // TODO:根据传入的参数添加过滤条件
              
-             
-                query = query.Where(o => o.ItemId == input.ItemId);
+ 
             if (!string.IsNullOrEmpty(input.BusinessTypeName))
             {
                 query = query.Where(o => o.BusinessTypeName == input.BusinessTypeName);
