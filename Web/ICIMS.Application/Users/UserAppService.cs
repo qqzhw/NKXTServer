@@ -21,6 +21,8 @@ using Abp.Organizations;
 using ICIMS.Dtos;
 using Abp.AutoMapper;
 using Abp.Linq.Extensions;
+using ICIMS.BusinessManages;
+
 namespace ICIMS.Users
 {
     [AbpAuthorize(PermissionNames.Pages_Users)]
@@ -32,12 +34,13 @@ namespace ICIMS.Users
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly IRepository<OrganizationUnit, long> _organizationUnitRepository;
         private readonly IRepository<UserOrganizationUnit, long> _userOrganizationUnitRepository;
+        private readonly IRepository<UserManageUnit> _usermanagerUnitRepository;
         private readonly IRepository<User, long> _userRepository;
         public UserAppService(
             IRepository<User, long> repository,
             UserManager userManager,
             RoleManager roleManager, IRepository<User, long> userRepository,IRepository<OrganizationUnit, long> organizationUnitRepository, IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
-            IRepository<Role> roleRepository,
+            IRepository<Role> roleRepository, IRepository<UserManageUnit> usermanagerUnitRepository,
             IPasswordHasher<User> passwordHasher)
             : base(repository)
         {
@@ -48,6 +51,7 @@ namespace ICIMS.Users
             _organizationUnitRepository = organizationUnitRepository;
             _userOrganizationUnitRepository = userOrganizationUnitRepository;
             _userRepository = userRepository;
+            _usermanagerUnitRepository = usermanagerUnitRepository;
         }
 
         public override async Task<UserDto> Create(CreateUserDto input)
@@ -198,9 +202,18 @@ namespace ICIMS.Users
             var userdto = MapToEntityDto(user);
             var items =await  _userManager.GetUserOrganizationUnit(user.Id);
             userdto.Unit= items.FirstOrDefault().MapTo<UnitDto>();
+            var units = await GetUserManagerUnits(id);//用户管理部门
+            userdto.Units = units.MapTo<List<UnitDto>>();
             return userdto;
         }
-
+        public virtual async Task<List<OrganizationUnit>> GetUserManagerUnits(long userId)
+        {
+            var query = from uou in _usermanagerUnitRepository.GetAll()
+                        join ou in _organizationUnitRepository.GetAll() on uou.UnitId equals ou.Id
+                        where uou.UserId == userId
+                        select ou;
+            return await Task.FromResult(query.ToList());
+        }
         public async Task CreateOrUpdateUserUnit(CreateUserUnitDto userUnitDto)
         {
             if (userUnitDto.UnitId>0&&userUnitDto.UserId>0)

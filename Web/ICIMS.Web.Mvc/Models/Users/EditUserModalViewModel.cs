@@ -13,7 +13,7 @@ namespace ICIMS.Web.Models.Users
 
         public bool UserIsInRole(RoleDto role)
         {
-            return User.Roles != null && User.Roles.Any(r => r.NormalizedName== role.NormalizedName);
+            return User.Roles != null && User.Roles.Any(r => r.Id== role.Id);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Abp.Organizations
         [UnitOfWork]
         public virtual async Task<OrganizationUnit> CreateAsync(OrganizationUnit organizationUnit)
         {
-            organizationUnit.Code = await GetNextChildCodeAsync(organizationUnit.ParentId);
+            //organizationUnit.Code = await GetNextChildCodeAsync(organizationUnit.ParentId);
             await ValidateOrganizationUnitAsync(organizationUnit);
             return await OrganizationUnitRepository.InsertAsync(organizationUnit);
         }
@@ -93,7 +93,7 @@ namespace Abp.Organizations
             var oldCode = organizationUnit.Code;
 
             //Move OU
-            organizationUnit.Code = await GetNextChildCodeAsync(parentId);
+            //organizationUnit.Code = await GetNextChildCodeAsync(parentId);
             organizationUnit.ParentId = parentId;
 
             await ValidateOrganizationUnitAsync(organizationUnit);

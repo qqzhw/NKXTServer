@@ -62,7 +62,7 @@ namespace Abp.Authorization.Users
         private readonly IUnitOfWorkManager _unitOfWorkManager;
         private readonly ICacheManager _cacheManager;
         private readonly IRepository<OrganizationUnit, long> _organizationUnitRepository;
-        private readonly IRepository<UserOrganizationUnit, long> _userOrganizationUnitRepository;
+        private readonly IRepository<UserOrganizationUnit, long> _userOrganizationUnitRepository; 
         private readonly IOrganizationUnitSettings _organizationUnitSettings;
         private readonly ISettingManager _settingManager;
         private readonly IOptions<IdentityOptions> _optionsAccessor;
@@ -226,7 +226,7 @@ namespace Abp.Authorization.Users
                        select ou;
            return await Task.FromResult(query.ToList());
         }
-
+      
         /// <summary>
         /// Gets granted permissions for a user.
         /// </summary>
