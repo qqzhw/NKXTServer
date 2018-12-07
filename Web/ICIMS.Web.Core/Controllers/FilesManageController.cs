@@ -52,12 +52,12 @@ namespace ICIMS.Controllers
                 model.FileSize = file.Length;
                 model.DownloadGuid = Guid.NewGuid();
                 //原文件名 不包括路径
-                var fileName = file.FileName; 
-                
+                var fileName = file.FileName;
+                var index = fileName.LastIndexOf('.');
                 ////获取文件扩展名
                  var fileExtensionName = Path.GetExtension(fileName);
                 model.Extension = fileExtensionName;
-                var NewFileName = Guid.NewGuid().ToString().Replace("-","") + fileExtensionName;
+                var NewFileName =fileName.Substring(0,index)+DateTime.Now.ToString("_fff") + fileExtensionName;
                 //string[] pictureFormatArray = { ".png", ".jpg", ".jpeg", ".bmp", ".gif", ".ico", ".PNG", ".JPG", ".JPEG", ".BMP", ".GIF", ".ICO" };
                 //if (!pictureFormatArray.Contains(fileExtensionName))
                 //{
@@ -65,7 +65,7 @@ namespace ICIMS.Controllers
 
                 //    return new RawJsonActionResult(jsonstr);
                 //}
-                var folder = _hostingEnvironment.WebRootPath + $@"\Upload\{model.EntityKey}\{DateTime.Now.Year}\{DateTime.Now.Month}";
+                var folder = _hostingEnvironment.WebRootPath + $@"\Upload\{model.EntityKey}\{DateTime.Now.Year}\{DateTime.Now.Month}\{DateTime.Now.Day}";
 
                 if (!Directory.Exists(folder))//路径不存在则创建
                 {
@@ -78,7 +78,7 @@ namespace ICIMS.Controllers
                     await file.CopyToAsync(fs);
                     fs.Flush();
                 }
-                model.DownloadUrl= $@"/Upload/{model.EntityKey}/{DateTime.Now.Year}/{DateTime.Now.Month}/"+NewFileName;
+                model.DownloadUrl= $@"/Upload/{model.EntityKey}/{DateTime.Now.Year}/{DateTime.Now.Month}/{DateTime.Now.Day}/"+NewFileName;
                 //var webUrl = $@"/Upload/CampaignFiles/" + NewFileName;// _webHelper.GetStoreLocation() + "/Upload/Pictures/" + fileName;
                return await  _ifilesManageAppService.InsertOrUpdate(model);
                 //model.ImagePath = _webHelper.GetStoreLocation().TrimEnd('/') + webUrl;

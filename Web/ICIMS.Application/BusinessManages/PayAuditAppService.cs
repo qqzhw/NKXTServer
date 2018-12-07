@@ -80,13 +80,16 @@ namespace ICIMS.BusinessManages
                            UnitName=o.ItemDefine.Unit.DisplayName,
                            VendorName=o.Contract.Vendor.Name
                        });
-			// TODO:根据传入的参数添加过滤条件
-            
+            // TODO:根据传入的参数添加过滤条件
+            if (input.Status.HasValue)
+            {
+                query = query.Where(o => o.PayAudit.Status == 2);
+            }
 
-			var count = await query.CountAsync();
+            var count = await query.CountAsync();
 
 			var entityList = await query
-					.OrderBy(input.Sorting).AsNoTracking()
+					.OrderByDescending(o=>o.Id).AsNoTracking()
 					.PageBy(input)
 					.ToListAsync();
 
@@ -243,9 +246,9 @@ PayAuditEditDto editDto;
 			await _entityRepository.DeleteAsync(s => input.Contains(s.Id));
 		}
 
-        public async Task<long> SearchPayCount(int itemDefineId)
+        public async Task<long> SearchPayCount(EntityDto<int> input)
         {
-            var query =await _entityRepository.LongCountAsync(o => o.ItemDefineId == itemDefineId);
+            var query =await _entityRepository.LongCountAsync(o => o.ItemDefineId == input.Id);
             return query;
         }
 

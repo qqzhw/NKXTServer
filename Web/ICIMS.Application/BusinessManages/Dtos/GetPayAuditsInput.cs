@@ -21,5 +21,6 @@ namespace ICIMS.BusinessManages.Dtos
         public string No { get; set; }
         public string Name { get; set; }
         public string ContractName { get; set; }
+        public int? Status { get; set; }
     }
 }

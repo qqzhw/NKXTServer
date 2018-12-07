@@ -88,15 +88,18 @@ namespace ICIMS.BusinessManages
                      UnitId=o.UnitId ,
                     UnitName =o.Unit.DisplayName
                 });
-                 
-           
-			// TODO:根据传入的参数添加过滤条件
-            
-            
-			var count = await query.CountAsync();
+
+
+            // TODO:根据传入的参数添加过滤条件
+
+            if (input.Status.HasValue)
+            {
+                query = query.Where(o => o.Status == 2);
+            }
+            var count = await query.CountAsync();
 
 			var entityList = await query
-					.OrderBy(input.Sorting).AsNoTracking()
+					.OrderByDescending(o=>o.Id).AsNoTracking()
 					.PageBy(input)
 					.ToListAsync();
 

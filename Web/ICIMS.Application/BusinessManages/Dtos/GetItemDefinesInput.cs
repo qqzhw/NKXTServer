@@ -18,6 +18,7 @@ namespace ICIMS.BusinessManages.Dtos
                 Sorting = "Id";
             }
         }
+        
 
     }
 }

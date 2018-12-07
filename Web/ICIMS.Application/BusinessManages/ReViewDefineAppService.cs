@@ -82,10 +82,14 @@ namespace ICIMS.BusinessManages
             {
                 query = query.Where(o => o.ReViewDefine.ReViewName.Contains(input.Name));
             }
+            if (input.Status.HasValue)
+            {
+                query = query.Where(o => o.Status == 2);
+            }
             var count = await query.CountAsync();
 
 			var entityList = await query
-					.OrderBy(input.Sorting).AsNoTracking()
+					.OrderByDescending(o=>o.Id).AsNoTracking()
 					.PageBy(input)
 					.ToListAsync();
 

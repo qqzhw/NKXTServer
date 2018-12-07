@@ -26,6 +26,7 @@ namespace ICIMS.BusinessManages.Dtos
 
         public long? CreatorUserId { get; set; }
         public DateTime CreationTime { get; set; }
+        public  int Status { get; set; }
     }
 
 }
