@@ -19,7 +19,7 @@ namespace  ICIMS.BaseData.Dtos
 		/// <summary>
 		/// No
 		/// </summary>
-		[Required(ErrorMessage="No不能为空")]
+		[Required(ErrorMessage="编号不能为空")]
 		public string No { get; set; }
 
 
@@ -42,7 +42,7 @@ namespace  ICIMS.BaseData.Dtos
 		/// <summary>
 		/// Address
 		/// </summary>
-		[Required(ErrorMessage="Address不能为空")]
+		//[Required(ErrorMessage="Address不能为空")]
 		public string Address { get; set; }
 
 
@@ -50,7 +50,7 @@ namespace  ICIMS.BaseData.Dtos
 		/// <summary>
 		/// LinkPerson
 		/// </summary>
-		[Required(ErrorMessage="LinkPerson不能为空")]
+		//[Required(ErrorMessage="LinkPerson不能为空")]
 		public string LinkPerson { get; set; }
 
 
@@ -58,7 +58,7 @@ namespace  ICIMS.BaseData.Dtos
 		/// <summary>
 		/// LinkPhone
 		/// </summary>
-		[Required(ErrorMessage="LinkPhone不能为空")]
+		//[Required(ErrorMessage="LinkPhone不能为空")]
 		public string LinkPhone { get; set; }
 
 
@@ -66,7 +66,7 @@ namespace  ICIMS.BaseData.Dtos
 		/// <summary>
 		/// AccountName
 		/// </summary>
-		[Required(ErrorMessage="AccountName不能为空")]
+		//[Required(ErrorMessage="AccountName不能为空")]
 		public string AccountName { get; set; }
 
 
@@ -74,7 +74,7 @@ namespace  ICIMS.BaseData.Dtos
 		/// <summary>
 		/// OpenBank
 		/// </summary>
-		[Required(ErrorMessage="OpenBank不能为空")]
+		//[Required(ErrorMessage="OpenBank不能为空")]
 		public string OpenBank { get; set; }
 
 
