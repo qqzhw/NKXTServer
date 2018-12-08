@@ -212,9 +212,14 @@ ItemDefineEditDto editDto;
 		{
             //TODO:更新前的逻辑判断，是否允许更新
             input.TenantId = AbpSession.TenantId;
+            if (input.Status == 3)
+            {
+                input.AuditUserId = AbpSession.UserId;
+                input.AuditDate = DateTime.Now;
+            }
             var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-
+          
 			// ObjectMapper.Map(input, entity);
 		    await _entityRepository.UpdateAsync(entity);
             return entity.MapTo<ItemDefineEditDto>();

@@ -139,7 +139,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// AuditUserId
 		/// </summary>
-		public int? AuditUserId { get; set; }
+		public long? AuditUserId { get; set; }
 
 
 
