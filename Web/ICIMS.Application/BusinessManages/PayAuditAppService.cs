@@ -83,7 +83,7 @@ namespace ICIMS.BusinessManages
             // TODO:根据传入的参数添加过滤条件
             if (input.Status.HasValue)
             {
-                query = query.Where(o => o.PayAudit.Status == 2);
+                query = query.Where(o => o.PayAudit.Status == input.Status);
             }
 
             var count = await query.CountAsync();
@@ -177,7 +177,7 @@ PayAuditEditDto editDto;
             }
             entity.TenantId = AbpSession.TenantId;
             entity.SysGuid = Guid.NewGuid().ToString();
-            entity.PaymentNo = GenerateId();
+            entity.PaymentNo = GenerateId(input.ItemDefineId);
             entity.CreatorUserId = AbpSession.UserId;
             
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
@@ -193,14 +193,16 @@ PayAuditEditDto editDto;
              
             return input;
 		}
-        private string GenerateId()
+        private string GenerateId(int itemdefineId)
         {
-            var findnumber = _entityRepository.LongCount(o => o.CreationTime.Date == DateTime.Now.Date);
+            var query = _entityRepository.GetAllIncluding(o => o.ItemDefine).Where(o => o.ItemDefineId == itemdefineId).Select(o => new { o.ItemDefineId, o.PaymentNo, o.ItemDefine.ItemNo });
 
-            findnumber += 1;
-
-            var id = DateTime.Now.ToString("yyyyMMdd000");
-            var no = $"ZF{Convert.ToInt64(id) + findnumber}";
+            var findnumber = query.Count();
+                findnumber += 1;
+            var id =findnumber.ToString().PadLeft(3, '0');
+            var no = $"{query.FirstOrDefault()?.ItemNo}_ZF{id}";
+          //  var id = DateTime.Now.ToString("yyyyMMdd000");
+            //var no = $"ZF{Convert.ToInt64(id) + findnumber}";
             return no;
         }
         /// <summary>
@@ -252,10 +254,12 @@ PayAuditEditDto editDto;
 			await _entityRepository.DeleteAsync(s => input.Contains(s.Id));
 		}
        
-        public async Task<long> GetSearchPayCount(EntityDto<int> input)
+        public async Task<List<PayAuditEditDto>> GetSearchPayCount(EntityDto<int> input)
         {
-            var query =await _entityRepository.LongCountAsync(o => o.ItemDefineId == input.Id);
-            return query;
+            var query =_entityRepository.GetAll().Where(o=>o.ItemDefineId==input.Id);
+
+            var list = await query.ToListAsync();
+            return list.MapTo<List<PayAuditEditDto>>();
         }
 
         /// <summary>

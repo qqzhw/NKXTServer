@@ -71,7 +71,9 @@ namespace ICIMS.BusinessManages
                     UnitName = o.ItemDefine.Unit.DisplayName,
                     CreationTime=o.CreationTime,
                     CreatorUserId=o.CreatorUserId,
-                    IsDeleted=o.IsDeleted                   
+                    IsDeleted=o.IsDeleted,
+                    Status=o.Status
+                    
                 });
             // TODO:根据传入的参数添加过滤条件
             if (!string.IsNullOrEmpty(input.No))
@@ -84,7 +86,7 @@ namespace ICIMS.BusinessManages
             }
             if (input.Status.HasValue)
             {
-                query = query.Where(o => o.Status == 2);
+                query = query.Where(o => o.Status == input.Status);
             }
             var count = await query.CountAsync();
 
