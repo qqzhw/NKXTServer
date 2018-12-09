@@ -1,4 +1,5 @@
-﻿using Abp.MultiTenancy;
+﻿using Abp.Application.Services.Dto;
+using Abp.MultiTenancy;
 using ICIMS.Authentication.JwtBearer;
 using ICIMS.Authorization;
 using ICIMS.BaseData;
@@ -86,5 +87,50 @@ namespace ICIMS.Controllers
 
             return null;
         }
+        [HttpGet]
+        public async Task<FileContentResult> GetDownloadByGuid(string guid)
+        {
+            var item = await _ifilesManageAppService.GetByGuid(guid);
+            if (item == null)
+                return null;
+
+            //return result
+            var fileName = _hostingEnvironment.WebRootPath + item.DownloadUrl.Replace("/", "\\");// !string.IsNullOrWhiteSpace(download.Filename) ? download.Filename : product.Id.ToString();
+            var contentType = !string.IsNullOrWhiteSpace(item.ContentType) ? item.ContentType : MimeTypes.ApplicationOctetStream;
+            var downloadBinary = AuthGetFileData(fileName);
+            return new FileContentResult(downloadBinary, contentType) { FileDownloadName = item.FileName + item.Extension };
+        }
+        [HttpGet]
+        public async Task<FileContentResult> GetDownloadById(int Id)
+        {
+            var item =await _ifilesManageAppService.GetById(new EntityDto<int>(Id));
+            if (item == null)
+                return null; 
+         
+            //return result
+            var fileName = _hostingEnvironment.WebRootPath + item.DownloadUrl.Replace("/", "\\");// !string.IsNullOrWhiteSpace(download.Filename) ? download.Filename : product.Id.ToString();
+            var contentType = !string.IsNullOrWhiteSpace(item.ContentType) ? item.ContentType : MimeTypes.ApplicationOctetStream;
+            var downloadBinary = AuthGetFileData(fileName);
+              return new FileContentResult(downloadBinary, contentType) { FileDownloadName = item.FileName + item.Extension };
+        }
+        /// <summary>
+        /// 将文件转换成byte[] 数组
+        /// </summary>
+        /// <param name="fileUrl">文件路径文件名称</param>
+        /// <returns>byte[]</returns>
+        protected byte[] AuthGetFileData(string fileUrl)
+        {
+            using (FileStream fs = new FileStream(fileUrl, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                byte[] buffur = new byte[fs.Length];
+                using (BinaryWriter bw = new BinaryWriter(fs))
+                {
+                    bw.Write(buffur);
+                    bw.Close();
+                }
+                return buffur;
+            }
+        }
+
     }
 }

@@ -35,7 +35,7 @@ namespace ICIMS.BusinessManages
         /// <returns></returns>
         Task<PagedResultDto<PayAuditListDto>> GetPaged(GetPayAuditsInput input);
 
-        Task<long> SearchPayCount(EntityDto<int> input);
+        Task<long> GetSearchPayCount(EntityDto<int> input);
 		/// <summary>
 		/// 通过指定id获取PayAuditListDto信息
 		/// </summary>

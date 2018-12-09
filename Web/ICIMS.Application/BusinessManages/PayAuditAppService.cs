@@ -251,8 +251,8 @@ PayAuditEditDto editDto;
 			// TODO:批量删除前的逻辑判断，是否允许删除
 			await _entityRepository.DeleteAsync(s => input.Contains(s.Id));
 		}
-
-        public async Task<long> SearchPayCount(EntityDto<int> input)
+       
+        public async Task<long> GetSearchPayCount(EntityDto<int> input)
         {
             var query =await _entityRepository.LongCountAsync(o => o.ItemDefineId == input.Id);
             return query;

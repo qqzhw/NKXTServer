@@ -217,6 +217,13 @@ FilesManageEditDto editDto;
             return input;
         }
 
+        public async Task<FilesManageListDto> GetByGuid(string guid)
+        {
+            Guid id = Guid.Parse(guid);
+            var entity = await _entityRepository.FirstOrDefaultAsync(o=>o.DownloadGuid==id);
+            return entity.MapTo<FilesManageListDto>();
+        }
+
         /// <summary>
         /// 导出FilesManage为excel表,等待开发。
         /// </summary>

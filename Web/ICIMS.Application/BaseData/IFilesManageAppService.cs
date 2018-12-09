@@ -42,7 +42,7 @@ namespace ICIMS.BaseData
 		/// </summary>
 		Task<FilesManageListDto> GetById(EntityDto<int> input);
 
-
+        Task<FilesManageListDto> GetByGuid(string guid);
         /// <summary>
         /// 返回实体的EditDto
         /// </summary>
