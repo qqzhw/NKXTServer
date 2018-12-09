@@ -409,10 +409,10 @@ namespace Abp.Authorization.Users
                 }
             }
 
-            if (errors.Any())
-            {
-                return IdentityResult.Failed(errors.ToArray());
-            }
+            //if (errors.Any())
+            //{
+            //    return IdentityResult.Failed(errors.ToArray());
+            //}
 
             await AbpUserStore.SetPasswordHashAsync(user, PasswordHasher.HashPassword(user, newPassword));
             return IdentityResult.Success;
