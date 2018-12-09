@@ -84,7 +84,7 @@ namespace ICIMS.BusinessManages
             }
             if (input.Status.HasValue)
             {
-                query = query.Where(o => o.Status == 2);
+                query = query.Where(o => o.Status == input.Status);
             }
             var count = await query.CountAsync();
 
