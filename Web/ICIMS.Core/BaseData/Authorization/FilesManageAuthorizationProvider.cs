@@ -47,7 +47,7 @@ namespace ICIMS.BaseData.Authorization
             //entityPermission.CreateChildPermission(FilesManagePermissions.Delete, L("DeleteFilesManage"));
             //entityPermission.CreateChildPermission(FilesManagePermissions.BatchDelete, L("BatchDeleteFilesManage"));
             //entityPermission.CreateChildPermission(FilesManagePermissions.ExportExcel, L("ExportExcelFilesManage"));
-            var entityPermission = context.CreatePermission(ContractCategoryPermissions.Node, new FixedLocalizableString("附件下载"));
+            var entityPermission = context.CreatePermission(FilesManagePermissions.Node, new FixedLocalizableString("附件下载"));
 
         }
 

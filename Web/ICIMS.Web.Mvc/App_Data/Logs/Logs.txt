@@ -9697,3 +9697,616 @@ WARN  2018-12-10 11:16:22,003 [10   ] naries.DictionaryBasedLocalizationSource -
 INFO  2018-12-10 11:16:22,004 [10   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view _EditRoleModal executed in 5.0214ms.
 INFO  2018-12-10 11:16:22,004 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc) in 430.7753ms
 INFO  2018-12-10 11:16:22,004 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 437.335ms 200 text/html; charset=utf-8
+INFO  2018-12-10 11:27:32,542 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Roles  
+INFO  2018-12-10 11:27:32,607 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Roles", area = ""}. Executing action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc)
+INFO  2018-12-10 11:27:32,614 [52   ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-12-10 11:27:32,626 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+WARN  2018-12-10 11:27:33,033 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Pages' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,034 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Administration' in localization source 'ICIMS'!
+INFO  2018-12-10 11:27:33,157 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 530.884ms.
+INFO  2018-12-10 11:27:33,324 [52   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+WARN  2018-12-10 11:27:33,328 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,328 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Refresh' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,329 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,330 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,331 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Actions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,331 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,332 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,333 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,334 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,335 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewRole' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,338 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,339 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,340 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleDescription' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,340 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Permissions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,342 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,343 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,348 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'PleaseWait' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,349 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'StartTyping' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,464 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,474 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,476 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,478 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,479 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,500 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Version' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,501 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Skins' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,502 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'Settings' in localization source 'ICIMS'!
+INFO  2018-12-10 11:27:33,507 [52   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 183.8609ms.
+INFO  2018-12-10 11:27:33,507 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) in 899.8924ms
+INFO  2018-12-10 11:27:33,508 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 967.9736ms 200 text/html; charset=utf-8
+DEBUG 2018-12-10 11:27:33,553 [52   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: Scxj2Ou30Dku-xGhaCxoOA
+INFO  2018-12-10 11:27:33,559 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 674835.038ms 101 
+INFO  2018-12-10 11:27:33,857 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636800370201640913  
+INFO  2018-12-10 11:27:33,871 [57   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:27:33,872 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636800370201640913  
+INFO  2018-12-10 11:27:33,873 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-12-10 11:27:33,875 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-12-10 11:27:33,881 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-12-10 11:27:33,884 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-12-10 11:27:33,890 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 14.9748ms.
+INFO  2018-12-10 11:27:33,890 [52   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-12-10 11:27:33,891 [57   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.8407ms 404 
+INFO  2018-12-10 11:27:33,891 [52   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 18.0728ms
+INFO  2018-12-10 11:27:33,891 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 34.6248ms 200 application/x-javascript
+WARN  2018-12-10 11:27:33,943 [51   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,945 [51   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,945 [51   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:27:33,946 [51   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+INFO  2018-12-10 11:27:33,979 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 93.9462ms.
+INFO  2018-12-10 11:27:33,979 [51   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:27:33,979 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 98.7777ms
+INFO  2018-12-10 11:27:33,979 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 107.5062ms 200 application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:27:34,025 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-12-10 11:27:34,037 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.5273ms 200 application/json
+INFO  2018-12-10 11:27:34,087 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-12-10 11:27:34,089 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\favicon.ico'
+INFO  2018-12-10 11:27:34,090 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.1461ms 200 image/x-icon
+INFO  2018-12-10 11:27:34,090 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=KsMA8CFreWPRnXlQyvxi1Q  
+INFO  2018-12-10 11:27:34,112 [57   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-12-10 11:27:34,125 [57   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"KsMA8CFreWPRnXlQyvxi1Q","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-12-10T11:27:34.1134646+08:00","Properties":{}}
+DEBUG 2018-12-10 11:27:34,127 [52   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: KsMA8CFreWPRnXlQyvxi1Q
+DEBUG 2018-12-10 11:27:41,894 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-12-10 11:27:42,061 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-12-10 11:27:42,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Startup.ICIMSWebMvcModule, ICIMS.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,080 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,080 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,081 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,081 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,081 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,081 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,082 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,082 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,082 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,083 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,083 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,083 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,083 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,083 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:27:42,087 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-12-10 11:27:42,142 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:27:42,142 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:27:42,142 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:27:42,142 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:27:42,485 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+FATAL 2018-12-10 11:27:42,990 [1    ] Abp.AbpBootstrapper                      - Abp.AbpException: There is already a permission with name: Pages.ContractCategory
+   at Abp.Authorization.PermissionDefinitionContextBase.CreatePermission(String name, ILocalizableString displayName, ILocalizableString description, MultiTenancySides multiTenancySides, IFeatureDependency featureDependency) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionDefinitionContextBase.cs:line 29
+   at ICIMS.BaseData.Authorization.FilesManageAuthorizationProvider.SetPermissions(IPermissionDefinitionContext context) in F:\20181030\Server\Web\ICIMS.Core\BaseData\Authorization\FilesManageAuthorizationProvider.cs:line 50
+   at Abp.Authorization.PermissionManager.Initialize() in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 42
+   at Abp.AbpKernelModule.PostInitialize() in F:\20181030\Server\AbpProject\Abp\AbpKernelModule.cs:line 83
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at Abp.AbpBootstrapper.Initialize() in F:\20181030\Server\AbpProject\Abp\AbpBootstrapper.cs:line 155
+Abp.AbpException: There is already a permission with name: Pages.ContractCategory
+   at Abp.Authorization.PermissionDefinitionContextBase.CreatePermission(String name, ILocalizableString displayName, ILocalizableString description, MultiTenancySides multiTenancySides, IFeatureDependency featureDependency) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionDefinitionContextBase.cs:line 29
+   at ICIMS.BaseData.Authorization.FilesManageAuthorizationProvider.SetPermissions(IPermissionDefinitionContext context) in F:\20181030\Server\Web\ICIMS.Core\BaseData\Authorization\FilesManageAuthorizationProvider.cs:line 50
+   at Abp.Authorization.PermissionManager.Initialize() in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 42
+   at Abp.AbpKernelModule.PostInitialize() in F:\20181030\Server\AbpProject\Abp\AbpKernelModule.cs:line 83
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at Abp.AbpBootstrapper.Initialize() in F:\20181030\Server\AbpProject\Abp\AbpBootstrapper.cs:line 155
+FATAL 2018-12-10 11:27:43,042 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+Abp.AbpException: There is already a permission with name: Pages.ContractCategory
+   at Abp.Authorization.PermissionDefinitionContextBase.CreatePermission(String name, ILocalizableString displayName, ILocalizableString description, MultiTenancySides multiTenancySides, IFeatureDependency featureDependency) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionDefinitionContextBase.cs:line 29
+   at ICIMS.BaseData.Authorization.FilesManageAuthorizationProvider.SetPermissions(IPermissionDefinitionContext context) in F:\20181030\Server\Web\ICIMS.Core\BaseData\Authorization\FilesManageAuthorizationProvider.cs:line 50
+   at Abp.Authorization.PermissionManager.Initialize() in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 42
+   at Abp.AbpKernelModule.PostInitialize() in F:\20181030\Server\AbpProject\Abp\AbpKernelModule.cs:line 83
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at Abp.AbpBootstrapper.Initialize() in F:\20181030\Server\AbpProject\Abp\AbpBootstrapper.cs:line 155
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 67
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 38
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 23
+   at ICIMS.Web.Startup.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) in F:\20181030\Server\Web\ICIMS.Web.Mvc\Startup\Startup.cs:line 54
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+INFO  2018-12-10 11:27:43,465 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-12-10 11:27:43,611 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 147.347ms 500 text/html; charset=utf-8
+DEBUG 2018-12-10 11:29:54,171 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-12-10 11:29:54,191 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-12-10 11:29:54,207 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Startup.ICIMSWebMvcModule, ICIMS.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,210 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,211 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,211 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,211 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,211 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,212 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,213 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:29:54,216 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-12-10 11:29:54,290 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:29:54,290 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:29:54,290 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:29:54,290 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:29:54,684 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+FATAL 2018-12-10 11:29:55,174 [1    ] Abp.AbpBootstrapper                      - Abp.AbpException: There is already a permission with name: Pages.ContractCategory
+   at Abp.Authorization.PermissionDefinitionContextBase.CreatePermission(String name, ILocalizableString displayName, ILocalizableString description, MultiTenancySides multiTenancySides, IFeatureDependency featureDependency) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionDefinitionContextBase.cs:line 29
+   at ICIMS.BaseData.Authorization.FilesManageAuthorizationProvider.SetPermissions(IPermissionDefinitionContext context) in F:\20181030\Server\Web\ICIMS.Core\BaseData\Authorization\FilesManageAuthorizationProvider.cs:line 50
+   at Abp.Authorization.PermissionManager.Initialize() in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 42
+   at Abp.AbpKernelModule.PostInitialize() in F:\20181030\Server\AbpProject\Abp\AbpKernelModule.cs:line 83
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at Abp.AbpBootstrapper.Initialize() in F:\20181030\Server\AbpProject\Abp\AbpBootstrapper.cs:line 155
+Abp.AbpException: There is already a permission with name: Pages.ContractCategory
+   at Abp.Authorization.PermissionDefinitionContextBase.CreatePermission(String name, ILocalizableString displayName, ILocalizableString description, MultiTenancySides multiTenancySides, IFeatureDependency featureDependency) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionDefinitionContextBase.cs:line 29
+   at ICIMS.BaseData.Authorization.FilesManageAuthorizationProvider.SetPermissions(IPermissionDefinitionContext context) in F:\20181030\Server\Web\ICIMS.Core\BaseData\Authorization\FilesManageAuthorizationProvider.cs:line 50
+   at Abp.Authorization.PermissionManager.Initialize() in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 42
+   at Abp.AbpKernelModule.PostInitialize() in F:\20181030\Server\AbpProject\Abp\AbpKernelModule.cs:line 83
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at Abp.AbpBootstrapper.Initialize() in F:\20181030\Server\AbpProject\Abp\AbpBootstrapper.cs:line 155
+FATAL 2018-12-10 11:29:55,189 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+Abp.AbpException: There is already a permission with name: Pages.ContractCategory
+   at Abp.Authorization.PermissionDefinitionContextBase.CreatePermission(String name, ILocalizableString displayName, ILocalizableString description, MultiTenancySides multiTenancySides, IFeatureDependency featureDependency) in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionDefinitionContextBase.cs:line 29
+   at ICIMS.BaseData.Authorization.FilesManageAuthorizationProvider.SetPermissions(IPermissionDefinitionContext context) in F:\20181030\Server\Web\ICIMS.Core\BaseData\Authorization\FilesManageAuthorizationProvider.cs:line 50
+   at Abp.Authorization.PermissionManager.Initialize() in F:\20181030\Server\AbpProject\Abp\Authorization\PermissionManager.cs:line 42
+   at Abp.AbpKernelModule.PostInitialize() in F:\20181030\Server\AbpProject\Abp\AbpKernelModule.cs:line 83
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules() in F:\20181030\Server\AbpProject\Abp\Modules\AbpModuleManager.cs:line 48
+   at Abp.AbpBootstrapper.Initialize() in F:\20181030\Server\AbpProject\Abp\AbpBootstrapper.cs:line 155
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 67
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 38
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app) in F:\20181030\Server\AbpProject\Abp.AspNetCore\AspNetCore\AbpApplicationBuilderExtensions.cs:line 23
+   at ICIMS.Web.Startup.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) in F:\20181030\Server\Web\ICIMS.Web.Mvc\Startup\Startup.cs:line 54
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+INFO  2018-12-10 11:29:55,519 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Roles/EditRoleModal?roleId=15 application/html 0
+INFO  2018-12-10 11:29:55,648 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 129.603ms 500 text/html; charset=utf-8
+INFO  2018-12-10 11:30:02,950 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Roles  
+INFO  2018-12-10 11:30:02,955 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.8621ms 500 text/html; charset=utf-8
+INFO  2018-12-10 11:30:03,286 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-12-10 11:30:03,291 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.0799ms 500 text/html; charset=utf-8
+INFO  2018-12-10 11:30:06,452 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Roles  
+INFO  2018-12-10 11:30:06,457 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.2211ms 500 text/html; charset=utf-8
+INFO  2018-12-10 11:30:06,503 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-12-10 11:30:06,513 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.206ms 500 text/html; charset=utf-8
+DEBUG 2018-12-10 11:32:53,409 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-12-10 11:32:53,634 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-12-10 11:32:53,659 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Startup.ICIMSWebMvcModule, ICIMS.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,662 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,662 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,663 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,663 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,663 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,663 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,664 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,666 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,666 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,666 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,667 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,667 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:53,672 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-12-10 11:32:53,733 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:32:53,733 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:32:53,733 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:32:53,733 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:32:54,137 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:32:54,756 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-12-10 11:32:54,829 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-12-10 11:32:54,874 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-12-10 11:32:54,894 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-12-10 11:32:54,930 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-12-10 11:32:54,969 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-12-10 11:32:55,017 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2018-12-10 11:32:55,017 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-12-10 11:32:55,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-12-10 11:32:55,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-12-10 11:32:55,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-12-10 11:32:55,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-12-10 11:32:55,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-12-10 11:32:55,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-12-10 11:32:55,025 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-12-10 11:32:55,026 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-12-10 11:32:55,026 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+DEBUG 2018-12-10 11:32:55,026 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2018-12-10 11:32:55,026 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Web.Models.Roles.EditRoleModalViewModel
+INFO  2018-12-10 11:33:00,630 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Roles  
+INFO  2018-12-10 11:33:02,524 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Roles", area = ""}. Executing action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc)
+INFO  2018-12-10 11:33:03,639 [10   ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-12-10 11:33:03,764 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-12-10 11:33:04,659 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 892.6874ms.
+INFO  2018-12-10 11:33:04,927 [11   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+WARN  2018-12-10 11:33:05,336 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,338 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Refresh' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,338 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,338 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,339 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Actions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,343 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,343 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,343 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,343 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,344 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewRole' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,385 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,386 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,386 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleDescription' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,386 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Permissions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,389 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,389 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,750 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'PleaseWait' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:05,751 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'StartTyping' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:06,162 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:06,322 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:06,324 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:06,326 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:06,327 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:06,363 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Version' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:06,377 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Skins' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:06,378 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Settings' in localization source 'ICIMS'!
+INFO  2018-12-10 11:33:06,554 [7    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 1681.3714ms.
+INFO  2018-12-10 11:33:06,573 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) in 4044.9166ms
+INFO  2018-12-10 11:33:06,623 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5997.6593ms 200 text/html; charset=utf-8
+INFO  2018-12-10 11:33:06,676 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:33:06,679 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636800383749709592  
+INFO  2018-12-10 11:33:06,698 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.576ms 404 
+INFO  2018-12-10 11:33:06,778 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636800383749709592  
+INFO  2018-12-10 11:33:06,808 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-12-10 11:33:06,809 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-12-10 11:33:06,885 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+INFO  2018-12-10 11:33:06,950 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-12-10 11:33:07,046 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:33:07,055 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.9139ms 404 
+WARN  2018-12-10 11:33:07,085 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:07,086 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:07,087 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:07,087 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+INFO  2018-12-10 11:33:07,136 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 250.4654ms.
+INFO  2018-12-10 11:33:07,180 [6    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:33:07,184 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 375.7957ms
+INFO  2018-12-10 11:33:07,184 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 405.6967ms 200 application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:33:07,195 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 244.7254ms.
+INFO  2018-12-10 11:33:07,197 [7    ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-12-10 11:33:07,198 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 388.3786ms
+INFO  2018-12-10 11:33:07,199 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 520.2962ms 200 application/x-javascript
+INFO  2018-12-10 11:33:07,223 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-12-10 11:33:07,306 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 82.9544ms 200 application/json
+INFO  2018-12-10 11:33:07,324 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=IIsSrt6Isp09ql8iQ33Abw  
+INFO  2018-12-10 11:33:07,324 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-12-10 11:33:07,372 [6    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\favicon.ico'
+INFO  2018-12-10 11:33:07,372 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 47.9051ms 200 image/x-icon
+INFO  2018-12-10 11:33:07,695 [6    ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-12-10 11:33:07,753 [6    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"IIsSrt6Isp09ql8iQ33Abw","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-12-10T11:33:07.7355664+08:00","Properties":{}}
+DEBUG 2018-12-10 11:33:07,837 [6    ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: IIsSrt6Isp09ql8iQ33Abw
+INFO  2018-12-10 11:33:09,907 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Roles/EditRoleModal?roleId=15 application/html 0
+INFO  2018-12-10 11:33:09,920 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "EditRoleModal", controller = "Roles", area = ""}. Executing action ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc)
+INFO  2018-12-10 11:33:09,925 [7    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-12-10 11:33:09,949 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc) with arguments (15) - Validation state: Valid
+INFO  2018-12-10 11:33:10,301 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 351.4894ms.
+INFO  2018-12-10 11:33:10,462 [10   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view _EditRoleModal.
+WARN  2018-12-10 11:33:10,477 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditRole' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:10,501 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleDescription' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:10,501 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Permissions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:10,508 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:10,508 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'ICIMS'!
+INFO  2018-12-10 11:33:10,510 [10   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view _EditRoleModal executed in 51.6401ms.
+INFO  2018-12-10 11:33:10,510 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc) in 590.0565ms
+INFO  2018-12-10 11:33:10,510 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 603.0608ms 200 text/html; charset=utf-8
+INFO  2018-12-10 11:33:40,452 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:62114/api/services/app/Role/Update application/json 507
+INFO  2018-12-10 11:33:40,482 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Role"}. Executing action ICIMS.Roles.RoleAppService.Update (ICIMS.Application)
+INFO  2018-12-10 11:33:40,598 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Roles.RoleAppService.Update (ICIMS.Application) with arguments (ICIMS.Roles.Dto.RoleDto) - Validation state: Valid
+INFO  2018-12-10 11:33:41,181 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Roles.RoleAppService.Update (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 583.1098ms.
+INFO  2018-12-10 11:33:41,477 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-10 11:33:41,493 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Roles.RoleAppService.Update (ICIMS.Application) in 1011.1654ms
+INFO  2018-12-10 11:33:41,494 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1042.3328ms 200 application/json; charset=utf-8
+INFO  2018-12-10 11:33:41,504 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Roles  
+INFO  2018-12-10 11:33:41,517 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Roles", area = ""}. Executing action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc)
+INFO  2018-12-10 11:33:41,518 [6    ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-12-10 11:33:41,520 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-12-10 11:33:41,846 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 325.8543ms.
+INFO  2018-12-10 11:33:42,004 [13   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+WARN  2018-12-10 11:33:42,007 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,008 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Refresh' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,009 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,010 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,011 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Actions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,011 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,012 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,012 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,013 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,013 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewRole' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,014 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,014 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,015 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleDescription' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,015 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Permissions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,016 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,016 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,019 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'PleaseWait' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,019 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'StartTyping' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,144 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,155 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,157 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,158 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,159 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,179 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Version' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,180 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Skins' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,181 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'Settings' in localization source 'ICIMS'!
+INFO  2018-12-10 11:33:42,183 [7    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 181.8043ms.
+INFO  2018-12-10 11:33:42,183 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) in 666.0265ms
+INFO  2018-12-10 11:33:42,184 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 680.2666ms 200 text/html; charset=utf-8
+INFO  2018-12-10 11:33:42,291 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636800383749709592  
+INFO  2018-12-10 11:33:42,295 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:33:42,301 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-12-10 11:33:42,301 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.3852ms 404 
+INFO  2018-12-10 11:33:42,303 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+DEBUG 2018-12-10 11:33:42,303 [10   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: IIsSrt6Isp09ql8iQ33Abw
+INFO  2018-12-10 11:33:42,311 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 8.4389ms.
+INFO  2018-12-10 11:33:42,311 [17   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-12-10 11:33:42,312 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 10.7157ms
+INFO  2018-12-10 11:33:42,312 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24.8028ms 200 application/x-javascript
+INFO  2018-12-10 11:33:42,325 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 35001.2569ms 101 
+INFO  2018-12-10 11:33:42,328 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636800383749709592  
+INFO  2018-12-10 11:33:42,336 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-12-10 11:33:42,346 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+WARN  2018-12-10 11:33:42,378 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,381 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,381 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:42,382 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+INFO  2018-12-10 11:33:42,412 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 65.5797ms.
+INFO  2018-12-10 11:33:42,412 [11   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:33:42,412 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 76.3977ms
+INFO  2018-12-10 11:33:42,413 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 84.6226ms 200 application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:33:42,424 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-12-10 11:33:42,434 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.6573ms 200 application/json
+INFO  2018-12-10 11:33:42,481 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=SSqBsmBk4ExctU6Ga0IBCQ  
+INFO  2018-12-10 11:33:42,490 [19   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-12-10 11:33:42,498 [19   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"SSqBsmBk4ExctU6Ga0IBCQ","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-12-10T11:33:42.4932964+08:00","Properties":{}}
+DEBUG 2018-12-10 11:33:42,499 [19   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: SSqBsmBk4ExctU6Ga0IBCQ
+INFO  2018-12-10 11:33:44,263 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/Roles/EditRoleModal?roleId=1 application/html 0
+INFO  2018-12-10 11:33:44,269 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "EditRoleModal", controller = "Roles", area = ""}. Executing action ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc)
+INFO  2018-12-10 11:33:44,270 [21   ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-12-10 11:33:44,276 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc) with arguments (1) - Validation state: Valid
+INFO  2018-12-10 11:33:44,477 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 200.564ms.
+INFO  2018-12-10 11:33:44,631 [20   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view _EditRoleModal.
+WARN  2018-12-10 11:33:44,632 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'EditRole' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:44,633 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleDescription' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:44,634 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'Permissions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:44,634 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:44,635 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'ICIMS'!
+INFO  2018-12-10 11:33:44,635 [20   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view _EditRoleModal executed in 4.3973ms.
+INFO  2018-12-10 11:33:44,635 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.RolesController.EditRoleModal (ICIMS.Web.Mvc) in 365.8461ms
+INFO  2018-12-10 11:33:44,635 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 371.7549ms 200 text/html; charset=utf-8
+INFO  2018-12-10 11:33:50,549 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:62114/api/services/app/Role/Update application/json 534
+INFO  2018-12-10 11:33:50,563 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Role"}. Executing action ICIMS.Roles.RoleAppService.Update (ICIMS.Application)
+INFO  2018-12-10 11:33:50,566 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Roles.RoleAppService.Update (ICIMS.Application) with arguments (ICIMS.Roles.Dto.RoleDto) - Validation state: Valid
+INFO  2018-12-10 11:33:50,807 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Roles.RoleAppService.Update (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 241.4193ms.
+INFO  2018-12-10 11:33:50,964 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-10 11:33:50,964 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Roles.RoleAppService.Update (ICIMS.Application) in 400.8146ms
+INFO  2018-12-10 11:33:50,964 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 415.14ms 200 application/json; charset=utf-8
+INFO  2018-12-10 11:33:50,978 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Roles  
+INFO  2018-12-10 11:33:50,988 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Roles", area = ""}. Executing action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc)
+INFO  2018-12-10 11:33:50,989 [19   ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-12-10 11:33:50,992 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-12-10 11:33:51,312 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 319.5827ms.
+INFO  2018-12-10 11:33:51,464 [10   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+WARN  2018-12-10 11:33:51,465 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,466 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Refresh' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,466 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,466 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,467 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Actions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,467 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,467 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,467 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,468 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,468 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewRole' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,468 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,468 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,469 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleDescription' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,469 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Permissions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,470 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,470 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,472 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'PleaseWait' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,472 [10   ] naries.DictionaryBasedLocalizationSource - Can not find 'StartTyping' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,589 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,594 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,595 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,596 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,597 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,607 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Version' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,608 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Skins' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,608 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'Settings' in localization source 'ICIMS'!
+INFO  2018-12-10 11:33:51,610 [11   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 145.4791ms.
+INFO  2018-12-10 11:33:51,610 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) in 621.7442ms
+INFO  2018-12-10 11:33:51,610 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 635.9934ms 200 text/html; charset=utf-8
+DEBUG 2018-12-10 11:33:51,622 [11   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: SSqBsmBk4ExctU6Ga0IBCQ
+INFO  2018-12-10 11:33:51,623 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9142.1228ms 101 
+INFO  2018-12-10 11:33:51,657 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636800383749709592  
+INFO  2018-12-10 11:33:51,659 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:33:51,662 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-12-10 11:33:51,663 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-12-10 11:33:51,664 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.52ms 404 
+INFO  2018-12-10 11:33:51,671 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 8.03ms.
+INFO  2018-12-10 11:33:51,671 [19   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-12-10 11:33:51,672 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 9.3549ms
+INFO  2018-12-10 11:33:51,672 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.2456ms 200 application/x-javascript
+INFO  2018-12-10 11:33:51,681 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636800383749709592  
+INFO  2018-12-10 11:33:51,687 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-12-10 11:33:51,688 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+WARN  2018-12-10 11:33:51,709 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,710 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,711 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:33:51,711 [19   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+INFO  2018-12-10 11:33:51,736 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 46.2173ms.
+INFO  2018-12-10 11:33:51,736 [19   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:33:51,736 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 49.2784ms
+INFO  2018-12-10 11:33:51,737 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.4273ms 200 application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:33:51,795 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:33:51,800 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.0388ms 404 
+INFO  2018-12-10 11:33:51,813 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-12-10 11:33:51,822 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.3428ms 200 application/json
+INFO  2018-12-10 11:33:51,858 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=HFFsKPe_27iEUC5qwOi40g  
+INFO  2018-12-10 11:33:51,869 [20   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-12-10 11:33:51,874 [20   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"HFFsKPe_27iEUC5qwOi40g","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-12-10T11:33:51.8704231+08:00","Properties":{}}
+DEBUG 2018-12-10 11:33:51,875 [20   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: HFFsKPe_27iEUC5qwOi40g
+INFO  2018-12-10 11:36:39,667 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Roles  
+INFO  2018-12-10 11:36:39,672 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Roles", area = ""}. Executing action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc)
+INFO  2018-12-10 11:36:39,673 [29   ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-12-10 11:36:39,674 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-12-10 11:36:40,010 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 335.7469ms.
+INFO  2018-12-10 11:36:40,177 [25   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+WARN  2018-12-10 11:36:40,179 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,180 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Refresh' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,181 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,182 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,183 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Actions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,183 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,184 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,184 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Edit' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,185 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Delete' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,185 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'CreateNewRole' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,186 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,187 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'DisplayName' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,187 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'RoleDescription' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,188 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Permissions' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,188 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Cancel' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,188 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'Save' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,190 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'PleaseWait' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,191 [25   ] naries.DictionaryBasedLocalizationSource - Can not find 'StartTyping' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,315 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,320 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,321 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,321 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,322 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,331 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Version' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,331 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Skins' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,331 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Settings' in localization source 'ICIMS'!
+INFO  2018-12-10 11:36:40,333 [32   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 156.4006ms.
+INFO  2018-12-10 11:36:40,333 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.RolesController.Index (ICIMS.Web.Mvc) in 661.4041ms
+INFO  2018-12-10 11:36:40,334 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 666.5906ms 200 text/html; charset=utf-8
+DEBUG 2018-12-10 11:36:40,341 [32   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: HFFsKPe_27iEUC5qwOi40g
+INFO  2018-12-10 11:36:40,342 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 168483.2227ms 101 
+INFO  2018-12-10 11:36:40,372 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:36:40,373 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636800383749709592  
+INFO  2018-12-10 11:36:40,378 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.8364ms 404 
+INFO  2018-12-10 11:36:40,381 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-12-10 11:36:40,382 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-12-10 11:36:40,389 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 6.8383ms.
+INFO  2018-12-10 11:36:40,389 [32   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-12-10 11:36:40,389 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 8.5012ms
+INFO  2018-12-10 11:36:40,390 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16.3684ms 200 application/x-javascript
+INFO  2018-12-10 11:36:40,403 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636800383749709592  
+INFO  2018-12-10 11:36:40,409 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-12-10 11:36:40,411 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+WARN  2018-12-10 11:36:40,431 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,432 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,432 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:40,433 [32   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+INFO  2018-12-10 11:36:40,451 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 40.5699ms.
+INFO  2018-12-10 11:36:40,452 [32   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:36:40,452 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 42.804ms
+INFO  2018-12-10 11:36:40,454 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 51.3139ms 200 application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:36:40,511 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:36:40,530 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19.2373ms 404 
+INFO  2018-12-10 11:36:40,567 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-12-10 11:36:40,577 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.5637ms 200 application/json
+INFO  2018-12-10 11:36:40,623 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-12-10 11:36:40,623 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=3yAIviIWdnZW7e6RVyzbUQ  
+INFO  2018-12-10 11:36:40,626 [26   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'F:\20181030\Server\Web\ICIMS.Web.Mvc\wwwroot\favicon.ico'
+INFO  2018-12-10 11:36:40,627 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.2067ms 200 image/x-icon
+INFO  2018-12-10 11:36:40,635 [34   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-12-10 11:36:40,639 [34   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"3yAIviIWdnZW7e6RVyzbUQ","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-12-10T11:36:40.6356779+08:00","Properties":{}}
+DEBUG 2018-12-10 11:36:40,640 [34   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: 3yAIviIWdnZW7e6RVyzbUQ
+INFO  2018-12-10 11:36:45,277 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/About  
+INFO  2018-12-10 11:36:45,290 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "About", area = ""}. Executing action ICIMS.Web.Controllers.AboutController.Index (ICIMS.Web.Mvc)
+INFO  2018-12-10 11:36:45,292 [27   ] uthorization.DefaultAuthorizationService - Authorization was successful.
+INFO  2018-12-10 11:36:45,295 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Controllers.AboutController.Index (ICIMS.Web.Mvc) - Validation state: Valid
+INFO  2018-12-10 11:36:45,295 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Controllers.AboutController.Index (ICIMS.Web.Mvc), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6237ms.
+INFO  2018-12-10 11:36:45,420 [34   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+WARN  2018-12-10 11:36:45,468 [34   ] naries.DictionaryBasedLocalizationSource - Can not find 'PleaseWait' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,469 [34   ] naries.DictionaryBasedLocalizationSource - Can not find 'StartTyping' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,598 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'Logout' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,604 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,606 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,607 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,608 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,619 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'Version' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,620 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'Skins' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,620 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'Settings' in localization source 'ICIMS'!
+INFO  2018-12-10 11:36:45,621 [27   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 204.6426ms.
+INFO  2018-12-10 11:36:45,621 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Controllers.AboutController.Index (ICIMS.Web.Mvc) in 329.6584ms
+INFO  2018-12-10 11:36:45,622 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 344.8387ms 200 text/html; charset=utf-8
+DEBUG 2018-12-10 11:36:45,633 [27   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is disconnected: 3yAIviIWdnZW7e6RVyzbUQ
+INFO  2018-12-10 11:36:45,634 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5010.1871ms 101 
+INFO  2018-12-10 11:36:45,650 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:36:45,652 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636800383749709592  
+INFO  2018-12-10 11:36:45,655 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.5789ms 404 
+INFO  2018-12-10 11:36:45,658 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)
+INFO  2018-12-10 11:36:45,659 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - Validation state: Valid
+INFO  2018-12-10 11:36:45,664 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 5.0565ms.
+INFO  2018-12-10 11:36:45,665 [33   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-12-10 11:36:45,665 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 6.8285ms
+INFO  2018-12-10 11:36:45,665 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.2666ms 200 application/x-javascript
+INFO  2018-12-10 11:36:45,674 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636800383749709592  
+INFO  2018-12-10 11:36:45,683 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)
+INFO  2018-12-10 11:36:45,684 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - Validation state: Valid
+WARN  2018-12-10 11:36:45,704 [33   ] naries.DictionaryBasedLocalizationSource - Can not find 'Tenants' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,705 [33   ] naries.DictionaryBasedLocalizationSource - Can not find 'Users' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,706 [33   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'ICIMS'!
+WARN  2018-12-10 11:36:45,709 [33   ] naries.DictionaryBasedLocalizationSource - Can not find 'MultiLevelMenu' in localization source 'ICIMS'!
+INFO  2018-12-10 11:36:45,721 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.ContentResult in 36.5588ms.
+INFO  2018-12-10 11:36:45,721 [33   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:36:45,721 [33   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 38.617ms
+INFO  2018-12-10 11:36:45,722 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 47.9304ms 200 application/x-javascript; charset=utf-8
+INFO  2018-12-10 11:36:45,729 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/src/localization/messages_zh_Hans.js  
+INFO  2018-12-10 11:36:45,735 [33   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.6716ms 404 
+INFO  2018-12-10 11:36:45,781 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:62114/signalr/negotiate text/plain;charset=UTF-8 0
+INFO  2018-12-10 11:36:45,788 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.3718ms 200 application/json
+INFO  2018-12-10 11:36:45,826 [28   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/signalr?id=EIZdY7KSSvp5PqSP7-JZ3A  
+INFO  2018-12-10 11:36:45,835 [28   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
+DEBUG 2018-12-10 11:36:45,840 [28   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"EIZdY7KSSvp5PqSP7-JZ3A","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2018-12-10T11:36:45.8368112+08:00","Properties":{}}
+DEBUG 2018-12-10 11:36:45,841 [28   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: EIZdY7KSSvp5PqSP7-JZ3A
+DEBUG 2018-12-10 11:37:40,025 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-12-10 11:37:40,085 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-12-10 11:37:40,125 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Startup.ICIMSWebMvcModule, ICIMS.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,132 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,132 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,135 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,135 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,138 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,140 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-10 11:37:40,148 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-12-10 11:37:40,337 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:37:40,337 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:37:40,337 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-10 11:37:40,337 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
