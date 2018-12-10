@@ -40,13 +40,13 @@ namespace ICIMS.BaseData.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(PaymentTypePermissions.Node , L("PaymentType"));
-			entityPermission.CreateChildPermission(PaymentTypePermissions.Query, L("QueryPaymentType"));
-			entityPermission.CreateChildPermission(PaymentTypePermissions.Create, L("CreatePaymentType"));
-			entityPermission.CreateChildPermission(PaymentTypePermissions.Edit, L("EditPaymentType"));
-			entityPermission.CreateChildPermission(PaymentTypePermissions.Delete, L("DeletePaymentType"));
-			entityPermission.CreateChildPermission(PaymentTypePermissions.BatchDelete, L("BatchDeletePaymentType"));
-			entityPermission.CreateChildPermission(PaymentTypePermissions.ExportExcel, L("ExportExcelPaymentType"));
+			var entityPermission = administration.CreateChildPermission(PaymentTypePermissions.Node , L("基础信息_支付类型"));
+			//entityPermission.CreateChildPermission(PaymentTypePermissions.Query, L("QueryPaymentType"));
+			//entityPermission.CreateChildPermission(PaymentTypePermissions.Create, L("CreatePaymentType"));
+			//entityPermission.CreateChildPermission(PaymentTypePermissions.Edit, L("EditPaymentType"));
+			//entityPermission.CreateChildPermission(PaymentTypePermissions.Delete, L("DeletePaymentType"));
+			//entityPermission.CreateChildPermission(PaymentTypePermissions.BatchDelete, L("BatchDeletePaymentType"));
+			//entityPermission.CreateChildPermission(PaymentTypePermissions.ExportExcel, L("ExportExcelPaymentType"));
 
 
 		}

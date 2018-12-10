@@ -40,13 +40,13 @@ namespace ICIMS.BusinessManages.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(BusinessTypePermissions.Node , L("BusinessType"));
-			entityPermission.CreateChildPermission(BusinessTypePermissions.Query, L("QueryBusinessType"));
-			entityPermission.CreateChildPermission(BusinessTypePermissions.Create, L("CreateBusinessType"));
-			entityPermission.CreateChildPermission(BusinessTypePermissions.Edit, L("EditBusinessType"));
-			entityPermission.CreateChildPermission(BusinessTypePermissions.Delete, L("DeleteBusinessType"));
-			entityPermission.CreateChildPermission(BusinessTypePermissions.BatchDelete, L("BatchDeleteBusinessType"));
-			entityPermission.CreateChildPermission(BusinessTypePermissions.ExportExcel, L("ExportExcelBusinessType"));
+			var entityPermission = administration.CreateChildPermission(BusinessTypePermissions.Node , L("系统管理_业务类型"));
+			//entityPermission.CreateChildPermission(BusinessTypePermissions.Query, L("QueryBusinessType"));
+			//entityPermission.CreateChildPermission(BusinessTypePermissions.Create, L("CreateBusinessType"));
+			//entityPermission.CreateChildPermission(BusinessTypePermissions.Edit, L("EditBusinessType"));
+			//entityPermission.CreateChildPermission(BusinessTypePermissions.Delete, L("DeleteBusinessType"));
+			//entityPermission.CreateChildPermission(BusinessTypePermissions.BatchDelete, L("BatchDeleteBusinessType"));
+			//entityPermission.CreateChildPermission(BusinessTypePermissions.ExportExcel, L("ExportExcelBusinessType"));
 
 
 		}

@@ -40,13 +40,13 @@ namespace ICIMS.BusinessManages.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(PayAuditPermissions.Node , L("PayAudit"));
-			entityPermission.CreateChildPermission(PayAuditPermissions.Query, L("QueryPayAudit"));
-			entityPermission.CreateChildPermission(PayAuditPermissions.Create, L("CreatePayAudit"));
-			entityPermission.CreateChildPermission(PayAuditPermissions.Edit, L("EditPayAudit"));
-			entityPermission.CreateChildPermission(PayAuditPermissions.Delete, L("DeletePayAudit"));
-			entityPermission.CreateChildPermission(PayAuditPermissions.BatchDelete, L("BatchDeletePayAudit"));
-			entityPermission.CreateChildPermission(PayAuditPermissions.ExportExcel, L("ExportExcelPayAudit"));
+			var entityPermission = administration.CreateChildPermission(PayAuditPermissions.Node , L("项目管理_支付审核"));
+			//entityPermission.CreateChildPermission(PayAuditPermissions.Query, L("QueryPayAudit"));
+			//entityPermission.CreateChildPermission(PayAuditPermissions.Create, L("CreatePayAudit"));
+			//entityPermission.CreateChildPermission(PayAuditPermissions.Edit, L("EditPayAudit"));
+			//entityPermission.CreateChildPermission(PayAuditPermissions.Delete, L("DeletePayAudit"));
+			//entityPermission.CreateChildPermission(PayAuditPermissions.BatchDelete, L("BatchDeletePayAudit"));
+			//entityPermission.CreateChildPermission(PayAuditPermissions.ExportExcel, L("ExportExcelPayAudit"));
 
 
 		}

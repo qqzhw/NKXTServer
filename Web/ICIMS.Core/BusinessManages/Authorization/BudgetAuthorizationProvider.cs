@@ -40,13 +40,13 @@ namespace ICIMS.BusinessManages.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(BudgetPermissions.Node , L("Budget"));
-			entityPermission.CreateChildPermission(BudgetPermissions.Query, L("QueryBudget"));
-			entityPermission.CreateChildPermission(BudgetPermissions.Create, L("CreateBudget"));
-			entityPermission.CreateChildPermission(BudgetPermissions.Edit, L("EditBudget"));
-			entityPermission.CreateChildPermission(BudgetPermissions.Delete, L("DeleteBudget"));
-			entityPermission.CreateChildPermission(BudgetPermissions.BatchDelete, L("BatchDeleteBudget"));
-			entityPermission.CreateChildPermission(BudgetPermissions.ExportExcel, L("ExportExcelBudget"));
+			var entityPermission = administration.CreateChildPermission(BudgetPermissions.Node , L("项目管理_预算管理"));
+			//entityPermission.CreateChildPermission(BudgetPermissions.Query, L("QueryBudget"));
+			//entityPermission.CreateChildPermission(BudgetPermissions.Create, L("CreateBudget"));
+			//entityPermission.CreateChildPermission(BudgetPermissions.Edit, L("EditBudget"));
+			//entityPermission.CreateChildPermission(BudgetPermissions.Delete, L("DeleteBudget"));
+			//entityPermission.CreateChildPermission(BudgetPermissions.BatchDelete, L("BatchDeleteBudget"));
+			//entityPermission.CreateChildPermission(BudgetPermissions.ExportExcel, L("ExportExcelBudget"));
 
 
 		}

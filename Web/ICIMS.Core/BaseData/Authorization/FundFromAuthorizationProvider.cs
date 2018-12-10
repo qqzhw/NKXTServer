@@ -40,13 +40,13 @@ namespace ICIMS.BaseData.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(FundFromPermissions.Node , L("FundFrom"));
-			entityPermission.CreateChildPermission(FundFromPermissions.Query, L("QueryFundFrom"));
-			entityPermission.CreateChildPermission(FundFromPermissions.Create, L("CreateFundFrom"));
-			entityPermission.CreateChildPermission(FundFromPermissions.Edit, L("EditFundFrom"));
-			entityPermission.CreateChildPermission(FundFromPermissions.Delete, L("DeleteFundFrom"));
-			entityPermission.CreateChildPermission(FundFromPermissions.BatchDelete, L("BatchDeleteFundFrom"));
-			entityPermission.CreateChildPermission(FundFromPermissions.ExportExcel, L("ExportExcelFundFrom"));
+			var entityPermission = administration.CreateChildPermission(FundFromPermissions.Node , L("基础信息_资金来源"));
+			//entityPermission.CreateChildPermission(FundFromPermissions.Query, L("QueryFundFrom"));
+			//entityPermission.CreateChildPermission(FundFromPermissions.Create, L("CreateFundFrom"));
+			//entityPermission.CreateChildPermission(FundFromPermissions.Edit, L("EditFundFrom"));
+			//entityPermission.CreateChildPermission(FundFromPermissions.Delete, L("DeleteFundFrom"));
+			//entityPermission.CreateChildPermission(FundFromPermissions.BatchDelete, L("BatchDeleteFundFrom"));
+			//entityPermission.CreateChildPermission(FundFromPermissions.ExportExcel, L("ExportExcelFundFrom"));
 
 
 		}

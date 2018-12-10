@@ -35,13 +35,13 @@ namespace ICIMS.BaseData.Authorization
 
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
-            context.CreatePermission(BuyCategoryPermissions.Query, L("查询分类"));
-			// 在这里配置了BuyCategory 的权限。
-			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+ 
+            // 在这里配置了BuyCategory 的权限。
+            var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+            var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			//var entityPermission = administration.CreateChildPermission(BuyCategoryPermissions.Node , L("BuyCategory"));
+            var entityPermission = administration.CreateChildPermission(BuyCategoryPermissions.Node , new FixedLocalizableString("基础信息_采购分类"));
 			//entityPermission.CreateChildPermission(BuyCategoryPermissions.Query, L("QueryBuyCategory"));
 			//entityPermission.CreateChildPermission(BuyCategoryPermissions.Create, L("CreateBuyCategory"));
 			//entityPermission.CreateChildPermission(BuyCategoryPermissions.Edit, L("EditBuyCategory"));

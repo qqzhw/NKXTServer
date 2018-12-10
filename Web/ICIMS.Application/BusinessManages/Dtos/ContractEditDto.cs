@@ -171,13 +171,13 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// PaymentMethod
 		/// </summary>
 		public string PaymentMethod { get; set; }
+        public string According { get; set; }
 
 
-
-		/// <summary>
-		/// Remark
-		/// </summary>
-		public string Remark { get; set; }
+        /// <summary>
+        /// Remark
+        /// </summary>
+        public string Remark { get; set; }
 
 
 

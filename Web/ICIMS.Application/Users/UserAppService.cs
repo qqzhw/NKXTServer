@@ -22,6 +22,7 @@ using ICIMS.Dtos;
 using Abp.AutoMapper;
 using Abp.Linq.Extensions;
 using ICIMS.BusinessManages;
+using Abp.Domain.Uow;
 
 namespace ICIMS.Users
 {
@@ -191,12 +192,7 @@ namespace ICIMS.Users
         {
 
             var user = await Repository.GetAllIncluding(x => x.Roles).FirstOrDefaultAsync(x => x.Id == id);
-
-            if (user == null)
-            {
-                throw new EntityNotFoundException(typeof(User), id);
-            }
-
+             
             return user;
         }
 
@@ -246,12 +242,12 @@ namespace ICIMS.Users
             }
             await Task.CompletedTask;
         }
-
+        
         public async Task<PagedResultDto<UserDto>> GetAllUsersAsync(PagedAndSortedInputDto input)
         {
             var query = from u in _userRepository.GetAllIncluding().Include(u => u.Roles)
                         join uou in _userOrganizationUnitRepository.GetAll() on u.Id equals uou.UserId
-                        join ou in _organizationUnitRepository.GetAll() on uou.OrganizationUnitId equals ou.Id
+                        join ou in _organizationUnitRepository.GetAll() on uou.OrganizationUnitId equals ou.Id                      
                         select new
                         {
                             CreationTime = u.CreationTime,

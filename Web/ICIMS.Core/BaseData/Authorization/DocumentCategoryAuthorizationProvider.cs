@@ -39,17 +39,17 @@ namespace ICIMS.BaseData.Authorization
 			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+             
+            var entityPermission = administration.CreateChildPermission(ContractCategoryPermissions.Node, new FixedLocalizableString("基础信息_文档分类"));
+            //entityPermission.CreateChildPermission(DocumentCategoryPermissions.Query, L("QueryDocumentCategory"));
+            //entityPermission.CreateChildPermission(DocumentCategoryPermissions.Create, L("CreateDocumentCategory"));
+            //entityPermission.CreateChildPermission(DocumentCategoryPermissions.Edit, L("EditDocumentCategory"));
+            //entityPermission.CreateChildPermission(DocumentCategoryPermissions.Delete, L("DeleteDocumentCategory"));
+            //entityPermission.CreateChildPermission(DocumentCategoryPermissions.BatchDelete, L("BatchDeleteDocumentCategory"));
+            //entityPermission.CreateChildPermission(DocumentCategoryPermissions.ExportExcel, L("ExportExcelDocumentCategory"));
 
-			var entityPermission = administration.CreateChildPermission(DocumentCategoryPermissions.Node , L("DocumentCategory"));
-			entityPermission.CreateChildPermission(DocumentCategoryPermissions.Query, L("QueryDocumentCategory"));
-			entityPermission.CreateChildPermission(DocumentCategoryPermissions.Create, L("CreateDocumentCategory"));
-			entityPermission.CreateChildPermission(DocumentCategoryPermissions.Edit, L("EditDocumentCategory"));
-			entityPermission.CreateChildPermission(DocumentCategoryPermissions.Delete, L("DeleteDocumentCategory"));
-			entityPermission.CreateChildPermission(DocumentCategoryPermissions.BatchDelete, L("BatchDeleteDocumentCategory"));
-			entityPermission.CreateChildPermission(DocumentCategoryPermissions.ExportExcel, L("ExportExcelDocumentCategory"));
 
-
-		}
+        }
 
 		private static ILocalizableString L(string name)
 		{

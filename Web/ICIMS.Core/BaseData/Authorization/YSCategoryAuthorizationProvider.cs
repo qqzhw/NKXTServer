@@ -40,13 +40,13 @@ namespace ICIMS.BaseData.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(YSCategoryPermissions.Node , L("YSCategory"));
-			entityPermission.CreateChildPermission(YSCategoryPermissions.Query, L("QueryYSCategory"));
-			entityPermission.CreateChildPermission(YSCategoryPermissions.Create, L("CreateYSCategory"));
-			entityPermission.CreateChildPermission(YSCategoryPermissions.Edit, L("EditYSCategory"));
-			entityPermission.CreateChildPermission(YSCategoryPermissions.Delete, L("DeleteYSCategory"));
-			entityPermission.CreateChildPermission(YSCategoryPermissions.BatchDelete, L("BatchDeleteYSCategory"));
-			entityPermission.CreateChildPermission(YSCategoryPermissions.ExportExcel, L("ExportExcelYSCategory"));
+			var entityPermission = administration.CreateChildPermission(YSCategoryPermissions.Node , L("基础信息_预算分类"));
+			//entityPermission.CreateChildPermission(YSCategoryPermissions.Query, L("QueryYSCategory"));
+			//entityPermission.CreateChildPermission(YSCategoryPermissions.Create, L("CreateYSCategory"));
+			//entityPermission.CreateChildPermission(YSCategoryPermissions.Edit, L("EditYSCategory"));
+			//entityPermission.CreateChildPermission(YSCategoryPermissions.Delete, L("DeleteYSCategory"));
+			//entityPermission.CreateChildPermission(YSCategoryPermissions.BatchDelete, L("BatchDeleteYSCategory"));
+			//entityPermission.CreateChildPermission(YSCategoryPermissions.ExportExcel, L("ExportExcelYSCategory"));
 
 
 		}

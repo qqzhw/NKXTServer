@@ -40,13 +40,13 @@ namespace ICIMS.BusinessManages.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(ContractPermissions.Node , L("Contract"));
-			entityPermission.CreateChildPermission(ContractPermissions.Query, L("QueryContract"));
-			entityPermission.CreateChildPermission(ContractPermissions.Create, L("CreateContract"));
-			entityPermission.CreateChildPermission(ContractPermissions.Edit, L("EditContract"));
-			entityPermission.CreateChildPermission(ContractPermissions.Delete, L("DeleteContract"));
-			entityPermission.CreateChildPermission(ContractPermissions.BatchDelete, L("BatchDeleteContract"));
-			entityPermission.CreateChildPermission(ContractPermissions.ExportExcel, L("ExportExcelContract"));
+			var entityPermission = administration.CreateChildPermission(ContractPermissions.Node , L("项目管理_合同登记"));
+			//entityPermission.CreateChildPermission(ContractPermissions.Query, L("QueryContract"));
+			//entityPermission.CreateChildPermission(ContractPermissions.Create, L("CreateContract"));
+			//entityPermission.CreateChildPermission(ContractPermissions.Edit, L("EditContract"));
+			//entityPermission.CreateChildPermission(ContractPermissions.Delete, L("DeleteContract"));
+			//entityPermission.CreateChildPermission(ContractPermissions.BatchDelete, L("BatchDeleteContract"));
+			//entityPermission.CreateChildPermission(ContractPermissions.ExportExcel, L("ExportExcelContract"));
 
 
 		}

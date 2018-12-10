@@ -40,13 +40,13 @@ namespace ICIMS.BusinessManages.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(AuditMappingPermissions.Node , L("AuditMapping"));
-			entityPermission.CreateChildPermission(AuditMappingPermissions.Query, L("QueryAuditMapping"));
-			entityPermission.CreateChildPermission(AuditMappingPermissions.Create, L("CreateAuditMapping"));
-			entityPermission.CreateChildPermission(AuditMappingPermissions.Edit, L("EditAuditMapping"));
-			entityPermission.CreateChildPermission(AuditMappingPermissions.Delete, L("DeleteAuditMapping"));
-			entityPermission.CreateChildPermission(AuditMappingPermissions.BatchDelete, L("BatchDeleteAuditMapping"));
-			entityPermission.CreateChildPermission(AuditMappingPermissions.ExportExcel, L("ExportExcelAuditMapping"));
+			var entityPermission = administration.CreateChildPermission(AuditMappingPermissions.Node , L("项目管理_角色审核"));
+			//entityPermission.CreateChildPermission(AuditMappingPermissions.Query, L("QueryAuditMapping"));
+			//entityPermission.CreateChildPermission(AuditMappingPermissions.Create, L("CreateAuditMapping"));
+			//entityPermission.CreateChildPermission(AuditMappingPermissions.Edit, L("EditAuditMapping"));
+			//entityPermission.CreateChildPermission(AuditMappingPermissions.Delete, L("DeleteAuditMapping"));
+			//entityPermission.CreateChildPermission(AuditMappingPermissions.BatchDelete, L("BatchDeleteAuditMapping"));
+			//entityPermission.CreateChildPermission(AuditMappingPermissions.ExportExcel, L("ExportExcelAuditMapping"));
 
 
 		}

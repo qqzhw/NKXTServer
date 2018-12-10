@@ -210,8 +210,8 @@ namespace ICIMS.BusinessManages.Dtos
 		/// </summary>
 		public string AuditUserName { get; set; }
 
+        public string According { get; set; }
 
-        
 
     }
 }

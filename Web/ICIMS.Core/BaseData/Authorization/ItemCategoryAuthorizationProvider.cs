@@ -40,13 +40,13 @@ namespace ICIMS.BaseData.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(ItemCategoryPermissions.Node , L("ItemCategory"));
-			entityPermission.CreateChildPermission(ItemCategoryPermissions.Query, L("QueryItemCategory"));
-			entityPermission.CreateChildPermission(ItemCategoryPermissions.Create, L("CreateItemCategory"));
-			entityPermission.CreateChildPermission(ItemCategoryPermissions.Edit, L("EditItemCategory"));
-			entityPermission.CreateChildPermission(ItemCategoryPermissions.Delete, L("DeleteItemCategory"));
-			entityPermission.CreateChildPermission(ItemCategoryPermissions.BatchDelete, L("BatchDeleteItemCategory"));
-			entityPermission.CreateChildPermission(ItemCategoryPermissions.ExportExcel, L("ExportExcelItemCategory"));
+			var entityPermission = administration.CreateChildPermission(ItemCategoryPermissions.Node , L("基础信息_项目分类"));
+			//entityPermission.CreateChildPermission(ItemCategoryPermissions.Query, L("QueryItemCategory"));
+			//entityPermission.CreateChildPermission(ItemCategoryPermissions.Create, L("CreateItemCategory"));
+			//entityPermission.CreateChildPermission(ItemCategoryPermissions.Edit, L("EditItemCategory"));
+			//entityPermission.CreateChildPermission(ItemCategoryPermissions.Delete, L("DeleteItemCategory"));
+			//entityPermission.CreateChildPermission(ItemCategoryPermissions.BatchDelete, L("BatchDeleteItemCategory"));
+			//entityPermission.CreateChildPermission(ItemCategoryPermissions.ExportExcel, L("ExportExcelItemCategory"));
 
 
 		}

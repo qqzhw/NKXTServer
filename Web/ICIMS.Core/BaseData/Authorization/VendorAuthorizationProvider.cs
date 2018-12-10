@@ -40,13 +40,13 @@ namespace ICIMS.BaseData.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(VendorPermissions.Node , L("Vendor"));
-			entityPermission.CreateChildPermission(VendorPermissions.Query, L("QueryVendor"));
-			entityPermission.CreateChildPermission(VendorPermissions.Create, L("CreateVendor"));
-			entityPermission.CreateChildPermission(VendorPermissions.Edit, L("EditVendor"));
-			entityPermission.CreateChildPermission(VendorPermissions.Delete, L("DeleteVendor"));
-			entityPermission.CreateChildPermission(VendorPermissions.BatchDelete, L("BatchDeleteVendor"));
-			entityPermission.CreateChildPermission(VendorPermissions.ExportExcel, L("ExportExcelVendor"));
+			var entityPermission = administration.CreateChildPermission(VendorPermissions.Node , L("基础信息_供应商管理"));
+			//entityPermission.CreateChildPermission(VendorPermissions.Query, L("QueryVendor"));
+			//entityPermission.CreateChildPermission(VendorPermissions.Create, L("CreateVendor"));
+			//entityPermission.CreateChildPermission(VendorPermissions.Edit, L("EditVendor"));
+			//entityPermission.CreateChildPermission(VendorPermissions.Delete, L("DeleteVendor"));
+			//entityPermission.CreateChildPermission(VendorPermissions.BatchDelete, L("BatchDeleteVendor"));
+			//entityPermission.CreateChildPermission(VendorPermissions.ExportExcel, L("ExportExcelVendor"));
 
 
 		}

@@ -40,16 +40,17 @@ namespace ICIMS.BaseData.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(ContractCategoryPermissions.Node , L("ContractCategory"));
-			entityPermission.CreateChildPermission(ContractCategoryPermissions.Query, L("QueryContractCategory"));
-			entityPermission.CreateChildPermission(ContractCategoryPermissions.Create, L("CreateContractCategory"));
-			entityPermission.CreateChildPermission(ContractCategoryPermissions.Edit, L("EditContractCategory"));
-			entityPermission.CreateChildPermission(ContractCategoryPermissions.Delete, L("DeleteContractCategory"));
-			entityPermission.CreateChildPermission(ContractCategoryPermissions.BatchDelete, L("BatchDeleteContractCategory"));
-			entityPermission.CreateChildPermission(ContractCategoryPermissions.ExportExcel, L("ExportExcelContractCategory"));
+			var entityPermission = administration.CreateChildPermission(ContractCategoryPermissions.Node , new FixedLocalizableString("基础信息_合同分类"));
+            //context.CreatePermission(BuyCategoryPermissions.Query, new FixedLocalizableString("基础信息_采购分类"));
+            //entityPermission.CreateChildPermission(ContractCategoryPermissions.Query, L("QueryContractCategory"));
+            //entityPermission.CreateChildPermission(ContractCategoryPermissions.Create, L("CreateContractCategory"));
+            //entityPermission.CreateChildPermission(ContractCategoryPermissions.Edit, L("EditContractCategory"));
+            //entityPermission.CreateChildPermission(ContractCategoryPermissions.Delete, L("DeleteContractCategory"));
+            //entityPermission.CreateChildPermission(ContractCategoryPermissions.BatchDelete, L("BatchDeleteContractCategory"));
+            //entityPermission.CreateChildPermission(ContractCategoryPermissions.ExportExcel, L("ExportExcelContractCategory"));
 
 
-		}
+        }
 
 		private static ILocalizableString L(string name)
 		{

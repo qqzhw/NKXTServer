@@ -39,17 +39,17 @@ namespace ICIMS.BaseData.Authorization
 			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+            var entityPermission = administration.CreateChildPermission(ContractCategoryPermissions.Node, new FixedLocalizableString("附件下载"));
+            //var entityPermission = administration.CreateChildPermission(FilesManagePermissions.Node , L("FilesManage"));
+            //entityPermission.CreateChildPermission(FilesManagePermissions.Query, L("QueryFilesManage"));
+            //entityPermission.CreateChildPermission(FilesManagePermissions.Create, L("CreateFilesManage"));
+            //entityPermission.CreateChildPermission(FilesManagePermissions.Edit, L("EditFilesManage"));
+            //entityPermission.CreateChildPermission(FilesManagePermissions.Delete, L("DeleteFilesManage"));
+            //entityPermission.CreateChildPermission(FilesManagePermissions.BatchDelete, L("BatchDeleteFilesManage"));
+            //entityPermission.CreateChildPermission(FilesManagePermissions.ExportExcel, L("ExportExcelFilesManage"));
 
-			var entityPermission = administration.CreateChildPermission(FilesManagePermissions.Node , L("FilesManage"));
-			entityPermission.CreateChildPermission(FilesManagePermissions.Query, L("QueryFilesManage"));
-			entityPermission.CreateChildPermission(FilesManagePermissions.Create, L("CreateFilesManage"));
-			entityPermission.CreateChildPermission(FilesManagePermissions.Edit, L("EditFilesManage"));
-			entityPermission.CreateChildPermission(FilesManagePermissions.Delete, L("DeleteFilesManage"));
-			entityPermission.CreateChildPermission(FilesManagePermissions.BatchDelete, L("BatchDeleteFilesManage"));
-			entityPermission.CreateChildPermission(FilesManagePermissions.ExportExcel, L("ExportExcelFilesManage"));
 
-
-		}
+        }
 
 		private static ILocalizableString L(string name)
 		{

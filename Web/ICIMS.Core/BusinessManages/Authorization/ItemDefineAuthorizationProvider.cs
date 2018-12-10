@@ -40,13 +40,13 @@ namespace ICIMS.BusinessManages.Authorization
 
 			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(ItemDefinePermissions.Node , L("ItemDefine"));
-			entityPermission.CreateChildPermission(ItemDefinePermissions.Query, L("QueryItemDefine"));
-			entityPermission.CreateChildPermission(ItemDefinePermissions.Create, L("CreateItemDefine"));
-			entityPermission.CreateChildPermission(ItemDefinePermissions.Edit, L("EditItemDefine"));
-			entityPermission.CreateChildPermission(ItemDefinePermissions.Delete, L("DeleteItemDefine"));
-			entityPermission.CreateChildPermission(ItemDefinePermissions.BatchDelete, L("BatchDeleteItemDefine"));
-			entityPermission.CreateChildPermission(ItemDefinePermissions.ExportExcel, L("ExportExcelItemDefine"));
+			var entityPermission = administration.CreateChildPermission(ItemDefinePermissions.Node , L("项目管理_立项登记"));
+			//entityPermission.CreateChildPermission(ItemDefinePermissions.Query, L("QueryItemDefine"));
+			//entityPermission.CreateChildPermission(ItemDefinePermissions.Create, L("CreateItemDefine"));
+			//entityPermission.CreateChildPermission(ItemDefinePermissions.Edit, L("EditItemDefine"));
+			//entityPermission.CreateChildPermission(ItemDefinePermissions.Delete, L("DeleteItemDefine"));
+			//entityPermission.CreateChildPermission(ItemDefinePermissions.BatchDelete, L("BatchDeleteItemDefine"));
+			//entityPermission.CreateChildPermission(ItemDefinePermissions.ExportExcel, L("ExportExcelItemDefine"));
 
 
 		}

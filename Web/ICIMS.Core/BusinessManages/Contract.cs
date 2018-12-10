@@ -93,6 +93,8 @@ namespace ICIMS.BusinessManages
         /// </summary>
         public string PaymentMethod { get; set; }
 
+        public string According { get; set; }
+
         public string Remark { get; set; }
 
         /// <summary>
