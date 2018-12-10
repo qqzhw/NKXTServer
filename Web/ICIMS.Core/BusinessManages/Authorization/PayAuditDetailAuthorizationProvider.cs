@@ -36,11 +36,11 @@ namespace ICIMS.BusinessManages.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了PayAuditDetail 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(PayAuditDetailPermissions.Node , L("PayAuditDetail"));
+			var entityPermission = context.CreatePermission(PayAuditDetailPermissions.Node , new FixedLocalizableString("PayAuditDetail"));
 			//entityPermission.CreateChildPermission(PayAuditDetailPermissions.Query, L("QueryPayAuditDetail"));
 			//entityPermission.CreateChildPermission(PayAuditDetailPermissions.Create, L("CreatePayAuditDetail"));
 			//entityPermission.CreateChildPermission(PayAuditDetailPermissions.Edit, L("EditPayAuditDetail"));

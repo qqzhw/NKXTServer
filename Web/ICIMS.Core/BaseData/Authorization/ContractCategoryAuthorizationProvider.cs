@@ -36,11 +36,11 @@ namespace ICIMS.BaseData.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了ContractCategory 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(ContractCategoryPermissions.Node , new FixedLocalizableString("基础信息_合同分类"));
+			var entityPermission = context.CreatePermission(ContractCategoryPermissions.Node , new FixedLocalizableString("基础信息_合同分类"));
             //context.CreatePermission(BuyCategoryPermissions.Query, new FixedLocalizableString("基础信息_采购分类"));
             //entityPermission.CreateChildPermission(ContractCategoryPermissions.Query, L("QueryContractCategory"));
             //entityPermission.CreateChildPermission(ContractCategoryPermissions.Create, L("CreateContractCategory"));

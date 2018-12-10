@@ -36,11 +36,11 @@ namespace ICIMS.BusinessManages.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了Contract 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(ContractPermissions.Node , L("项目管理_合同登记"));
+			var entityPermission = context.CreatePermission(ContractPermissions.Node , new FixedLocalizableString("项目管理_合同登记"));
 			//entityPermission.CreateChildPermission(ContractPermissions.Query, L("QueryContract"));
 			//entityPermission.CreateChildPermission(ContractPermissions.Create, L("CreateContract"));
 			//entityPermission.CreateChildPermission(ContractPermissions.Edit, L("EditContract"));

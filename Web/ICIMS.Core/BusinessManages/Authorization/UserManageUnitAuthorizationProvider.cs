@@ -36,17 +36,17 @@ namespace ICIMS.BusinessManages.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了UserManageUnit 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(UserManageUnitPermissions.Node , L("UserManageUnit"));
-			entityPermission.CreateChildPermission(UserManageUnitPermissions.Query, L("QueryUserManageUnit"));
-			entityPermission.CreateChildPermission(UserManageUnitPermissions.Create, L("CreateUserManageUnit"));
-			entityPermission.CreateChildPermission(UserManageUnitPermissions.Edit, L("EditUserManageUnit"));
-			entityPermission.CreateChildPermission(UserManageUnitPermissions.Delete, L("DeleteUserManageUnit"));
-			entityPermission.CreateChildPermission(UserManageUnitPermissions.BatchDelete, L("BatchDeleteUserManageUnit"));
-			entityPermission.CreateChildPermission(UserManageUnitPermissions.ExportExcel, L("ExportExcelUserManageUnit"));
+			var entityPermission = context.CreatePermission(UserManageUnitPermissions.Node , new FixedLocalizableString("UserManageUnit"));
+			//entityPermission.CreateChildPermission(UserManageUnitPermissions.Query, L("QueryUserManageUnit"));
+			//entityPermission.CreateChildPermission(UserManageUnitPermissions.Create, L("CreateUserManageUnit"));
+			//entityPermission.CreateChildPermission(UserManageUnitPermissions.Edit, L("EditUserManageUnit"));
+			//entityPermission.CreateChildPermission(UserManageUnitPermissions.Delete, L("DeleteUserManageUnit"));
+			//entityPermission.CreateChildPermission(UserManageUnitPermissions.BatchDelete, L("BatchDeleteUserManageUnit"));
+			//entityPermission.CreateChildPermission(UserManageUnitPermissions.ExportExcel, L("ExportExcelUserManageUnit"));
 
 
 		}

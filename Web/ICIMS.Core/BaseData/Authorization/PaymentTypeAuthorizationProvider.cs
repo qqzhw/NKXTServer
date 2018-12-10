@@ -36,11 +36,11 @@ namespace ICIMS.BaseData.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了PaymentType 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(PaymentTypePermissions.Node , L("基础信息_支付类型"));
+			var entityPermission = context.CreatePermission(PaymentTypePermissions.Node , new FixedLocalizableString("基础信息_支付类型"));
 			//entityPermission.CreateChildPermission(PaymentTypePermissions.Query, L("QueryPaymentType"));
 			//entityPermission.CreateChildPermission(PaymentTypePermissions.Create, L("CreatePaymentType"));
 			//entityPermission.CreateChildPermission(PaymentTypePermissions.Edit, L("EditPaymentType"));

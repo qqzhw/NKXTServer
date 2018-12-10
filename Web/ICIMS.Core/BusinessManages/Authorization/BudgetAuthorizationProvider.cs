@@ -36,11 +36,11 @@ namespace ICIMS.BusinessManages.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了Budget 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(BudgetPermissions.Node , L("项目管理_预算管理"));
+			var entityPermission = context.CreatePermission(BudgetPermissions.Node , new FixedLocalizableString("项目管理_预算管理"));
 			//entityPermission.CreateChildPermission(BudgetPermissions.Query, L("QueryBudget"));
 			//entityPermission.CreateChildPermission(BudgetPermissions.Create, L("CreateBudget"));
 			//entityPermission.CreateChildPermission(BudgetPermissions.Edit, L("EditBudget"));

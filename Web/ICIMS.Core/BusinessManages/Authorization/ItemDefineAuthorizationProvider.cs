@@ -36,11 +36,11 @@ namespace ICIMS.BusinessManages.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了ItemDefine 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(ItemDefinePermissions.Node , L("项目管理_立项登记"));
+			var entityPermission = context.CreatePermission(ItemDefinePermissions.Node , new FixedLocalizableString("项目管理_立项登记"));
 			//entityPermission.CreateChildPermission(ItemDefinePermissions.Query, L("QueryItemDefine"));
 			//entityPermission.CreateChildPermission(ItemDefinePermissions.Create, L("CreateItemDefine"));
 			//entityPermission.CreateChildPermission(ItemDefinePermissions.Edit, L("EditItemDefine"));

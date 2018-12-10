@@ -36,11 +36,11 @@ namespace ICIMS.BusinessManages.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了ReViewDefine 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(ReViewDefinePermissions.Node , L("项目管理_评审登记"));
+			var entityPermission = context.CreatePermission(ReViewDefinePermissions.Node , new FixedLocalizableString("项目管理_评审登记"));
 			//entityPermission.CreateChildPermission(ReViewDefinePermissions.Query, L("QueryReViewDefine"));
 			//entityPermission.CreateChildPermission(ReViewDefinePermissions.Create, L("CreateReViewDefine"));
 			//entityPermission.CreateChildPermission(ReViewDefinePermissions.Edit, L("EditReViewDefine"));

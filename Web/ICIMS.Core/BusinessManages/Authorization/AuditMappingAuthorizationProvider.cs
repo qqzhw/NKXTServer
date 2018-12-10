@@ -36,11 +36,11 @@ namespace ICIMS.BusinessManages.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了AuditMapping 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(AuditMappingPermissions.Node , L("项目管理_角色审核"));
+			var entityPermission = context.CreatePermission(AuditMappingPermissions.Node , new FixedLocalizableString("项目管理_角色审核"));
 			//entityPermission.CreateChildPermission(AuditMappingPermissions.Query, L("QueryAuditMapping"));
 			//entityPermission.CreateChildPermission(AuditMappingPermissions.Create, L("CreateAuditMapping"));
 			//entityPermission.CreateChildPermission(AuditMappingPermissions.Edit, L("EditAuditMapping"));

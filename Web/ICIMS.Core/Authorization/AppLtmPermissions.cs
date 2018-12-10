@@ -13,9 +13,5 @@ namespace ICIMS.Authorization
 	{
 		public const string Pages = "Pages";
 		public const string Pages_Administration = "Pages.Administration";
-
-
-
-
 	}
 }

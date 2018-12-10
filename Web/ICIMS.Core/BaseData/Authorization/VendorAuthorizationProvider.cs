@@ -36,11 +36,11 @@ namespace ICIMS.BaseData.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了Vendor 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(VendorPermissions.Node , L("基础信息_供应商管理"));
+			var entityPermission = context.CreatePermission(VendorPermissions.Node , new FixedLocalizableString("基础信息_供应商管理"));
 			//entityPermission.CreateChildPermission(VendorPermissions.Query, L("QueryVendor"));
 			//entityPermission.CreateChildPermission(VendorPermissions.Create, L("CreateVendor"));
 			//entityPermission.CreateChildPermission(VendorPermissions.Edit, L("EditVendor"));

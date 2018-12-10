@@ -36,11 +36,11 @@ namespace ICIMS.BaseData.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了YSCategory 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(YSCategoryPermissions.Node , L("基础信息_预算分类"));
+			var entityPermission = context.CreatePermission(YSCategoryPermissions.Node , new FixedLocalizableString("基础信息_预算分类"));
 			//entityPermission.CreateChildPermission(YSCategoryPermissions.Query, L("QueryYSCategory"));
 			//entityPermission.CreateChildPermission(YSCategoryPermissions.Create, L("CreateYSCategory"));
 			//entityPermission.CreateChildPermission(YSCategoryPermissions.Edit, L("EditYSCategory"));

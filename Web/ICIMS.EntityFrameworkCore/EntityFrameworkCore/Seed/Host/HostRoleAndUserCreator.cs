@@ -9,6 +9,9 @@ using ICIMS.Authorization.Roles;
 using ICIMS.Authorization.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using ICIMS.BaseData.Authorization;
+using System.Collections.Generic;
+using ICIMS.BusinessManages.Authorization;
 
 namespace ICIMS.EntityFrameworkCore.Seed.Host
 {
@@ -44,12 +47,32 @@ namespace ICIMS.EntityFrameworkCore.Seed.Host
                 .Where(p => p.TenantId == null && p.RoleId == adminRoleForHost.Id)
                 .Select(p => p.Name)
                 .ToList();
-
+            var authList = new List<AuthorizationProvider>();
+            authList.Add(new BuyCategoryAuthorizationProvider());
+            authList.Add(new ContractCategoryAuthorizationProvider()); 
+            authList.Add(new DocumentCategoryAuthorizationProvider());
+            authList.Add(new FilesManageAuthorizationProvider());
+            authList.Add(new FunctionSubjectAuthorizationProvider());
+            authList.Add(new FundFromAuthorizationProvider());
+            authList.Add(new ItemCategoryAuthorizationProvider());
+            authList.Add(new PaymentTypeAuthorizationProvider());
+            authList.Add(new VendorAuthorizationProvider());
+            authList.Add(new YSCategoryAuthorizationProvider());
+            authList.Add(new BudgetAuthorizationProvider());
+            authList.Add(new BusinessAuditAuthorizationProvider());
+            authList.Add(new BusinessTypeAuthorizationProvider());
+            authList.Add(new ContractAuthorizationProvider());
+            authList.Add(new ItemDefineAuthorizationProvider());
+            authList.Add(new PayAuditAuthorizationProvider());
+            authList.Add(new ReViewDefineAuthorizationProvider());
+            authList.Add(new AuditMappingAuthorizationProvider());
+           
             var permissions = PermissionFinder
-                .GetAllPermissions(new ICIMSAuthorizationProvider())
+                .GetAllPermissions(authList.ToArray())
                 .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Host) &&
                             !grantedPermissions.Contains(p.Name))
                 .ToList();
+            
 
             if (permissions.Any())
             {

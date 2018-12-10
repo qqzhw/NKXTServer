@@ -36,10 +36,10 @@ namespace ICIMS.BaseData.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了FilesManage 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
-            var entityPermission = administration.CreateChildPermission(ContractCategoryPermissions.Node, new FixedLocalizableString("附件下载"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+           // var entityPermission = administration.CreateChildPermission(ContractCategoryPermissions.Node, new FixedLocalizableString("附件下载"));
             //var entityPermission = administration.CreateChildPermission(FilesManagePermissions.Node , L("FilesManage"));
             //entityPermission.CreateChildPermission(FilesManagePermissions.Query, L("QueryFilesManage"));
             //entityPermission.CreateChildPermission(FilesManagePermissions.Create, L("CreateFilesManage"));
@@ -47,7 +47,7 @@ namespace ICIMS.BaseData.Authorization
             //entityPermission.CreateChildPermission(FilesManagePermissions.Delete, L("DeleteFilesManage"));
             //entityPermission.CreateChildPermission(FilesManagePermissions.BatchDelete, L("BatchDeleteFilesManage"));
             //entityPermission.CreateChildPermission(FilesManagePermissions.ExportExcel, L("ExportExcelFilesManage"));
-
+            var entityPermission = context.CreatePermission(ContractCategoryPermissions.Node, new FixedLocalizableString("附件下载"));
 
         }
 

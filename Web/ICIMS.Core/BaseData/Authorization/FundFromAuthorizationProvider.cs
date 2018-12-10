@@ -36,11 +36,11 @@ namespace ICIMS.BaseData.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了FundFrom 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(FundFromPermissions.Node , L("基础信息_资金来源"));
+			var entityPermission = context.CreatePermission(FundFromPermissions.Node , new FixedLocalizableString("基础信息_资金来源"));
 			//entityPermission.CreateChildPermission(FundFromPermissions.Query, L("QueryFundFrom"));
 			//entityPermission.CreateChildPermission(FundFromPermissions.Create, L("CreateFundFrom"));
 			//entityPermission.CreateChildPermission(FundFromPermissions.Edit, L("EditFundFrom"));

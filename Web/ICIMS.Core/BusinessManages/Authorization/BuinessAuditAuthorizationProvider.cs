@@ -36,11 +36,11 @@ namespace ICIMS.BusinessManages.Authorization
 		public override void SetPermissions(IPermissionDefinitionContext context)
 		{
 			// 在这里配置了BuinessAudit 的权限。
-			var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
+			//var pages = context.GetPermissionOrNull(AppLtmPermissions.Pages) ?? context.CreatePermission(AppLtmPermissions.Pages, L("Pages"));
 
-			var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
+			//var administration = pages.Children.FirstOrDefault(p => p.Name == AppLtmPermissions.Pages_Administration) ?? pages.CreateChildPermission(AppLtmPermissions.Pages_Administration, L("Administration"));
 
-			var entityPermission = administration.CreateChildPermission(BusinessAuditPermissions.Node , L("系统管理_审核流设置"));
+			var entityPermission = context.CreatePermission(BusinessAuditPermissions.Node , new FixedLocalizableString("系统管理_审核流设置"));
 			//entityPermission.CreateChildPermission(BusinessAuditPermissions.Query, L("QueryBuinessAudit"));
 			//entityPermission.CreateChildPermission(BusinessAuditPermissions.Create, L("CreateBuinessAudit"));
 			//entityPermission.CreateChildPermission(BusinessAuditPermissions.Edit, L("EditBuinessAudit"));
