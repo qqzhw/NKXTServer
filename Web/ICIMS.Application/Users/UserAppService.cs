@@ -26,7 +26,7 @@ using Abp.Domain.Uow;
 
 namespace ICIMS.Users
 {
-    [AbpAuthorize(PermissionNames.Pages_Users)]
+   
     public class UserAppService : AsyncCrudAppService<User, UserDto, long, PagedResultRequestDto, CreateUserDto, UserDto>, IUserAppService
     {
         private readonly UserManager _userManager;
@@ -54,7 +54,7 @@ namespace ICIMS.Users
             _userRepository = userRepository;
             _usermanagerUnitRepository = usermanagerUnitRepository;
         }
-
+        [AbpAuthorize(PermissionNames.Pages_Users)]
         public override async Task<UserDto> Create(CreateUserDto input)
         {
             CheckCreatePermission();
