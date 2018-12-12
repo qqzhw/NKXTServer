@@ -16,6 +16,11 @@ using ICIMS.Configuration;
 using ICIMS.Identity;
 
 using Abp.AspNetCore.SignalR.Hubs;
+using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.Net.Http.Headers;
 
 namespace ICIMS.Web.Host.Startup
 {
@@ -123,6 +128,26 @@ namespace ICIMS.Web.Host.Startup
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
                     .GetManifestResourceStream("ICIMS.Web.Host.wwwroot.swagger.ui.index.html");
             }); // URL: /swagger
+
+            //add clienapp floder
+            //var provider = new FileExtensionContentTypeProvider();
+            //provider.Mappings[".bak"] = MimeTypes.ApplicationOctetStream;
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot", "clientapp")),
+            //    RequestPath = new PathString("/clientapp"),
+            //    ContentTypeProvider = provider
+            //});
+            var staticFileOptions = new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot", "clientapp")),
+                RequestPath = new PathString("/clientapp"),
+                OnPrepareResponse = ctx =>
+                { 
+                        ctx.Context.Response.Headers.Append(HeaderNames.CacheControl,
+                            "public,max-age=604800");
+                }
+            };
         }
     }
 }

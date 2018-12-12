@@ -58,7 +58,7 @@ namespace ICIMS.Controllers
                 ////获取文件扩展名
                  var fileExtensionName = Path.GetExtension(fileName);
                 model.Extension = fileExtensionName;
-                var NewFileName =fileName.Substring(0,index)+DateTime.Now.ToString("_fff") + fileExtensionName;
+                var NewFileName =fileName.Substring(0,index)+"_1" + fileExtensionName;
                 //string[] pictureFormatArray = { ".png", ".jpg", ".jpeg", ".bmp", ".gif", ".ico", ".PNG", ".JPG", ".JPEG", ".BMP", ".GIF", ".ICO" };
                 //if (!pictureFormatArray.Contains(fileExtensionName))
                 //{
@@ -72,8 +72,16 @@ namespace ICIMS.Controllers
                 {
                     Directory.CreateDirectory(folder);
                 }
-                 var FilePath = Path.Combine(folder, NewFileName);
-                model.FileName = NewFileName;
+                 var FilePath = Path.Combine(folder, fileName);
+                if (System.IO.File.Exists(FilePath))
+                {
+                    model.FileName = NewFileName;
+                    FilePath = Path.Combine(folder, NewFileName);
+                }
+                else
+                {
+                    model.FileName = file.FileName;
+                }
                 using (FileStream fs = System.IO.File.Create(FilePath))
                 {
                     await file.CopyToAsync(fs);

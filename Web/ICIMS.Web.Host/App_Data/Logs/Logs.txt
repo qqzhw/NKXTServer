@@ -2654,3 +2654,434 @@ INFO  2018-12-11 14:51:51,260 [10   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-12-11 14:51:51,534 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2018-12-11 14:51:51,596 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Roles.RoleAppService.GetAllPermissions (ICIMS.Application) in 4379.5466ms
 INFO  2018-12-11 14:51:51,616 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4488.1739ms 200 application/json; charset=utf-8
+DEBUG 2018-12-12 01:45:36,310 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-12-12 01:45:38,353 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-12-12 01:45:38,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,431 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,435 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,436 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,444 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,445 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,446 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,448 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,448 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,449 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:38,452 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-12-12 01:45:38,884 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-12 01:45:38,884 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-12 01:45:38,884 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-12 01:45:38,884 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-12 01:45:40,674 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-12 01:45:44,415 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-12-12 01:45:44,537 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-12-12 01:45:44,669 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-12-12 01:45:44,711 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-12-12 01:45:44,772 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-12-12 01:45:45,818 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-12-12 01:45:45,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-12-12 01:45:45,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-12-12 01:45:45,982 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-12-12 01:45:45,983 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-12-12 01:45:45,983 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-12-12 01:45:45,984 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-12-12 01:45:45,984 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-12-12 01:45:45,984 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-12-12 01:45:45,984 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-12-12 01:45:45,989 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-12-12 01:45:45,990 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-12-12 01:46:09,969 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-12-12 01:46:10,029 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-12-12 01:46:10,663 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 947.8281ms 200 
+INFO  2018-12-12 01:47:09,222 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-12-12 01:47:34,862 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-12-12 01:47:34,903 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 20.7193ms.
+INFO  2018-12-12 01:47:38,071 [14   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-12-12 01:47:38,174 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 28909.4569ms
+INFO  2018-12-12 01:47:38,616 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 88807.4637ms 302 
+INFO  2018-12-12 01:47:38,997 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-12-12 01:47:39,768 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 789.3017ms 200 text/html
+INFO  2018-12-12 01:47:40,763 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-12-12 01:47:41,019 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-12-12 01:47:41,212 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/ui/abp.swagger.js  
+INFO  2018-12-12 01:47:41,382 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-12-12 01:47:41,650 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-12-12 01:47:41,826 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2018-12-12 01:47:42,047 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 965.2976ms 304 text/css
+INFO  2018-12-12 01:47:42,197 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1151.6118ms 304 application/javascript
+INFO  2018-12-12 01:47:42,201 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 985.07ms 304 application/javascript
+INFO  2018-12-12 01:47:42,220 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-12-12 01:47:42,241 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-12-12 01:47:42,577 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1567.4217ms 304 application/javascript
+INFO  2018-12-12 01:47:54,615 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-12-12 01:47:58,595 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-12-12 01:47:58,618 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4611.3366ms 200 text/plain
+INFO  2018-12-12 01:48:03,548 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-12-12 01:48:05,991 [17   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-12-12 01:48:05,999 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2580.8337ms 200 text/plain
+INFO  2018-12-12 01:48:07,071 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-12-12 01:48:07,607 [17   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 01:48:10,761 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3650.9837ms 200 application/json;charset=utf-8
+INFO  2018-12-12 02:35:28,331 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-12-12 02:35:29,139 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-12-12 02:35:32,901 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-12-12 02:35:38,420 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5516.1934ms.
+INFO  2018-12-12 02:35:40,959 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:35:41,149 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 11861.8704ms
+INFO  2018-12-12 02:35:41,173 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12856.1183ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:35:42,027 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/User/GetUserById?Id=2  
+INFO  2018-12-12 02:35:42,232 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:35:43,316 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetUserById", controller = "User"}. Executing action ICIMS.Users.UserAppService.GetUserById (ICIMS.Application)
+INFO  2018-12-12 02:35:43,509 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Users.UserAppService.GetUserById (ICIMS.Application) with arguments (2) - Validation state: Valid
+INFO  2018-12-12 02:35:50,403 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Users.UserAppService.GetUserById (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6891.9035ms.
+INFO  2018-12-12 02:35:50,746 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:35:50,793 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetUserById (ICIMS.Application) in 7449.6736ms
+INFO  2018-12-12 02:35:50,802 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9076.6526ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:36:34,755 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ReViewDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:36:34,760 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:36:34,815 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ReViewDefine"}. Executing action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:36:35,308 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetReViewDefinesInput) - Validation state: Valid
+INFO  2018-12-12 02:36:36,286 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 973.6837ms.
+INFO  2018-12-12 02:36:36,555 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:36:36,597 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) in 1775.5264ms
+INFO  2018-12-12 02:36:36,635 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1848.4599ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:36:38,375 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BusinessAudit/GetPaged?BusinessTypeName=%E8%AF%84%E5%AE%A1%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:36:38,389 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:36:38,437 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FilesManage/GetPaged?entityId=2&entityKey=ReViewDefine&entityName=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:36:38,439 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "BusinessAudit"}. Executing action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:36:38,442 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetById?Id=5  
+INFO  2018-12-12 02:36:38,446 [27   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:36:38,449 [3    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:36:39,607 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FilesManage"}. Executing action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:36:39,645 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetById", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application)
+INFO  2018-12-12 02:36:39,649 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetBusinessAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:36:40,815 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1155.7251ms.
+INFO  2018-12-12 02:36:41,016 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2018-12-12 02:36:41,157 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFilesManagesInput) - Validation state: Valid
+INFO  2018-12-12 02:36:41,287 [30   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:36:41,354 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) in 2901.4469ms
+INFO  2018-12-12 02:36:41,365 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2985.7742ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:36:41,467 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/AuditMapping/GetPaged?ItemId=2&BusinessTypeId=0&BusinessTypeName=%E8%AF%84%E5%AE%A1%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:36:41,471 [27   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:36:41,495 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "AuditMapping"}. Executing action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:36:41,553 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 391.9313ms.
+INFO  2018-12-12 02:36:41,571 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 553.0914ms.
+INFO  2018-12-12 02:36:42,177 [30   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:36:42,224 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application) in 2573.0778ms
+INFO  2018-12-12 02:36:42,245 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:36:42,248 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3814.6475ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:36:42,279 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) in 2656.9562ms
+INFO  2018-12-12 02:36:42,280 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FilesManage/GetPaged?entityId=5&entityKey=ItemDefine&entityName=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:36:42,295 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3888.0654ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:36:42,329 [30   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:36:42,352 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetAuditMappingsInput) - Validation state: Valid
+INFO  2018-12-12 02:36:42,362 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FilesManage"}. Executing action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:36:42,421 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFilesManagesInput) - Validation state: Valid
+INFO  2018-12-12 02:36:42,762 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 336.9484ms.
+INFO  2018-12-12 02:36:42,918 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 563.3434ms.
+INFO  2018-12-12 02:36:43,006 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:36:43,009 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) in 644.6324ms
+INFO  2018-12-12 02:36:43,095 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 733.3472ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:36:43,190 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:36:43,203 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) in 1699.8347ms
+INFO  2018-12-12 02:36:43,216 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1738.8962ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:36:49,390 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/AuditMapping/CreateOrUpdate application/json; charset=utf-8 350
+INFO  2018-12-12 02:36:49,404 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:36:49,423 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdate", controller = "AuditMapping"}. Executing action ICIMS.BusinessManages.AuditMappingAppService.CreateOrUpdate (ICIMS.Application)
+INFO  2018-12-12 02:36:49,498 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.AuditMappingAppService.CreateOrUpdate (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.CreateOrUpdateAuditMappingInput) - Validation state: Valid
+INFO  2018-12-12 02:37:40,220 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.AuditMappingAppService.CreateOrUpdate (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 50718.3618ms.
+INFO  2018-12-12 02:37:40,480 [3    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:37:40,485 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.CreateOrUpdate (ICIMS.Application) in 51059.6498ms
+INFO  2018-12-12 02:37:40,491 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 51098.007ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:37:40,501 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BusinessAudit/GetPaged?BusinessTypeName=%E8%AF%84%E5%AE%A1%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:37:40,504 [30   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:37:40,513 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "BusinessAudit"}. Executing action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:37:40,556 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetBusinessAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:37:40,560 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/services/app/ReViewDefine/CreateOrUpdate application/json; charset=utf-8 377
+INFO  2018-12-12 02:37:40,562 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:37:40,570 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdate", controller = "ReViewDefine"}. Executing action ICIMS.BusinessManages.ReViewDefineAppService.CreateOrUpdate (ICIMS.Application)
+INFO  2018-12-12 02:37:40,648 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ReViewDefineAppService.CreateOrUpdate (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.CreateOrUpdateReViewDefineInput) - Validation state: Valid
+INFO  2018-12-12 02:37:40,989 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 430.9391ms.
+INFO  2018-12-12 02:37:41,015 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ReViewDefineAppService.CreateOrUpdate (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 365.5512ms.
+INFO  2018-12-12 02:37:41,419 [3    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:37:41,483 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) in 906.7036ms
+INFO  2018-12-12 02:37:41,624 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 986.1643ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:37:41,628 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/AuditMapping/GetPaged?ItemId=2&BusinessTypeId=0&BusinessTypeName=%E8%AF%84%E5%AE%A1%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:37:41,634 [30   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:37:41,647 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "AuditMapping"}. Executing action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:37:41,695 [30   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetAuditMappingsInput) - Validation state: Valid
+INFO  2018-12-12 02:37:41,706 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:37:41,710 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ReViewDefineAppService.CreateOrUpdate (ICIMS.Application) in 1136.3428ms
+INFO  2018-12-12 02:37:41,723 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1155.0716ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:37:41,951 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 250.968ms.
+INFO  2018-12-12 02:37:42,190 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:37:42,202 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) in 551.1642ms
+INFO  2018-12-12 02:37:42,209 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 579.0602ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:37:59,230 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:37:59,234 [27   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:37:59,264 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:37:59,769 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-12-12 02:38:00,194 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 423.3505ms.
+INFO  2018-12-12 02:38:00,426 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:38:00,465 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 1177.3564ms
+INFO  2018-12-12 02:38:00,468 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1238.7551ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:38:01,782 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BusinessAudit/GetPaged?BusinessTypeName=%E5%90%88%E5%90%8C%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:38:01,787 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:38:01,799 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "BusinessAudit"}. Executing action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:38:01,863 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetBusinessAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:38:01,867 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetById?Id=5  
+INFO  2018-12-12 02:38:01,870 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FilesManage/GetPaged?entityId=1&entityKey=Contract&entityName=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:38:01,872 [27   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:38:01,880 [3    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:38:01,889 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetById", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application)
+INFO  2018-12-12 02:38:02,008 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FilesManage"}. Executing action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:38:02,013 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2018-12-12 02:38:02,054 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFilesManagesInput) - Validation state: Valid
+INFO  2018-12-12 02:38:02,249 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 182.8135ms.
+INFO  2018-12-12 02:38:02,409 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 532.2093ms.
+INFO  2018-12-12 02:38:02,596 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 532.6223ms.
+INFO  2018-12-12 02:38:02,817 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:38:02,929 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application) in 928.667ms
+INFO  2018-12-12 02:38:02,931 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:38:02,950 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1083.622ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:38:02,975 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) in 1137.6017ms
+INFO  2018-12-12 02:38:03,001 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1195.7566ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:38:03,015 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/AuditMapping/GetPaged?ItemId=1&BusinessTypeId=0&BusinessTypeName=%E5%90%88%E5%90%8C%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:38:03,018 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:38:03,025 [3    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:38:03,027 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) in 1010.4034ms
+INFO  2018-12-12 02:38:03,050 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1162.8127ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:38:03,051 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "AuditMapping"}. Executing action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:38:03,096 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetAuditMappingsInput) - Validation state: Valid
+INFO  2018-12-12 02:38:03,315 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 216.6889ms.
+INFO  2018-12-12 02:38:03,549 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:38:03,554 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) in 498.2663ms
+INFO  2018-12-12 02:38:03,561 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 549.4704ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:40:38,437 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:40:38,469 [37   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:40:38,508 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:40:38,570 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-12-12 02:40:38,860 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 287.0919ms.
+INFO  2018-12-12 02:40:39,128 [35   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:40:39,151 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 622.3903ms
+INFO  2018-12-12 02:40:39,168 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 724.2944ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:40:42,633 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ReViewDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:40:42,636 [35   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:40:42,643 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ReViewDefine"}. Executing action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:40:42,732 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetReViewDefinesInput) - Validation state: Valid
+INFO  2018-12-12 02:40:42,990 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 254.7653ms.
+INFO  2018-12-12 02:40:43,234 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:40:43,238 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) in 592.5391ms
+INFO  2018-12-12 02:40:43,243 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 608.3099ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:40:47,483 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/PayAudit/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:40:47,486 [37   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:40:47,506 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "PayAudit"}. Executing action ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:40:48,330 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetPayAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:40:49,141 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 808.8162ms.
+INFO  2018-12-12 02:40:49,380 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:40:49,406 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application) in 1897.1968ms
+INFO  2018-12-12 02:40:49,413 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1927.9621ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:40:50,746 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BusinessAudit/GetPaged?BusinessTypeName=%E6%94%AF%E4%BB%98%E5%AE%A1%E6%A0%B8&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:40:50,758 [27   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:40:50,760 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/PayAudit/GetSearchPayCount?Id=6  
+INFO  2018-12-12 02:40:50,772 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FilesManage/GetPaged?entityId=4&entityKey=PayAudit&entityName=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:40:50,780 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:40:50,784 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "BusinessAudit"}. Executing action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:40:50,800 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FundFrom/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:40:50,854 [37   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:40:50,856 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetBusinessAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:40:50,859 [35   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:40:50,862 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetSearchPayCount", controller = "PayAudit"}. Executing action ICIMS.BusinessManages.PayAuditAppService.GetSearchPayCount (ICIMS.Application)
+INFO  2018-12-12 02:40:50,917 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FilesManage"}. Executing action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:40:50,971 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FundFrom"}. Executing action ICIMS.BaseData.FundFromAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:40:50,978 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.PayAuditAppService.GetSearchPayCount (ICIMS.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2018-12-12 02:40:51,022 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFilesManagesInput) - Validation state: Valid
+INFO  2018-12-12 02:40:51,376 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 513.4431ms.
+INFO  2018-12-12 02:40:52,147 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:40:52,151 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) in 1364.5136ms
+INFO  2018-12-12 02:40:52,186 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1441.0481ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:40:52,228 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/AuditMapping/GetPaged?ItemId=4&BusinessTypeId=0&BusinessTypeName=%E6%94%AF%E4%BB%98%E5%AE%A1%E6%A0%B8&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:40:52,252 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:40:52,261 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1211.692ms.
+INFO  2018-12-12 02:40:52,275 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.PayAuditAppService.GetSearchPayCount (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1293.3759ms.
+INFO  2018-12-12 02:40:52,308 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "AuditMapping"}. Executing action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:40:52,472 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FundFromAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFundFromsInput) - Validation state: Valid
+INFO  2018-12-12 02:40:52,490 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetAuditMappingsInput) - Validation state: Valid
+INFO  2018-12-12 02:40:52,586 [3    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:40:52,589 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) in 1669.4149ms
+INFO  2018-12-12 02:40:52,598 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1829.2776ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:40:52,848 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FundFromAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 373.2758ms.
+INFO  2018-12-12 02:40:52,910 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:40:52,913 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.PayAuditAppService.GetSearchPayCount (ICIMS.Application) in 2047.9629ms
+INFO  2018-12-12 02:40:52,920 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2156.7718ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:40:52,951 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 459.2441ms.
+INFO  2018-12-12 02:40:53,118 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:40:53,127 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FundFromAppService.GetPaged (ICIMS.Application) in 2154.1506ms
+INFO  2018-12-12 02:40:53,132 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2345.7128ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:40:53,217 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:40:53,220 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) in 909.2239ms
+INFO  2018-12-12 02:40:53,231 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1003.5024ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:41:39,294 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ReViewDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:41:39,297 [37   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:41:39,305 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ReViewDefine"}. Executing action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:41:39,374 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetReViewDefinesInput) - Validation state: Valid
+INFO  2018-12-12 02:41:39,635 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 257.5647ms.
+INFO  2018-12-12 02:41:39,887 [3    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:41:39,905 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) in 582.5072ms
+INFO  2018-12-12 02:41:39,913 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 614.8262ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:41:43,290 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:41:43,294 [35   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:41:43,303 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:41:43,352 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-12-12 02:41:43,572 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 216.0168ms.
+INFO  2018-12-12 02:41:43,842 [35   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:41:43,849 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 539.6144ms
+INFO  2018-12-12 02:41:43,873 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 561.8003ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:41:44,865 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FilesManage/GetPaged?entityId=1&entityKey=Contract&entityName=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:41:44,868 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BusinessAudit/GetPaged?BusinessTypeName=%E5%90%88%E5%90%8C%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:41:44,876 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetById?Id=5  
+INFO  2018-12-12 02:41:44,881 [3    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:41:44,916 [35   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:41:44,930 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FilesManage"}. Executing action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:41:44,936 [34   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:41:44,943 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "BusinessAudit"}. Executing action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:41:44,989 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetById", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application)
+INFO  2018-12-12 02:41:44,993 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFilesManagesInput) - Validation state: Valid
+INFO  2018-12-12 02:41:45,032 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetBusinessAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:41:45,217 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2018-12-12 02:41:45,499 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 275.701ms.
+INFO  2018-12-12 02:41:45,557 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 557.4479ms.
+INFO  2018-12-12 02:41:45,605 [39   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 566.594ms.
+INFO  2018-12-12 02:41:45,891 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:41:46,042 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application) in 902.1348ms
+INFO  2018-12-12 02:41:46,058 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:41:46,080 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1176.9142ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:41:46,085 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) in 1128.9105ms
+INFO  2018-12-12 02:41:46,120 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1245.1359ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:41:46,124 [40   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:41:46,127 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) in 1181.284ms
+INFO  2018-12-12 02:41:46,136 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1287.2474ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:41:46,142 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/AuditMapping/GetPaged?ItemId=1&BusinessTypeId=0&BusinessTypeName=%E5%90%88%E5%90%8C%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:41:46,152 [39   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:41:46,162 [39   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "AuditMapping"}. Executing action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:41:46,201 [39   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetAuditMappingsInput) - Validation state: Valid
+INFO  2018-12-12 02:41:46,523 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 318.9208ms.
+INFO  2018-12-12 02:41:46,806 [40   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:41:46,810 [40   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) in 643.9354ms
+INFO  2018-12-12 02:41:46,854 [40   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 672.331ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:43:40,138 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/PayAudit/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:43:40,143 [45   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:43:40,165 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "PayAudit"}. Executing action ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:43:40,216 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetPayAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:43:40,554 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 328.3863ms.
+INFO  2018-12-12 02:43:40,830 [45   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:43:40,837 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application) in 665.6432ms
+INFO  2018-12-12 02:43:40,853 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 702.3671ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:43:43,693 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/PayAudit/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:43:43,723 [42   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:43:43,749 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "PayAudit"}. Executing action ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:43:43,792 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetPayAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:43:44,026 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 231.1767ms.
+INFO  2018-12-12 02:43:44,277 [46   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:43:44,281 [46   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.PayAuditAppService.GetPaged (ICIMS.Application) in 528.0155ms
+INFO  2018-12-12 02:43:44,291 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 603.006ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:43:45,157 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FilesManage/GetPaged?entityId=4&entityKey=PayAudit&entityName=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:43:45,185 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BusinessAudit/GetPaged?BusinessTypeName=%E6%94%AF%E4%BB%98%E5%AE%A1%E6%A0%B8&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:43:45,211 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/PayAudit/GetSearchPayCount?Id=6  
+INFO  2018-12-12 02:43:45,217 [42   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:43:45,227 [46   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:43:45,525 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "BusinessAudit"}. Executing action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:43:45,613 [46   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetSearchPayCount", controller = "PayAudit"}. Executing action ICIMS.BusinessManages.PayAuditAppService.GetSearchPayCount (ICIMS.Application)
+INFO  2018-12-12 02:43:45,725 [45   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:43:45,729 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetBusinessAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:43:45,743 [46   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.PayAuditAppService.GetSearchPayCount (ICIMS.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2018-12-12 02:43:45,745 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FilesManage"}. Executing action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:43:45,758 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FundFrom/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:43:45,844 [48   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:43:45,924 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFilesManagesInput) - Validation state: Valid
+INFO  2018-12-12 02:43:46,014 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FundFrom"}. Executing action ICIMS.BaseData.FundFromAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:43:46,179 [46   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.PayAuditAppService.GetSearchPayCount (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 425.2354ms.
+INFO  2018-12-12 02:43:46,182 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FundFromAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFundFromsInput) - Validation state: Valid
+INFO  2018-12-12 02:43:46,323 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 592.0362ms.
+INFO  2018-12-12 02:43:46,407 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 478.8137ms.
+INFO  2018-12-12 02:43:46,476 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FundFromAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 290.7219ms.
+INFO  2018-12-12 02:43:46,673 [46   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:43:46,763 [46   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.PayAuditAppService.GetSearchPayCount (ICIMS.Application) in 1047.8258ms
+INFO  2018-12-12 02:43:46,772 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1639.1541ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:43:46,810 [45   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:43:46,815 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:43:46,816 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) in 1066.3227ms
+INFO  2018-12-12 02:43:46,827 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) in 1290.9273ms
+INFO  2018-12-12 02:43:46,845 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1714.2696ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:43:46,849 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1673.7216ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:43:46,851 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:43:46,857 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FundFromAppService.GetPaged (ICIMS.Application) in 838.104ms
+INFO  2018-12-12 02:43:46,867 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1702.628ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:43:46,901 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/AuditMapping/GetPaged?ItemId=4&BusinessTypeId=0&BusinessTypeName=%E6%94%AF%E4%BB%98%E5%AE%A1%E6%A0%B8&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:43:46,905 [50   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:43:46,915 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "AuditMapping"}. Executing action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:43:46,952 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetAuditMappingsInput) - Validation state: Valid
+INFO  2018-12-12 02:43:47,164 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 210.2338ms.
+INFO  2018-12-12 02:43:47,413 [45   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:43:47,415 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) in 497.7622ms
+INFO  2018-12-12 02:43:47,420 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 518.6787ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:44:12,986 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Contract/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:44:12,996 [36   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:44:13,013 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Contract"}. Executing action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:44:13,119 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetContractsInput) - Validation state: Valid
+INFO  2018-12-12 02:44:14,267 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1106.5355ms.
+INFO  2018-12-12 02:44:15,069 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ReViewDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-12 02:44:15,085 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:44:15,124 [36   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:44:15,128 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ContractAppService.GetPaged (ICIMS.Application) in 2072.3089ms
+INFO  2018-12-12 02:44:15,135 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2149.2217ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:44:15,174 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ReViewDefine"}. Executing action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:44:15,243 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetReViewDefinesInput) - Validation state: Valid
+INFO  2018-12-12 02:44:15,548 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 298.5703ms.
+INFO  2018-12-12 02:44:16,234 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:44:16,359 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) in 1061.1941ms
+INFO  2018-12-12 02:44:16,467 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1315.66ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:44:18,264 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FilesManage/GetPaged?entityId=2&entityKey=ReViewDefine&entityName=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:44:18,451 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetById?Id=5  
+INFO  2018-12-12 02:44:18,607 [45   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:44:18,820 [49   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:44:19,021 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FilesManage"}. Executing action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:44:19,244 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetById", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application)
+INFO  2018-12-12 02:44:19,586 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/BusinessAudit/GetPaged?BusinessTypeName=%E8%AF%84%E5%AE%A1%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:44:19,676 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFilesManagesInput) - Validation state: Valid
+INFO  2018-12-12 02:44:19,722 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int32]) - Validation state: Valid
+INFO  2018-12-12 02:44:20,940 [43   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:44:21,130 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "BusinessAudit"}. Executing action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:44:21,584 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetBusinessAuditsInput) - Validation state: Valid
+INFO  2018-12-12 02:44:21,590 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1859.4667ms.
+INFO  2018-12-12 02:44:21,626 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1944.9117ms.
+INFO  2018-12-12 02:44:22,674 [54   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:44:22,678 [54   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) in 3652.6896ms
+INFO  2018-12-12 02:44:22,695 [54   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4806.642ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:44:22,720 [43   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:44:22,725 [54   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1132.5168ms.
+INFO  2018-12-12 02:44:22,729 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetById (ICIMS.Application) in 3476.9232ms
+INFO  2018-12-12 02:44:22,761 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4801.9646ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:44:22,764 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/FilesManage/GetPaged?entityId=5&entityKey=ItemDefine&entityName=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:44:22,769 [49   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:44:22,795 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "FilesManage"}. Executing action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:44:22,860 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetFilesManagesInput) - Validation state: Valid
+INFO  2018-12-12 02:44:23,080 [54   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:44:23,083 [54   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.BusinessAuditAppService.GetPaged (ICIMS.Application) in 1949.8459ms
+INFO  2018-12-12 02:44:23,116 [54   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5155.9834ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:44:23,170 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/AuditMapping/GetPaged?ItemId=2&BusinessTypeId=0&BusinessTypeName=%E8%AF%84%E5%AE%A1%E7%99%BB%E8%AE%B0&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-12 02:44:23,175 [43   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-12 02:44:23,186 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "AuditMapping"}. Executing action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-12 02:44:23,232 [43   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetAuditMappingsInput) - Validation state: Valid
+INFO  2018-12-12 02:44:23,236 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 367.8737ms.
+INFO  2018-12-12 02:44:23,516 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:44:23,519 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 282.866ms.
+INFO  2018-12-12 02:44:23,523 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.FilesManageAppService.GetPaged (ICIMS.Application) in 722.4227ms
+INFO  2018-12-12 02:44:23,528 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 770.3241ms 200 application/json; charset=utf-8
+INFO  2018-12-12 02:44:23,789 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-12 02:44:23,792 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.AuditMappingAppService.GetPaged (ICIMS.Application) in 603.3436ms
+INFO  2018-12-12 02:44:23,800 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 667.1351ms 200 application/json; charset=utf-8
