@@ -35,17 +35,20 @@ namespace ICIMS.BusinessManages
         private readonly IRepository<ReViewDefine, int> _entityRepository;
 
         private readonly IReViewDefineManager _entityManager;
-
+        private readonly IRepository<BusinessAudit, int> _entityAuditRepository;
+        private readonly IRepository<BusinessAuditStatus, int> _entityAuditStatusRepository;
         /// <summary>
         /// 构造函数 
         ///</summary>
         public ReViewDefineAppService(
-        IRepository<ReViewDefine, int> entityRepository
-        ,IReViewDefineManager entityManager
+        IRepository<ReViewDefine, int> entityRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
+        , IReViewDefineManager entityManager
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
+            _entityAuditRepository = entityauditRepository;
+            _entityAuditStatusRepository = entityauditstatusRepository;
         }
 
 
@@ -181,8 +184,21 @@ ReViewDefineEditDto editDto;
             }
             entity.CreatorUserId = AbpSession.UserId;
 			input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
-            
-			return input;
+           
+            var audit = _entityAuditRepository.GetAll().Where(o => o.BusinessTypeName == "评审登记");
+            foreach (var businessaudit in audit)
+            {
+                var auditStatus = new BusinessAuditStatus()
+                {
+                    TenantId = AbpSession.TenantId,
+                    BusinessAuditId = businessaudit.Id,
+                    BusinessTypeName = businessaudit.BusinessTypeName,
+                    DisplayOrder = businessaudit.DisplayOrder,
+                    EntityId = input.Id,
+                };
+                _entityAuditStatusRepository.Insert(auditStatus);
+            }
+            return input;
 		}
         private string GenerateId()
         {

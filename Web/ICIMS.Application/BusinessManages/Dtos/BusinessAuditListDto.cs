@@ -43,7 +43,7 @@ namespace ICIMS.BusinessManages.Dtos
 		[Required(ErrorMessage="RoleId不能为空")]
 		public int RoleId { get; set; }
 
-
+        public string RoleName { get; set; }
 
 		/// <summary>
 		/// BuinessTypeId
@@ -58,8 +58,9 @@ namespace ICIMS.BusinessManages.Dtos
         /// </summary>
        // public virtual RoleDto Role { get; set; }
 
-         
+         public int EntityId { get; set; }
 
-
+        public int Status { get; set; }
+        public int BusinessAuditStatusId { get; set; }
     }
 }

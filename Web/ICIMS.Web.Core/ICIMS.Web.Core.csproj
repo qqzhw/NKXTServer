@@ -29,4 +29,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.4" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\..\ICIMS\DLLs\Aspose.Words.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
