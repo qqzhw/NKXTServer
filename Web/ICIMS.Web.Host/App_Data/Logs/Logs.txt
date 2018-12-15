@@ -12769,3 +12769,412 @@ INFO  2018-12-16 02:02:15,932 [48   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-12-16 02:02:16,477 [48   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2018-12-16 02:02:16,553 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ReViewDefineAppService.GetPaged (ICIMS.Application) in 1163.3538ms
 INFO  2018-12-16 02:02:16,605 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1398.2354ms 200 application/json; charset=utf-8
+DEBUG 2018-12-16 02:16:14,626 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-12-16 02:16:16,185 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-12-16 02:16:16,224 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,242 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,242 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,255 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,256 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,256 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,259 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,260 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,264 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:16,272 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-12-16 02:16:16,525 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-16 02:16:16,525 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-16 02:16:16,525 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-16 02:16:16,525 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-16 02:16:18,147 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:16:21,821 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-12-16 02:16:21,931 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-12-16 02:16:22,065 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-12-16 02:16:22,123 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-12-16 02:16:22,200 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-12-16 02:16:23,239 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-12-16 02:16:23,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-12-16 02:16:23,426 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-12-16 02:16:23,451 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-12-16 02:16:23,452 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-12-16 02:16:23,453 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-12-16 02:16:23,453 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-12-16 02:16:23,454 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-12-16 02:16:23,454 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-12-16 02:16:23,454 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-12-16 02:16:23,455 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-12-16 02:16:23,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-12-16 02:16:40,902 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-12-16 02:16:40,902 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-12-16 02:16:41,092 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 205.92ms 200 
+INFO  2018-12-16 02:16:50,153 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-12-16 02:16:52,396 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-12-16 02:16:52,409 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 5.1249ms.
+INFO  2018-12-16 02:16:53,030 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-12-16 02:16:53,097 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 2917.0277ms
+INFO  2018-12-16 02:16:53,268 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12282.337ms 302 
+INFO  2018-12-16 02:16:53,283 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-12-16 02:16:53,352 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 80.9925ms 200 text/html
+INFO  2018-12-16 02:16:53,405 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-12-16 02:16:53,407 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-12-16 02:16:53,411 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-12-16 02:16:53,447 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-12-16 02:16:53,450 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-12-16 02:16:53,451 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-12-16 02:16:53,476 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 53.4374ms 304 application/javascript
+INFO  2018-12-16 02:16:53,484 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 65.1957ms 304 text/css
+INFO  2018-12-16 02:16:53,495 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.9433ms 304 application/javascript
+INFO  2018-12-16 02:16:56,725 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-12-16 02:16:57,236 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-12-16 02:16:57,243 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 525.5876ms 200 text/plain
+INFO  2018-12-16 02:16:59,431 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-12-16 02:16:59,489 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-12-16 02:16:59,492 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 60.9637ms 200 text/plain
+INFO  2018-12-16 02:16:59,904 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-12-16 02:17:00,097 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:17:01,967 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2058.6148ms 200 application/json;charset=utf-8
+INFO  2018-12-16 02:17:44,192 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-12-16 02:17:44,293 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-12-16 02:17:47,340 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-12-16 02:17:50,578 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3232.7403ms.
+INFO  2018-12-16 02:17:51,901 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:17:51,945 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 7647.5224ms
+INFO  2018-12-16 02:17:51,953 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7761.045ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:17:52,098 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/User/GetUserById?Id=2  
+INFO  2018-12-16 02:17:52,101 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:17:52,128 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetUserById", controller = "User"}. Executing action ICIMS.Users.UserAppService.GetUserById (ICIMS.Application)
+INFO  2018-12-16 02:17:52,193 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Users.UserAppService.GetUserById (ICIMS.Application) with arguments (2) - Validation state: Valid
+INFO  2018-12-16 02:17:54,107 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Users.UserAppService.GetUserById (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1911.2545ms.
+INFO  2018-12-16 02:17:54,479 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:17:54,507 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetUserById (ICIMS.Application) in 2372.8495ms
+INFO  2018-12-16 02:17:54,536 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2412.4396ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:00,319 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-16 02:18:00,329 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:00,375 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-16 02:18:01,032 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-16 02:18:01,039 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:02,217 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-16 02:18:02,503 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetItemDefinesInput) - Validation state: Valid
+INFO  2018-12-16 02:18:02,504 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetItemDefinesInput) - Validation state: Valid
+INFO  2018-12-16 02:18:03,304 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 797.192ms.
+INFO  2018-12-16 02:18:03,306 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 797.3403ms.
+INFO  2018-12-16 02:18:03,668 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:03,672 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:03,698 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) in 1468.3347ms
+INFO  2018-12-16 02:18:03,707 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) in 3322.7294ms
+INFO  2018-12-16 02:18:03,720 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2676.1555ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:03,740 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3394.0635ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:21,091 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Role/GetAll?MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-16 02:18:21,095 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:21,113 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application)
+INFO  2018-12-16 02:18:21,176 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - Validation state: Valid
+INFO  2018-12-16 02:18:22,976 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1798.3511ms.
+INFO  2018-12-16 02:18:23,328 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:23,338 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application) in 2216.5107ms
+INFO  2018-12-16 02:18:23,354 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2258.5607ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:23,369 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Role/GetAllPermissions  
+INFO  2018-12-16 02:18:23,376 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:23,391 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllPermissions", controller = "Role"}. Executing action ICIMS.Roles.RoleAppService.GetAllPermissions (ICIMS.Application)
+INFO  2018-12-16 02:18:23,462 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Roles.RoleAppService.GetAllPermissions (ICIMS.Application) - Validation state: Valid
+INFO  2018-12-16 02:18:23,513 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Roles.RoleAppService.GetAllPermissions (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 31.6737ms.
+INFO  2018-12-16 02:18:23,849 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:23,857 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Roles.RoleAppService.GetAllPermissions (ICIMS.Application) in 461.3393ms
+INFO  2018-12-16 02:18:23,868 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 491.201ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:28,545 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/User/GetAllUsersAsync?MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-16 02:18:28,552 [17   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:28,569 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllUsersAsync", controller = "User"}. Executing action ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application)
+INFO  2018-12-16 02:18:28,688 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application) with arguments (ICIMS.Dtos.PagedAndSortedInputDto) - Validation state: Valid
+INFO  2018-12-16 02:18:28,776 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/User/GetAllUsersAsync?MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-16 02:18:28,782 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:28,792 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllUsersAsync", controller = "User"}. Executing action ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application)
+INFO  2018-12-16 02:18:28,849 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application) with arguments (ICIMS.Dtos.PagedAndSortedInputDto) - Validation state: Valid
+INFO  2018-12-16 02:18:30,851 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1999.9157ms.
+INFO  2018-12-16 02:18:30,897 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2205.8524ms.
+INFO  2018-12-16 02:18:31,216 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:31,223 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application) in 2426.6298ms
+INFO  2018-12-16 02:18:31,241 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2528.1088ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:31,281 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Department/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-16 02:18:31,286 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:31,287 [17   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:31,293 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetAllUsersAsync (ICIMS.Application) in 2718.5287ms
+INFO  2018-12-16 02:18:31,325 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2761.3108ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:31,336 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Department"}. Executing action ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-16 02:18:31,643 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetOrganizationUnitsInput) - Validation state: Valid
+INFO  2018-12-16 02:18:31,674 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Department/GetPaged?No=&Name=&MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-16 02:18:31,686 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:31,800 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "Department"}. Executing action ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-16 02:18:31,974 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BaseData.Dtos.GetOrganizationUnitsInput) - Validation state: Valid
+INFO  2018-12-16 02:18:32,409 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 410.4622ms.
+INFO  2018-12-16 02:18:32,410 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 741.3368ms.
+INFO  2018-12-16 02:18:32,758 [17   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:32,760 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:32,771 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application) in 965.6299ms
+INFO  2018-12-16 02:18:32,772 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BaseData.DepartmentAppService.GetPaged (ICIMS.Application) in 1429.9521ms
+INFO  2018-12-16 02:18:32,779 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1494.4029ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:32,791 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1184.7173ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:32,824 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Role/GetAll?MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-16 02:18:32,839 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/Role/GetAll?MaxResultCount=2147483647&SkipCount=0  
+INFO  2018-12-16 02:18:32,842 [19   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:32,845 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:18:32,851 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application)
+INFO  2018-12-16 02:18:32,855 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application)
+INFO  2018-12-16 02:18:32,928 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - Validation state: Valid
+INFO  2018-12-16 02:18:32,929 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application) with arguments (Abp.Application.Services.Dto.PagedResultRequestDto) - Validation state: Valid
+INFO  2018-12-16 02:18:33,705 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 774.6704ms.
+INFO  2018-12-16 02:18:33,787 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 855.9567ms.
+INFO  2018-12-16 02:18:34,070 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:34,074 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application) in 1216.5447ms
+INFO  2018-12-16 02:18:34,096 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1273.9528ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:18:34,112 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:18:34,116 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Roles.RoleAppService.GetAll (ICIMS.Application) in 1258.2519ms
+INFO  2018-12-16 02:18:34,129 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1304.7928ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:21:26,535 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-16 02:21:26,548 [23   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:21:26,556 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-16 02:21:26,763 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetItemDefinesInput) - Validation state: Valid
+DEBUG 2018-12-16 02:25:24,540 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-12-16 02:25:26,938 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2018-12-16 02:25:27,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.Web.Host.Startup.ICIMSWebHostModule, ICIMS.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,029 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSWebCoreModule, ICIMS.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSApplicationModule, ICIMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.ICIMSCoreModule, ICIMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,031 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,031 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,031 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,033 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,033 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ICIMS.EntityFrameworkCore.ICIMSEntityFrameworkModule, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,035 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,036 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,037 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,038 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:25:27,048 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2018-12-16 02:25:27,938 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-16 02:25:27,938 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-16 02:25:27,938 [1    ] o.Configuration.LanguageManagementConfig - Converted ICIMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-16 02:25:27,938 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-12-16 02:25:32,284 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ICIMS.EntityFrameworkCore.ICIMSDbContext, ICIMS.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-12-16 02:26:02,437 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-12-16 02:26:02,945 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-12-16 02:26:03,308 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-12-16 02:26:03,512 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ICIMS
+DEBUG 2018-12-16 02:26:03,628 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-12-16 02:26:07,955 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-12-16 02:26:08,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2018-12-16 02:26:08,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2018-12-16 02:26:08,376 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.CreateUserDto
+DEBUG 2018-12-16 02:26:08,378 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Users.Dto.UserDto
+DEBUG 2018-12-16 02:26:08,379 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-12-16 02:26:08,381 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-12-16 02:26:08,381 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.CreateRoleDto
+DEBUG 2018-12-16 02:26:08,382 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.PermissionDto
+DEBUG 2018-12-16 02:26:08,382 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.Roles.Dto.RoleDto
+DEBUG 2018-12-16 02:26:08,383 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-12-16 02:26:08,383 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ICIMS.MultiTenancy.Dto.TenantDto
+INFO  2018-12-16 02:27:03,078 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/  
+INFO  2018-12-16 02:27:03,225 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-12-16 02:27:03,380 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21025/  0
+INFO  2018-12-16 02:27:04,207 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1605.5713ms 200 
+INFO  2018-12-16 02:27:34,657 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-12-16 02:28:22,871 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host)
+INFO  2018-12-16 02:28:23,105 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-12-16 02:28:23,224 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-12-16 02:29:14,266 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-12-16 02:29:18,537 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) - Validation state: Valid
+INFO  2018-12-16 02:29:18,617 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 7.1706ms.
+INFO  2018-12-16 02:29:21,084 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-12-16 02:29:22,561 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-12-16 02:29:23,364 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-12-16 02:29:23,548 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-12-16 02:29:25,209 [13   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-12-16 02:29:25,791 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Web.Host.Controllers.HomeController.Index (ICIMS.Web.Host) in 62577.7194ms
+INFO  2018-12-16 02:29:26,274 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 143574.5987ms 302 
+INFO  2018-12-16 02:29:27,058 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/index.html  
+INFO  2018-12-16 02:29:28,667 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1864.8975ms 200 text/html
+INFO  2018-12-16 02:29:31,216 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-12-16 02:29:31,722 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui.css  
+INFO  2018-12-16 02:29:32,291 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js  
+INFO  2018-12-16 02:29:32,721 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-12-16 02:29:32,875 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-12-16 02:29:33,050 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-12-16 02:29:33,153 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1674.9835ms 304 text/css
+INFO  2018-12-16 02:29:33,392 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2309.7746ms 304 application/javascript
+INFO  2018-12-16 02:29:33,438 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2488.3529ms 304 application/javascript
+INFO  2018-12-16 02:29:36,840 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-bundle.js.map  
+INFO  2018-12-16 02:29:50,969 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 28278.4672ms.
+INFO  2018-12-16 02:29:51,677 [18   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js.map'. Physical path: 'N/A'
+INFO  2018-12-16 02:29:52,395 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15211.5187ms 200 text/plain
+INFO  2018-12-16 02:29:59,778 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/swagger-ui-standalone-preset.js.map  
+WARN  2018-12-16 02:30:04,705 [4    ] ICIMS.Authorization.Users.UserStore      - Abp.Domain.Uow.AbpDbConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions. ---> Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   --- End of inner exception stack trace ---
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 221
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 167
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 70
+   at Abp.Authorization.Users.AbpUserStore`2.UpdateAsync(TUser user, CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserStore.cs:line 228
+Abp.Domain.Uow.AbpDbConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions. ---> Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   --- End of inner exception stack trace ---
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 221
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 167
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 70
+   at Abp.Authorization.Users.AbpUserStore`2.UpdateAsync(TUser user, CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserStore.cs:line 228
+WARN  2018-12-16 02:30:04,770 [13   ] ICIMS.Authorization.Users.UserStore      - Abp.Domain.Uow.AbpDbConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions. ---> Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   --- End of inner exception stack trace ---
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 221
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 167
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 70
+   at Abp.Authorization.Users.AbpUserStore`2.UpdateAsync(TUser user, CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserStore.cs:line 228
+Abp.Domain.Uow.AbpDbConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions. ---> Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   --- End of inner exception stack trace ---
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 221
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 167
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 70
+   at Abp.Authorization.Users.AbpUserStore`2.UpdateAsync(TUser user, CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\Users\AbpUserStore.cs:line 228
+INFO  2018-12-16 02:30:16,639 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js.map'. Physical path: 'N/A'
+INFO  2018-12-16 02:30:16,946 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17714.9032ms 200 text/plain
+INFO  2018-12-16 02:30:20,015 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/swagger/v1/swagger.json  
+INFO  2018-12-16 02:30:21,694 [18   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:30:23,122 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 119490.4643ms
+ERROR 2018-12-16 02:30:23,194 [11   ] Mvc.ExceptionHandling.AbpExceptionFilter - Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+Abp.Domain.Uow.AbpDbConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions. ---> Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   --- End of inner exception stack trace ---
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 221
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 167
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 70
+   at Abp.Authorization.AbpLogInManager`3.CreateLoginResultAsync(TUser user, TTenant tenant) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\AbpLoginManager.cs:line 226
+   at Abp.Authorization.AbpLogInManager`3.LoginAsyncInternal(String userNameOrEmailAddress, String plainPassword, String tenancyName, Boolean shouldLockout) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\AbpLoginManager.cs:line 201
+   at Abp.Authorization.AbpLogInManager`3.LoginAsync(String userNameOrEmailAddress, String plainPassword, String tenancyName, Boolean shouldLockout) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\AbpLoginManager.cs:line 124
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at ICIMS.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in F:\20181030\Server\Web\ICIMS.Web.Core\Controllers\TokenAuthController.cs:line 200
+   at ICIMS.Controllers.TokenAuthController.Authenticate(AuthenticateModel model) in F:\20181030\Server\Web\ICIMS.Web.Core\Controllers\TokenAuthController.cs:line 64
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2018-12-16 02:30:23,276 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 168494.3791ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:30:23,936 [17   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+ERROR 2018-12-16 02:30:30,361 [18   ] Mvc.ExceptionHandling.AbpExceptionFilter - Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+Abp.Domain.Uow.AbpDbConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions. ---> Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagationAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 215
+   --- End of inner exception stack trace ---
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 221
+   at Abp.Zero.EntityFrameworkCore.AbpZeroCommonDbContext`3.SaveChangesAsync(CancellationToken cancellationToken) in F:\20181030\Server\AbpProject\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroCommonDbContext.cs:line 165
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesInDbContextAsync(DbContext dbContext) in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 167
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.SaveChangesAsync() in F:\20181030\Server\AbpProject\Abp.EntityFrameworkCore\EntityFrameworkCore\Uow\EfCoreUnitOfWork.cs:line 70
+   at Abp.Authorization.AbpLogInManager`3.CreateLoginResultAsync(TUser user, TTenant tenant) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\AbpLoginManager.cs:line 226
+   at Abp.Authorization.AbpLogInManager`3.LoginAsyncInternal(String userNameOrEmailAddress, String plainPassword, String tenancyName, Boolean shouldLockout) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\AbpLoginManager.cs:line 201
+   at Abp.Authorization.AbpLogInManager`3.LoginAsync(String userNameOrEmailAddress, String plainPassword, String tenancyName, Boolean shouldLockout) in F:\20181030\Server\AbpProject\Abp.ZeroCore\Authorization\AbpLoginManager.cs:line 124
+   at Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult[T](Task`1 actualReturnValue, Func`1 postAction, Action`1 finalAction) in F:\20181030\Server\AbpProject\Abp\Threading\InternalAsyncHelper.cs:line 113
+   at ICIMS.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in F:\20181030\Server\Web\ICIMS.Web.Core\Controllers\TokenAuthController.cs:line 200
+   at ICIMS.Controllers.TokenAuthController.Authenticate(AuthenticateModel model) in F:\20181030\Server\Web\ICIMS.Web.Core\Controllers\TokenAuthController.cs:line 64
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2018-12-16 02:30:32,519 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:30:32,569 [18   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:30:32,703 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 71437.8949ms
+INFO  2018-12-16 02:30:32,840 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 129480.1507ms
+INFO  2018-12-16 02:30:32,909 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 78454.5111ms 500 application/json; charset=utf-8
+INFO  2018-12-16 02:30:33,053 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 210354.2348ms 500 application/json; charset=utf-8
+INFO  2018-12-16 02:30:33,562 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13546.9587ms 200 application/json;charset=utf-8
+INFO  2018-12-16 02:33:05,486 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21025/api/TokenAuth/Authenticate application/json; charset=utf-8 78
+INFO  2018-12-16 02:33:05,514 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core)
+INFO  2018-12-16 02:33:05,616 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) with arguments (ICIMS.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2018-12-16 02:33:08,138 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2519.5135ms.
+INFO  2018-12-16 02:33:08,863 [25   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:33:08,866 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Controllers.TokenAuthController.Authenticate (ICIMS.Web.Core) in 3349.6113ms
+INFO  2018-12-16 02:33:08,895 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3385.5502ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:33:09,067 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/User/GetUserById?Id=2  
+INFO  2018-12-16 02:33:09,071 [17   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:33:09,110 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetUserById", controller = "User"}. Executing action ICIMS.Users.UserAppService.GetUserById (ICIMS.Application)
+INFO  2018-12-16 02:33:09,183 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.Users.UserAppService.GetUserById (ICIMS.Application) with arguments (2) - Validation state: Valid
+INFO  2018-12-16 02:33:11,079 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.Users.UserAppService.GetUserById (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1891.5716ms.
+INFO  2018-12-16 02:33:11,461 [25   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:33:11,510 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.Users.UserAppService.GetUserById (ICIMS.Application) in 2397.6709ms
+INFO  2018-12-16 02:33:11,517 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2445.3952ms 200 application/json; charset=utf-8
+INFO  2018-12-16 02:40:44,642 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21025/api/services/app/ItemDefine/GetPaged?No=&Name=&MaxResultCount=20&SkipCount=0  
+INFO  2018-12-16 02:40:44,753 [21   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2018-12-16 02:40:44,891 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPaged", controller = "ItemDefine"}. Executing action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application)
+INFO  2018-12-16 02:40:48,300 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) with arguments (ICIMS.BusinessManages.Dtos.GetItemDefinesInput) - Validation state: Valid
+INFO  2018-12-16 02:40:49,811 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1459.0636ms.
+INFO  2018-12-16 02:40:51,273 [21   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2018-12-16 02:40:51,327 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ICIMS.BusinessManages.ItemDefineAppService.GetPaged (ICIMS.Application) in 6410.2938ms
+INFO  2018-12-16 02:40:51,386 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6697.0648ms 200 application/json; charset=utf-8

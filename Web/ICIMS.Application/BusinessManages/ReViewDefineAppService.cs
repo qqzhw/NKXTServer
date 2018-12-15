@@ -64,7 +64,7 @@ namespace ICIMS.BusinessManages
 		{
 
 		    var query =from o in _entityRepository.GetAllIncluding(o=>o.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.AuditUser).Include(o=>o.CreatorUser)
-                       join u in _entitymanageunitRepository.GetAll() on o.ItemDefine.UnitId equals u.UnitId
+                       join u in _entitymanageunitRepository.GetAll().Where(o=>o.UserId==AbpSession.UserId) on o.ItemDefine.UnitId equals u.UnitId
                   select new ReViewDefineListDto
                 {
                     ReViewDefine = o.MapTo<ReViewDefineEditDto>(),

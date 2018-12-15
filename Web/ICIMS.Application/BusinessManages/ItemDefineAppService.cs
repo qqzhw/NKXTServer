@@ -62,7 +62,7 @@ namespace ICIMS.BusinessManages
 		{
 
             var query =from o in _entityRepository.GetAllIncluding(o => o.Budget).Include(o => o.ItemCategory).Include(o => o.Unit).Include(o=>o.AuditUser)
-                        join u in _entitymanageunitRepository.GetAll() on o.UnitId equals u.UnitId
+                        join u in _entitymanageunitRepository.GetAll().Where(p=>p.UserId==AbpSession.UserId) on o.UnitId equals u.UnitId
                         select new ItemDefineListDto() {
                      AuditDate=o.AuditDate,
                      AuditUserId=o.AuditUserId,
