@@ -36,19 +36,19 @@ namespace ICIMS.BusinessManages
         private readonly IRepository<BusinessAudit, int> _entityAuditRepository;
         private readonly IRepository<BusinessAuditStatus, int> _entityAuditStatusRepository;
         private readonly IItemDefineManager _entityManager;
-
+        private readonly IRepository<UserManageUnit, int> _entitymanageunitRepository;
         /// <summary>
         /// 构造函数 
         ///</summary>
         public ItemDefineAppService(
         IRepository<ItemDefine, int> entityRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
-        , IItemDefineManager entityManager
-        )
+        , IItemDefineManager entityManager, IRepository<UserManageUnit, int> entitymanageunitRepository )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
             _entityAuditRepository = entityauditRepository;
             _entityAuditStatusRepository = entityauditstatusRepository;
+            _entitymanageunitRepository = entitymanageunitRepository;
         }
 
 
@@ -61,8 +61,9 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<ItemDefineListDto>> GetPaged(GetItemDefinesInput input)
 		{
 
-            var query = _entityRepository.GetAllIncluding(o => o.Budget).Include(o => o.ItemCategory).Include(o => o.Unit).Include(o=>o.AuditUser)
-                .Select(o=>new ItemDefineListDto() {
+            var query =from o in _entityRepository.GetAllIncluding(o => o.Budget).Include(o => o.ItemCategory).Include(o => o.Unit).Include(o=>o.AuditUser)
+                        join u in _entitymanageunitRepository.GetAll() on o.UnitId equals u.UnitId
+                        select new ItemDefineListDto() {
                      AuditDate=o.AuditDate,
                      AuditUserId=o.AuditUserId,
                      AuditUserName=o.AuditUser.Name,
@@ -90,7 +91,7 @@ namespace ICIMS.BusinessManages
                      TenantId=o.TenantId,
                      UnitId=o.UnitId ,
                     UnitName =o.Unit.DisplayName
-                });
+                };
 
 
             // TODO:根据传入的参数添加过滤条件

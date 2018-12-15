@@ -37,18 +37,19 @@ namespace ICIMS.BusinessManages
         private readonly IContractManager _entityManager;
         private readonly IRepository<BusinessAudit, int> _entityAuditRepository;
         private readonly IRepository<BusinessAuditStatus, int> _entityAuditStatusRepository;
+        private readonly IRepository<UserManageUnit, int> _entitymanageunitRepository;
         /// <summary>
         /// 构造函数 
         ///</summary>
         public ContractAppService(
         IRepository<Contract, int> entityRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
-        , IContractManager entityManager
-        )
+        , IContractManager entityManager, IRepository<UserManageUnit, int> entitymanageunitRepository )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
             _entityAuditRepository = entityauditRepository;
             _entityAuditStatusRepository = entityauditstatusRepository;
+            _entitymanageunitRepository = entitymanageunitRepository;
         }
 
 
@@ -61,7 +62,9 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<ContractListDto>> GetPaged(GetContractsInput input)
 		{
 
-		    var query = _entityRepository.GetAllIncluding(o=>o.Vendor).Include(o=>o.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.ContractCategory).Select(o=>new ContractListDto()
+		    var query =from o in  _entityRepository.GetAllIncluding(o=>o.Vendor).Include(o=>o.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.ContractCategory)
+                       join u in _entitymanageunitRepository.GetAll() on o.UnitId equals u.UnitId
+                      select new ContractListDto()
             {
                 AuditDate=o.AuditDate,
                 AuditUserId=o.AuditUserId,
@@ -98,7 +101,7 @@ namespace ICIMS.BusinessManages
                 VendorName=o.Vendor.Name,
                 Warining=o.Warining,
                 WariningDate=o.WariningDate                
-            });
+            };
             // TODO:根据传入的参数添加过滤条件
             if (!string.IsNullOrEmpty(input.No))
             {

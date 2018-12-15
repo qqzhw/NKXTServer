@@ -37,18 +37,20 @@ namespace ICIMS.BusinessManages
         private readonly IReViewDefineManager _entityManager;
         private readonly IRepository<BusinessAudit, int> _entityAuditRepository;
         private readonly IRepository<BusinessAuditStatus, int> _entityAuditStatusRepository;
+        private readonly IRepository<UserManageUnit, int> _entitymanageunitRepository;
         /// <summary>
         /// 构造函数 
         ///</summary>
         public ReViewDefineAppService(
         IRepository<ReViewDefine, int> entityRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
-        , IReViewDefineManager entityManager
+        , IReViewDefineManager entityManager, IRepository<UserManageUnit, int> entitymanageunitRepository
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
             _entityAuditRepository = entityauditRepository;
             _entityAuditStatusRepository = entityauditstatusRepository;
+            _entitymanageunitRepository = entitymanageunitRepository;
         }
 
 
@@ -61,8 +63,9 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<ReViewDefineListDto>> GetPaged(GetReViewDefinesInput input)
 		{
 
-		    var query = _entityRepository.GetAllIncluding(o=>o.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.AuditUser).Include(o=>o.CreatorUser)
-                .Select(o=>new ReViewDefineListDto
+		    var query =from o in _entityRepository.GetAllIncluding(o=>o.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.AuditUser).Include(o=>o.CreatorUser)
+                       join u in _entitymanageunitRepository.GetAll() on o.ItemDefine.UnitId equals u.UnitId
+                  select new ReViewDefineListDto
                 {
                     ReViewDefine = o.MapTo<ReViewDefineEditDto>(),
                     AuditUserName = o.AuditUser.Name,
@@ -77,7 +80,7 @@ namespace ICIMS.BusinessManages
                     IsDeleted=o.IsDeleted,
                     Status=o.Status
                     
-                });
+                };
             // TODO:根据传入的参数添加过滤条件
             if (!string.IsNullOrEmpty(input.No))
             {

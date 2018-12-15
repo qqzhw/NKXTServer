@@ -37,13 +37,14 @@ namespace ICIMS.BusinessManages
         private readonly IRepository<BusinessAudit, int> _entityAuditRepository;
         private readonly IRepository<BusinessAuditStatus, int> _entityAuditStatusRepository;
         private readonly IPayAuditManager _entityManager;
+        private readonly IRepository<UserManageUnit, int> _entitymanageunitRepository;
 
         /// <summary>
         /// 构造函数 
         ///</summary>
         public PayAuditAppService(
-        IRepository<PayAudit, int> entityRepository, IRepository<PayAuditDetail, int> entityDetailRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
-      
+        IRepository<PayAudit, int> entityRepository, IRepository<PayAuditDetail, int> entityDetailRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository,
+      IRepository<UserManageUnit, int> entitymanageunitRepository
         , IPayAuditManager entityManager
         )
         {
@@ -52,6 +53,7 @@ namespace ICIMS.BusinessManages
             _entityDetailRepository = entityDetailRepository;
             _entityAuditRepository = entityauditRepository;
             _entityAuditStatusRepository = entityauditstatusRepository;
+            _entitymanageunitRepository = entitymanageunitRepository;
         }
 
 
@@ -64,27 +66,29 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<PayAuditListDto>> GetPaged(GetPayAuditsInput input)
 		{
 
-		    var query = _entityRepository.GetAllIncluding(o=>o.Contract).Include(o=>o.Contract.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.Contract.Vendor).Include(o=>o.AuditUser).Include(o=>o.CreatorUser)
-                       .Select(o=>new PayAuditListDto() {
-                           PayAudit= o.MapTo<PayAuditEditDto>(),
-                           AccountName=o.Contract.Vendor.AccountName,
-                           AuditUserName=o.AuditUser.Name,
-                           ContractAmount=o.Contract.ContractAmount,
-                           ContractName=o.Contract.ContractName,
-                           CreationTime=o.CreationTime,
-                           CreatorUserId=o.CreatorUserId,
-                           CreatorUserName=o.CreatorUser.Name,
-                           DefineAmount=o.ItemDefine.DefineAmount,
-                           Id=o.Id,
-                           IsDeleted=o.IsDeleted,
-                           ItemDefineName=o.ItemDefine.ItemName,
-                           ItemNo=o.ItemDefine.ItemNo,
-                           LinkPhone=o.Contract.Vendor.LinkPhone,
-                           OpenBank=o.Contract.Vendor.OpenBank,
-                           PaymentTypeName=o.PaymentType.Name,
-                           UnitName=o.ItemDefine.Unit.DisplayName,
-                           VendorName=o.Contract.Vendor.Name
-                       });
+		    var query =from o  in _entityRepository.GetAllIncluding(o=>o.Contract).Include(o=>o.Contract.ItemDefine).Include(o=>o.ItemDefine.Unit).Include(o=>o.Contract.Vendor).Include(o=>o.AuditUser).Include(o=>o.CreatorUser)
+                 join u in _entitymanageunitRepository.GetAll() on o.UnitId equals u.UnitId
+                       select new PayAuditListDto()
+                       {
+                           PayAudit = o.MapTo<PayAuditEditDto>(),
+                           AccountName = o.Contract.Vendor.AccountName,
+                           AuditUserName = o.AuditUser.Name,
+                           ContractAmount = o.Contract.ContractAmount,
+                           ContractName = o.Contract.ContractName,
+                           CreationTime = o.CreationTime,
+                           CreatorUserId = o.CreatorUserId,
+                           CreatorUserName = o.CreatorUser.Name,
+                           DefineAmount = o.ItemDefine.DefineAmount,
+                           Id = o.Id,
+                           IsDeleted = o.IsDeleted,
+                           ItemDefineName = o.ItemDefine.ItemName,
+                           ItemNo = o.ItemDefine.ItemNo,
+                           LinkPhone = o.Contract.Vendor.LinkPhone,
+                           OpenBank = o.Contract.Vendor.OpenBank,
+                           PaymentTypeName = o.PaymentType.Name,
+                           UnitName = o.ItemDefine.Unit.DisplayName,
+                           VendorName = o.Contract.Vendor.Name
+                       };
             // TODO:根据传入的参数添加过滤条件
             if (input.Status.HasValue)
             {
