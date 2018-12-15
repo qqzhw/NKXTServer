@@ -9,16 +9,18 @@ namespace ICIMS.BusinessManages.Mapper
 	/// <summary>
     /// 配置BusinessAuditStatus的AutoMapper
     /// </summary>
-	internal static class BusinessAuditStatusMapper
+	public partial class BusinessAuditStatusMapper : Profile
     {
-        public static void CreateMappings(IMapperConfigurationExpression configuration)
+        public BusinessAuditStatusMapper()
         {
-            configuration.CreateMap <BusinessAuditStatus,BusinessAuditStatusListDto>();
-            configuration.CreateMap <BusinessAuditStatusListDto,BusinessAuditStatus>();
 
-            configuration.CreateMap <BusinessAuditStatusEditDto,BusinessAuditStatus>();
-            configuration.CreateMap <BusinessAuditStatus,BusinessAuditStatusEditDto>();
+            CreateMap<BusinessAuditStatus, BusinessAuditStatusListDto>();
+            CreateMap<BusinessAuditStatusListDto, BusinessAuditStatus>();
+
+            CreateMap<BusinessAuditStatusEditDto, BusinessAuditStatus>();
+            CreateMap<BusinessAuditStatus, BusinessAuditStatusEditDto>();
 
         }
-	}
+    }
+     
 }

@@ -151,12 +151,12 @@ BusinessAuditStatusEditDto editDto;
 		
 		protected virtual async Task<BusinessAuditStatusEditDto> Create(BusinessAuditStatusEditDto input)
 		{
-			//TODO:新增前的逻辑判断，是否允许新增
-
+            //TODO:新增前的逻辑判断，是否允许新增
+            input.TenantId = AbpSession.TenantId;
             // var entity = ObjectMapper.Map <BusinessAuditStatus>(input);
             var entity=input.MapTo<BusinessAuditStatus>();
 			
-
+            
 			entity = await _entityRepository.InsertAsync(entity);
 			return entity.MapTo<BusinessAuditStatusEditDto>();
 		}
@@ -167,9 +167,9 @@ BusinessAuditStatusEditDto editDto;
 		
 		protected virtual async Task Update(BusinessAuditStatusEditDto input)
 		{
-			//TODO:更新前的逻辑判断，是否允许更新
-
-			var entity = await _entityRepository.GetAsync(input.Id);
+            //TODO:更新前的逻辑判断，是否允许更新
+            input.TenantId = AbpSession.TenantId;
+            var entity = await _entityRepository.GetAsync(input.Id);
             
 			input.MapTo(entity);
 

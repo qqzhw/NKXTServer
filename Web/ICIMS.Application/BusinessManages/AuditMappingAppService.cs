@@ -160,12 +160,12 @@ AuditMappingEditDto editDto;
             
             entity.CreatorUserId = AbpSession.UserId;
 			input.Id = await _entityRepository.InsertOrUpdateAndGetIdAsync(entity);
-            var findItem = _entityauditstatusRepository.Get(input.BusinessAuditId);
-            if (findItem!=null)
-            {
-                findItem.Status = input.Status;
-              await  _entityauditstatusRepository.UpdateAsync(findItem);
-            }
+            //var findItem = _entityauditstatusRepository.Get(input.BusinessAuditStatusId);
+            //if (findItem!=null)
+            //{
+            //    findItem.Status = input.Status;
+            //  await  _entityauditstatusRepository.UpdateAsync(findItem);
+            //}
 			return  input;
 		}
 
