@@ -54,7 +54,7 @@ namespace ICIMS.BusinessManages
         /// <param name="input"></param>
         /// <returns></returns>
 		//[AbpAuthorize(BuinessAuditPermissions.Query)] 
-        public async Task<PagedResultDto<BusinessAuditListDto>> GetPaged(GetBusinessAuditsInput input)
+        public async Task<PagedResultDto<BusinessAuditListDto>> GetAllAuditStatus(GetBusinessAuditsInput input)
         {
 
             var queryaudit = _entityRepository.GetAll();
@@ -107,12 +107,38 @@ namespace ICIMS.BusinessManages
             return new PagedResultDto<BusinessAuditListDto>(count, entityList);
         }
 
+        public async Task<PagedResultDto<BusinessAuditListDto>> GetPaged(GetBusinessAuditsInput input)
+        {
 
-		/// <summary>
-		/// 通过指定id获取BuinessAuditListDto信息
-		/// </summary>
-		//[AbpAuthorize(BuinessAuditPermissions.Query)] 
-		public async Task<BusinessAuditListDto> GetById(EntityDto<int> input)
+            var query = _entityRepository.GetAll();
+            var a = _entityRepository.FirstOrDefault(1);
+            // TODO:根据传入的参数添加过滤条件
+            if (input.BusinessTypeId.HasValue)
+            {
+                query = query.Where(o => o.BusinessType.Id == input.BusinessTypeId);
+            }
+            if (!string.IsNullOrEmpty(input.BusinessTypeName))
+            {
+                query = query.Where(o => o.BusinessType.Name == input.BusinessTypeName);
+            }
+            var count = await query.CountAsync();
+
+            var entityList = await query
+                    .OrderBy(o=>o.DisplayOrder).AsNoTracking()
+                    .PageBy(input)
+                    .ToListAsync();
+
+            //var entityListDtos = ObjectMapper.Map<List<BuinessAuditListDto>>(entityList);
+            var entityListDtos = entityList.MapTo<List<BusinessAuditListDto>>();
+
+            return new PagedResultDto<BusinessAuditListDto>(count, entityListDtos);
+        }
+
+        /// <summary>
+        /// 通过指定id获取BuinessAuditListDto信息
+        /// </summary>
+        //[AbpAuthorize(BuinessAuditPermissions.Query)] 
+        public async Task<BusinessAuditListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
 

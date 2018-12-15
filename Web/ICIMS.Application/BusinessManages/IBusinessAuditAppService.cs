@@ -35,11 +35,11 @@ namespace ICIMS.BusinessManages
         /// <returns></returns>
         Task<PagedResultDto<BusinessAuditListDto>> GetPaged(GetBusinessAuditsInput input);
 
-
-		/// <summary>
-		/// 通过指定id获取BuinessAuditListDto信息
-		/// </summary>
-		Task<BusinessAuditListDto> GetById(EntityDto<int> input);
+        Task<PagedResultDto<BusinessAuditListDto>> GetAllAuditStatus(GetBusinessAuditsInput input);
+        /// <summary>
+        /// 通过指定id获取BuinessAuditListDto信息
+        /// </summary>
+        Task<BusinessAuditListDto> GetById(EntityDto<int> input);
 
 
         /// <summary>
