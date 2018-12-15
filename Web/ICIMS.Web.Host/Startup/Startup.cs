@@ -138,9 +138,14 @@ namespace ICIMS.Web.Host.Startup
             //    RequestPath = new PathString("/clientapp"),
             //    ContentTypeProvider = provider
             //});
+            var path = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot", "clientapp");
+            if(!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
             var staticFileOptions = new StaticFileOptions
             {
-                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot", "clientapp")),
+                FileProvider = new PhysicalFileProvider(path),
                 RequestPath = new PathString("/clientapp"),
                 OnPrepareResponse = ctx =>
                 { 

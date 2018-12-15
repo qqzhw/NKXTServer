@@ -174,11 +174,11 @@ VendorEditDto editDto;
             input.TenantId = AbpSession.TenantId;
             var entity = await _entityRepository.GetAsync(input.Id);
 			input.MapTo(entity);
-            var item = await _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
-            if (item != null)
-            {
-                throw new UserFriendlyException("编号已存在,请重新输入");
-            }
+            //var item = await _entityRepository.FirstOrDefaultAsync(o => o.No == input.No & o.Id != input.Id);
+            //if (item != null)
+            //{
+            //    throw new UserFriendlyException("编号已存在,请重新输入");
+            //}
             // ObjectMapper.Map(input, entity);
             await _entityRepository.UpdateAsync(entity);
             return entity.MapTo<VendorEditDto>();

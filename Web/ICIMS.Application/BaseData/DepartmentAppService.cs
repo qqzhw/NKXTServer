@@ -13,6 +13,7 @@ using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Text;
 using System.Threading.Tasks;
+using Abp.AutoMapper;
 
 namespace ICIMS.BaseData
 {
@@ -115,9 +116,13 @@ namespace ICIMS.BaseData
 
         public virtual async Task<OrganizationUnit> UpdateAsync(OrganizationUnit organizationUnit)
         {
+            organizationUnit.TenantId = AbpSession.TenantId;
             var oriItem = await _organizationUnitRepository.GetAsync(organizationUnit.Id);
+            //organizationUnit.MapTo(oriItem);
+            oriItem.DisplayName = organizationUnit.DisplayName;
+            organizationUnit.Code = organizationUnit.Code;
             //Mapper.Map(organizationUnit, oriItem);
-            oriItem = organizationUnit;
+            //oriItem = organizationUnit;
             await ValidateOrganizationUnitAsync(oriItem);
             return await _organizationUnitRepository.UpdateAsync(oriItem);
         }
