@@ -82,7 +82,7 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// </summary>
 		public DateTime? AuditTime { get; set; }
 
-
+        public int BusinessAuditStatusId { get; set; }
 
 
     }

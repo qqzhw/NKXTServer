@@ -33,18 +33,18 @@ namespace ICIMS.BusinessManages
         private readonly IRepository<BusinessAudit, int> _entityRepository;
         private readonly IRepository<BusinessType, int> _businessRepository;
         private readonly IBusinessAuditManager _entityManager;
-
+        private readonly IRepository<BusinessAuditStatus, int> _businessauditStatusRepository;
         /// <summary>
         /// 构造函数 
         ///</summary>
         public BusinessAuditAppService(
-        IRepository<BusinessAudit, int> entityRepository
-        ,IBusinessAuditManager entityManager
+        IRepository<BusinessAudit, int> entityRepository, IRepository<BusinessAuditStatus, int> businessauditStatusRepository
+        , IBusinessAuditManager entityManager
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
-           // _businessRepository = businessRepository;
+            _businessauditStatusRepository = businessauditStatusRepository;
         }
 
 
@@ -54,11 +54,64 @@ namespace ICIMS.BusinessManages
         /// <param name="input"></param>
         /// <returns></returns>
 		//[AbpAuthorize(BuinessAuditPermissions.Query)] 
+        public async Task<PagedResultDto<BusinessAuditListDto>> GetAllAuditStatus(GetBusinessAuditsInput input)
+        {
+
+            var queryaudit = _entityRepository.GetAll();
+            var querystatus = _businessauditStatusRepository.GetAll();
+            if (input.EntityId>0)
+            {
+                querystatus = querystatus.Where(o => o.EntityId == input.EntityId);
+            }
+            var query = (from o in queryaudit
+                         join s in querystatus on o.Id equals s.BusinessAuditId
+                         into temp
+                         from tt in temp.DefaultIfEmpty()
+                         where o.BusinessTypeName == input.BusinessTypeName 
+                         select new BusinessAuditListDto
+                         {
+                             BusinessTypeId = o.BusinessTypeId,
+                             BusinessTypeName = o.BusinessTypeName,
+                             DisplayOrder = o.DisplayOrder,
+                             Name = o.Name,
+                             Status = tt != null ? tt.Status : 0,
+                             EntityId = tt != null ? tt.EntityId : 0,
+                             RoleId = o.RoleId,
+                             Id = o.Id,
+                             BusinessAuditStatusId = tt != null ? tt.Id : 0,
+                             RoleName = o.Name
+                         });
+
+            //into temp    from tt in temp.DefaultIfEmpty()
+
+            // TODO:根据传入的参数添加过滤条件
+            //if (input.BusinessTypeId.HasValue)
+            //{
+            //    query = query.Where(o => o.BusinessType.Id == input.BusinessTypeId);
+            //}
+            //if (!string.IsNullOrEmpty(input.BusinessTypeName))
+            //{
+            //    query = query.Where(o => o.BusinessType.Name == input.BusinessTypeName);
+            //}
+            int s2 = 0;
+            var count = await query.CountAsync();
+
+            var entityList = await query
+                    .OrderBy(o => o.DisplayOrder).AsNoTracking()
+                    .PageBy(input)
+                    .ToListAsync();
+
+            //var entityListDtos = ObjectMapper.Map<List<BuinessAuditListDto>>(entityList);
+            // var entityListDtos = entityList.MapTo<List<BusinessAuditListDto>>();
+
+            return new PagedResultDto<BusinessAuditListDto>(count, entityList);
+        }
+
         public async Task<PagedResultDto<BusinessAuditListDto>> GetPaged(GetBusinessAuditsInput input)
         {
 
             var query = _entityRepository.GetAll();
-             var a =_entityRepository.FirstOrDefault(1);
+            var a = _entityRepository.FirstOrDefault(1);
             // TODO:根据传入的参数添加过滤条件
             if (input.BusinessTypeId.HasValue)
             {
@@ -71,7 +124,7 @@ namespace ICIMS.BusinessManages
             var count = await query.CountAsync();
 
             var entityList = await query
-                    .OrderBy(input.Sorting).AsNoTracking()
+                    .OrderBy(o=>o.DisplayOrder).AsNoTracking()
                     .PageBy(input)
                     .ToListAsync();
 
@@ -81,12 +134,11 @@ namespace ICIMS.BusinessManages
             return new PagedResultDto<BusinessAuditListDto>(count, entityListDtos);
         }
 
-
-		/// <summary>
-		/// 通过指定id获取BuinessAuditListDto信息
-		/// </summary>
-		//[AbpAuthorize(BuinessAuditPermissions.Query)] 
-		public async Task<BusinessAuditListDto> GetById(EntityDto<int> input)
+        /// <summary>
+        /// 通过指定id获取BuinessAuditListDto信息
+        /// </summary>
+        //[AbpAuthorize(BuinessAuditPermissions.Query)] 
+        public async Task<BusinessAuditListDto> GetById(EntityDto<int> input)
 		{
 			var entity = await _entityRepository.GetAsync(input.Id);
 

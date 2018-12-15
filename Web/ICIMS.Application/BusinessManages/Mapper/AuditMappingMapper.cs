@@ -22,8 +22,9 @@ namespace ICIMS.BusinessManages.Mapper
                 .ForMember(model => model.BusinessAudit, options => options.Ignore())
                 .ForMember(model => model.User, options => options.Ignore());
 
-            CreateMap <AuditMappingEditDto,AuditMapping>();
-            CreateMap <AuditMapping,AuditMappingEditDto>();
+            CreateMap<AuditMappingEditDto, AuditMapping>();
+            CreateMap<AuditMapping, AuditMappingEditDto>();
+              
 
         }
 	}

@@ -56,4 +56,9 @@
   <ItemGroup>
     <Folder Include="App_Data\Logs\" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\..\ICIMS\DLLs\Aspose.Words.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

@@ -33,19 +33,22 @@ namespace ICIMS.BusinessManages
     public class ItemDefineAppService : ICIMSAppServiceBase, IItemDefineAppService
     {
         private readonly IRepository<ItemDefine, int> _entityRepository;
-
+        private readonly IRepository<BusinessAudit, int> _entityAuditRepository;
+        private readonly IRepository<BusinessAuditStatus, int> _entityAuditStatusRepository;
         private readonly IItemDefineManager _entityManager;
 
         /// <summary>
         /// 构造函数 
         ///</summary>
         public ItemDefineAppService(
-        IRepository<ItemDefine, int> entityRepository
-        ,IItemDefineManager entityManager
+        IRepository<ItemDefine, int> entityRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
+        , IItemDefineManager entityManager
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
+            _entityAuditRepository = entityauditRepository;
+            _entityAuditStatusRepository = entityauditstatusRepository;
         }
 
 
@@ -192,7 +195,20 @@ ItemDefineEditDto editDto;
             entity.CreatorUserId = AbpSession.UserId;
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
             input.ItemNo = entity.ItemNo;
-			return input;
+            var audit =await _entityAuditRepository.GetAll().Where(o => o.BusinessTypeName == "立项登记").ToListAsync();
+            foreach (var businessaudit in audit)
+            {
+                var auditStatus = new BusinessAuditStatus()
+                {
+                    TenantId = AbpSession.TenantId,
+                    BusinessAuditId = businessaudit.Id,
+                    BusinessTypeName = businessaudit.BusinessTypeName,
+                    DisplayOrder = businessaudit.DisplayOrder,
+                    EntityId = input.Id, 
+                };
+                _entityAuditStatusRepository.Insert(auditStatus);
+            }
+            return input;
 		}
         private string GenerateId()
         {

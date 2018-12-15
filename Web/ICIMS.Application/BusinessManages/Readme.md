@@ -26,7 +26,7 @@ Configuration.Modules.AbpAutoMapper().Configurators.Add(configuration =>
     // ....
 
     // 只需要复制这一段
-UserManageUnitMapper.CreateMappings(configuration);
+BusinessAuditStatusMapper.CreateMappings(configuration);
 
     // ....
 });
@@ -39,7 +39,7 @@ UserManageUnitMapper.CreateMappings(configuration);
 中的 PreInitialize 方法中:
 
 ```
-Configuration.Authorization.Providers.Add<UserManageUnitAuthorizationProvider>();
+Configuration.Authorization.Providers.Add<BusinessAuditStatusAuthorizationProvider>();
 
 ```
 
@@ -48,7 +48,7 @@ Configuration.Authorization.Providers.Add<UserManageUnitAuthorizationProvider>()
 可以在```DbContext```中增加：
 
  ```
-public DbSet<UserManageUnit>  UserManageUnits { get; set; }
+public DbSet<BusinessAuditStatus>  BusinessAuditStatuss { get; set; }
 
  ```
 
@@ -57,7 +57,7 @@ public DbSet<UserManageUnit>  UserManageUnits { get; set; }
 ```
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new UserManageUnitCfg());
+            modelBuilder.ApplyConfiguration(new BusinessAuditStatusCfg());
         }
 
 ```
@@ -69,11 +69,13 @@ public DbSet<UserManageUnit>  UserManageUnits { get; set; }
 
 ```
 
-<text name="UserId"  value="UserId"></text>
-<text name="UnitId"  value="UnitId"></text>
 <text name="TenantId"  value="TenantId"></text>
-<text name="User"  value="User"></text>
-<text name="OrganizationUnit"  value="OrganizationUnit"></text>
+<text name="EntityId"  value="EntityId"></text>
+<text name="BusinessTypeName"  value="BusinessTypeName"></text>
+<text name="Status"  value="Status"></text>
+<text name="BusinessAuditId"  value="BusinessAuditId"></text>
+<text name="BusinessAudit"  value="BusinessAudit"></text>
+<text name="DisplayOrder"  value="DisplayOrder"></text>
 
 
 ```

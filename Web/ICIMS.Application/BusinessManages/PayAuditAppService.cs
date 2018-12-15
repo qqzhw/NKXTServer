@@ -34,19 +34,24 @@ namespace ICIMS.BusinessManages
     {
         private readonly IRepository<PayAudit, int> _entityRepository;
         private readonly IRepository<PayAuditDetail, int> _entityDetailRepository;
+        private readonly IRepository<BusinessAudit, int> _entityAuditRepository;
+        private readonly IRepository<BusinessAuditStatus, int> _entityAuditStatusRepository;
         private readonly IPayAuditManager _entityManager;
 
         /// <summary>
         /// 构造函数 
         ///</summary>
         public PayAuditAppService(
-        IRepository<PayAudit, int> entityRepository, IRepository<PayAuditDetail, int> entityDetailRepository
+        IRepository<PayAudit, int> entityRepository, IRepository<PayAuditDetail, int> entityDetailRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
+      
         , IPayAuditManager entityManager
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
             _entityDetailRepository = entityDetailRepository;
+            _entityAuditRepository = entityauditRepository;
+            _entityAuditStatusRepository = entityauditstatusRepository;
         }
 
 
@@ -189,8 +194,20 @@ PayAuditEditDto editDto;
                payDetail.Id= await _entityDetailRepository.InsertAndGetIdAsync(payDetail);
             }
             input.PaymentNo = entity.PaymentNo;
-         
-             
+
+            var audit = _entityAuditRepository.GetAll().Where(o => o.BusinessTypeName == "支付审核");
+            foreach (var businessaudit in audit)
+            {
+                var auditStatus = new BusinessAuditStatus()
+                {
+                    TenantId = AbpSession.TenantId,
+                    BusinessAuditId = businessaudit.Id,
+                    BusinessTypeName = businessaudit.BusinessTypeName,
+                    DisplayOrder = businessaudit.DisplayOrder,
+                    EntityId = input.Id,
+                };
+                _entityAuditStatusRepository.Insert(auditStatus);
+            }
             return input;
 		}
         private string GenerateId(int itemdefineId)

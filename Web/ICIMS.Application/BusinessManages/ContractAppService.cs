@@ -35,17 +35,20 @@ namespace ICIMS.BusinessManages
         private readonly IRepository<Contract, int> _entityRepository;
 
         private readonly IContractManager _entityManager;
-
+        private readonly IRepository<BusinessAudit, int> _entityAuditRepository;
+        private readonly IRepository<BusinessAuditStatus, int> _entityAuditStatusRepository;
         /// <summary>
         /// 构造函数 
         ///</summary>
         public ContractAppService(
-        IRepository<Contract, int> entityRepository
-        ,IContractManager entityManager
+        IRepository<Contract, int> entityRepository, IRepository<BusinessAudit, int> entityauditRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
+        , IContractManager entityManager
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
+            _entityAuditRepository = entityauditRepository;
+            _entityAuditStatusRepository = entityauditstatusRepository;
         }
 
 
@@ -202,6 +205,19 @@ ContractEditDto editDto;
             var entity = input.MapTo<Contract>();
             entity.CreatorUserId = AbpSession.UserId;
             input.Id = await _entityRepository.InsertAndGetIdAsync(entity);
+            var audit = _entityAuditRepository.GetAll().Where(o => o.BusinessTypeName == "合同登记");
+            foreach (var businessaudit in audit)
+            {
+                var auditStatus = new BusinessAuditStatus()
+                {
+                    TenantId = AbpSession.TenantId,
+                    BusinessAuditId = businessaudit.Id,
+                    BusinessTypeName = businessaudit.BusinessTypeName,
+                    DisplayOrder = businessaudit.DisplayOrder,
+                    EntityId = input.Id,
+                };
+                _entityAuditStatusRepository.Insert(auditStatus);
+            }
             return input;
 		}
         private string GenerateId()

@@ -1,5 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.MultiTenancy;
+using Aspose.Words;
+using Aspose.Words.Replacing;
 using ICIMS.Authentication.JwtBearer;
 using ICIMS.Authorization;
 using ICIMS.BaseData;
@@ -139,6 +141,117 @@ namespace ICIMS.Controllers
                 return buffur;
             }
         }
+
+        private async Task<IActionResult> Print()
+        {
+            return new JsonResult(null);
+        }
+        private void OnExportFlowDocumentCmd(object o)
+        {
+            try
+            {
+                var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "666.docx");
+
+                var file1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "777.docx");
+                var content = "evento";
+                // Open the document.
+                Document doc = new Document(file); 
+                //// Replace the text in the document.
+                //doc.Range.Replace("$UnitName$", "UnitName", new FindReplaceOptions(FindReplaceDirection.Forward));
+                //string cmdNo = string.Format("成联指【{0}】号", 511);
+                //doc.Range.Replace("$CreationTime$", PayAuditList.CreationTime.ToString("yyyy-MM-dd"), new FindReplaceOptions(FindReplaceDirection.Forward));
+                //doc.Range.Replace("$ItemDefineName$", PayAuditList.ItemDefineName, new FindReplaceOptions(FindReplaceDirection.Forward));
+
+                //doc.Range.Replace("$DefineAmount$", PayAuditList.DefineAmount.ToString(), new FindReplaceOptions(FindReplaceDirection.Forward));
+                //doc.Range.Replace("$ItemDescription$", ItemDefine?.ItemDescription == null ? "" : ItemDefine?.ItemDescription, new FindReplaceOptions(FindReplaceDirection.Forward));
+                //doc.Range.Replace("$FundItems$", PayAuditList.AccountName.ToString(), new FindReplaceOptions(FindReplaceDirection.Forward));
+
+                //doc.Range.Replace("$ContractName$", PayAuditList.ContractName, new FindReplaceOptions(FindReplaceDirection.Forward));
+                //doc.Range.Replace("$ContractAmount$", PayAuditList.ContractAmount.ToString(), new FindReplaceOptions(FindReplaceDirection.Forward));
+
+
+                //doc.Range.Replace("$VendorName$", PayAuditList.VendorName, new FindReplaceOptions(FindReplaceDirection.Forward));
+                //doc.Range.Replace("$PayDescription$", PayAudit.PayDetail, new FindReplaceOptions(FindReplaceDirection.Forward));
+                //doc.Range.Replace("$PayAmount$", PayAudit.PayAmount.ToString(), new FindReplaceOptions(FindReplaceDirection.Forward));
+
+
+                doc.Range.Replace("$AuditOpinion1$", "", new FindReplaceOptions(FindReplaceDirection.Forward));
+
+                DocumentBuilder builder = new DocumentBuilder(doc);
+                NodeCollection allTables = doc.GetChildNodes(NodeType.Table, true);
+                builder.MoveToDocumentEnd();
+                //builder.StartTable();
+                Aspose.Words.Tables.Table table = allTables[0] as Aspose.Words.Tables.Table;//拿到第一个表格
+                var rowCount = table.Count;
+                //builder.InsertCell();
+                //builder.Write("ROW1ASD");
+                //builder.InsertCell();
+                //builder.Write("asdsad");
+                //builder.EndRow();
+                //  DataTable products = this.GetData(); //数据源
+                //builder.InsertCell();
+                //builder.InsertCell();
+                //for (int i = 0; i < 3; i++)
+                //{
+                //    var roww = table.Rows[rowCount-2];
+                //    //var row = table.LastRow.Clone(true);
+                //    var row = roww.Clone(true);//复制第三行(绿色行)
+                //    table.Rows.Insert(rowCount + i, row);//将复制的行插入当前行的上方
+                //    builder.MoveToCell(0, rowCount+i, 0, 0);
+                //    builder.Writeln($"asdas还是审核人{i+1}");
+                //    builder.MoveToCell(0, rowCount + i, 1, 0);
+                //    builder.Write("$Title$" + i.ToString());
+                //}
+                //doc.Range.Replace("$Title$", "真的啊", new FindReplaceOptions(FindReplaceDirection.Forward));
+                //builder.MoveToCell(0, 3, 0, 0); //移动到第一个表格的第四行第一个格子
+                //builder.Write("test"); //单元格填充文字
+                int count = 0;
+
+                //记录要显示多少列
+                //for (var i = 0; i < products.Columns.Count; i)
+                //{
+                //    if (doc.Range.Bookmarks[products.Columns[i].ColumnName.Trim()] != null)
+                //    {
+                //        Bookmark mark = doc.Range.Bookmarks[products.Columns[i].ColumnName.Trim()];
+                //        mark.Text = "";
+                //        count;
+                //    }
+
+                //}
+                //System.Collections.Generic.List listcolumn = new System.Collections.Generic.List(count);
+                //for (var i = 0; i < count; i)
+                //{
+                //    builder.MoveToCell(0, 0, i, 0); //移动单元格
+                //    if (builder.CurrentNode.NodeType == NodeType.BookmarkStart)
+                //    {
+                //        listcolumn.Add((builder.CurrentNode as BookmarkStart).Name);
+                //    }
+                //}
+                double width = builder.CellFormat.Width;//获取单元格宽度
+                //builder.MoveToBookmark("table"); //开始添加值
+                //for (var m = 0; m < products.Rows.Count; m)
+                //{
+                //    for (var i = 0; i < listcolumn.Count; i)
+                //    {
+                //        builder.InsertCell(); // 添加一个单元格 
+                //        builder.CellFormat.Borders.LineStyle = LineStyle.Single;
+                //        builder.CellFormat.Borders.Color = System.Drawing.Color.Black;
+                //        builder.CellFormat.Width = width;
+                //        builder.CellFormat.VerticalMerge = Aspose.Words.Tables.CellMerge.None;
+                //        builder.Write(products.Rows[m][listcolumn[i]].ToString());
+                //    }
+                //    builder.EndRow();
+                //}
+                //doc.Range.Bookmarks["table"].Text = ""; // 清掉标示 
+                //builder.DeleteRow(0, 5);
+                // Save the modified document.
+                doc.Save(file1);  
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
 
     }
 }

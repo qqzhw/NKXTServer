@@ -33,19 +33,20 @@ namespace ICIMS.BusinessManages
     public class AuditMappingAppService : ICIMSAppServiceBase, IAuditMappingAppService
     {
         private readonly IRepository<AuditMapping, int> _entityRepository;
-
+        private readonly IRepository<BusinessAuditStatus, int> _entityauditstatusRepository;
         private readonly IAuditMappingManager _entityManager;
 
         /// <summary>
         /// 构造函数 
         ///</summary>
         public AuditMappingAppService(
-        IRepository<AuditMapping, int> entityRepository
-        ,IAuditMappingManager entityManager
+        IRepository<AuditMapping, int> entityRepository, IRepository<BusinessAuditStatus, int> entityauditstatusRepository
+        , IAuditMappingManager entityManager
         )
         {
             _entityRepository = entityRepository; 
              _entityManager=entityManager;
+            _entityauditstatusRepository = entityauditstatusRepository;
         }
 
 
@@ -155,10 +156,16 @@ AuditMappingEditDto editDto;
 
             entity.TenantId = AbpSession.TenantId;
             entity.AuditTime = DateTime.Now;
-            entity.Status = 1;
+            entity.Status = input.Status;
             
             entity.CreatorUserId = AbpSession.UserId;
 			input.Id = await _entityRepository.InsertOrUpdateAndGetIdAsync(entity);
+            //var findItem = _entityauditstatusRepository.Get(input.BusinessAuditStatusId);
+            //if (findItem!=null)
+            //{
+            //    findItem.Status = input.Status;
+            //  await  _entityauditstatusRepository.UpdateAsync(findItem);
+            //}
 			return  input;
 		}
 
