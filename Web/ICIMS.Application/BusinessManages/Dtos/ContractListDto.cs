@@ -40,8 +40,8 @@ namespace ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// UintId
 		/// </summary>
-		[Required(ErrorMessage="UintId不能为空")]
-		public long UintId { get; set; }
+		[Required(ErrorMessage="UnitId不能为空")]
+		public long UnitId { get; set; }
 
         public string UnitName { get; set; }
 

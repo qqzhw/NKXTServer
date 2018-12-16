@@ -95,7 +95,7 @@ namespace ICIMS.BusinessManages
                 SysGuid=o.SysGuid,
                 Tax=o.Tax,
                 TaxAmount=o.TaxAmount,
-                UintId=o.UnitId,
+                UnitId=o.UnitId,
                 UnitName=o.ItemDefine.Unit.DisplayName,
                 VendorId=o.VendorId,
                 VendorName=o.Vendor.Name,

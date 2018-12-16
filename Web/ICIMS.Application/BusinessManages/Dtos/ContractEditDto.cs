@@ -38,8 +38,8 @@ namespace  ICIMS.BusinessManages.Dtos
 		/// <summary>
 		/// UintId
 		/// </summary>
-		[Required(ErrorMessage="UintId不能为空")]
-		public int UintId { get; set; }
+		[Required(ErrorMessage="UnitId不能为空")]
+		public int UnitId { get; set; }
 
 
  
