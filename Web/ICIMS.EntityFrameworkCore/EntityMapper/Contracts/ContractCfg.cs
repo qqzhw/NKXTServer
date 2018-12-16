@@ -24,7 +24,7 @@ namespace ICIMS.EntityMapper.Contracts
            // builder.HasOne(a => a.Unit).WithMany().HasForeignKey(r => r.UnitId);
             builder.HasOne(a => a.ContractCategory).WithMany().HasForeignKey(r => r.ContractCategoryId).IsRequired();
             builder.HasOne(a => a.Vendor).WithMany().HasForeignKey(r => r.VendorId).IsRequired();
-
+            builder.HasOne(a => a.CreatorUser).WithMany().HasForeignKey(r => r.CreatorUserId);
             builder.HasOne(a => a.AuditUser).WithMany().HasForeignKey(r => r.AuditUserId);
         }
     }

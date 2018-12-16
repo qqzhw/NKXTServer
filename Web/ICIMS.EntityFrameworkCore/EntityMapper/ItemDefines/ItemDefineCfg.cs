@@ -30,8 +30,8 @@ namespace ICIMS.EntityMapper.ItemDefines
            builder.HasOne(a => a.Unit).WithMany().HasForeignKey(r => r.UnitId).IsRequired();
            builder.HasOne(a => a.Budget).WithMany().HasForeignKey(r => r.BudgetId);
            builder.HasOne(a => a.ItemCategory).WithMany().HasForeignKey(r => r.ItemCategoryId).IsRequired();
-      
 
+            builder.HasOne(a => a.CreatorUser).WithMany().HasForeignKey(r => r.CreatorUserId);
         }
     }
 }

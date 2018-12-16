@@ -114,6 +114,8 @@ namespace ICIMS.BusinessManages
         public virtual ContractCategory ContractCategory { get; set; }
         //供应商
         public virtual Vendor Vendor { get; set; }
+
+        public virtual User CreatorUser { get; set; }
         //public virtual OrganizationUnit Unit { get; set; }
         #endregion
     }

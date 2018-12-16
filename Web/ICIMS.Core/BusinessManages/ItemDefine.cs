@@ -86,5 +86,7 @@ namespace ICIMS.BusinessManages
         public long? AuditUserId { get; set; }
         [ForeignKey("AuditUserId")]
         public virtual User AuditUser { get; set; }
+
+        public virtual User CreatorUser { get; set; }
     }
 }

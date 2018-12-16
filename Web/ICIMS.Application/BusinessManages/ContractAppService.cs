@@ -79,6 +79,7 @@ namespace ICIMS.BusinessManages
                 ContractCategoryName = o.ContractCategory.Name,
                 CreationTime=o.CreationTime,
                 CreatorUserId=o.CreatorUserId,
+                CreatorUserName=o.CreatorUser.Name,
                 EndTime=o.EndTime,
                 FinalPer=o.FinalPer,
                 Id=o.Id,

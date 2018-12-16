@@ -212,6 +212,6 @@ namespace ICIMS.BusinessManages.Dtos
 
         public string According { get; set; }
 
-
+       public string CreatorUserName { get; set; }
     }
 }

@@ -61,7 +61,7 @@ namespace ICIMS.BusinessManages
         public async Task<PagedResultDto<ItemDefineListDto>> GetPaged(GetItemDefinesInput input)
 		{
 
-            var query =from o in _entityRepository.GetAllIncluding(o => o.Budget).Include(o => o.ItemCategory).Include(o => o.Unit).Include(o=>o.AuditUser)
+            var query =from o in _entityRepository.GetAllIncluding(o => o.Budget).Include(o => o.ItemCategory).Include(o => o.Unit).Include(o=>o.AuditUser).Include(o=>o.CreatorUser)
                         join u in _entitymanageunitRepository.GetAll().Where(p=>p.UserId==AbpSession.UserId) on o.UnitId equals u.UnitId
                         select new ItemDefineListDto() {
                      AuditDate=o.AuditDate,
@@ -71,6 +71,7 @@ namespace ICIMS.BusinessManages
                      BudgetName=o.Budget.BudgetName,
                      BudgetNo=o.Budget.BudgetNo,
                      CreatorUserId = o.CreatorUserId,
+                     CreatorName=o.CreatorUser.Name,
                      CreationTime=o.CreationTime,
                      DefineAmount=o.DefineAmount,
                      DefineDate=o.DefineDate,
