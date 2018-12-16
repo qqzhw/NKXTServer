@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Abp.Auditing;
 using Abp.Authorization.Users;
 using Abp.AutoMapper;
 using Abp.Runtime.Validation;
 using ICIMS.Authorization.Users;
+using ICIMS.Roles.Dto;
 
 namespace ICIMS.Users.Dto
 {
@@ -45,5 +47,6 @@ namespace ICIMS.Users.Dto
         }
         public long[] UnitIds { get; set; }
         public UnitDto Unit { get; set; }
+        public IList<RoleDto> Roles { get; set; }
     }
 }

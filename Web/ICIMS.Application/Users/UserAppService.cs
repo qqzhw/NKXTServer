@@ -75,7 +75,15 @@ namespace ICIMS.Users
             }
             CurrentUnitOfWork.SaveChanges();
 
-            return await MapToNewEntityDto(user);
+            if (input.Roles != null)
+            {
+                CheckErrors(await _userManager.SetRoles(user, input.Roles.Select(o => o.Name).ToArray()));
+            }
+            CurrentUnitOfWork.SaveChanges();
+
+            var rs = await MapToNewEntityDto(user);
+            rs.Roles = input.Roles;
+            return rs;
         }
 
         public async virtual Task<bool> ChangePasswordAsync(ChangePasswordDto dto)
@@ -170,10 +178,9 @@ namespace ICIMS.Users
 
         private async Task<UserDto> MapToNewEntityDto(User user)
         {
-            var roles = _roleManager.Roles.Include(o => o.Permissions).Where(r => user.Roles.Any(ur => ur.RoleId == r.Id));
+            //var roles = _roleManager.Roles.Include(o => o.Permissions).Where(r => user.Roles.Any(ur => ur.RoleId == r.Id));
             var userDto = base.MapToEntityDto(user);
-            userDto.Roles = new List<RoleDto>();
-            var units = await _userManager.GetUserOrganizationUnit(user.Id);
+             var units = await _userManager.GetUserOrganizationUnit(user.Id);
             var unit = units.FirstOrDefault();
             if (unit != null)
             {
