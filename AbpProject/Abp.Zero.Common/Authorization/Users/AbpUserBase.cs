@@ -101,8 +101,8 @@ namespace Abp.Authorization.Users
         /// Email address of the user.
         /// Email address must be unique for it's tenant.
         /// </summary>
-        [Required]
-        [StringLength(MaxEmailAddressLength)]
+        //[Required]
+        //[StringLength(MaxEmailAddressLength)]
         public virtual string EmailAddress { get; set; }
 
         /// <summary>
