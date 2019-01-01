@@ -13,6 +13,7 @@ namespace ICIMS.Web.Host.Controllers
         }
 
         public void GetToken()
+
         {
             _antiforgery.SetCookieTokenAndHeader(HttpContext);
         }
