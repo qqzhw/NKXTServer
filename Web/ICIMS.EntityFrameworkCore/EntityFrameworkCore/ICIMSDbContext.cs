@@ -85,6 +85,7 @@ namespace ICIMS.EntityFrameworkCore
         public virtual DbSet<ContractCategory> ContractCategory { get; set; }
 
         public virtual DbSet<DocumentCategory> DocumentCategory { get; set; }
+        public virtual DbSet<ProjectProps> ProjectProps { get; set; }
         public virtual DbSet<FilesManage> FilesManage { get; set; }
 
         public virtual DbSet<ItemCategory> ItemCategory { get; set; }
