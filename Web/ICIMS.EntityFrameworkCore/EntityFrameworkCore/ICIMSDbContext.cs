@@ -29,6 +29,7 @@ using ICIMS.EntityMapper.BusinessTypes;
 using ICIMS.EntityMapper.PayAuditDetails;
 using ICIMS.EntityMapper.UserManageUnits;
 using ICIMS.EntityMapper.BusinessAuditStatuss;
+using ICIMS.EntityMapper;
 
 namespace ICIMS.EntityFrameworkCore
 {
@@ -59,6 +60,7 @@ namespace ICIMS.EntityFrameworkCore
             modelBuilder.ApplyConfiguration(new BuyCategoryCfg());
             modelBuilder.ApplyConfiguration(new ContractCategoryCfg());
             modelBuilder.ApplyConfiguration(new DocumentCategoryCfg());
+            modelBuilder.ApplyConfiguration(new ProjectPropsCfg());
             modelBuilder.ApplyConfiguration(new FilesManageCfg());
             modelBuilder.ApplyConfiguration(new FunctionSubjectCfg());
             modelBuilder.ApplyConfiguration(new ItemCategoryCfg());

@@ -18,6 +18,7 @@ namespace ICIMS
             Configuration.Authorization.Providers.Add<BuyCategoryAuthorizationProvider>();
             Configuration.Authorization.Providers.Add<ContractCategoryAuthorizationProvider>();
             Configuration.Authorization.Providers.Add<DocumentCategoryAuthorizationProvider>();
+            Configuration.Authorization.Providers.Add<ProjectPropsAuthorizationProvider>();
             Configuration.Authorization.Providers.Add<FilesManageAuthorizationProvider>();
             Configuration.Authorization.Providers.Add<FunctionSubjectAuthorizationProvider>();
             Configuration.Authorization.Providers.Add<FundFromAuthorizationProvider>();

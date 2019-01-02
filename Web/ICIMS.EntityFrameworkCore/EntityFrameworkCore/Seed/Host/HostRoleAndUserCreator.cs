@@ -51,6 +51,7 @@ namespace ICIMS.EntityFrameworkCore.Seed.Host
             authList.Add(new BuyCategoryAuthorizationProvider());
             authList.Add(new ContractCategoryAuthorizationProvider()); 
             authList.Add(new DocumentCategoryAuthorizationProvider());
+            authList.Add(new ProjectPropsAuthorizationProvider());
             authList.Add(new FilesManageAuthorizationProvider());
             authList.Add(new FunctionSubjectAuthorizationProvider());
             authList.Add(new FundFromAuthorizationProvider());
